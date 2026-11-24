@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "verified_at": "2026-11-22T13:14:34.3809084Z",
+  "input_hashes": [
+    {
+      "path": "crates\\app\\build.rs",
+      "sha256": "C87DD0EF13D531B68158E53A6FAEFCBDC2EE8D6117D3EEF4FA7760334E93EC96"
+    },
+    {
+      "path": "crates\\app\\Cargo.toml",
+      "sha256": "FD9E48E24E68AE7A61EE59F08A8DF9C476856827A8F19EAD9DBDA16DB36245C8"
+    },
+    {
+      "path": "crates\\app\\resources\\opensequoia.manifest",
+      "sha256": "F1A83999267CFAE7EC75375EECDA34E2E9F2969D0D041643D39CB0EE7D448B84"
+    },
+    {
+      "path": "crates\\app\\resources\\opensequoia.rc",
+      "sha256": "D06039D3384296FE6F813014B1F990A07851B829DF9AEC39EEA6F182864700B5"
+    },
+    {
+      "path": "crates\\app\\src\\input.rs",
+      "sha256": "67F435CA82C83C4E058CCC8A8FC52CF2B79626780BA702CC80F5E2C2861BB38D"
+    },
+    {
+      "path": "crates\\app\\src\\main.rs",
+      "sha256": "54F12EA1153B4537B94004658C7276A83B2806F265872EB3CAB1066414CF2562"
+    },
+    {
+      "path": "crates\\app\\src\\windows.rs",
+      "sha256": "14D44DF45B8A9A81DD668253BE5BE193CFF55A1A331D1839169053944C9EA839"
+    },
+    {
+      "path": "crates\\app\\src\\worker.rs",
+      "sha256": "B5D7CEB96AA9A9855ACFEFC3F4B73E28F7B4C71C9155CD8BCB734AE46FA5E5BF"
+    },
+    {
+      "path": "crates\\engine\\Cargo.toml",
+      "sha256": "A50E98201067C464496BCAA4643A55EE081AB1E2E2433410FE5DDD4F040B8173"
+    },
+    {
+      "path": "crates\\engine\\src\\dom.rs",
+      "sha256": "73AC088AE5A13342DF9C11EA530EE61E564819B72B0A8709CBEBFF91EF5E7EE1"
+    },
+    {
+      "path": "crates\\engine\\src\\layout.rs",
+      "sha256": "5CB3F1B05CB832C92142F252D9945A71B6FC84D9C22F1A8250A4F1C093A2E73E"
+    },
+    {
+      "path": "crates\\engine\\src\\lib.rs",
+      "sha256": "EB9126B628407652EDC3D75D6F8077CA93B54BDD2BA32058CE1F0DC11D29C371"
+    },
+    {
+      "path": "crates\\engine\\tests\\static_document.rs",
+      "sha256": "735DACC2752F5246C6ED01682EEBEC88475522322EB671460852D01546E64A7E"
+    },
+    {
+      "path": "crates\\ipc\\Cargo.toml",
+      "sha256": "618C76524216EA5DEA746360676EA0231F06BE487FAEE6EEAC2388E4A51F70D9"
+    },
+    {
+      "path": "crates\\ipc\\src\\codec.rs",
+      "sha256": "CF199AEE483460B9F32D162076DAE0759AC71E81CF33944B043D07EAC1B7C1DE"
+    },
+    {
+      "path": "crates\\ipc\\src\\lib.rs",
+      "sha256": "00C45C2EDE1564BE0577CF6B992F7D78792D2495AF1248938575D9A40EC84CDB"
+    },
+    {
+      "path": "crates\\ipc\\tests\\framing.rs",
+      "sha256": "65F97D98EFE90B4E4808362BF49B125A09F24BC737D5EEED200C8536084DB4A1"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "3936AC3B85CF37E019CFE36AC4A040BFF857A17979797DF66A679CA6C3D66299"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "88D6D60F73CB5A84D7A04D069D8C5E756A12928195609BB2DB226566ACA4BCAC"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "B30392501151E20A7D00B4B580C614F49C402580AB876E3A4A694E58D09D595C"
+    },
+    {
+      "path": ".cargo\\config.toml",
+      "sha256": "8A110099B9690912BD2F841794AF36EF6C2096D1D14B7135439FEE31AD08A3BC"
+    },
+    {
+      "path": "fixtures\\welcome.html",
+      "sha256": "3B98C0AFCA68E30DBDECD99066A6B0961067D4DBF5DBCC146F24E77486DF3847"
+    }
+  ],
+  "window_smoke_run": false,
+  "limitations": [
+    "No WPT/Test262/Wasm run",
+    "No sandbox, network, full UI/accessibility or browser parity verdict"
+  ]
+}

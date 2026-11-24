@@ -1,0 +1,10 @@
+{
+  "tool": "core_evidence_export",
+  "params": {
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/evidence/artifacts/sandbox4-evidence.json",
+    "overwrite": true
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":131421,\"not_loaded\":0,\"path\":\"C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/evidence/artifacts/sandbox4-evidence.json\",\"records\":7,\"unknowns\":4}}\n"
+}

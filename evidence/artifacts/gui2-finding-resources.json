@@ -1,0 +1,13 @@
+{
+  "tool": "core-finding-record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_7c864322896125c053adf7e03d6f2f6488bcb36bc41dc676c066a3e375509527"
+    ],
+    "statement": "The final GUI executable contains exactly two enumerated PE resources: OpenSequoia RT_VERSION FileVersion0.2.0.0/ProductVersion0.2.0 and RT_MANIFEST0.2.0.0 with asInvoker, uiAccess false, PerMonitorV2 and longPathAware true. No icon group is present in the enumerated resource tree."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_19\",\"revision\":65}}\n"
+}

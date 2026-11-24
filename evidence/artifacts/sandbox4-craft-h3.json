@@ -1,0 +1,10 @@
+{
+  "tool": "core_hypothesis_record",
+  "params": {
+    "claim": "The new EXE resources still identify OpenSequoia with the manifest asInvoker/PerMonitorV2 policy and a 0.1.0.0-style file version inherited from the package metadata.",
+    "prediction": "RT_VERSION names OpenSequoia and RT_MANIFEST requests asInvoker and PerMonitorV2."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis_id\":\"hyp_3\",\"revision\":5}}\n"
+}

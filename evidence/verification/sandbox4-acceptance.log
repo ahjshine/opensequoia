@@ -1,0 +1,245 @@
+revision=56d1adbbce0cfe468e56be2afaacb778ef102a2b
+integration={"kind": "integrated_checkout", "lane_sources": {"crates/app/src/windows_process.rs": "65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d", "crates/app/src/windows_sandbox.rs": "1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97", "crates/app/src/worker.rs": "3565782421db5b76408c98387e5e30e19864e6814548ec3693e542689034b5e0", "evidence/verification/sandbox4-acceptance.py": "9d815a6f3d1f107df95b9a90f9e7fc55c0e291f8056c5529ebc796571e3acc58", "evidence/verification/sandbox4-process-helper.rs": "6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72"}, "root": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia", "root_files": {"Cargo.lock": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707", "Cargo.toml": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd", "crates/app/Cargo.toml": "e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf", "crates/app/src/input.rs": "25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60", "crates/app/src/main.rs": "ea9da7f770d81173495457ca2c9afb0364086020dc3f5dc0a8ec5c0f3ee94646"}}
+COMMAND build application returncode=0 timed_out=False argv=["cargo", "build", "--manifest-path", "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\Cargo.toml", "--target-dir", "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build", "-p", "opensequoia", "--locked", "--offline"]
+STDOUT truncated=False
+
+STDERR truncated=False
+   Compiling siphasher v1.0.4
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling fastrand v2.5.0
+   Compiling unicode-ident v1.0.27
+   Compiling windows-link v0.2.1
+   Compiling parking_lot_core v0.9.12
+   Compiling smallvec v1.16.6
+   Compiling scopeguard v1.2.0
+   Compiling cfg-if v1.0.5
+   Compiling new_debug_unreachable v1.0.6
+   Compiling precomputed-hash v0.1.1
+   Compiling phf_shared v0.14.0
+   Compiling lock_api v0.4.14
+   Compiling tendril v0.5.1
+   Compiling log v0.4.35
+   Compiling memchr v2.8.3
+   Compiling opensequoia v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+   Compiling windows-sys v0.61.2
+   Compiling phf_generator v0.14.0
+   Compiling phf v0.14.0
+   Compiling phf_codegen v0.14.0
+   Compiling parking_lot v0.12.5
+   Compiling string_cache v0.11.0
+   Compiling string_cache_codegen v0.11.2
+   Compiling web_atoms v0.3.0
+   Compiling markup5ever v0.40.0
+   Compiling html5ever v0.40.1
+   Compiling opensequoia-engine v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\engine)
+   Compiling opensequoia-ipc v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\ipc)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 27.96s
+
+COMMAND build real process helper returncode=0 timed_out=False argv=["rustc", "--edition=2024", "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\verification\\sandbox4-process-helper.rs", "--extern", "windows_sys=C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\deps\\libwindows_sys-e0551551b6ff6ca1.rlib", "-L", "dependency=C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\deps", "-o", "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-process-helper.exe"]
+STDOUT truncated=False
+
+STDERR truncated=False
+warning: field `token_policy` is never read
+  --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_process.rs:70:5
+   |
+63 | pub struct ContainedChild {
+   |            -------------- field in this struct
+...
+70 |     token_policy: Option<crate::windows_sandbox::TokenPolicy>,
+   |     ^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `verified_token` is never used
+  --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_process.rs:76:12
+   |
+75 | impl ContainedChild {
+   | ------------------- method in this implementation
+76 |     pub fn verified_token(&self) -> Option<crate::windows_sandbox::TokenPolicy> {
+   |            ^^^^^^^^^^^^^^
+
+warning: struct `WsaPollFd` is never constructed
+  --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:86:8
+   |
+86 | struct WsaPollFd {
+   |        ^^^^^^^^^
+
+warning: struct `WsaSession` is never constructed
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:128:8
+    |
+128 | struct WsaSession;
+    |        ^^^^^^^^^^
+
+warning: associated function `start` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:130:8
+    |
+129 | impl WsaSession {
+    | --------------- associated function in this implementation
+130 |     fn start() -> io::Result<Self> {
+    |        ^^^^^
+
+warning: struct `Socket` is never constructed
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:150:8
+    |
+150 | struct Socket(usize);
+    |        ^^^^^^
+
+warning: function `winsock_loopback` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:158:4
+    |
+158 | fn winsock_loopback(port: u16) -> io::Result<i32> {
+    |    ^^^^^^^^^^^^^^^^
+
+warning: method `fixture` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:731:12
+    |
+567 | impl RendererSandbox {
+    | -------------------- method in this implementation
+...
+731 |     pub fn fixture(&self) -> &Path {
+    |            ^^^^^^^
+
+warning: function `denial_worker` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:998:8
+    |
+998 | pub fn denial_worker(path: &Path, port: u16) -> io::Result<()> {
+    |        ^^^^^^^^^^^^^
+
+warning: function `denial_worker_inner` is never used
+    --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:1008:4
+     |
+1008 | fn denial_worker_inner(path: &Path, port: u16) -> io::Result<()> {
+     |    ^^^^^^^^^^^^^^^^^^^
+
+warning: function `wsa_startup` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:101:8
+    |
+101 |     fn wsa_startup(version: u16, data: *mut WsaData) -> i32;
+    |        ^^^^^^^^^^^
+
+warning: function `wsa_cleanup` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:103:8
+    |
+103 |     fn wsa_cleanup() -> i32;
+    |        ^^^^^^^^^^^
+
+warning: function `wsa_get_last_error` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:105:8
+    |
+105 |     fn wsa_get_last_error() -> i32;
+    |        ^^^^^^^^^^^^^^^^^^
+
+warning: function `socket` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:107:8
+    |
+107 |     fn socket(family: i32, socket_type: i32, protocol: i32) -> usize;
+    |        ^^^^^^
+
+warning: function `connect` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:109:8
+    |
+109 |     fn connect(socket: usize, address: *const SockAddrIn, bytes: i32) -> i32;
+    |        ^^^^^^^
+
+warning: function `send` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:111:8
+    |
+111 |     fn send(socket: usize, bytes: *const i8, length: i32, flags: i32) -> i32;
+    |        ^^^^
+
+warning: function `ioctl_socket` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:113:8
+    |
+113 |     fn ioctl_socket(socket: usize, command: i32, value: *mut u32) -> i32;
+    |        ^^^^^^^^^^^^
+
+warning: function `wsa_poll` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:115:8
+    |
+115 |     fn wsa_poll(fds: *mut WsaPollFd, count: u32, timeout_ms: i32) -> i32;
+    |        ^^^^^^^^
+
+warning: function `get_socket_option` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:117:8
+    |
+117 |     fn get_socket_option(
+    |        ^^^^^^^^^^^^^^^^^
+
+warning: function `closesocket` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence\verification\..\..\crates\app\src\windows_sandbox.rs:125:8
+    |
+125 |     fn closesocket(socket: usize) -> i32;
+    |        ^^^^^^^^^^^
+
+warning: 20 warnings emitted
+
+
+COMMAND ordinary process smoke returncode=0 timed_out=False argv=["C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\opensequoia.exe", "--process-smoke"]
+STDOUT truncated=False
+PROCESS_SMOKE_OK healthy=1 malformed_rejected=1 restarted=1 spawned=3 reaped=3
+Local lifecycle probe only; no sandbox, site isolation or authenticated peer claim.
+
+STDERR truncated=False
+
+COMMAND AppContainer renderer and denial smoke returncode=1 timed_out=False argv=["C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\opensequoia.exe", "--sandbox-smoke"]
+STDOUT truncated=False
+SANDBOX_RENDER app=1 sid_equal=1 integrity_rid=4096 capabilities=0 equal=1 spawned=2 reaped=2
+SANDBOX_DENIAL_CONTROL app=0 read=0 write=0 network=0 accepted=1 fixture_unchanged=1
+SANDBOX_DENIAL_OBSERVATION accepted=0 fixture_unchanged=1
+SANDBOX_PROBE_VERIFIED_FILES app=1 read=5 write=5
+SANDBOX_CLEANUP profile_deleted=1 staging_removed=1
+
+STDERR truncated=False
+OpenSequoia: AppContainer exact denial observation failed: exit=Some(1) output=SANDBOX_PROBE_FILES app=1 read=5 write=5
+SANDBOX_PROBE_ERROR operation=Winsock WSAPoll loopback connect timed out with SO_ERROR=0
+
+COMMAND AppContainer Job/handle/cancellation lifetime returncode=0 timed_out=False argv=["C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-process-helper.exe", "sandbox-lifetime"]
+STDOUT truncated=False
+SANDBOX_LIFETIME_STAGE wrong_path=denied
+SANDBOX_LIFETIME_STAGE job_close=1
+SANDBOX_LIFETIME_STAGE quota=2 result=STARTED_AND_REAPED
+SANDBOX_LIFETIME_STAGE quota=1 result=DENIED:1816
+SANDBOX_LIFETIME_STAGE handle_include=true result=INHERITED
+SANDBOX_LIFETIME_STAGE handle_include=false result=0xc0000008
+SANDBOX_LIFETIME_STAGE cancellation=995
+SANDBOX_LIFETIME job_close=1 quota_control=started quota_denied=1816 include_control=1 unrelated_handle=0xc0000008 cancellation=995 wrong_path=denied
+SANDBOX_LIFETIME_OK reaped=1 cleanup=1
+
+STDERR truncated=False
+
+COMMAND AppContainer parent death and owned recovery returncode=0 timed_out=False argv=["C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-process-helper.exe", "sandbox-parent-death"]
+STDOUT truncated=False
+SANDBOX_PARENT_DEATH killed=1 child_reaped=1 profile_deleted=1 staging_removed=1
+
+STDERR truncated=False
+
+PASS no preexisting generated staging: entries=0; oracle never deletes abandoned input
+PASS application build: returncode=0
+PASS one compatible windows-sys rlib: count=1
+PASS process helper build: returncode=0
+PASS ordinary process smoke exit: returncode=0
+PASS ordinary healthy/malformed/restart/reap controls: PROCESS_SMOKE_OK healthy=1 malformed_rejected=1 restarted=1 spawned=3 reaped=3
+FAIL sandbox smoke exit: returncode=1
+PASS real renderer equality and suspended token policy: SANDBOX_RENDER app=1 sid_equal=1 integrity_rid=4096 capabilities=0 equal=1 spawned=2 reaped=2
+PASS ordinary file/network positive control: SANDBOX_DENIAL_CONTROL app=0 read=0 write=0 network=0 accepted=1 fixture_unchanged=1
+PASS AppContainer exact file denials: SANDBOX_PROBE_VERIFIED_FILES app=1 read=5 write=5
+PASS unchanged fixture and no accepted sandbox connection: SANDBOX_DENIAL_OBSERVATION accepted=0 fixture_unchanged=1
+FAIL actual helper loopback WSAEACCES 10013: SANDBOX_PROBE_VERIFIED app=1 read=5 write=5 network=10013
+FAIL broker exact denial/token observation: SANDBOX_DENIAL ordinary_app=0 sandbox_app=1 sid_equal=1 integrity_rid=4096 capabilities=0 read=5 write=5 network=10013 ordinary_accepted=1 accepted=0 fixture_unchanged=1
+PASS observable sandbox profile/staging cleanup: SANDBOX_CLEANUP profile_deleted=1 staging_removed=1
+FAIL complete sandbox smoke: SANDBOX_SMOKE_OK token=verified render=equal denials=verified cleanup=ok
+PASS lifetime exit: returncode=0
+PASS wrong-path fail closed: SANDBOX_LIFETIME_STAGE wrong_path=denied
+PASS Job close kills real sandbox child: SANDBOX_LIFETIME_STAGE job_close=1
+PASS two-process descendant positive control: SANDBOX_LIFETIME_STAGE quota=2 result=STARTED_AND_REAPED
+PASS one-process quota 1816: SANDBOX_LIFETIME_STAGE quota=1 result=DENIED:1816
+PASS included handle marker positive control: SANDBOX_LIFETIME_STAGE handle_include=true result=INHERITED
+PASS excluded strict-handle observation: SANDBOX_LIFETIME_STAGE handle_include=false result=0xc0000008
+PASS real pipe cancellation 995: SANDBOX_LIFETIME_STAGE cancellation=995
+PASS lifetime summary: SANDBOX_LIFETIME job_close=1 quota_control=started quota_denied=1816 include_control=1 unrelated_handle=0xc0000008 cancellation=995 wrong_path=denied
+PASS lifetime reaping and cleanup: SANDBOX_LIFETIME_OK reaped=1 cleanup=1
+PASS parent-death exit: returncode=0
+PASS parent death kills child and recovers owned profile/staging: SANDBOX_PARENT_DEATH killed=1 child_reaped=1 profile_deleted=1 staging_removed=1
+PASS all generated staging removed: remaining=0
+passed=False unmet=["sandbox smoke exit", "actual helper loopback WSAEACCES 10013", "broker exact denial/token observation", "complete sandbox smoke"]

@@ -1,0 +1,10 @@
+{
+  "tool": "core-hypothesis-record",
+  "params": {
+    "claim": "The corrected release executable uses Windows GUI subsystem 2 while retaining AMD64, CFG/NX/PIE/high-entropy flags and OpenSequoia 0.2 branding.",
+    "prediction": "PE headers identify pei-x86-64 and subsystem 2; DLL characteristics retain high entropy VA, dynamic base, NX and guard CF; resource version is OpenSequoia 0.2.0.0."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis_id\":\"hyp_12\",\"revision\":57}}\n"
+}

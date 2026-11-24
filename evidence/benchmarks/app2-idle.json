@@ -1,0 +1,1276 @@
+{
+  "schema": 1,
+  "task": "M02",
+  "started_utc": "2026-11-22T20:12:46.443069+00:00",
+  "finished_utc": "2026-11-22T20:13:21.613596+00:00",
+  "kind": "warm local-development GUI exploratory idle snapshots",
+  "source_revision": "83451aa1a93f7c85b730dd30940975bd7abf6aaa",
+  "sampler_sources": [
+    {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\scripts\\measure_app_idle.py",
+      "bytes": 9825,
+      "sha256": "80f26bbae8e0ca5486cc8f8ec724eb590209cf7f0eb355d39b2f9a865832df8b"
+    },
+    {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\scripts\\measure_idle.py",
+      "bytes": 6133,
+      "sha256": "e993b69a87d2a97b76f1674afd5ceff9a8a566462f3fa8d1ee5fa87daa6739c9"
+    }
+  ],
+  "command": [
+    "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\scripts\\measure_app_idle.py",
+    "--executable",
+    "target/gui/release/opensequoia.exe",
+    "--fixture",
+    "fixtures/welcome.html",
+    "--output",
+    "evidence/benchmarks/app2-idle.json",
+    "--source-revision",
+    "83451aa1a93f7c85b730dd30940975bd7abf6aaa",
+    "--expected-sha256",
+    "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e",
+    "--runs",
+    "7",
+    "--seconds",
+    "5",
+    "--interval",
+    "0.25"
+  ],
+  "before": {
+    "executable": {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\gui\\release\\opensequoia.exe",
+      "bytes": 946176,
+      "sha256": "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e"
+    },
+    "fixture": {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\fixtures\\welcome.html",
+      "bytes": 1358,
+      "sha256": "68cedd95f6f8125e334f748f1090cfb29f27fa7affd37e86214a90469c2294ea"
+    },
+    "environment": {
+      "os": "Windows-11-10.0.26200-SP0",
+      "windows_build": 26200,
+      "architecture": "AMD64",
+      "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+      "python": "3.13.5",
+      "psutil": "7.1.2",
+      "logical_cpus": 12,
+      "physical_cpus": 10,
+      "installed_memory_bytes": 16716918784,
+      "available_memory_bytes": 7322234880,
+      "power_scheme": "Power Scheme GUID: a1841308-3541-4fab-bc81-f71556f20b4a  (Power saver)",
+      "power_scheme_exit_code": 0
+    }
+  },
+  "after": {
+    "executable": {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\gui\\release\\opensequoia.exe",
+      "bytes": 946176,
+      "sha256": "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e"
+    },
+    "fixture": {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\fixtures\\welcome.html",
+      "bytes": 1358,
+      "sha256": "68cedd95f6f8125e334f748f1090cfb29f27fa7affd37e86214a90469c2294ea"
+    },
+    "environment": {
+      "os": "Windows-11-10.0.26200-SP0",
+      "windows_build": 26200,
+      "architecture": "AMD64",
+      "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+      "python": "3.13.5",
+      "psutil": "7.1.2",
+      "logical_cpus": 12,
+      "physical_cpus": 10,
+      "installed_memory_bytes": 16716918784,
+      "available_memory_bytes": 7370428416,
+      "power_scheme": "Power Scheme GUID: a1841308-3541-4fab-bc81-f71556f20b4a  (Power saver)",
+      "power_scheme_exit_code": 0
+    }
+  },
+  "runs": [
+    {
+      "process_spawn_ms": 226.44320000108564,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8310784,
+        "private_commit_bytes": 1421312,
+        "cpu_seconds": 0.078125,
+        "elapsed_ms": 4987.052600001334
+      },
+      "observed_process_identities": [
+        {
+          "pid": 21740,
+          "created_unix_seconds": 1795378366.6574233
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1421312,
+      "sampled_peak_working_set_bytes": 8310784,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 2084864,
+          "private_commit_bytes": 421888,
+          "cpu_seconds": 0.0,
+          "elapsed_ms": 240.33670000062557
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 492.8813000005903
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 741.4599000003363
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 991.6635000008682
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1241.954799999803
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1492.2119000002567
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1742.163500002789
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1992.4329000023135
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2242.045099999814
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2490.0414000003366
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2740.298700002313
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2989.8115000032703
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3234.185500001331
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3492.890500001522
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3734.849200001918
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3986.7759000007936
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4240.408400000888
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4487.393999999767
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4738.322000001062
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8310784,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4987.052600001334
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 9.545700002490776,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8282112,
+        "private_commit_bytes": 1409024,
+        "cpu_seconds": 0.140625,
+        "elapsed_ms": 4773.577899999509
+      },
+      "observed_process_identities": [
+        {
+          "pid": 10468,
+          "created_unix_seconds": 1795378371.469571
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1409024,
+      "sampled_peak_working_set_bytes": 8282112,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 4956160,
+          "private_commit_bytes": 958464,
+          "cpu_seconds": 0.015625,
+          "elapsed_ms": 24.210499999753665
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 267.53760000065085
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 524.241200000688
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 774.2142999995849
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.09375,
+          "elapsed_ms": 1020.573300000251
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 1267.9152000018803
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 1517.4748999997973
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 1773.4555999995791
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 2023.2173000003968
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 2273.4176000012667
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 2520.423900001333
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 2772.2023999995145
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 3020.255300001736
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 3267.8472000006877
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 3518.284000001586
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 3767.11780000187
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 4017.480999998952
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 4267.466699999204
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 4525.110200000199
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1409024,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 4773.577899999509
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 9.056700000655837,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8286208,
+        "private_commit_bytes": 1421312,
+        "cpu_seconds": 0.0625,
+        "elapsed_ms": 4770.682599999418
+      },
+      "observed_process_identities": [
+        {
+          "pid": 25108,
+          "created_unix_seconds": 1795378376.4880188
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1421312,
+      "sampled_peak_working_set_bytes": 8286208,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 4841472,
+          "private_commit_bytes": 933888,
+          "cpu_seconds": 0.015625,
+          "elapsed_ms": 23.238499998115003
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 272.12259999942034
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 522.1711000012874
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 768.5977000001003
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1022.7429000005941
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1270.6409999991592
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1522.399099998438
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1769.7130000015022
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2019.7002999993856
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2272.2781999982544
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2522.744900001271
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2770.6465999981447
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3022.136399998999
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3272.5619999982882
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3519.8048999991443
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3770.1268999990134
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 4019.901600000594
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 4272.373399999196
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 4519.638999998278
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 4770.682599999418
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 8.39320000159205,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8273920,
+        "private_commit_bytes": 1413120,
+        "cpu_seconds": 0.09375,
+        "elapsed_ms": 4769.171100000676
+      },
+      "observed_process_identities": [
+        {
+          "pid": 7108,
+          "created_unix_seconds": 1795378381.5067403
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1413120,
+      "sampled_peak_working_set_bytes": 8273920,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 4759552,
+          "private_commit_bytes": 905216,
+          "cpu_seconds": 0.015625,
+          "elapsed_ms": 21.873900001082802
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 272.58250000159023
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 517.8756999994221
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 767.8373999988253
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1022.5050000008196
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1273.1505000010657
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1521.026599999459
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 1771.6308000017307
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2019.5488999997906
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2271.3896999994176
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2517.6611999995657
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 2769.4687000002887
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3019.7595999998157
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3272.942499999772
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 3518.642600000021
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3771.6442000019015
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.09375,
+          "elapsed_ms": 4019.7245000017574
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.09375,
+          "elapsed_ms": 4269.600799998443
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.09375,
+          "elapsed_ms": 4524.163999998564
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8273920,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.09375,
+          "elapsed_ms": 4769.171100000676
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 8.58449999941513,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8278016,
+        "private_commit_bytes": 1413120,
+        "cpu_seconds": 0.0625,
+        "elapsed_ms": 4773.021200002404
+      },
+      "observed_process_identities": [
+        {
+          "pid": 2616,
+          "created_unix_seconds": 1795378386.5240998
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1413120,
+      "sampled_peak_working_set_bytes": 8278016,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 4952064,
+          "private_commit_bytes": 958464,
+          "cpu_seconds": 0.0,
+          "elapsed_ms": 23.368199999822536
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 273.37009999973816
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 517.9310999992595
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 767.1740000005229
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 1016.348500001186
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 1266.8854000003194
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 1516.986700000416
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 1771.4498999994248
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 2023.8251000009768
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 2267.4585999993724
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 2523.995899999136
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 2767.749000002368
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 3016.424500001449
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 3272.382300001482
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 3521.810500002175
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 3773.4512999995786
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 4023.730400000204
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.046875,
+          "elapsed_ms": 4272.220000002562
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 4522.073800002545
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8278016,
+          "private_commit_bytes": 1413120,
+          "cpu_seconds": 0.0625,
+          "elapsed_ms": 4773.021200002404
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 8.344400001078611,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8282112,
+        "private_commit_bytes": 1421312,
+        "cpu_seconds": 0.078125,
+        "elapsed_ms": 4768.742600001133
+      },
+      "observed_process_identities": [
+        {
+          "pid": 24112,
+          "created_unix_seconds": 1795378391.542537
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1421312,
+      "sampled_peak_working_set_bytes": 8282112,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 4988928,
+          "private_commit_bytes": 962560,
+          "cpu_seconds": 0.015625,
+          "elapsed_ms": 24.144999999407446
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 271.5710999982548
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 516.7908000003081
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 772.4264999997104
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1021.1740999984613
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1272.659999998723
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1521.910100000241
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 1766.9224999990547
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2016.7111000009754
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2266.600599999947
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2519.281000000774
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 2766.2875999994867
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3019.4351999998617
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3271.9648999991477
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3521.489800001291
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 3768.9892999987933
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4022.458999999799
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4269.560600001569
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4523.831800001062
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8282112,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 4768.742600001133
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 8.745600000111153,
+      "sample_duration_seconds": 5.0,
+      "sample_interval_seconds": 0.25,
+      "final": {
+        "processes": 1,
+        "working_set_bytes": 8286208,
+        "private_commit_bytes": 1421312,
+        "cpu_seconds": 0.15625,
+        "elapsed_ms": 4777.374000001146
+      },
+      "observed_process_identities": [
+        {
+          "pid": 12628,
+          "created_unix_seconds": 1795378396.5594313
+        }
+      ],
+      "maximum_sampled_process_count": 1,
+      "sampled_peak_private_bytes": 1421312,
+      "sampled_peak_working_set_bytes": 8286208,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 4927488,
+          "private_commit_bytes": 913408,
+          "cpu_seconds": 0.015625,
+          "elapsed_ms": 22.952900002565002
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 269.69800000006217
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.078125,
+          "elapsed_ms": 524.0279000026931
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.09375,
+          "elapsed_ms": 769.1962000026251
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.109375,
+          "elapsed_ms": 1023.8575000003038
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.125,
+          "elapsed_ms": 1269.490800001222
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 1519.4030000020575
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.140625,
+          "elapsed_ms": 1773.0577000002086
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 2023.58760000061
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 2269.740300002013
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 2520.761700001458
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 2767.29350000096
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 3017.106400002376
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 3270.7824999997683
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 3523.7741000019014
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 3769.722000000911
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 4018.8192000023264
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 4269.595500001742
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 4519.456500001979
+        },
+        {
+          "processes": 1,
+          "working_set_bytes": 8286208,
+          "private_commit_bytes": 1421312,
+          "cpu_seconds": 0.15625,
+          "elapsed_ms": 4777.374000001146
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "final_private_bytes": {
+      "median": 1421312,
+      "min": 1409024,
+      "max": 1421312
+    },
+    "final_working_set_bytes": {
+      "median": 8282112,
+      "min": 8273920,
+      "max": 8310784
+    },
+    "final_process_count": {
+      "median": 1,
+      "min": 1,
+      "max": 1
+    },
+    "sampled_peak_private_bytes": {
+      "median": 1421312,
+      "min": 1409024,
+      "max": 1421312
+    },
+    "sampled_peak_working_set_bytes": {
+      "median": 8282112,
+      "min": 8273920,
+      "max": 8310784
+    }
+  },
+  "window_policy": "STARTF_USESHOWWINDOW with SW_HIDE requested; no interaction",
+  "limitations": [
+    "Immutable0.2 local application EXE; current development source may have advanced",
+    "No profiles implemented or used; fixed trusted local fixture only",
+    "Hidden-window exploratory samples; no first-paint/readiness/interaction verdict",
+    "No controlled cold-cache run; final sample near five seconds is idle observation",
+    "Transient children and memory/CPU peaks between samples may be missed",
+    "Shared sampler omits vanished or access-denied processes; root accessibility is checked",
+    "Root remains after one-shot renderer exits; one sampled process is valid",
+    "Working-set sum may count shared pages more than once",
+    "CPU seconds sum applies only to extant sampled processes, not total exited-child CPU",
+    "Host background workload and available RAM/power state are uncontrolled",
+    "Retained full-browser functionality is incomplete; no equivalent Brave advantage or budgets",
+    "Startup Popen duration is process creation only; not startup-to-paint or navigation speed"
+  ]
+}

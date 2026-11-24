@@ -1,0 +1,71 @@
+{
+  "authority": "original-files",
+  "confidence": "observed",
+  "coverage": {
+    "examined": 2,
+    "status": "complete",
+    "total": 2
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_15a6b690669ec0bd4b2b9cb3e76f6b6be92cda0177889ec448ab11d12c37518b",
+  "limitations": [],
+  "links": [],
+  "locations": [],
+  "operation": "native_pe_resources_list",
+  "params": {
+    "max_entries": 64,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/craft-opensequoia-final.exe"
+  },
+  "result": {
+    "entries": [
+      {
+        "codepage": 0,
+        "file_offset": 883664,
+        "language": 1033,
+        "name": "1",
+        "rva": "0xdb3d0",
+        "sha256": "f1a83999267cfae7ec75375eecda34e2e9f2969d0d041643d39cb0ee7d448b84",
+        "size": 933,
+        "type": "RT_MANIFEST"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 882848,
+        "language": 1033,
+        "name": "1",
+        "rva": "0xdb0a0",
+        "sha256": "d309e8f837f5a4dd70288b9e5d0d22d00047bfe15fa41552d235e64001d9669c",
+        "size": 816,
+        "type": "RT_VERSION"
+      }
+    ],
+    "icon_groups": [],
+    "manifest": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n  <assemblyIdentity version=\"0.1.0.0\" processorArchitecture=\"*\" name=\"OpenSequoia\" type=\"win32\"/>\n  <description>OpenSequoia local rendering development increment</description>\n  <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\"><security><requestedPrivileges>\n    <requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"/>\n  </requestedPrivileges></security></trustInfo>\n  <application xmlns=\"urn:schemas-microsoft-com:asm.v3\"><windowsSettings>\n    <dpiAware xmlns=\"http://schemas.microsoft.com/SMI/2005/WindowsSettings\">true/pm</dpiAware>\n    <dpiAwareness xmlns=\"http://schemas.microsoft.com/SMI/2016/WindowsSettings\">PerMonitorV2</dpiAwareness>\n    <longPathAware xmlns=\"http://schemas.microsoft.com/SMI/2016/WindowsSettings\">true</longPathAware>\n  </windowsSettings></application>\n</assembly>\n",
+    "truncated": false,
+    "version": {
+      "file_version": "0.1.0.0",
+      "product_version": "0.1.0.0",
+      "strings": {
+        "CompanyName": "OpenSequoia Project",
+        "FileDescription": "OpenSequoia local rendering development increment",
+        "FileVersion": "0.1.0.0",
+        "InternalName": "opensequoia",
+        "LegalCopyright": "OpenSequoia contributors; MPL-2.0",
+        "OriginalFilename": "opensequoia.exe",
+        "ProductName": "OpenSequoia",
+        "ProductVersion": "0.1.0"
+      }
+    }
+  },
+  "subject": {
+    "kind": "pe",
+    "name": "craft-opensequoia-final.exe",
+    "sha256": "930a4415a37137ad33ce77e4c82c134aa1ae0be5dcae14bc8449104ffb7042b8"
+  },
+  "summary": "2 resources, product \"OpenSequoia\"."
+}

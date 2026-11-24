@@ -1,0 +1,18 @@
+{
+  "task": "S02c",
+  "owner": "/root/navigation_model",
+  "source": "crates/app/src/browser.rs",
+  "sha256": "28BB64613F96CE2B6A5E48C0F14E3DF60D1C53C0D2286E1A1C5AFB23D8605C8B",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\r\nbinary: rustc\r\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\r\ncommit-date: 2026-09-01\r\nhost: x86_64-pc-windows-msvc\r\nrelease: 1.98.1\r\nLLVM version: 22.1.8\r\n",
+  "package_version": "0.2.0",
+  "tests": "cargo test -p opensequoia --locked browser::tests",
+  "passed": 12,
+  "failed": 0,
+  "ignored": 0,
+  "lint": "App integration pending unrelated windows.rs collapsible_if; no model diagnostics",
+  "limitations": [
+    "Independent parent review pending",
+    "No file I/O or sandbox authority",
+    "No native runtime/browser parity verdict"
+  ]
+}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>OpenSequoia</title></head>
+<body>
+<h1>OpenSequoia</h1>
+<p>A Rust browser app in development.</p>
+<h2>Open a local document</h2>
+<p>Press Ctrl+L and enter a trusted local HTML filename. Open about:guide for keyboard shortcuts, or use the Guide button.</p>
+<p>Use tabs, Back, Forward and Reload to explore local pages. Their text is parsed and laid out by the Rust renderer in a separate child process.</p>
+<p>Entities decode here: trees &amp; sunlight. Unicode stays intact: Sequoia — नमस्ते — 日本語.</p>
+<h2>Keyboard interaction</h2>
+<p>Ctrl+T opens a tab, Ctrl+W closes it, and Ctrl+Tab switches tabs. Click the page to scroll with arrows, Page Up, Page Down, Home and End. Resize the window to reflow text.</p>
+<h2>Implementation status</h2>
+<p>The current app supports local text, headings, paragraphs, divisions and line breaks. Remote browsing, CSS, scripts, links, forms, images, profiles and most modern web APIs are still being implemented.</p>
+<p>Use trusted development files. Full compatibility, privacy, isolation, extensions and performance gates must be verified before release.</p>
+<h2>Security gates</h2>
+<p>No remote browsing is enabled before process isolation, Windows sandboxing, origin policy and certificate verification exist.</p>
+</body>
+</html>

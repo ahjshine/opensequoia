@@ -1,0 +1,4 @@
+   Compiling opensequoia v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.36s
+     Running `target\debug\opensequoia.exe --smoke-test`
+WINDOW_SMOKE_OK paints=1 drawn_text_runs=113

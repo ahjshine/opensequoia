@@ -1,0 +1,22 @@
+[
+  {
+    "path": "scripts/verify.ps1",
+    "sha256": "1ce9715913d586608222d8fd8358246871df8911299c0331a90c6d313e01e6cb"
+  },
+  {
+    "path": "scripts/package_dev.py",
+    "sha256": "5cab822f1bd57ae2bc6e91b9ed1ac6209942e0f4fed8adfb584251b04d7df127"
+  },
+  {
+    "path": ".github/workflows/windows.yml",
+    "sha256": "9226ef96b86f4b94456b322d98f0790bb02852fb89155a373df48b2e4d93c9ff"
+  },
+  {
+    "path": "README.md",
+    "sha256": "3af3ea597f059bdec0f604ea88769bb2a41668331a09042b6c7dd97d779b1119"
+  },
+  {
+    "path": "evidence/verification/process2-helper.rs",
+    "sha256": "b0a2568e850cce947d5b0e38937cc25d34649ef4f37044ac02308c1be15d2e65"
+  }
+]

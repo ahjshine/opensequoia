@@ -1,0 +1,53 @@
+{
+  "result": {
+    "continue_with": "core_evidence_browse",
+    "counts": {
+      "libraries": 12,
+      "segments": 6,
+      "toolchain_hints": 2,
+      "warnings": 0
+    },
+    "record": {
+      "carries_target_content": false,
+      "confidence": "derived",
+      "coverage": {
+        "examined": 1,
+        "status": "complete",
+        "total": 1
+      },
+      "evidence_id": "ev_3f209fa6421ff44641b469a9bb6cdf58d62f01c027a6e60fca09236f826fa98a",
+      "limitations": [
+        {
+          "code": "indirect_jumps_unresolved",
+          "message": "49 indirect jumps could not be resolved; code they reach may be missing"
+        },
+        {
+          "code": "stripped_binary",
+          "message": "no local symbols: most function names are generated (sub_…)"
+        },
+        {
+          "code": "static_analysis_only",
+          "message": "functions reached only through computed pointers or at run time may be missing; absence is not proof"
+        }
+      ],
+      "lists": {
+        "libraries": 12,
+        "segments": 6,
+        "toolchain_hints": 2,
+        "warnings": 0
+      },
+      "operation": "core_overview_show",
+      "subject": {
+        "kind": "pe",
+        "name": "app2-opensequoia.exe",
+        "sha256": "d50b7780c3dcfcce1906e946a103c2a0a765689805b2f15b6db4ad4208160e8f"
+      },
+      "summary": "PE (Windows) executable for x86_64 with 1193 functions, 2990 strings, 162 imports from 12 libraries."
+    },
+    "saved_evidence": {
+      "evidence_id": "ev_3f209fa6421ff44641b469a9bb6cdf58d62f01c027a6e60fca09236f826fa98a",
+      "kind": "saved"
+    },
+    "summary": "PE (Windows) executable for x86_64 with 1193 functions, 2990 strings, 162 imports from 12 libraries."
+  }
+}

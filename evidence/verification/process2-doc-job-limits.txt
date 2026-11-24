@@ -1,0 +1,1123 @@
+  
+		 
+			
+		 
+			 SetInformationJobObject function (jobapi2.h) - Win32 apps | Microsoft Learn 
+			 
+			 
+			 
+
+			 
+			  
+
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			   
+			 
+			 
+			 
+
+			 
+
+			 
+			
+
+			 
+			
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+		 
+	 
+		 
+	
+		 
+	
+		 
+	
+		 
+	
+
+			 
+			 
+				(function () {
+			try {
+				var stored = localStorage.getItem('theme');
+				var theme = /^(light|dark|high-contrast)$/.test(stored)
+					? stored
+					: matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+				document.documentElement.classList.add('theme-' + theme);
+			} catch (e) {}
+		})();;
+			 
+
+			 
+				(function () {
+			try {
+				var state = JSON.parse(localStorage.getItem('atlas-layout-preferences') || '{}');
+				var view = state["docs-layout-persistence"] || {};
+				var excludesKey = "";
+				var blocked = {};
+				if (excludesKey) {
+					var exclusions = JSON.parse(localStorage.getItem('atlas-layout-exclusions') || '{}');
+					if (Object.prototype.hasOwnProperty.call(exclusions, excludesKey)) {
+						var scoped = exclusions[excludesKey];
+						if (scoped) {
+							if (typeof scoped === 'object') blocked = scoped;
+						}
+					}
+				}
+				var html = document.documentElement;
+				for (var c in view) {
+					if (Object.prototype.hasOwnProperty.call(blocked, c)) continue;
+					if (view[c]) html.classList.add(c);
+					else html.classList.remove(c);
+				}
+			} catch (e) {}
+		})();;
+			 
+
+			 
+			
+			 
+			
+			 
+			 
+			 
+			
+
+			 
+			 
+		var msDocs = {
+  "environment": {
+    "accessLevel": "online",
+    "azurePortalHostname": "portal.azure.com",
+    "reviewFeatures": false,
+    "supportLevel": "production",
+    "systemContent": true,
+    "siteName": "learn",
+    "legacyHosting": false
+  },
+  "data": {
+    "contentLocale": "en-us",
+    "contentDir": "ltr",
+    "userLocale": "en-us",
+    "userDir": "ltr",
+    "pageTemplate": "Conceptual",
+    "layoutStateStorageKey": "docs-layout-persistence",
+    "brand": "",
+    "context": {},
+    "standardFeedback": true,
+    "showFeedbackReport": false,
+    "feedbackHelpLinkType": "get-help-at-qna",
+    "feedbackHelpLinkUrl": "https://learn.microsoft.com/answers/tags/224/windows-api-win32/",
+    "feedbackSystem": "Standard",
+    "feedbackGitHubRepo": "",
+    "feedbackProductUrl": "https://www.microsoft.com/en-us/windowsinsider/feedbackhub/fb",
+    "extendBreadcrumb": true,
+    "isEditDisplayable": true,
+    "isPrivateUnauthorized": false,
+    "hideViewSource": false,
+    "isPermissioned": false,
+    "hasRecommendations": false
+  },
+  "functions": {}
+};;
+	 
+
+			 
+			 
+			
+
+			 
+			
+		 
+	
+			 
+				 
+		 
+			
+		 
+			Skip to main content
+		 
+	
+		 
+			Skip to Ask Learn chat experience
+		 
+	
+
+			 
+			 
+			 
+				 
+					 This browser is no longer supported. 
+					 
+						Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+					 
+					 
+						 
+							Download Microsoft Edge
+						 
+						 
+							More info about Internet Explorer and Microsoft Edge
+						 
+					 
+				 
+			 
+			 
+			 
+				 
+				 
+				 
+			 
+			
+		 
+		 
+			 
+			
+		 
+		 
+	
+		 
+	 
+				  
+					
+		 
+			 
+				 
+					 
+						 
+							 
+								 
+								 
+							 
+						 
+						 
+					 
+				 
+			 
+		 
+	
+			   
+
+				 
+					
+			 
+		 
+			 
+				 
+				  Table of contents  
+			 
+			 
+				 
+				 Exit editor mode 
+			 
+		 
+	  
+		 
+	
+			 
+				 
+					
+		 
+			 
+				
+		 
+			 
+				 
+					 
+				 
+			 
+			 
+		 
+
+		 
+	 
+		 
+			
+		 
+			 
+				 
+			 
+		 
+		 
+			 
+				 
+			 
+			 Ask Learn 
+		 
+		 
+			 
+				 
+			 
+			 Ask Learn 
+		 
+	 
+
+			 
+				 
+					 
+						 
+					 
+				 
+				 
+					
+		 
+			 
+				 
+			 
+			 Reading mode 
+		 
+	 
+		 
+			 
+			 Table of contents 
+		 
+	 
+		 
+			 
+				 
+			 
+			 Read in English 
+		 
+	
+					
+		 
+			 
+				 
+			 
+			 Add 
+		 
+	 
+		 
+			 
+				 
+			 
+			 Add to Plans 
+		 
+	 
+					
+		 
+			 
+				 
+			 
+			 Edit 
+		 
+	  
+		 
+		
+				 
+					 
+						 
+						 
+						 
+					 
+					 Copy Markdown 
+				 
+		   
+				 
+					 
+						 
+					 
+					 Print 
+				 
+		  
+	
+				 
+			 
+		 
+	
+			 
+		 
+	  
+		 
+		 
+			 
+			 
+				 
+					 
+						 
+						 Note 
+					 
+					 
+						Access to this page requires authorization. You can try  signing in  or  changing directories .
+					 
+					 
+						Access to this page requires authorization. You can try  changing directories .
+					 
+				 
+			 
+		 
+	
+					 SetInformationJobObject function (jobapi2.h) 
+					
+		 
+			 
+				 
+					
+		 
+			 
+				 
+			 
+			 Feedback 
+		 
+	
+				 
+		  
+		 
+	 
+		 
+			 
+				 
+					 
+				 
+				 
+					 
+						Summarize this article for me
+					 
+				 
+			 
+			 
+			 
+		 
+	 
+		 
+			 
+				In this article
+			 
+		 
+	  Sets limits for a job object. 
+ Syntax 
+ BOOL SetInformationJobObject(
+  [in] HANDLE             hJob,
+  [in] JOBOBJECTINFOCLASS JobObjectInformationClass,
+  [in] LPVOID             lpJobObjectInformation,
+  [in] DWORD              cbJobObjectInformationLength
+);
+ 
+ Parameters 
+ [in] hJob 
+ A handle to the job whose limits are being set. The
+ CreateJobObject  or
+ OpenJobObject  function returns this handle. The handle
+must have the  JOB_OBJECT_SET_ATTRIBUTES  access right. For more information, see
+ Job Object Security and Access Rights . 
+ [in] JobObjectInformationClass 
+ The information class for the limits to be set. This parameter can be one of the following values. 
+ 
+ 
+ Value 
+ Meaning 
+ 
+ 
+ 
+ JobObjectAssociateCompletionPortInformation 
+ 7 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_ASSOCIATE_COMPLETION_PORT  
+        structure.
+ 
+ 
+ 
+ 
+ JobObjectBasicLimitInformation 
+ 2 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_BASIC_LIMIT_INFORMATION  
+        structure.
+ 
+ 
+ 
+ 
+ JobObjectBasicUIRestrictions 
+ 4 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_BASIC_UI_RESTRICTIONS  
+        structure.
+ 
+ 
+ 
+ 
+ JobObjectCpuRateControlInformation 
+ 15 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_CPU_RATE_CONTROL_INFORMATION  
+        structure.
+        
+ Windows 7, Windows Server 2008 R2, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ If Dynamic Fair Share Scheduling (DFSS) is enabled, the CPU rate cannot be set and SetInformationJobObject will fail with error code 50 ("The request is not supported"). 
+ 
+ 
+ 
+ 
+ JobObjectEndOfJobTimeInformation 
+ 6 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_END_OF_JOB_TIME_INFORMATION  
+        structure.
+ 
+ 
+ 
+ 
+ JobObjectExtendedLimitInformation 
+ 9 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_EXTENDED_LIMIT_INFORMATION  
+        structure.
+ 
+ 
+ 
+ 
+ JobObjectGroupInformation 
+ 11 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         USHORT  value that specifies the list of 
+         processor groups  to assign the job to. The 
+         cbJobObjectInfoLength  parameter is set to the size of the group data. Divide this 
+        value by  sizeof(USHORT)  to determine the number of groups.
+        
+ Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ 
+ 
+ 
+ 
+ JobObjectGroupInformationEx 
+ 14 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a buffer that contains an array 
+        of  GROUP_AFFINITY  structures that specify the 
+        affinity of the job for the  processor groups  to which 
+        the job is currently assigned. The  cbJobObjectInfoLength  parameter is set to the 
+        size of the group affinity data. Divide this value by 
+         sizeof(GROUP_AFFINITY)  to determine the number of groups.
+        
+ Windows 7, Windows Server 2008 R2, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ 
+ 
+ 
+ 
+ JobObjectLimitViolationInformation2 
+ 34 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_LIMIT_VIOLATION_INFORMATION_2  
+        structure.
+        
+ Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ 
+ 
+ 
+ 
+ JobObjectNetRateControlInformation 
+ 32 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_NET_RATE_CONTROL_INFORMATION  
+        structure.
+        
+ Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ 
+ 
+ 
+ 
+ JobObjectNotificationLimitInformation 
+ 12 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_NOTIFICATION_LIMIT_INFORMATION  
+        structure.
+        
+ Windows 7, Windows Server 2008 R2, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ 
+ 
+ 
+ 
+ JobObjectNotificationLimitInformation2 
+ 33 
+ 
+ 
+ 
+The  lpJobObjectInfo  parameter is a pointer to a 
+         JOBOBJECT_NOTIFICATION_LIMIT_INFORMATION_2  
+        structure.
+        
+ Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Server 2008, Windows Vista, Windows Server 2003 and Windows XP:   This flag is not supported. 
+ 
+ 
+ 
+ 
+ JobObjectSecurityLimitInformation 
+ 5 
+ 
+ 
+ 
+This flag is not supported. Applications must set security limitations individually for each process.
+        
+ Windows Server 2003 and Windows XP:   The  lpJobObjectInfo  parameter is a pointer to a
+ JOBOBJECT_SECURITY_LIMIT_INFORMATION 
+structure. The
+ hJob  handle must have the
+ JOB_OBJECT_SET_SECURITY_ATTRIBUTES  access right associated with it. 
+ 
+ 
+ 
+ [in] lpJobObjectInformation 
+ The limits or job state to be set for the job. The format of this data depends on the value of  JobObjectInfoClass . 
+ [in] cbJobObjectInformationLength 
+ The size of the job information being set, in bytes. 
+ Return value 
+ If the function succeeds, the return value is nonzero. 
+ If the function fails, the return value is zero. To get extended error information, call
+ GetLastError . 
+ Remarks 
+ Use the  SetInformationJobObject 
+function to set several limits in a single call. To establish the limits one at a time or change a
+subset of the limits, call the
+ QueryInformationJobObject  function to obtain
+the current limits, modify these limits, and then call
+ SetInformationJobObject . 
+ You must set security limits individually for each process associated with a job object, rather than setting
+them for the job object itself. For information, see
+ Process Security and Access Rights . 
+ Windows Server 2003 and Windows XP:   Use the  SetInformationJobObject 
+function to set security limits for the job object. 
+ To compile an application that uses this function, define _WIN32_WINNT as 0x0500 or later. For more
+information, see
+ Using the Windows Headers . 
+ Requirements 
+ 
+ 
+ 
+ Requirement 
+ Value 
+ 
+ 
+ 
+ 
+ Minimum supported client 
+ Windows XP [desktop apps only] 
+ 
+ 
+ Minimum supported server 
+ Windows Server 2003 [desktop apps only] 
+ 
+ 
+ Target Platform 
+ Windows 
+ 
+ 
+ Header 
+ jobapi2.h (include Windows.h) 
+ 
+ 
+ Library 
+ Kernel32.lib 
+ 
+ 
+ DLL 
+ Kernel32.dll 
+ 
+ 
+ 
+ See also 
+ JOBOBJECT_ASSOCIATE_COMPLETION_PORT 
+ JOBOBJECT_BASIC_LIMIT_INFORMATION 
+ JOBOBJECT_BASIC_UI_RESTRICTIONS 
+ JOBOBJECT_CPU_RATE_CONTROL_INFORMATION 
+ JOBOBJECT_END_OF_JOB_TIME_INFORMATION 
+ JOBOBJECT_EXTENDED_LIMIT_INFORMATION 
+ JOBOBJECT_LIMIT_VIOLATION_INFORMATION 
+ JOBOBJECT_LIMIT_VIOLATION_INFORMATION_2 
+ JOBOBJECT_NET_RATE_CONTROL_INFORMATION 
+ JOBOBJECT_NOTIFICATION_LIMIT_INFORMATION 
+ JOBOBJECT_NOTIFICATION_LIMIT_INFORMATION_2 
+ JOBOBJECT_SECURITY_LIMIT_INFORMATION 
+ Job Objects 
+ Process Security and Access Rights 
+ Process and Thread Functions 
+ QueryInformationJobObject 
+ 
+					
+		 
+	 
+		 
+		 
+	
+					
+		 
+		 
+			 
+			 Feedback 
+			 
+				 
+					Was this page helpful?
+				 
+				 
+					 
+						 
+							 
+						 
+						 Yes 
+					 
+					 
+						 
+							 
+						 
+						 No 
+					 
+					 
+						 
+							 
+								 
+							 
+							 No 
+						 
+						 
+							 
+								Need help with this topic?
+							 
+							 
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							 
+							
+		 
+			 
+		 
+			 
+				 
+			 
+		 
+		 
+			 
+				 
+			 
+			 Ask Learn 
+		 
+		 
+			 
+				 
+			 
+			 Ask Learn 
+		 
+	 
+			 
+				 
+					 
+				 
+				  Suggest a fix?  
+			 
+		 
+	
+						 
+					 
+				 
+			 
+		 
+		 
+	
+				 
+				
+		 
+			 
+			 
+				Additional resources
+			 
+			 
+		 
+	 
+		 
+	
+		 
+	 
+		 
+			 
+			 
+				 
+			 
+				 Last updated on  
+		2021-11-23
+	 
+			 
+		 
+			 
+		 
+	
+			 
+		
+				 
+				 
+					
+		 
+			 
+				
+		 
+			 In this article 
+		 
+	
+				 
+				
+		 
+			 
+				 
+					Was this page helpful?
+				 
+				 
+					 
+						 
+							 
+						 
+					 
+					 
+						 
+							 
+						 
+					 
+					 
+						 
+							 
+								 
+							 
+						 
+						 
+							 
+								Need help with this topic?
+							 
+							 
+								Want to try using Ask Learn to clarify or guide you through this topic?
+							 
+							
+		 
+			 
+		 
+			 
+				 
+			 
+		 
+		 
+			 
+				 
+			 
+			 Ask Learn 
+		 
+		 
+			 
+				 
+			 
+			 Ask Learn 
+		 
+	 
+			 
+				 
+					 
+				 
+				  Suggest a fix?  
+			 
+		 
+	
+						 
+					 
+				 
+			 
+		 
+	
+			 
+		 
+	
+			     
+					  
+			     
+		 
+			 
+				
+		 en-us 
+	  
+		
+		 
+		 
+			 
+			 
+			 
+			 
+		 
+	
+			 Your Privacy Choices 
+	
+	 
+				 
+		 
+			 
+				 
+				 Theme 
+				 
+					 
+				 
+			 
+			 
+				 
+					 
+						 
+							 
+								 
+									 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+									 
+								 
+							 
+							  Light  
+						 
+					 
+					 
+						 
+							 
+								 
+									 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+									 
+								 
+							 
+							  Dark  
+						 
+					 
+					 
+						 
+							 
+								 
+									 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+										 
+									 
+								 
+							 
+							  High contrast  
+						 
+					 
+				 
+			 
+		 
+	 
+			 
+			 
+				 
+				 
+		
+		 AI Disclaimer 
+	
+	 
+		
+		 Previous Versions 
+	
+	   
+		
+		 Blog 
+	
+	   
+		
+		 Contribute 
+	
+	 
+		
+		 Privacy 
+	
+	 
+		
+		 Consumer Health Privacy 
+	
+	 
+		
+		 Terms of Use 
+	
+	 
+		
+		 Trademarks 
+	
+	 
+				 © Microsoft 2026 
+			 
+		 
+	 
+			 
+		

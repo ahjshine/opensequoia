@@ -1,0 +1,15 @@
+{
+  "tool": "core_hypothesis_update",
+  "params": {
+    "hypothesis_id": "hyp_1",
+    "status": "supported",
+    "add_supporting_evidence_ids": [
+      "ev_9a529d3bb5ea667ee02508b0100d5011ec72493a960ac1bd33edad2480bfb32d",
+      "ev_d1415ce57072b4b4827b09c86e89b3015be36e6e802685febd7630c0bc468b49"
+    ],
+    "note": "Layout and overview both report x86_64, windows-gui subsystem, NX, PIE, high-entropy VA and control-flow guard true; code_signature is null, which is not an unsigned verdict."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis\":{\"claim\":\"The new EXE is an x86_64 PE GUI-subsystem executable with NX, PIE and high-entropy VA enabled and control-flow guard enabled by the locked release build.\",\"contradicting\":[],\"id\":\"hyp_1\",\"notes\":[\"Layout and overview both report x86_64, windows-gui subsystem, NX, PIE, high-entropy VA and control-flow guard true; code_signature is null, which is not an unsigned verdict.\"],\"prediction\":\"PE layout reports machine x86_64, subsystem GUI, NX/PIE/high-entropy VA true and CFG true.\",\"status\":\"supported\",\"supporting\":[\"ev_9a529d3bb5ea667ee02508b0100d5011ec72493a960ac1bd33edad2480bfb32d\",\"ev_d1415ce57072b4b4827b09c86e89b3015be36e6e802685febd7630c0bc468b49\"]},\"revision\":6}}\n"
+}

@@ -1,0 +1,9 @@
+{
+  "findings": 13,
+  "export_records": 19,
+  "unknowns": 3,
+  "missing_finding_evidence": [],
+  "final_executable_sha256": "930a4415a37137ad33ce77e4c82c134aa1ae0be5dcae14bc8449104ffb7042b8",
+  "package_sha256": "e1f6b22bb9f84113fc3f873e57a682d7b83cceb09936d083c172fc10b68183bf",
+  "scope": "Static artifact evidence cross-reference check only; not browser acceptance"
+}

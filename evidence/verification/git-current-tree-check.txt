@@ -1,0 +1,11 @@
+evidence/verification/engine-green.txt:29: new blank line at EOF.
+evidence/verification/ipc-green.txt:30: new blank line at EOF.
+evidence/verification/review-format.txt:37: new blank line at EOF.
+evidence/verification/review-workspace-tests.txt:40: new blank line at EOF.
+evidence/verification/review2-io-deadline-test.txt:8: new blank line at EOF.
+evidence/verification/review2-tests.txt:73: new blank line at EOF.
+evidence/verification/root-tests.log:75: new blank line at EOF.
+evidence/verification/windows-font-green.log:9: new blank line at EOF.
+evidence/verification/windows-tests.log:14: new blank line at EOF.
+evidence/verification/windows-worker-join-test.log:9: new blank line at EOF.
+evidence/verification/windows-worker-tests.log:48: new blank line at EOF.

@@ -1,0 +1,9 @@
+{
+  "tool": "core_target_open",
+  "params": {
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/target/i03a/release/opensequoia.exe"
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":1043456,\"description\":\"A Windows program\",\"kind\":\"pe\",\"name\":\"opensequoia.exe\",\"path\":\"C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/target/i03a/release/opensequoia.exe\",\"raw\":null,\"sha256\":\"b8ae67c3b6839c1be1751bb3eb49088bf9999491b38284b58eb309e74cbc7499\",\"target_id\":\"t_b8ae67c3b683\"}}\n"
+}

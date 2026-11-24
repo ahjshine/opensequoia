@@ -1,0 +1,14 @@
+{
+  "tool": "core_unknown_add",
+  "params": {
+    "question": "What code is reachable only through the 58 unresolved indirect jumps and stripped local symbols?",
+    "severity": "medium",
+    "domain": "static-coverage",
+    "probes": [
+      "Deeper call-graph/CFG recovery, targeted disassembly and runtime tracing"
+    ]
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"domain\":\"static-coverage\",\"evidence_against\":[],\"evidence_for\":[],\"id\":\"unk_3329d70cb992298d\",\"probes\":[\"Deeper call-graph/CFG recovery, targeted disassembly and runtime tracing\"],\"question\":\"What code is reachable only through the 58 unresolved indirect jumps and stripped local symbols?\",\"revision\":1,\"severity\":\"medium\",\"status\":\"open\"}}\n"
+}

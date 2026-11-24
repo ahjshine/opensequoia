@@ -1,0 +1,38 @@
+[
+  {
+    "path": "crates/app/src/windows_process.rs",
+    "sha256": "6B2CC3B80BF3121C649C75FF8163BD11E0F99E6C672340BDB8E019D369BBE9AF"
+  },
+  {
+    "path": "crates/app/src/worker.rs",
+    "sha256": "1A67F290AD4818935A1B9B3C3BD381E23B756BA73894BAB7784C84F5871AE01D"
+  },
+  {
+    "path": "crates/app/Cargo.toml",
+    "sha256": "BFC3183980E72576FDE595DFE4DD1E5F5077A2D306F842B121AB03C91203F219"
+  },
+  {
+    "path": "Cargo.lock",
+    "sha256": "E801E3EC0B12E1D134834A119102C4AC270D328818683C5C7CDB4D11B5852707"
+  },
+  {
+    "path": "C:/Users/deepa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/windows-sys-0.61.2/src/Windows/Win32/Security/Isolation/mod.rs",
+    "sha256": "F82E33830EF7845F7E402B10318F0E10D8DD6CB1F9155146A5276D8F35C7E292"
+  },
+  {
+    "path": "C:/Users/deepa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/windows-sys-0.61.2/src/Windows/Win32/Security/mod.rs",
+    "sha256": "4879AED31A7511359C3CB2348EDFCF1C3FF84B7125C7CDE03BC946E53CAF20DF"
+  },
+  {
+    "path": "C:/Users/deepa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/windows-sys-0.61.2/src/Windows/Win32/Security/Authorization/mod.rs",
+    "sha256": "76BC066BEA30169B4601F7013009B5F162588F2503A0873C12EB7371DD70B893"
+  },
+  {
+    "path": "C:/Users/deepa/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/windows-sys-0.61.2/src/Windows/Win32/System/Threading/mod.rs",
+    "sha256": "C91BA24C0890691EE0B4415F0D2D8E512DF380068D47E0A4CF2DA5D7042FF012"
+  },
+  {
+    "path": "C:/Program Files (x86)/Windows Kits/10/Include/10.0.26100.0/um/WinBase.h",
+    "sha256": "EC538199F5EBE8CEC2DFD4F1BA48316EF776C82D37277AED3A677965E494F192"
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "authority": "original-files",
+  "confidence": "observed",
+  "coverage": {
+    "examined": 4,
+    "status": "complete",
+    "total": 4
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_ec8eed8efe42aa4f623e196215e20703eff68bf5c2ac5f9693bf7c9285e3f8b0",
+  "limitations": [
+    {
+      "code": "no_disk_images",
+      "message": "Disk images (DMG), installers (PKG/MSI) and compressed tarballs are listed as single files, not opened."
+    }
+  ],
+  "links": [],
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/opensequoia-0.1.0-win-x64.zip"
+    }
+  ],
+  "operation": "core_archive_show",
+  "params": {
+    "if_tampered": true,
+    "limit": 32,
+    "max_depth": 0,
+    "max_entries": 32,
+    "max_total_bytes": 16777216,
+    "offset": 0,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/opensequoia-0.1.0-win-x64.zip"
+  },
+  "result": {
+    "by_kind": {
+      "pe": 1,
+      "text": 3
+    },
+    "containers": [
+      {
+        "declared": 4,
+        "entries": 4,
+        "kind": "zip",
+        "path": "",
+        "truncated": false,
+        "zip64": false
+      }
+    ],
+    "content_id": "inv_7eb87f11cc44ace8bd5f43323a335df4de0f35f14497f190b4c688a9593c8630",
+    "contradictions": [],
+    "entries": [
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "opensequoia.exe",
+        "sha256": "930a4415a37137ad33ce77e4c82c134aa1ae0be5dcae14bc8449104ffb7042b8",
+        "size": 908800
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "LICENSE",
+        "sha256": "9221c2f936159b8446d329249fb4c0f25be510f447383a0f13336ac7985668a3",
+        "size": 17099
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "README.md",
+        "sha256": "3af3ea597f059bdec0f604ea88769bb2a41668331a09042b6c7dd97d779b1119",
+        "size": 2585
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "THIRD_PARTY_NOTICES.txt",
+        "sha256": "ba473cc311e4506a509e1bd73f8a6287320fae789569e351537d2143fcc78e95",
+        "size": 322482
+      }
+    ],
+    "entries_total": 4,
+    "files": 4,
+    "hashed_bytes": 1250966,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/opensequoia-0.1.0-win-x64.zip",
+    "root": "opensequoia-0.1.0-win-x64.zip",
+    "root_kind": "zip",
+    "truncated": false,
+    "unopened_nested": 0
+  },
+  "subject": {
+    "kind": "zip",
+    "name": "opensequoia-0.1.0-win-x64.zip",
+    "sha256": "e1f6b22bb9f84113fc3f873e57a682d7b83cceb09936d083c172fc10b68183bf"
+  },
+  "summary": "opensequoia-0.1.0-win-x64.zip (zip) holds 4 files in 4 entries; 0 nested container(s)."
+}

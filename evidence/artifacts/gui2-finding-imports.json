@@ -1,0 +1,14 @@
+{
+  "tool": "core-finding-record",
+  "params": {
+    "confidence": "derived",
+    "evidence_ids": [
+      "ev_f97f3c572503836ee601339717f5779c4f277218b6637baef179d3d4a441212b",
+      "ev_751a26dab5578a14416d3b7ad83c50792deaae9b46901ef57c64836d041ee258"
+    ],
+    "statement": "Complete GUI and console-draft import inventories have the same162 semantic imported functions from12 recorded library names (including a KERNEL32 case variant), with some import-slot order changes and no added/removed functions or DLL names. Windows/CRT imports including VCRUNTIME140 are observed; this does not prove static native code absence or clean-machine runtime availability."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_20\",\"revision\":66}}\n"
+}

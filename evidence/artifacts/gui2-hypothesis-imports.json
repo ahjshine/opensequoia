@@ -1,0 +1,10 @@
+{
+  "tool": "core-hypothesis-record",
+  "params": {
+    "claim": "The GUI header change preserves the console draft normal import table of 162 rows including Job/stdio/native UI services.",
+    "prediction": "Complete imports match draft rows, with no newly recorded DLL; this only tests import table equivalence."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis_id\":\"hyp_14\",\"revision\":59}}\n"
+}

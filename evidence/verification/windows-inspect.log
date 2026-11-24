@@ -1,0 +1,7 @@
+   Compiling opensequoia v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.02s
+     Running `target\debug\opensequoia.exe --inspect`
+OpenSequoia local HTML inspection
+nodes=46 viewport_width=960 content_height=528 text_runs=143
+diagnostics=1 html_recovery=0 unsupported_elements=0 unsupported_css=0 unsupported_features=1
+Limited static layout; no script execution or website compatibility claim.

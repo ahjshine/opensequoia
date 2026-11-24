@@ -1,0 +1,153 @@
+{
+  "schema": 1,
+  "verified_at": "2026-11-24T12:50:45.2810829Z",
+  "input_hashes": [
+    {
+      "path": "crates\\app\\build.rs",
+      "sha256": "C87DD0EF13D531B68158E53A6FAEFCBDC2EE8D6117D3EEF4FA7760334E93EC96"
+    },
+    {
+      "path": "crates\\app\\Cargo.toml",
+      "sha256": "E8D6EF76B14E277613B4ACC1D02BD3437B7B1046DA0F757B947B596C338C49CF"
+    },
+    {
+      "path": "crates\\app\\resources\\opensequoia.manifest",
+      "sha256": "4A8CEF18596856F2A1B16FBB36A58A4A288105B4D4FF058D077F9C35C3446853"
+    },
+    {
+      "path": "crates\\app\\resources\\opensequoia.rc",
+      "sha256": "91A71353F77979131459AD8CA68BB163DFB1E46381A0E287164437537FEE682A"
+    },
+    {
+      "path": "crates\\app\\src\\browser.rs",
+      "sha256": "28BB64613F96CE2B6A5E48C0F14E3DF60D1C53C0D2286E1A1C5AFB23D8605C8B"
+    },
+    {
+      "path": "crates\\app\\src\\chrome.rs",
+      "sha256": "58599071A1612A48CB30ADE5F42DAE05E3887446D3868597FE669A3AEFBCE224"
+    },
+    {
+      "path": "crates\\app\\src\\controller.rs",
+      "sha256": "1D36384067FBDFADAEEF880CD22E56B91AF77A80A2D4BD0071EBAE2DD51EB52F"
+    },
+    {
+      "path": "crates\\app\\src\\input.rs",
+      "sha256": "25106AF641986A62785D3B7F6BC2CE540E2031F6A921CF7DACADB3BB2BE15A60"
+    },
+    {
+      "path": "crates\\app\\src\\main.rs",
+      "sha256": "EA9DA7F770D81173495457CA2C9AFB0364086020DC3F5DC0A8EC5C0F3EE94646"
+    },
+    {
+      "path": "crates\\app\\src\\windows_process.rs",
+      "sha256": "65F42FEA9B302858076D5046767DF11B708B0A9C97E6689FD5AC05BAC5CD246D"
+    },
+    {
+      "path": "crates\\app\\src\\windows_sandbox.rs",
+      "sha256": "1AE44F9D316E4796CD88FACEBA48B412FB86E9D45F86164C7B6955F0195EFC97"
+    },
+    {
+      "path": "crates\\app\\src\\windows.rs",
+      "sha256": "DCD3F3CD83727525668083138F0CA386B643EEF71048123D3E2A2E4EC2247996"
+    },
+    {
+      "path": "crates\\app\\src\\worker.rs",
+      "sha256": "3565782421DB5B76408C98387E5E30E19864E6814548EC3693E542689034B5E0"
+    },
+    {
+      "path": "crates\\engine\\Cargo.toml",
+      "sha256": "A50E98201067C464496BCAA4643A55EE081AB1E2E2433410FE5DDD4F040B8173"
+    },
+    {
+      "path": "crates\\engine\\examples\\tree_construction.rs",
+      "sha256": "378FD498BCB398C8BFC9C3D552EAE0BBC8AD7DFC044377D8F0D62721CBCF653E"
+    },
+    {
+      "path": "crates\\engine\\examples\\support\\dat.rs",
+      "sha256": "A17673AB436CE862B4DFE1326B809F6C2C689304C728F841BE243C852860FF96"
+    },
+    {
+      "path": "crates\\engine\\src\\css.rs",
+      "sha256": "4699F24C6BD7C2E06B9E61B19F56C0FA57DB45A3B2D9902F6BC49C98F18CF71F"
+    },
+    {
+      "path": "crates\\engine\\src\\dom.rs",
+      "sha256": "395A957ACF95A42689D2980EBDFF75DF56492129859653A484BBFDA3ECDC8A13"
+    },
+    {
+      "path": "crates\\engine\\src\\layout.rs",
+      "sha256": "52946B14F1308610B049ADCE20B4767154087D0231BAB1C146B3DFB3539B6C08"
+    },
+    {
+      "path": "crates\\engine\\src\\lib.rs",
+      "sha256": "343261FCCD3B8115BFE3B3078572E101B8F7434C81BF804BBCF4E24BDE45F524"
+    },
+    {
+      "path": "crates\\engine\\src\\tree_dump.rs",
+      "sha256": "5E6C83E95B440A1F0BEE32CEED8F9AA8273A4D93F6E5DD063E53F81B6039A339"
+    },
+    {
+      "path": "crates\\engine\\tests\\css_subset.rs",
+      "sha256": "3BA23059BEAE284CBF50AB71CEE4C82257F06FB229A792304DE0DB407C0AA64D"
+    },
+    {
+      "path": "crates\\engine\\tests\\dat_format.rs",
+      "sha256": "358F78430608BEE15E926A0B1EF3A6361448887E482D7E89D6FDE96DC35BED5D"
+    },
+    {
+      "path": "crates\\engine\\tests\\static_document.rs",
+      "sha256": "7A48E3DAC9C1B9C7841A41E42FE020E332A24A7B4BEB053DA25956E7A7E48ACE"
+    },
+    {
+      "path": "crates\\engine\\tests\\tree_inspection.rs",
+      "sha256": "8863D57F0BE9758C8E82F3E1304D00ADBD81022F0D7584F459DA7F73D5D9F85D"
+    },
+    {
+      "path": "crates\\ipc\\Cargo.toml",
+      "sha256": "618C76524216EA5DEA746360676EA0231F06BE487FAEE6EEAC2388E4A51F70D9"
+    },
+    {
+      "path": "crates\\ipc\\src\\codec.rs",
+      "sha256": "CF199AEE483460B9F32D162076DAE0759AC71E81CF33944B043D07EAC1B7C1DE"
+    },
+    {
+      "path": "crates\\ipc\\src\\lib.rs",
+      "sha256": "00C45C2EDE1564BE0577CF6B992F7D78792D2495AF1248938575D9A40EC84CDB"
+    },
+    {
+      "path": "crates\\ipc\\tests\\framing.rs",
+      "sha256": "65F97D98EFE90B4E4808362BF49B125A09F24BC737D5EEED200C8536084DB4A1"
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "1CAEBAA3F3B1CE49737F390BAAD18C1DAA33A2716CBDF1C0963D357AD12548DD"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "E801E3EC0B12E1D134834A119102C4AC270D328818683C5C7CDB4D11B5852707"
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "B30392501151E20A7D00B4B580C614F49C402580AB876E3A4A694E58D09D595C"
+    },
+    {
+      "path": ".cargo\\config.toml",
+      "sha256": "8A110099B9690912BD2F841794AF36EF6C2096D1D14B7135439FEE31AD08A3BC"
+    },
+    {
+      "path": "fixtures\\welcome.html",
+      "sha256": "68CEDD95F6F8125E334F748F1090CFB29F27FA7AFFD37E86214A90469C2294EA"
+    },
+    {
+      "path": "fixtures\\guide.html",
+      "sha256": "6DED2E2A409116977D252431924614B988A94D0BB6749B4976F16B95F382607F"
+    }
+  ],
+  "build_target": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target",
+  "executable": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\release\\opensequoia.exe",
+  "window_smoke_run": true,
+  "limitations": [
+    "No WPT/Test262/Wasm run",
+    "No sandbox, network, full UI/accessibility or browser parity verdict"
+  ]
+}

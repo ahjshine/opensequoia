@@ -1,0 +1,41 @@
+   Compiling opensequoia v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.46s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-db6b529dac40c3a8.exe)
+
+running 33 tests
+test browser::tests::closing_last_tab_creates_new_welcome_identity ... ok
+test browser::tests::reload_same_address_and_reflow_do_not_duplicate_history ... ok
+test browser::tests::failure_messages_remain_bounded_utf8_and_do_not_revert_source ... ok
+test browser::tests::navigation_and_history_keep_loading_identity_and_discard_forward_branch ... ok
+test browser::tests::no_history_unknown_tab_and_invalid_initial_source_are_explicit_failures ... ok
+test browser::tests::stale_duplicate_and_closed_tab_completions_cannot_replace_current_state ... ok
+test browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization ... ok
+test browser::tests::tab_selection_wraps_and_closure_preserves_neighbor_and_pending_results ... ok
+test browser::tests::request_and_tab_counter_exhaustion_are_atomic_failures ... ok
+test chrome::tests::dpi_conversion_checks_signed_coordinates ... ok
+test browser::tests::tab_and_history_limits_fail_without_mutating_state ... ok
+test browser::tests::source_validation_rejects_active_schemes_devices_controls_and_invalid_direct_sources ... ok
+test input::tests::defaults_to_bundled_local_document ... ok
+test input::tests::modes_are_explicit_and_exclusive ... ok
+test input::tests::refuses_network_and_device_inputs ... ok
+test controller::tests::scheduler_capacity_and_viewport_checks_do_not_mutate_state ... ok
+test controller::tests::renderer_failure_is_reported_for_the_current_request ... ok
+test chrome::tests::actual_ascii_font_metrics_fit_static_engine_advances ... ok
+test controller::tests::closing_a_tab_discards_its_late_reply_and_frees_capacity ... ok
+test controller::tests::pending_reflows_coalesce_and_running_stale_reply_is_not_published ... ok
+test worker::tests::worker_rejects_malformed_and_wrong_direction_frames ... ok
+test worker::tests::worker_uses_real_parse_and_layout ... ok
+test windows_process::tests::native_argument_quoting_preserves_quotes_and_trailing_slashes ... ok
+test windows_process::tests::real_synchronous_pipe_read_can_be_cancelled ... ok
+test browser::tests::generated_transition_sequences_preserve_identity_history_and_completion_invariants ... ok
+test windows_process::tests::job_membership_is_established_at_spawn_and_job_close_kills_child ... ok
+test input::tests::loader_validates_real_utf8_and_file_limits ... ok
+test worker::tests::supervisor_timeout_kills_and_reaps_actual_child ... ok
+test input::tests::loader_rejects_a_real_local_directory_junction ... ok
+test windows_process::tests::job_active_process_limit_rejects_descendant_creation ... ok
+test windows_process::tests::parent_death_closes_noninherited_job_and_kills_actual_worker ... ok
+test windows_process::tests::unrelated_inheritable_handle_is_excluded_with_positive_control ... ok
+test worker::tests::unfinished_io_thread_returns_bounded_error_and_fixture_is_released ... ok
+
+test result: ok. 33 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.02s
+

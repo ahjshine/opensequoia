@@ -1,0 +1,29 @@
+   Compiling opensequoia-engine v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.60s
+     Running unittests src\lib.rs (target\debug\deps\opensequoia_engine-7b885e5d65bc1fb5.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\static_document.rs (target\debug\deps\static_document-d4d515d2e7ad4c84.exe)
+
+running 9 tests
+test html_tree_builder_repairs_paragraphs_and_preserves_entities_unicode ... ok
+test viewport_rejection_and_wrapping_have_deterministic_bounds ... ok
+test unsupported_css_and_active_elements_are_explicit ... ok
+test foster_parenting_and_misnested_formatting_terminate_with_text ... ok
+test non_rendered_content_cannot_leak_into_display_list ... ok
+test unicode_chunk_boundaries_and_html_space_rules_are_preserved ... ok
+test generated_malformed_token_sequences_keep_display_bounds ... ok
+test input_and_node_limits_reject_instead_of_returning_truncated_documents ... ok
+test deep_tree_traversal_and_drop_do_not_recurse ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.20s
+
+   Doc-tests opensequoia_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

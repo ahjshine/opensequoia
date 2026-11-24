@@ -1,0 +1,31 @@
+{
+  "tool": "core_plan_update",
+  "params": {
+    "steps": [
+      {
+        "title": "Pin binary hash, size and build provenance",
+        "status": "doing",
+        "why": "The investigated bytes and source commit must be fixed before any metadata claim."
+      },
+      {
+        "title": "Open the exact EXE and record PE overview/layout",
+        "status": "todo"
+      },
+      {
+        "title": "Inspect sections, resources, manifest/version and imports",
+        "status": "todo"
+      },
+      {
+        "title": "Compare relevant metadata with the prior GUI snapshot",
+        "status": "todo"
+      },
+      {
+        "title": "Settle findings, unknowns, export and write report/handoff",
+        "status": "todo"
+      }
+    ]
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"brief\":{\"constraints\":[\"User-approved Deep static analysis only; do not run target code and do not use --allow-run\",\"No credentials, browsing profiles or personal data\",\"Static PE flags do not prove runtime sandboxing, security or performance\",\"Imports do not prove the absence of statically linked code or later runtime loads\",\"Windows Authenticode is separate from code_signature metadata\"],\"done_when\":\"Hash-bound findings with loadable evidence IDs for build/source identity, PE architecture/subsystem, mitigation flags, imports, resources and the relevant difference from the old snapshot; unknowns and a handoff; evidence export and generated report under evidence/artifacts and docs/investigations.\",\"purpose\":\"Complete I03a static artifact acceptance for the exact new EXE without claiming runtime security, compatibility or performance.\",\"question\":\"Does the final OpenSequoia 0.2.0 EXE built at source commit 54289fd (SHA256 b8ae67c3...) have the expected PE architecture, subsystem, mitigation flags, resources and imports, and how does it differ from the previously analysed GUI development EXE?\",\"targets\":[\"C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/target/i03a/release/opensequoia.exe\",\"C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/target/gui/release/opensequoia.exe\"]},\"findings\":[],\"handoff\":null,\"hypotheses\":[],\"plan\":[{\"status\":\"doing\",\"title\":\"Pin binary hash, size and build provenance\",\"why\":\"The investigated bytes and source commit must be fixed before any metadata claim.\"},{\"status\":\"todo\",\"title\":\"Open the exact EXE and record PE overview/layout\"},{\"status\":\"todo\",\"title\":\"Inspect sections, resources, manifest/version and imports\"},{\"status\":\"todo\",\"title\":\"Compare relevant metadata with the prior GUI snapshot\"},{\"status\":\"todo\",\"title\":\"Settle findings, unknowns, export and write report/handoff\"}],\"revision\":2,\"stored_in\":\"C:\\\\Users\\\\deepa\\\\OneDrive\\\\Dokumen\\\\ChatGPT\\\\opensequoia-crew\\\\controller\\\\evidence\\\\artifacts\\\\sandbox4-opensequoia.cany\\\\investigation\",\"updated\":\"2026-11-24T11:30:33Z\"}}\n"
+}

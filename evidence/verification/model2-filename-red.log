@@ -1,0 +1,41 @@
+   Compiling opensequoia v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+warning: associated function `new` is never used
+  --> crates\app\src\controller.rs:52:12
+   |
+51 | impl RenderController {
+   | --------------------- associated function in this implementation
+52 |     pub fn new() -> Result<Self, String> {
+   |            ^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `render` is never used
+  --> crates\app\src\worker.rs:49:8
+   |
+49 | pub fn render(html: &str, width: u32) -> Result<DisplayList, String> {
+   |        ^^^^^^
+
+warning: `opensequoia` (bin "opensequoia" test) generated 2 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.12s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-2aeb2cf887c4d60b.exe)
+
+running 1 test
+test browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization ... FAILED
+
+failures:
+
+---- browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization stdout ----
+
+thread 'browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization' (18568) panicked at crates\app\src\browser.rs:621:13:
+assertion `left == right` failed
+  left: Local("leading.html")
+ right: Local(" leading.html")
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 29 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p opensequoia --bin opensequoia`

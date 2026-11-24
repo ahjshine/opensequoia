@@ -1,0 +1,315 @@
+{
+  "schema": 2,
+  "task": "I03a",
+  "source_commit": "54289fd358547870b6fce3b9040a959dfad4efc5",
+  "correction": "Schema 1 masked every differing byte separately for each comparison, so its normalized hashes were equal by construction. This check masks only PE identity fields located by parsing, and it reports the /Brepro layout shift instead of claiming a normalized match.",
+  "artifacts": {
+    "recorded": {
+      "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\i03a\\recorded-opensequoia.exe",
+      "bytes": 1043456,
+      "sha256": "b8ae67c3b6839c1be1751bb3eb49088bf9999491b38284b58eb309e74cbc7499"
+    },
+    "default_builds": [
+      {
+        "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\i03a\\rebuilt-default1-opensequoia.exe",
+        "bytes": 1043456,
+        "sha256": "df0f8b9c1a55ac7cbb13db9abffcfe435b78d2d17e1f243bb3a6c9709f32e23c"
+      },
+      {
+        "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\i03a\\rebuilt-default2-opensequoia.exe",
+        "bytes": 1043456,
+        "sha256": "ed265d2f30cc9e2a884aa6f8a7fd5c679660baaa07ca7fed5074bfbb679ead1e"
+      }
+    ],
+    "brepro_builds": [
+      {
+        "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\i03a\\rebuilt-brepro1-opensequoia.exe",
+        "bytes": 1043456,
+        "sha256": "165af357529758fd51a54df676c629a60331637f3ceef2d436c467b6c3572d26"
+      },
+      {
+        "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\i03a\\rebuilt-brepro2-opensequoia.exe",
+        "bytes": 1043456,
+        "sha256": "165af357529758fd51a54df676c629a60331637f3ceef2d436c467b6c3572d26"
+      }
+    ]
+  },
+  "identity_fields": [
+    {
+      "name": "coff_timestamp",
+      "offset": 256,
+      "length": 4
+    },
+    {
+      "name": "debug_directory[0].timestamp",
+      "offset": 973636,
+      "length": 4
+    },
+    {
+      "name": "debug_directory[0].codeview_guid",
+      "offset": 974068,
+      "length": 16
+    },
+    {
+      "name": "debug_directory[1].timestamp",
+      "offset": 973664,
+      "length": 4
+    },
+    {
+      "name": "debug_directory[2].timestamp",
+      "offset": 973692,
+      "length": 4
+    }
+  ],
+  "recorded_vs_default": {
+    "differing_offsets": [
+      256,
+      257,
+      973636,
+      973637,
+      973664,
+      973665,
+      973692,
+      973693,
+      974068,
+      974069,
+      974070,
+      974071,
+      974072,
+      974073,
+      974074,
+      974075,
+      974076,
+      974077,
+      974078,
+      974079,
+      974080,
+      974081,
+      974082,
+      974083
+    ],
+    "differing_byte_count": 24,
+    "field_for_each_offset": [
+      "coff_timestamp",
+      "coff_timestamp",
+      "debug_directory[0].timestamp",
+      "debug_directory[0].timestamp",
+      "debug_directory[1].timestamp",
+      "debug_directory[1].timestamp",
+      "debug_directory[2].timestamp",
+      "debug_directory[2].timestamp",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid"
+    ],
+    "masked_sha256_recorded": "b1ba0a98b4ccc2de084f03a56c4b82a30c37420a9a40c08b00774250ee75cc10",
+    "masked_sha256_rebuild": "b1ba0a98b4ccc2de084f03a56c4b82a30c37420a9a40c08b00774250ee75cc10",
+    "masked_equal": true,
+    "section_hashes": {
+      ".text": {
+        "recorded": "dd767f07441fdda5ed08b3c5086855fac0feedaaf901b3dfebb751264cefc201",
+        "rebuild": "dd767f07441fdda5ed08b3c5086855fac0feedaaf901b3dfebb751264cefc201",
+        "equal": true,
+        "identity_masked_equal": true
+      },
+      ".rdata": {
+        "recorded": "7501a50388eb3f2a3a6717a4d2455ca23419c3c060309fdf7a2318c2172ceba3",
+        "rebuild": "251aac248418926c42e88f5b7267bcdc659a37b2dddcf08a0f0795669f33017c",
+        "equal": false,
+        "identity_masked_equal": true
+      },
+      ".data": {
+        "recorded": "d9191042a03552fd7624659cea4d0c9a722d9e5512d9267cf068208e2a03aca5",
+        "rebuild": "d9191042a03552fd7624659cea4d0c9a722d9e5512d9267cf068208e2a03aca5",
+        "equal": true,
+        "identity_masked_equal": true
+      },
+      ".pdata": {
+        "recorded": "1df613c8a7f8b75ad9dbaa70d6b0c83d68f83e2790845e0145bd674b2f8f8ab5",
+        "rebuild": "1df613c8a7f8b75ad9dbaa70d6b0c83d68f83e2790845e0145bd674b2f8f8ab5",
+        "equal": true,
+        "identity_masked_equal": true
+      },
+      ".rsrc": {
+        "recorded": "f931b664020deb286f3098cdad581e8c9fa4ed007284bb1c28ab04bb09533758",
+        "rebuild": "f931b664020deb286f3098cdad581e8c9fa4ed007284bb1c28ab04bb09533758",
+        "equal": true,
+        "identity_masked_equal": true
+      },
+      ".reloc": {
+        "recorded": "bf013ddcc6f5814edde2ec8ba8f222b08db4cfb01d7f48cb529eb6b2a6f1fd9c",
+        "rebuild": "bf013ddcc6f5814edde2ec8ba8f222b08db4cfb01d7f48cb529eb6b2a6f1fd9c",
+        "equal": true,
+        "identity_masked_equal": true
+      }
+    }
+  },
+  "default_two_builds": {
+    "differing_offsets": [
+      256,
+      973636,
+      973664,
+      973692,
+      974068,
+      974069,
+      974070,
+      974071,
+      974072,
+      974073,
+      974074,
+      974075,
+      974076,
+      974077,
+      974078,
+      974079,
+      974080,
+      974081,
+      974082,
+      974083
+    ],
+    "differing_byte_count": 20,
+    "field_for_each_offset": [
+      "coff_timestamp",
+      "debug_directory[0].timestamp",
+      "debug_directory[1].timestamp",
+      "debug_directory[2].timestamp",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid",
+      "debug_directory[0].codeview_guid"
+    ],
+    "byte_identical": false,
+    "identity_masked_equal": true
+  },
+  "brepro": {
+    "debug_directory_size_recorded": 84,
+    "debug_directory_size_brepro": 112,
+    "debug_entries_recorded": [
+      {
+        "index": 0,
+        "type": 2,
+        "timestamp": [
+          973636,
+          973640
+        ],
+        "data_size": 40,
+        "codeview_guid": [
+          974068,
+          974084
+        ],
+        "pdb": "opensequoia.pdb"
+      },
+      {
+        "index": 1,
+        "type": 12,
+        "timestamp": [
+          973664,
+          973668
+        ],
+        "data_size": 20
+      },
+      {
+        "index": 2,
+        "type": 13,
+        "timestamp": [
+          973692,
+          973696
+        ],
+        "data_size": 852
+      }
+    ],
+    "debug_entries_brepro": [
+      {
+        "index": 0,
+        "type": 2,
+        "timestamp": [
+          973636,
+          973640
+        ],
+        "data_size": 40,
+        "codeview_guid": [
+          974068,
+          974084
+        ],
+        "pdb": "opensequoia.pdb"
+      },
+      {
+        "index": 1,
+        "type": 12,
+        "timestamp": [
+          973664,
+          973668
+        ],
+        "data_size": 20
+      },
+      {
+        "index": 2,
+        "type": 13,
+        "timestamp": [
+          973692,
+          973696
+        ],
+        "data_size": 852
+      },
+      {
+        "index": 3,
+        "type": 16,
+        "timestamp": [
+          973720,
+          973724
+        ],
+        "data_size": 36
+      }
+    ],
+    "builds_byte_identical": true,
+    "vs_default": {
+      "differing_byte_count": 22570,
+      "identity_field_offsets": 32,
+      "other_offsets": 22538,
+      "identity_masked_equal": false,
+      "note": "/Brepro adds a Repro debug-directory entry (type 16). That shifts .rdata contents by 28 bytes and changes RVAs in .pdata/.text, so the binary is deterministic across /Brepro builds but is not byte-equivalent to the canonical build modulo identity fields."
+    }
+  },
+  "checks": {
+    "all_sizes_1043456": true,
+    "recorded_sha256_matches_root4": true,
+    "recorded_vs_default_diffs_are_identity_fields_only": true,
+    "recorded_vs_default_identity_masked_equal": true,
+    "default_two_builds_identity_masked_equal": true,
+    "brepro_two_builds_identical": true,
+    "brepro_differs_from_default_beyond_identity_fields": true,
+    "brepro_debug_directory_has_repro_entry": true
+  },
+  "verdict": "Content-equivalent modulo PE build identity: every recorded-vs-default diff lies in the COFF timestamp, debug timestamps or CodeView GUID, and masking only those fields makes both files equal. The canonical build is NOT byte-reproducible (two clean builds differ), and /Brepro does NOT reproduce the same layout.",
+  "limitations": [
+    "The recorded EXE predates the final worker.rs commit; root4-build.json records the committed file as byte-identical to the build tree, but this check cannot recover historical dirty bytes.",
+    "The canonical command has no /Brepro; two clean canonical builds differ in timestamp and PDB identity fields, so bit-for-bit release reproduction is not yet available.",
+    "/Brepro builds are byte-identical to each other but add a Repro debug entry and shift .rdata, so they are not interchangeable with the recorded artifact.",
+    "Static provenance does not replace Authenticode signing, windowed runtime smoke or malware review; no release-trust claim is made."
+  ]
+}

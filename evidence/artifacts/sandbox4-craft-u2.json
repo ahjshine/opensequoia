@@ -1,0 +1,14 @@
+{
+  "tool": "core_unknown_add",
+  "params": {
+    "question": "Does the exact EXE or its eventual package carry a valid Authenticode signature, and who is the trusted signer?",
+    "severity": "high",
+    "domain": "release",
+    "probes": [
+      "Inspect an actually signed release artifact and its certificate chain"
+    ]
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"domain\":\"release\",\"evidence_against\":[],\"evidence_for\":[],\"id\":\"unk_e84376c514cc788d\",\"probes\":[\"Inspect an actually signed release artifact and its certificate chain\"],\"question\":\"Does the exact EXE or its eventual package carry a valid Authenticode signature, and who is the trusted signer?\",\"revision\":1,\"severity\":\"high\",\"status\":\"open\"}}\n"
+}

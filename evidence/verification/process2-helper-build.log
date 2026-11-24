@@ -1,0 +1,33 @@
+warning: fields `stdin` and `stdout` are never read
+  --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence/verification\..\..\crates\app\src\windows_process.rs:64:9
+   |
+60 | pub struct ContainedChild {
+   |            -------------- fields in this struct
+...
+64 |     pub stdin: Option<File>,
+   |         ^^^^^
+65 |     pub stdout: Option<File>,
+   |         ^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: methods `try_wait` and `kill` are never used
+  --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence/verification\..\..\crates\app\src\windows_process.rs:78:12
+   |
+68 | impl ContainedChild {
+   | ------------------- methods in this implementation
+...
+78 |     pub fn try_wait(&mut self) -> io::Result<Option<ExitStatus>> {
+   |            ^^^^^^^^
+...
+95 |     pub fn kill(&mut self) -> io::Result<()> {
+   |            ^^^^
+
+warning: function `cancel_io` is never used
+   --> C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\evidence/verification\..\..\crates\app\src\windows_process.rs:123:8
+    |
+123 | pub fn cancel_io(thread: &JoinHandle<()>) -> io::Result<()> {
+    |        ^^^^^^^^^
+
+warning: 3 warnings emitted
+

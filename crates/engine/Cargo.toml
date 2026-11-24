@@ -1,0 +1,10 @@
+[package]
+name = "opensequoia-engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Bounded Rust HTML engine increment for OpenSequoia"
+
+[dependencies]
+html5ever = "=0.40.1"

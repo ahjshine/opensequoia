@@ -1,0 +1,287 @@
+{
+  "schema": 1,
+  "task": "M02",
+  "reviewer": "measurement-review, leaf 1.1.3, independent from the sampler author",
+  "lane": "crew/m02",
+  "base_commit": "2027b2274f975f68f583a67aaed16f6b9ec89b38",
+  "command_context": {
+    "cwd": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/measurement-review",
+    "python_environment": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "verdict": {
+    "status": "PASS_WITH_EXPLICIT_LIMITS",
+    "raw_evidence_reconciled": true,
+    "formal_ready": false,
+    "production_performance_acceptance": false,
+    "gui_workload_rerun": false,
+    "sampler_source_changed": false,
+    "focused_checks_changed": false,
+    "raw_report_changed": false
+  },
+  "source_identity": {
+    "application_source_revision": "83451aa1a93f7c85b730dd30940975bd7abf6aaa",
+    "source_revision_resolves_to_git_commit": true,
+    "source_build_proof_limit": "The revision and EXE association is recorded historical identity, not a reproducible compiler-build proof; development source has advanced.",
+    "raw_report": {
+      "path": "evidence/benchmarks/app2-idle.json",
+      "bytes": 39687,
+      "sha256": "ac5e2799ab5a8c91a895cccaeb81a2c083a5f69a101a49a8580fb5b2a16c004d"
+    },
+    "executable": {
+      "legacy_path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/target/gui/release/opensequoia.exe",
+      "bytes": 946176,
+      "sha256": "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e",
+      "before_after_equal": true,
+      "build_record_hash_equal": true
+    },
+    "fixture": {
+      "legacy_path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/fixtures/welcome.html",
+      "bytes": 1358,
+      "sha256": "68cedd95f6f8125e334f748f1090cfb29f27fa7affd37e86214a90469c2294ea",
+      "before_after_equal": true
+    },
+    "sampler_sources": [
+      {
+        "path": "scripts/measure_app_idle.py",
+        "bytes": 9825,
+        "sha256": "80f26bbae8e0ca5486cc8f8ec724eb590209cf7f0eb355d39b2f9a865832df8b",
+        "legacy_and_worktree_match_raw": true
+      },
+      {
+        "path": "scripts/measure_idle.py",
+        "bytes": 6133,
+        "sha256": "e993b69a87d2a97b76f1674afd5ceff9a8a566462f3fa8d1ee5fa87daa6739c9",
+        "legacy_matches_raw": true
+      }
+    ],
+    "focused_checks_sha256": "074c97b5fcc36758ef299ac4b53940f035f9a1c4760da86cde24b6923da30cf1",
+    "acceptance_oracle_sha256": "b5c1b7bebd5789933faf499eb458fc89bb507304910f234c465ee1cf67c2f5ec",
+    "migration_audit": "target/m02/migration-audit.json",
+    "four_migrated_files_byte_identical": true
+  },
+  "observed": {
+    "run_count": 7,
+    "samples_per_run": [20, 20, 20, 20, 20, 20, 20],
+    "total_samples": 140,
+    "sampled_process_counts": [1],
+    "maximum_sampled_process_count_each_run": [1, 1, 1, 1, 1, 1, 1],
+    "final_elapsed_ms_range": [4768.742600001133, 4987.052600001334],
+    "environment": {
+      "os": "Windows-11-10.0.26200-SP0",
+      "windows_build": 26200,
+      "architecture": "AMD64",
+      "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+      "python": "3.13.5",
+      "psutil": "7.1.2",
+      "logical_cpus": 12,
+      "physical_cpus": 10,
+      "installed_memory_bytes": 16716918784,
+      "available_memory_bytes_before": 7322234880,
+      "available_memory_bytes_after": 7370428416,
+      "power_scheme": "Power Scheme GUID: a1841308-3541-4fab-bc81-f71556f20b4a  (Power saver)",
+      "power_scheme_exit_code": 0,
+      "only_changed_before_after_field": "available_memory_bytes"
+    },
+    "recorded_process_identities": {
+      "total": 7,
+      "not_running": 7,
+      "same_identity_alive": 0,
+      "pid_reused_different_birth": 0
+    },
+    "wrong_hash_negative_control": {
+      "evidence_type": "current-source in-process rejection with run and Popen mocked to forbid launches",
+      "exit_code": 2,
+      "launch_calls": 0,
+      "historical_log_rejection_present": true,
+      "raw_report_unchanged": true
+    },
+    "cleanup_controls": {
+      "evidence_type": "real Python child process, not the GUI workload",
+      "mismatched_birth_preserved": true,
+      "matching_owned_root_killed_and_reaped": true,
+      "process_name_or_global_termination_used": false
+    }
+  },
+  "derived": {
+    "summary_exact_match": true,
+    "statistics": {
+      "final_private_bytes": {
+        "median": 1421312,
+        "min": 1409024,
+        "max": 1421312
+      },
+      "final_working_set_bytes": {
+        "median": 8282112,
+        "min": 8273920,
+        "max": 8310784
+      },
+      "final_process_count": {
+        "median": 1,
+        "min": 1,
+        "max": 1
+      },
+      "sampled_peak_private_bytes": {
+        "median": 1421312,
+        "min": 1409024,
+        "max": 1421312
+      },
+      "sampled_peak_working_set_bytes": {
+        "median": 8282112,
+        "min": 8273920,
+        "max": 8310784
+      }
+    },
+    "mib_conversions": {
+      "final_private_mib": {
+        "median": 1.35546875,
+        "min": 1.34375,
+        "max": 1.35546875
+      },
+      "final_working_set_mib": {
+        "median": 7.8984375,
+        "min": 7.890625,
+        "max": 7.92578125
+      }
+    },
+    "recorded_renderer_child_identities": 0,
+    "final_elapsed_ms_median": 4773.021200002404
+  },
+  "acceptance": {
+    "command": "python evidence/verification/measure2-acceptance.py",
+    "exit_code": 0,
+    "stdout": "M02_ACCEPTANCE_OK",
+    "checks_total": 197,
+    "checks_passed": 197,
+    "check_categories": {
+      "baseline_git": 8,
+      "cleanup_and_rejection": 8,
+      "derived_statistics": 34,
+      "environment": 28,
+      "limitations": 12,
+      "raw_metadata": 9,
+      "raw_structure": 81,
+      "source_identity": 17
+    },
+    "detailed_command": "python evidence/verification/measure2-acceptance.py --details",
+    "detailed_exit_code": 0,
+    "median_implementation": "Independent sorted-values median, not the sampler summary function",
+    "raw_immutability_control": "Expected raw SHA256 checked before and after dynamic controls"
+  },
+  "focused_checks": {
+    "command": "python evidence/verification/measure2-checks.py",
+    "exit_code": 0,
+    "tests_run": 2,
+    "tests_passed": 2,
+    "result": "OK"
+  },
+  "refutation": {
+    "command": "python target/m02/refute-acceptance.py",
+    "exit_code": 0,
+    "result": "M02_REFUTATION_OK",
+    "cases_total": 12,
+    "cases_rejected_for_intended_reason": 12,
+    "cases": [
+      "missing_sample",
+      "final_not_last_sample",
+      "private_peak_lie",
+      "summary_median_lie",
+      "unrecorded_child_sample",
+      "executable_after_hash_lie",
+      "sampler_hash_lie",
+      "missing_environment_field",
+      "removed_limit",
+      "elapsed_nonmonotonic",
+      "invalid_root_birth",
+      "raw_file_mutation"
+    ],
+    "results": "target/m02/refutation-results.json",
+    "raw_sha256_before_after": "ac5e2799ab5a8c91a895cccaeb81a2c083a5f69a101a49a8580fb5b2a16c004d"
+  },
+  "baseline_git": {
+    "git_root": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia",
+    "files": [
+      {
+        "path": "scripts/measure_idle.py",
+        "tracked": true,
+        "worktree_diff_empty": true,
+        "cached_diff_empty": true,
+        "status_porcelain_empty": true,
+        "sha256": "e993b69a87d2a97b76f1674afd5ceff9a8a566462f3fa8d1ee5fa87daa6739c9"
+      },
+      {
+        "path": "evidence/benchmarks/brave-idle.json",
+        "tracked": true,
+        "worktree_diff_empty": true,
+        "cached_diff_empty": true,
+        "status_porcelain_empty": true,
+        "sha256": "ecbbdcc1873b97357ce4a2d920fd86f65b0ab220c021ddc4e4cca71ffc3457c7"
+      }
+    ],
+    "brave_statistics_recomputed_for_comparison": false
+  },
+  "initial_isolated_red_control": {
+    "command": "python evidence/verification/measure2-acceptance.py",
+    "exit_code": 1,
+    "failure": "raw_metadata: recorded command names the current app sampler",
+    "cause": "The pre-resume oracle incorrectly resolved legacy recorded paths against the isolated worktree.",
+    "repair_scope": "Only measure2-acceptance.py path binding and required value-card/limit coverage; raw evidence and sampler were not edited.",
+    "gui_launched": false
+  },
+  "lint": {
+    "commands_attempted": [
+      "ruff check --no-cache scripts/measure_app_idle.py evidence/verification/measure2-checks.py evidence/verification/measure2-acceptance.py target/m02/refute-acceptance.py",
+      "ruff format --check --no-cache scripts/measure_app_idle.py evidence/verification/measure2-checks.py evidence/verification/measure2-acceptance.py target/m02/refute-acceptance.py"
+    ],
+    "status": "unavailable",
+    "observed_error": "ruff: The term 'ruff' is not recognized as a name of a cmdlet, function, script file, or executable program.",
+    "current_pass_claimed": false,
+    "historical_ruff_logs_reused_as_current_evidence": false
+  },
+  "value_card": {
+    "protects": "M02 raw arithmetic, source identity, baseline integrity, and launch-owned cleanup",
+    "fails_when": "A sample, digest, summary, PID birth identity, rejection, or Git baseline changes",
+    "why_new": "Existing focused checks omit all-sample, environment, hash, wrong-hash, and mutation reconciliation",
+    "seam": "None in production; wrong-hash launches are stubbed only inside the test process",
+    "no_claim": "No GUI rerun, paint/readiness, renderer/true peak, Brave equivalence, startup/navigation, or production-budget verdict"
+  },
+  "claim_boundaries": {
+    "observed": [
+      "Seven recorded runs contain twenty samples each, with one extant process in every recorded sample.",
+      "Current EXE, fixture, and sampler fingerprints match the recorded identities; EXE and fixture before/after records are equal.",
+      "The seven recorded PID/create-time identities are not alive now.",
+      "Current-source wrong-hash rejection and real Python-child cleanup controls passed without launching the GUI."
+    ],
+    "derived": [
+      "All per-run final and sampled-peak fields and all five median/min/max summaries recompute exactly from raw samples.",
+      "No renderer child was observed at the 250 ms sampling interval; this is a sampling result, not proof that no renderer ran.",
+      "Final samples occurred 4768.742600001133 to 4987.052600001334 ms after Popen initiation."
+    ],
+    "not_established": [
+      "Renderer lifetime, renderer memory, exited-child CPU, or true whole-process-tree peaks",
+      "First meaningful paint, page readiness, navigation timing, interaction, frame pacing, or startup-to-paint",
+      "Cold startup, controlled cache state, energy use, active/multitab/recovery behavior, or production memory budgets",
+      "Equivalent Brave functionality, comparative advantage, reduction ratios, or a fastest/lightest claim",
+      "A reproducible build from the historical source revision or a performance claim for later development source"
+    ]
+  },
+  "limitations": [
+    "All 140 samples contain only the retained GUI root. A one-shot renderer can exit between 250 ms observations, so renderer resource use and true process-tree peaks remain unknown.",
+    "Hidden-window process survival and headless fixture inspection do not establish paint or page readiness.",
+    "Sampled peaks are maxima of the recorded root-only observations, not true peaks; transient or inaccessible descendants can be missed.",
+    "Popen duration is process creation only. Final-sample elapsed times are not startup, navigation, or readiness metrics.",
+    "Working-set sums can count shared pages more than once. CPU fields cover only extant sampled processes and omit exited-child CPU.",
+    "Power saver, available RAM, host background work, and cache conditions were not controlled. No cold-cache result follows.",
+    "The raw report does not record viewport, DPI, fonts, or a background-process inventory requested by BENCHMARKS.md; this is an environment-capture gap for future comparisons.",
+    "Creation-time checks and the Popen handle constrain cleanup to owned identities, but children never observed cannot be included in that evidence.",
+    "The immutable 0.2 local subset lacks retained full-browser functionality. No equivalent Brave comparison, performance advantage, or production budget is justified.",
+    "This review reconciled existing evidence and non-GUI controls; it did not rerun or independently reproduce the GUI workload."
+  ],
+  "root_actions": [
+    "Preserve the raw report, existing sampler/checks, and Brave baseline as immutable inputs; integrate this only as a local crew candidate, not formal READY.",
+    "If root records these values in BENCHMARKS.md or TASKS.md, retain the renderer-sampling, environment-capture, paint-readiness, and non-equivalence limits.",
+    "Measure a future new workload with explicit paint/navigation readiness, high-resolution renderer-lifetime instrumentation, viewport/DPI/font/background capture, and full-process-tree active/peak/recovery metrics before any comparison.",
+    "Keep formal gstack receipt/READY/ship gates open because their helper runtime and remote policy are unavailable."
+  ]
+}

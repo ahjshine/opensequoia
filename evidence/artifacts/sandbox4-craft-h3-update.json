@@ -1,0 +1,14 @@
+{
+  "tool": "core_hypothesis_update",
+  "params": {
+    "hypothesis_id": "hyp_3",
+    "status": "refuted",
+    "add_contradicting_evidence_ids": [
+      "ev_273186e83b0e8fea1dd8a9b7a4964dc0e6b012e45d4ccee5ee3ce2cb0902a0b9"
+    ],
+    "note": "The manifest is asInvoker with PerMonitorV2 and longPathAware as predicted, but the version resource is 0.2.0.0 (ProductVersion 0.2.0), not the predicted 0.1.0.0 style."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis\":{\"claim\":\"The new EXE resources still identify OpenSequoia with the manifest asInvoker/PerMonitorV2 policy and a 0.1.0.0-style file version inherited from the package metadata.\",\"contradicting\":[\"ev_273186e83b0e8fea1dd8a9b7a4964dc0e6b012e45d4ccee5ee3ce2cb0902a0b9\"],\"id\":\"hyp_3\",\"notes\":[\"The manifest is asInvoker with PerMonitorV2 and longPathAware as predicted, but the version resource is 0.2.0.0 (ProductVersion 0.2.0), not the predicted 0.1.0.0 style.\"],\"prediction\":\"RT_VERSION names OpenSequoia and RT_MANIFEST requests asInvoker and PerMonitorV2.\",\"status\":\"refuted\",\"supporting\":[]},\"revision\":8}}\n"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "crates/ipc/src/lib.rs",
+    "sha256": "00c45c2ede1564be0577cf6b992f7d78792d2495af1248938575d9a40ec84cdb"
+  },
+  {
+    "path": "crates/ipc/src/codec.rs",
+    "sha256": "cf199aee483460b9f32d162076dae0759ac71e81cf33944b043d07eac1b7c1de"
+  },
+  {
+    "path": "crates/ipc/tests/framing.rs",
+    "sha256": "65f97d98efe90b4e4808362bf49b125a09f24bc737d5eeed200c8536084db4a1"
+  }
+]

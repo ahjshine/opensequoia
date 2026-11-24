@@ -1,0 +1,20 @@
+I03a runtime smoke: recorded vs rebuilt 54289fd EXE
+recorded_inspect_sha256=dca111c5a4a6a5761426c524352e3e16738211675a8e22a3a72eda191de4f143
+rebuilt_inspect_sha256=dca111c5a4a6a5761426c524352e3e16738211675a8e22a3a72eda191de4f143
+inspect_outputs_equal=True
+recorded_line: nodes=46 viewport_width=960 content_height=480 text_runs=137
+--- CSS subset runtime smoke (current build, later commit; 54289fd predates CSS) ---
+plain: nodes=7 viewport_width=960 content_height=56 text_runs=3 | diagnostics=3 html_recovery=1 unsupported_elements=0 unsupported_css=0 unsupported_features=2
+styled: nodes=7 viewport_width=960 content_height=80 text_runs=3 | diagnostics=3 html_recovery=1 unsupported_elements=0 unsupported_css=0 unsupported_features=2
+css_changed_layout=True
+
+css_build_head=56d1adbbce0cfe468e56be2afaacb778ef102a2b dirty=yes
+plain_height=56
+styled40_height=80 unsupported_css=0
+oversize300_height=56 unsupported_css=1
+runtime_fixture=fixtures/guide.html recorded_sha256=dca111c5a4a6a5761426c524352e3e16738211675a8e22a3a72eda191de4f143 rebuilt_sha256=dca111c5a4a6a5761426c524352e3e16738211675a8e22a3a72eda191de4f143 identical=True
+runtime_fixture=fixtures/welcome.html recorded_sha256=11bc582944f960da101a2de2008b971d84b2b27b31bff47ac2091d571187d036 rebuilt_sha256=11bc582944f960da101a2de2008b971d84b2b27b31bff47ac2091d571187d036 identical=True
+windowed_smoke_recorded exit=0 output=WINDOW_SMOKE_OK paints=1 drawn_text_runs=105 child_rendered=1
+windowed_smoke_rebuilt exit=0 output=WINDOW_SMOKE_OK paints=1 drawn_text_runs=105 child_rendered=1
+windowed_smoke_current exit=0 output=WINDOW_SMOKE_OK paints=1 drawn_text_runs=105 child_rendered=1
+app_smoke_current exit=0 output=APP_SMOKE_OK navigation=1 back=1 forward=1 tabs=1 close_reset=1 native_controls=1 child_rendered=1 paints=10

@@ -1,0 +1,40 @@
+name: Windows development gates
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: windows-2025
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install pinned toolchain
+        shell: pwsh
+        run: rustup toolchain install 1.98.1 --profile minimal --component rustfmt --component clippy
+      - name: Format
+        run: cargo fmt --all -- --check
+      - name: Lint
+        run: cargo clippy --workspace --all-targets --locked -- -D warnings
+      - name: Install pinned lockfile auditor
+        run: cargo install cargo-audit --version 0.23.0 --locked --no-default-features
+      - name: Dependency advisories
+        run: cargo audit --file Cargo.lock
+      - name: Behavior tests
+        run: cargo test --workspace --locked
+      - name: Release build
+        run: cargo build --release --locked
+      - name: Headless engine and process verification
+        shell: pwsh
+        run: |
+          & target/release/opensequoia.exe --inspect
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & target/release/opensequoia.exe --process-smoke
+          exit $LASTEXITCODE
+      - name: Package development payload and license notices
+        run: python scripts/package_dev.py
+      - name: Upload development payload
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: opensequoia-development-win-x64
+          path: evidence/artifacts/raw/opensequoia-*-win-x64.zip
+  # Native window/assistive technology gates require an interactive Windows
+  # test session. Hosted CI does not establish UI accessibility or sandbox parity.

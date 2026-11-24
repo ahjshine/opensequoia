@@ -1,0 +1,11 @@
+{
+  "program_version": 1,
+  "selection_date": "2026-11-22",
+  "status": "Pinned inputs only; no suite executed",
+  "suites": [
+    { "name": "wpt", "repository": "https://github.com/web-platform-tests/wpt.git", "revision": "42e27408034f57afe4c726476d1a0bd96b873129", "adapter": "pending" },
+    { "name": "Test262", "repository": "https://github.com/tc39/test262.git", "revision": "2a1ade303f72d3de80565c921d685222405c32ce", "adapter": "pending" },
+    { "name": "WebAssembly spec", "repository": "https://github.com/WebAssembly/spec.git", "revision": "6fca707686ed4f36a1e30ec2ae7d3dd32b276704", "adapter": "pending" }
+  ],
+  "pin_command": "git ls-remote <repository> HEAD (only exact HEAD rows selected; symbolic origin/HEAD discarded)"
+}

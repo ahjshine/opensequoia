@@ -1,0 +1,22 @@
+   Compiling opensequoia-ipc v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\ipc)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.32s
+     Running tests\framing.rs (target\debug\deps\framing-2ec38df0240bc4bf.exe)
+
+running 1 test
+test round_trip_all_message_types_and_streamed_frames ... FAILED
+
+failures:
+
+---- round_trip_all_message_types_and_streamed_frames stdout ----
+
+thread 'round_trip_all_message_types_and_streamed_frames' (13848) panicked at crates\ipc\tests\framing.rs:17:38:
+called `Result::unwrap()` on an `Err` value: BadMagic
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    round_trip_all_message_types_and_streamed_frames
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p opensequoia-ipc --test framing`

@@ -1,0 +1,14 @@
+   Compiling opensequoia v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.19s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-2beb1d63a8ff4f92.exe)
+
+running 6 tests
+test input::tests::defaults_to_bundled_local_document ... ok
+test input::tests::modes_are_explicit_and_exclusive ... ok
+test windows::tests::dpi_conversion_checks_signed_coordinates ... ok
+test input::tests::refuses_network_and_device_inputs ... ok
+test input::tests::loader_validates_real_utf8_and_file_limits ... ok
+test input::tests::loader_rejects_a_real_local_directory_junction ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.18s
+

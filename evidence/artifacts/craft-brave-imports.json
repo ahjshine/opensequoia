@@ -1,0 +1,186 @@
+{
+  "authority": "original-files",
+  "carries_target_content": true,
+  "confidence": "observed",
+  "coverage": {
+    "examined": 1,
+    "next_offset": 1,
+    "status": "partial",
+    "total": 366
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_0373a002bdd6ea3ef501b4bbed059974fb89325f9848a243929d79f5bb55417d",
+  "limitations": [],
+  "links": [],
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+    }
+  ],
+  "operation": "native_library_calls_list",
+  "params": {
+    "contains": null,
+    "kind": null,
+    "limit": 1,
+    "offset": 0,
+    "path": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"
+  },
+  "result": {
+    "bound_modules": [],
+    "format": "pe",
+    "imports": [
+      {
+        "hint": 0,
+        "kind": "delay",
+        "library": "ADVAPI32.dll",
+        "name": "AccessCheck",
+        "slot": "0x1403f6bf0"
+      }
+    ],
+    "libraries": [
+      {
+        "by_ordinal_only": 0,
+        "imports": 47,
+        "kinds": [
+          "delay"
+        ],
+        "name": "ADVAPI32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 237,
+        "kinds": [
+          "normal"
+        ],
+        "name": "KERNEL32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 3,
+        "kinds": [
+          "delay"
+        ],
+        "name": "SHELL32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 1,
+        "kinds": [
+          "delay"
+        ],
+        "name": "SHLWAPI.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 31,
+        "kinds": [
+          "delay"
+        ],
+        "name": "USER32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 1,
+        "kinds": [
+          "delay"
+        ],
+        "name": "USERENV.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 3,
+        "kinds": [
+          "normal"
+        ],
+        "name": "VERSION.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 13,
+        "kinds": [
+          "delay"
+        ],
+        "name": "WINHTTP.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 3,
+        "kinds": [
+          "delay"
+        ],
+        "name": "WINMM.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 3,
+        "kinds": [
+          "delay"
+        ],
+        "name": "api-ms-win-core-synch-l1-2-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 2,
+        "kinds": [
+          "delay"
+        ],
+        "name": "api-ms-win-core-winrt-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 1,
+        "kinds": [
+          "delay"
+        ],
+        "name": "api-ms-win-power-base-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 5,
+        "kinds": [
+          "normal"
+        ],
+        "name": "chrome_elf.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 9,
+        "kinds": [
+          "delay"
+        ],
+        "name": "dbghelp.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 3,
+        "kinds": [
+          "normal"
+        ],
+        "name": "ntdll.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 4,
+        "kinds": [
+          "delay"
+        ],
+        "name": "ole32.dll"
+      }
+    ],
+    "matching": 366,
+    "path": "C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe",
+    "total": 366
+  },
+  "subject": {
+    "kind": "pe",
+    "name": "brave.exe",
+    "sha256": "eb7bdd6794feef543c70ed73db5a408636b9f0b86f6977609e8034b1f6da932f"
+  },
+  "summary": "366 imported function(s) from 16 libraries, 118 of them delay-loaded."
+}

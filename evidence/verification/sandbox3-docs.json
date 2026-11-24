@@ -1,0 +1,88 @@
+[
+  {
+    "name": "profile",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/userenv/nf-userenv-createappcontainerprofile",
+    "sha256_html": "5f4944e54e39e200e7a1dd716be65ff122068ea8abe53a764523eb7c1b829164",
+    "sha256_text": "a08845078b31b2cd374fb302735fc5f65adbc220674342657c0ed2e984df5f86",
+    "bytes": 52845,
+    "path": "evidence\\verification\\sandbox3-doc-profile.txt",
+    "result": "ok"
+  },
+  {
+    "name": "derive",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/userenv/nf-userenv-deriveappcontainersidfromappcontainername",
+    "sha256_html": "7e58318703a3ae8a80f4eb2d8c679cd8476070790a3e7edda9456affa40d0ee7",
+    "sha256_text": "4438ce67f8293daccd92562e0f4ce2063d6ee210954e31bb56e1fb1c58bb080f",
+    "bytes": 51002,
+    "path": "evidence\\verification\\sandbox3-doc-derive.txt",
+    "result": "ok"
+  },
+  {
+    "name": "delete",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/userenv/nf-userenv-deleteappcontainerprofile",
+    "sha256_html": "b3fcc01597c7decd4ecd400c8ba698293cf58859ded1be63c59029940681fde4",
+    "sha256_text": "039b8e7e3daf35ee0161a0541863d98151d173ac526f40d87fb395ddcb31bbf8",
+    "bytes": 51750,
+    "path": "evidence\\verification\\sandbox3-doc-delete.txt",
+    "result": "ok"
+  },
+  {
+    "name": "security-capabilities",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnt/ns-winnt-security_capabilities",
+    "sha256_html": "e281e0e7d956d538085f640457f6343abe49c6b17762b450a527fb3ad5c9f693",
+    "sha256_text": "0d1710e95699f8e96b8f93a6c814f38050f214d132179f32a89589e633a8bb29",
+    "bytes": 50075,
+    "path": "evidence\\verification\\sandbox3-doc-security-capabilities.txt",
+    "result": "ok"
+  },
+  {
+    "name": "attributes",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-updateprocthreadattribute",
+    "sha256_html": "1d449eb75a870371c1edcb610d09e706649a6d4b2b70738a3afadea92c050042",
+    "sha256_text": "14f9e8f5bae2fcb6976681601826cafe4ac8c6b35ab22c5533e59735383c704c",
+    "bytes": 85404,
+    "path": "evidence\\verification\\sandbox3-doc-attributes.txt",
+    "result": "ok"
+  },
+  {
+    "name": "isolation",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/secauthz/appcontainer-isolation",
+    "sha256_html": "18efe09ca217eb29813a78aa21fdc93027645cbd3050196c9da3b7807254311b",
+    "sha256_text": "b3e54ca28dd0b3788bfadfd256f2f16f985236c6e4cd5c5510010146dd1cb1ad",
+    "bytes": 49890,
+    "path": "evidence\\verification\\sandbox3-doc-isolation.txt",
+    "result": "ok"
+  },
+  {
+    "name": "token",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/securitybaseapi/nf-securitybaseapi-gettokeninformation",
+    "sha256_html": "d1c6e809f2ac0cf72f9aa34347575290ccb2a930f912700d4bb360997b6bb0c8",
+    "sha256_text": "dbe4974415187b90dcb80663a4b85e20c388deee1eed9be77c433bd58048f0cd",
+    "bytes": 56601,
+    "path": "evidence\\verification\\sandbox3-doc-token.txt",
+    "result": "ok"
+  },
+  {
+    "name": "acl",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/aclapi/nf-aclapi-setnamedsecurityinfow",
+    "sha256_html": "cdc3ca2efd1fccd959cda7d63bc37e792b0b02c30c80b8d80370b98eab105ffd",
+    "sha256_text": "58530730ef67b379f525260939978f87790fc3cc620218545ed6e81411bc69a8",
+    "bytes": 58258,
+    "path": "evidence\\verification\\sandbox3-doc-acl.txt",
+    "result": "ok"
+  },
+  {
+    "name": "loopback",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/winsock/using-winsock-in-an-appcontainer",
+    "result": "<HTTPError 404: 'Not Found'>"
+  },
+  {
+    "name": "mitigation",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocessmitigationpolicy",
+    "sha256_html": "47e31900848eec94e8eda416fcd9979f2319631af2f0086fc7e2cb04d81de4aa",
+    "sha256_text": "21a9f10eefd493c53e7515d8785247281e0c8cd59613a18b180029e977dab4f4",
+    "bytes": 63669,
+    "path": "evidence\\verification\\sandbox3-doc-mitigation.txt",
+    "result": "ok"
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "task": "I02a",
+  "date": "2026-11-23",
+  "result": "Verified bounded GUI development package artifact gates",
+  "gui_input_hashes_match_before_and_after": true,
+  "package_inputs_match_current_sources": [
+    {
+      "member": "opensequoia.exe",
+      "sha256": "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e",
+      "current_source_matches": true
+    },
+    {
+      "member": "LICENSE",
+      "sha256": "9221c2f936159b8446d329249fb4c0f25be510f447383a0f13336ac7985668a3",
+      "current_source_matches": true
+    },
+    {
+      "member": "README.md",
+      "sha256": "807109188029501ae799150f160c57d6ca57ee0094c5522ea0dd6a00fd445aa4",
+      "current_source_matches": true
+    },
+    {
+      "member": "THIRD_PARTY_NOTICES.txt",
+      "sha256": "ba473cc311e4506a509e1bd73f8a6287320fae789569e351537d2143fcc78e95",
+      "current_source_matches": true
+    }
+  ],
+  "craft_findings": [
+    "fnd_18",
+    "fnd_19",
+    "fnd_20",
+    "fnd_21"
+  ],
+  "integrity_report": "gui2-evidence-integrity.json",
+  "same_input_zip_reproducibility": true,
+  "package_runs": [
+    "gui2-package-first.json",
+    "gui2-package-second.json"
+  ],
+  "python": "3.13.5",
+  "cargo": "cargo 1.98.1 (797e8a9bc 2026-08-05)",
+  "check_commands": [
+    "Compare all Get-FileHash values with root2-gui-verification.json input_hashes",
+    "Get-AuthenticodeSignature target/gui/release/opensequoia.exe",
+    "python scripts/package_dev.py --executable target/gui/release/opensequoia.exe (twice)",
+    "Craft CLI --project evidence/artifacts/brave-opensequoia.cany tools recorded in gui2-*.json"
+  ],
+  "limitations": [
+    "54-test/runtime suite pre-existed and was fingerprint-verified, not re-run by I02a",
+    "Unsigned; no production install/update/recovery, clean-machine VC runtime or Windows10 execution verified",
+    "No full browser/runtime security/performance/native-code-absence verdict"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "unsigned development renderer payload; not browser release/installer",
+  "version": "0.2.0",
+  "target": "x86_64-pc-windows-msvc",
+  "executable_bytes": 946176,
+  "build_executable": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\gui\\release\\opensequoia.exe",
+  "executable_sha256": "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e",
+  "payload_bytes": 1289128,
+  "zip_bytes": 379375,
+  "zip_sha256": "743c6594a6e72f0dffdcfbf07537b4900659da35d018933eef39df21d871ff05",
+  "zip_metadata": "fixed order, timestamp 1980-01-01, Unix regular file mode 0644; reproducible for identical inputs/tool runtime",
+  "archive": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\raw\\opensequoia-0.2.0-win-x64.zip",
+  "files": [
+    "opensequoia.exe",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.txt"
+  ],
+  "limitations": [
+    "Does not include production browser retained scope",
+    "Not comparable to full Brave payload",
+    "No signing/update/install support",
+    "No fresh-install footprint or allocated-size claim"
+  ]
+}

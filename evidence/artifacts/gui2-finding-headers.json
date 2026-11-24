@@ -1,0 +1,13 @@
+{
+  "tool": "core-finding-record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_a5ef3c46551c09321e8f1df477403bdfc68782d330ee8a107721730a8f3b1e3b"
+    ],
+    "statement": "The final GUI executable SHA256 d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e is PE32+ AMD64 (pei-x86-64) and its first250 header-adapter lines report Windows GUI subsystem2 with HIGH_ENTROPY_VA, DYNAMIC_BASE, NX_COMPAT and GUARD_CF. Header flags are static mitigation metadata, not runtime sandbox/security proof."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_18\",\"revision\":64}}\n"
+}

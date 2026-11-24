@@ -1,0 +1,65 @@
+{
+  "result": {
+    "continue_with": "core_evidence_browse",
+    "counts": {
+      "exports": 2,
+      "imports": 366,
+      "relocations": 0,
+      "sections": 11,
+      "segments": 0,
+      "symbols": 0
+    },
+    "mitigations": {
+      "canary": false,
+      "code_signature": null,
+      "control_flow_guard": true,
+      "encrypted": null,
+      "fortify": null,
+      "high_entropy_va": true,
+      "no_seh": false,
+      "nx": true,
+      "pie": true,
+      "relro": null,
+      "stripped": true
+    },
+    "record": {
+      "carries_target_content": false,
+      "confidence": "observed",
+      "coverage": {
+        "examined": 1,
+        "status": "complete",
+        "total": 1
+      },
+      "evidence_id": "ev_428782241cfb9a0eb59ca948ff23d0b413dab1a3e6e3e0bc6a0bc8cfdf0bc50d",
+      "limitations": [
+        {
+          "code": "pe_base_relocations",
+          "message": "PE base relocations are counted by the loader, not listed"
+        }
+      ],
+      "lists": {
+        "data_directories": 11,
+        "exports": 2,
+        "imports": 366,
+        "libraries": 16,
+        "relocations": 0,
+        "sections": 11,
+        "segments": 0,
+        "symbols": 0,
+        "warnings": 0
+      },
+      "operation": "native_layout_show",
+      "subject": {
+        "kind": "pe",
+        "name": "brave.exe",
+        "sha256": "eb7bdd6794feef543c70ed73db5a408636b9f0b86f6977609e8034b1f6da932f"
+      },
+      "summary": "PE (Windows) executable (x86_64): 11 sections, 0 symbols, 0 relocations; NX yes, PIE yes, RELRO n/a, canary no."
+    },
+    "saved_evidence": {
+      "evidence_id": "ev_428782241cfb9a0eb59ca948ff23d0b413dab1a3e6e3e0bc6a0bc8cfdf0bc50d",
+      "kind": "saved"
+    },
+    "summary": "PE (Windows) executable (x86_64): 11 sections, 0 symbols, 0 relocations; NX yes, PIE yes, RELRO n/a, canary no."
+  }
+}

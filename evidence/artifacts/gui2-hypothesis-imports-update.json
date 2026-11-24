@@ -1,0 +1,15 @@
+{
+  "tool": "core-hypothesis-update",
+  "params": {
+    "hypothesis_id": "hyp_14",
+    "status": "supported",
+    "add_supporting_evidence_ids": [
+      "ev_f97f3c572503836ee601339717f5779c4f277218b6637baef179d3d4a441212b",
+      "ev_751a26dab5578a14416d3b7ad83c50792deaae9b46901ef57c64836d041ee258"
+    ],
+    "note": "Semantic names/library/kind/hints match all162 console draft imports and12 library names.18 import slots are reordered, so raw row equivalence is false; no added/removed functions or libraries."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis\":{\"claim\":\"The GUI header change preserves the console draft normal import table of 162 rows including Job/stdio/native UI services.\",\"contradicting\":[],\"id\":\"hyp_14\",\"notes\":[\"Semantic names/library/kind/hints match all162 console draft imports and12 library names.18 import slots are reordered, so raw row equivalence is false; no added/removed functions or libraries.\"],\"prediction\":\"Complete imports match draft rows, with no newly recorded DLL; this only tests import table equivalence.\",\"status\":\"supported\",\"supporting\":[\"ev_f97f3c572503836ee601339717f5779c4f277218b6637baef179d3d4a441212b\",\"ev_751a26dab5578a14416d3b7ad83c50792deaae9b46901ef57c64836d041ee258\"]},\"revision\":63}}\n"
+}

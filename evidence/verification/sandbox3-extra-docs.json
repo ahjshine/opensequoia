@@ -1,0 +1,15 @@
+[
+  {
+    "name": "legacy",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/secauthz/appcontainer-for-legacy-applications-",
+    "path": "evidence\\verification\\sandbox3-doc-legacy.txt",
+    "result": "ok",
+    "sha256_html": "f3c67ad638eb3fad409382958867ddb50b76a3e708040e592894d79bb17430de",
+    "sha256_text": "8e5836525a24364f869d2604b26357015a4ee65da98cc173a26a83d336b6f311"
+  },
+  {
+    "name": "network",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/winsock/network-isolation",
+    "result": "<HTTPError 404: 'Not Found'>"
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "path": ".cargo/config.toml",
+    "sha256": "8a110099b9690912bd2f841794af36ef6c2096d1d14b7135439fee31ad08a3bc"
+  },
+  {
+    "path": "Cargo.toml",
+    "sha256": "3936ac3b85cf37e019cfe36ac4a040bff857a17979797df66a679ca6c3d66299"
+  },
+  {
+    "path": "Cargo.lock",
+    "sha256": "88d6d60f73cb5a84d7a04d069d8c5e756a12928195609bb2db226566aca4bcac"
+  },
+  {
+    "path": "crates/ipc/Cargo.toml",
+    "sha256": "618c76524216ea5dea746360676ea0231f06be487faee6eeac2388e4a51f70d9"
+  },
+  {
+    "path": "crates/ipc/src/lib.rs",
+    "sha256": "00c45c2ede1564be0577cf6b992f7d78792d2495af1248938575d9a40ec84cdb"
+  },
+  {
+    "path": "crates/ipc/src/codec.rs",
+    "sha256": "cf199aee483460b9f32d162076dae0759ac71e81cf33944b043d07eac1b7c1de"
+  },
+  {
+    "path": "crates/ipc/tests/framing.rs",
+    "sha256": "65f97d98efe90b4e4808362bf49b125a09f24bc737d5eeed200c8536084db4a1"
+  },
+  {
+    "path": "crates/app/src/worker.rs",
+    "sha256": "b5d7ceb96aa9a9855acfefc3f4b73e28f7b4c71c9155cd8bcb734ae46fa5e5bf"
+  },
+  {
+    "path": "crates/app/src/input.rs",
+    "sha256": "67f435ca82c83c4e058ccc8a8fc52cf2b79626780ba702cc80f5e2c2861bb38d"
+  },
+  {
+    "path": "crates/app/src/main.rs",
+    "sha256": "54f12ea1153b4537b94004658c7276a83b2806f265872eb3cab1066414cf2562"
+  },
+  {
+    "path": "crates/app/src/windows.rs",
+    "sha256": "14d44df45b8a9a81dd668253be5be193cff55a1a331d1839169053944c9ea839"
+  },
+  {
+    "path": "crates/app/build.rs",
+    "sha256": "c87dd0ef13d531b68158e53a6faefcbdc2ee8d6117d3eef4fa7760334e93ec96"
+  },
+  {
+    "path": "crates/app/resources/opensequoia.rc",
+    "sha256": "d06039d3384296fe6f813014b1f990a07851b829df9aec39eea6f182864700b5"
+  },
+  {
+    "path": "crates/app/resources/opensequoia.manifest",
+    "sha256": "f1a83999267cfae7ec75375eecda34e2e9f2969d0d041643d39cb0ee7d448b84"
+  },
+  {
+    "path": "fixtures/welcome.html",
+    "sha256": "3b98c0afca68e30dbdecd99066a6b0961067d4dbf5dbcc146f24e77486df3847"
+  },
+  {
+    "path": "README.md",
+    "sha256": "3af3ea597f059bdec0f604ea88769bb2a41668331a09042b6c7dd97d779b1119"
+  },
+  {
+    "path": "scripts/package_dev.py",
+    "sha256": "0d7fe769be79de162a8e4c6a09305c26d46faf2eca89682955e4864ad85bc7f0"
+  },
+  {
+    "path": ".github/workflows/windows.yml",
+    "sha256": "0b96614e21302ca0d7047500afca817c88e6ace0d67cad7d85b80ae03d107dfa"
+  }
+]

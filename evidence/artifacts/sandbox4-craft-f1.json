@@ -1,0 +1,14 @@
+{
+  "tool": "core_finding_record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_d1415ce57072b4b4827b09c86e89b3015be36e6e802685febd7630c0bc468b49",
+      "ev_9a529d3bb5ea667ee02508b0100d5011ec72493a960ac1bd33edad2480bfb32d"
+    ],
+    "statement": "The exact investigated bytes are a 1,043,456-byte Windows PE named opensequoia.exe with SHA256 b8ae67c3b6839c1be1751bb3eb49088bf9999491b38284b58eb309e74cbc7499; both Craft records bind that same hash."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_1\",\"revision\":10}}\n"
+}

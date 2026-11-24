@@ -1,0 +1,70 @@
+{
+  "authority": "original-files",
+  "confidence": "observed",
+  "coverage": {
+    "examined": 1,
+    "status": "complete",
+    "total": 1
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_c1a51f322dc7a696971dcc3fc1236af141123fef3f9b86c5a21575554771ca04",
+  "limitations": [
+    {
+      "code": "no_disk_images",
+      "message": "Disk images (DMG), installers (PKG/MSI) and compressed tarballs are listed as single files, not opened."
+    }
+  ],
+  "links": [],
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/BraveBrowserStandaloneSetup-1.100.58.exe"
+    }
+  ],
+  "operation": "core_archive_show",
+  "params": {
+    "if_tampered": true,
+    "limit": 1,
+    "max_depth": 0,
+    "max_entries": 2000,
+    "max_total_bytes": 268435456,
+    "offset": 0,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/BraveBrowserStandaloneSetup-1.100.58.exe"
+  },
+  "result": {
+    "by_kind": {
+      "pe": 1
+    },
+    "containers": [],
+    "content_id": "inv_fc4809b52e3476374924c06810e62caf1713024505312c3fc5b3046cc0667662",
+    "contradictions": [],
+    "entries": [
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "BraveBrowserStandaloneSetup-1.100.58.exe",
+        "sha256": "2802553c89831effe624bd1b0dd8e39c463e03a1224d557441350a5586e559ce",
+        "size": 173087584
+      }
+    ],
+    "entries_total": 1,
+    "files": 1,
+    "hashed_bytes": 173087584,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/BraveBrowserStandaloneSetup-1.100.58.exe",
+    "root": "BraveBrowserStandaloneSetup-1.100.58.exe",
+    "root_kind": "pe",
+    "truncated": false,
+    "unopened_nested": 0
+  },
+  "subject": {
+    "kind": "pe",
+    "name": "BraveBrowserStandaloneSetup-1.100.58.exe",
+    "sha256": "2802553c89831effe624bd1b0dd8e39c463e03a1224d557441350a5586e559ce"
+  },
+  "summary": "BraveBrowserStandaloneSetup-1.100.58.exe (pe) holds 1 files in 1 entries; 0 nested container(s)."
+}

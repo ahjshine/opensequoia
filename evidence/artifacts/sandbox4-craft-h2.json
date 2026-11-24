@@ -1,0 +1,10 @@
+{
+  "tool": "core_hypothesis_record",
+  "params": {
+    "claim": "The new EXE imports only Windows platform/CRT libraries used by the local renderer and has no new networking, scripting or browser-engine dependency compared with the prior snapshot.",
+    "prediction": "Library summary contains KERNEL32/USER32/GDI32/ntdll and CRT runtime names, with no new network or script engine DLLs."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis_id\":\"hyp_2\",\"revision\":4}}\n"
+}

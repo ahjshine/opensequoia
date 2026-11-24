@@ -1,0 +1,13 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.30s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-db6b529dac40c3a8.exe)
+
+running 6 tests
+test windows_process::tests::native_argument_quoting_preserves_quotes_and_trailing_slashes ... ok
+test windows_process::tests::real_synchronous_pipe_read_can_be_cancelled ... ok
+test windows_process::tests::job_membership_is_established_at_spawn_and_job_close_kills_child ... ok
+test windows_process::tests::parent_death_closes_noninherited_job_and_kills_actual_worker ... ok
+test windows_process::tests::unrelated_inheritable_handle_is_excluded_with_positive_control ... ok
+test windows_process::tests::job_active_process_limit_rejects_descendant_creation ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 29 filtered out; finished in 2.25s
+

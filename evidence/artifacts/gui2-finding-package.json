@@ -1,0 +1,13 @@
+{
+  "tool": "core-finding-record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_5da17a302b1ea9c68081ad590c783575f88bc1474663a074758898275d34f2bb"
+    ],
+    "statement": "The final GUI development ZIP SHA256743c6594a6e72f0dffdcfbf07537b4900659da35d018933eef39df21d871ff05 has a complete four-member inventory: opensequoia.exe946176bytes with verified GUI SHA d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e, LICENSE17099bytes, README.md3371bytes and THIRD_PARTY_NOTICES.txt322482bytes. Total hashed member bytes1289128; no ZIP contradictions reported."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_21\",\"revision\":67}}\n"
+}

@@ -1,0 +1,10 @@
+[package]
+name = "opensequoia-ipc"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Bounded local renderer IPC contract for OpenSequoia"
+
+[dependencies]
+opensequoia-engine = { path = "../engine" }

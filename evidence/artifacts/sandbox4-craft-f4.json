@@ -1,0 +1,13 @@
+{
+  "tool": "core_finding_record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_273186e83b0e8fea1dd8a9b7a4964dc0e6b012e45d4ccee5ee3ce2cb0902a0b9"
+    ],
+    "statement": "The EXE has two PE resources: RT_VERSION reports OpenSequoia 0.2.0.0 and the RT_MANIFEST requests asInvoker with PerMonitorV2 DPI awareness and longPathAware support."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_4\",\"revision\":13}}\n"
+}

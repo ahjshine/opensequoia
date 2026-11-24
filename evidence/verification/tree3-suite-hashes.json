@@ -1,0 +1,368 @@
+{
+  "schema": 1,
+  "hash_algorithm": "sha256",
+  "suite": {
+    "upstream": "web-platform-tests/wpt",
+    "revision": "31d1feb70e2d02f25ae26254caba19c8de0b56e0",
+    "root": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests",
+    "dat_files": 59,
+    "source_cases": 1779,
+    "outcome_cases": 3519
+  },
+  "html5ever_adapter": {
+    "source_revision": "492f52a02fd07c2321e59ccff90038e26b9c90bc",
+    "runner": "rcdom/tests/html-tree-builder.rs",
+    "ignore_list_inspected_not_applied": true
+  },
+  "parser": {
+    "crate": "html5ever",
+    "version": "0.40.1",
+    "vcs_revision": "d7232d746d3112f08926d169591576bd12fe2fdf",
+    "archive_sha256": "456a1a377e608e555d22ddab27ac0114bc7a7b4199078108e34c2aeae6c9b130",
+    "vcs_record_sha256": "ca39e10c658b000d4a59a197d2024cb92ac780fdc0f7cbbc3bb29122413209d4",
+    "cargo_lock_sha256": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707",
+    "engine_manifest_sha256": "a50e98201067c464496bcaa4643a55ee081ab1e2e2433410fe5ddd4f040b8173"
+  },
+  "files": [
+    {
+      "path": "evidence/components/html5ever/Cargo.toml",
+      "bytes": 1096,
+      "sha256": "c96f7abf0b9d044ea4c2c90f606b55c210ccca86037a92be9478ec6b5962c2b6"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/data/test/ignore",
+      "bytes": 213,
+      "sha256": "0251ed703fe3a247f567fe92f56afc3b81607f696f73d8a6efbf3be6d523b9e8"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/data/test/wpt-commit.txt",
+      "bytes": 42,
+      "sha256": "a3a55e487c65d9c5472c79904b8a85c90e83cd2f64dabf24979a4e4d74526866"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/tests/foreach_html5lib_test/mod.rs",
+      "bytes": 1388,
+      "sha256": "1ea254ffa3890b4dd928445a7d8b6253ad9053e4f37ef795839928accfdae77f"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/tests/html-tree-builder.rs",
+      "bytes": 9899,
+      "sha256": "573cc6f6d73f56d081274c2a52db1e87d2ce09500d8073e90420107ffea19848"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/LICENSE.md",
+      "bytes": 1511,
+      "sha256": "b66fe44a797069c9dcc44cb7e8cd20c4d81c4040368787ee62488f6dd00187d9"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/adoption01.dat",
+      "bytes": 6438,
+      "sha256": "8ec52e461d0f1e419013917923caedae99236f43e08996ccc683bb6af6c69991"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/adoption02.dat",
+      "bytes": 711,
+      "sha256": "e7302a75943f7b14d67fd3fd3e415504b69773142cba7dd33cba07a23efcf47c"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/blocks.dat",
+      "bytes": 10383,
+      "sha256": "81c218f1d72defdbd260eea20a11ebb3a53b2573c9be9d5b575133e7791d0433"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/comments01.dat",
+      "bytes": 3719,
+      "sha256": "9a76013856d98232c20dfc9096feedcb29cb2f6488d66381d2987f4741c844e1"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/common.js",
+      "bytes": 788,
+      "sha256": "2ad6e9fc4c16c0bb156858bd61582517a2ff49742a3c43867add9fb3cfe984d6"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/doctype01.dat",
+      "bytes": 9550,
+      "sha256": "c7c1acb59c4adb82c1f9ae11af4492a4701ca83110e49ab83aaec7ac42d3b62a"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/domjs-unsafe.dat",
+      "bytes": 10356,
+      "sha256": "eef4fb719e027ffaadfb854787d172893850fc561c29efe72d90c5bfa3c8b7ac"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/entities01.dat",
+      "bytes": 18583,
+      "sha256": "d66a31b136aba34b26237457c13056a2ff01bf86556859748a7a089102cdb63c"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/entities02.dat",
+      "bytes": 5261,
+      "sha256": "16cfeb9139b4c58c05fd0e9d606e08eb2f2d39808ce9efb209cfb7411f195488"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/foreign-fragment.dat",
+      "bytes": 9727,
+      "sha256": "3d0bbb74fee93de3a52a8c28c9ec59adf9a4c4a0c0fd471d73b1e936dd2bbb93"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/html5test-com.dat",
+      "bytes": 5091,
+      "sha256": "a851d26aa8f5aaa44f5fd7a4b57f2fdca285935c078cf667577d5db021d7e97b"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/inbody01.dat",
+      "bytes": 890,
+      "sha256": "aa84c9847f970975c62cbd4119729dfe3c2749ce73b392e2f43ce37d8ccb8dfc"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/isindex.dat",
+      "bytes": 823,
+      "sha256": "78e3bf6be2065fce7924bfc890724944d2d277e44cbf1f43f72427b4d74bcde8"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/main-element.dat",
+      "bytes": 773,
+      "sha256": "514d81bddfec9152e016f5db7bf23ffc577d20a2cffe6a0f08e0d5c7515235a6"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/math.dat",
+      "bytes": 1966,
+      "sha256": "a255bdad667a1b7de532df25802652cf05b55b6679c7bf08b8b43dc41fbacb29"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/menuitem-element.dat",
+      "bytes": 4256,
+      "sha256": "d930067ac3944f2f6a7c4b8cc511c1b28a84fd04645db7c1b080be8da5517150"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/namespace-sensitivity.dat",
+      "bytes": 540,
+      "sha256": "ffcf89223a10769f075be99aa0d58543f1d7d1a2c1190c343af324dcb60fbe35"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/noscript01.dat",
+      "bytes": 4856,
+      "sha256": "dd9c87f644bcd1cdf9dd01c64377cf92da5d56d0041ea89a553119d56805533a"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/pending-spec-changes-plain-text-unsafe.dat",
+      "bytes": 927,
+      "sha256": "f45151f8dc7a4fe1a4b36710cf33606ff43cc98a42f1d2f085a77680683b0c99"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/pending-spec-changes.dat",
+      "bytes": 897,
+      "sha256": "f5875fc46b1ced94e3e520ddd306c0ddbad285fa430d537ce3382b9cd66b423c"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/plain-text-unsafe.dat",
+      "bytes": 9486,
+      "sha256": "1aef5e36b7ea04bb1d70684b33529a183938b7604283c562c698d6dad4e3878d"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/quirks01.dat",
+      "bytes": 1223,
+      "sha256": "b57e75298f690e54897ca37b5e13843fb92ab9df9e66b5ba3eb78ab602f8c46b"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/ruby.dat",
+      "bytes": 4773,
+      "sha256": "af833aae604eb4eeec15edb3772209c247f782c038430e0ce629e17051207373"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/scriptdata01.dat",
+      "bytes": 6996,
+      "sha256": "aeeb24fa6bb926361d2edee9e9230890d39bfe2f96cc4cfd62c070e1a03cd14a"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/scripted_adoption01.dat",
+      "bytes": 312,
+      "sha256": "0dd8da769277091365d3c0f87e128808ef27a41ba14834654ad3c80e86e3e4c3"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/scripted_ark.dat",
+      "bytes": 658,
+      "sha256": "3c3628a4bafc420f9463c5250647be72296e731920d667d419f6120aa31e5b14"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/scripted_webkit01.dat",
+      "bytes": 633,
+      "sha256": "174144e8cb32b5a80199ede08a69f04f455708f4e0ffea49aa62535e61201433"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/search-element.dat",
+      "bytes": 787,
+      "sha256": "9af96807a6948646e0f85974c5397522909cf9874fb52f6b0612b453a6cae903"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/svg.dat",
+      "bytes": 1710,
+      "sha256": "8eed40ad70af4a2e92e74740b753b4da7ad820ff3fc39e727fc8de5dea9edbd5"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tables01.dat",
+      "bytes": 7364,
+      "sha256": "2bd7df3d818d1ccb4576cb579e172c5baca0db2fd6f5376f7a1b57b3b871e676"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/template.dat",
+      "bytes": 26815,
+      "sha256": "f1077a6586c052979fb38bb72f172bf756f14815c6be4588fac70faefef4b6c6"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/template.js",
+      "bytes": 6427,
+      "sha256": "cf35e4840e0494628ede11064b0ad274ed6bf1de90c92c9abb589f426763cdc8"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/test.js",
+      "bytes": 13048,
+      "sha256": "54987a0d41ab160136e7031a70382344e98a26cca927b78fcddb70380cc3e06e"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests1.dat",
+      "bytes": 41760,
+      "sha256": "f59d8bab63913c262aa916e5614ff63e3d884bb910a062291182c8dcff6a1f5a"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests10.dat",
+      "bytes": 17311,
+      "sha256": "4c8bd109f8d814ee86c6e20e52bec2d1af493dbd309b7c6f18123c37be583905"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests11.dat",
+      "bytes": 18202,
+      "sha256": "e9f7cb09a1b3cbea12cbf170ca929be80fc76e6cdf091182dfe76c7fd78ab95e"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests12.dat",
+      "bytes": 1674,
+      "sha256": "470a1c3f27e83ee8647b710cff8aab61da1925a99fd74d374ba7f61e49219a07"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests14.dat",
+      "bytes": 1142,
+      "sha256": "d68d545f9a91d38c7e6b5fb3cc513d4d0e744781dcf81651ec0d737217e2ef34"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests15.dat",
+      "bytes": 3865,
+      "sha256": "102371dc386e470eb68a88c3e609d0050bc0840b097d45dc51e357f88817f63d"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests16.dat",
+      "bytes": 49056,
+      "sha256": "3949d68a4c139614b281ace30d4980fb2c30a289793414123f427e62d1682942"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests17.dat",
+      "bytes": 2996,
+      "sha256": "c06e0312c2c82c3ecd141d1d05edd915ce04cfb5682b50a072f2106d102e1be5"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests18.dat",
+      "bytes": 12691,
+      "sha256": "60db916da0272ed819c481cd7a0c4c71759c612ed054726e762c48e4f14712e0"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests19.dat",
+      "bytes": 24386,
+      "sha256": "01bce306eb145a0ffd5a53e021d2cbaab03dda95053e81aaa6604776c7c85fed"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests2.dat",
+      "bytes": 14024,
+      "sha256": "8c780e8bbe25455fa085cbce1ca4d4f0d6ea720d3524f90cade3ac1518ff4482"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests20.dat",
+      "bytes": 14366,
+      "sha256": "32ee2af33344ab5d81e8a9b941b43671a0e39537a66275a9f27c5cc1ff45691d"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests21.dat",
+      "bytes": 5398,
+      "sha256": "577670c6e4d61f48ed1989e793b84d64263b95f510bd40afdb3dceb1fd639404"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests22.dat",
+      "bytes": 4433,
+      "sha256": "a00d8619dbe5b1dd558242da7e5632e1972f603fa04ace6ad38e35e610365db1"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests23.dat",
+      "bytes": 3646,
+      "sha256": "56c91149063b0355b5377b5c6832ca2dff43d8a00152510377bf6e0d75890024"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests24.dat",
+      "bytes": 1008,
+      "sha256": "e5d8b5e01cdd3a4f1f299cd14aa0881bab3c373696e49c687cd3e21f96b464f7"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests25.dat",
+      "bytes": 3874,
+      "sha256": "2c86b2e96230ec4f0489e9d9349ebcf7eb500cb34f7225154bcae73706ccdd17"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests26.dat",
+      "bytes": 9318,
+      "sha256": "cc2bb9889141a731917b7fa7277891964997f9b6d7e4cdb8190cec6b6d18c2b3"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests3.dat",
+      "bytes": 4906,
+      "sha256": "9597a98a52e80d7287fa7eb86fedb779cd156d09f0ee1fca09ee7143526efcb4"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests4.dat",
+      "bytes": 1115,
+      "sha256": "c7213d3d61e13c14476c894e01f336c4c8f50836c3cf44ab5c4b9cff20d81399"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests5.dat",
+      "bytes": 3370,
+      "sha256": "a1430b1e3994dda959e6eef318e255f64b838da5640f90317f5f4c8110796ba4"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests6.dat",
+      "bytes": 11728,
+      "sha256": "e843beaf46216ab20856a25b8e67d7fff90b07251570ff22db107baad34ad9df"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests7.dat",
+      "bytes": 7792,
+      "sha256": "5127efc6a247c31fc3ea22eb03ffece2a5a018ff03a67dd59f9587e807e19216"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests8.dat",
+      "bytes": 2829,
+      "sha256": "3ff7bae595b1560271acd835fc27cc920df6343a29f58f365b072d2b30a94119"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests9.dat",
+      "bytes": 10873,
+      "sha256": "e5ee196d81a1d99437762d3d7666f19290532d8d5e3a24d576ae0a9df5af006f"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tests_innerHTML_1.dat",
+      "bytes": 12032,
+      "sha256": "083876152c436627c58628e72d08efbdf2d7af14367cc53da5c401674864bd61"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/tricky01.dat",
+      "bytes": 7026,
+      "sha256": "91246172fa4b465a1ad6bac24c2c0caf3bb58dd6a2d9dae14fa25541b6582d7c"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/webkit01.dat",
+      "bytes": 14817,
+      "sha256": "275c0a8ba6b8a94deeabdb969f3e299627add06d0814c4d165ae777e67502bc3"
+    },
+    {
+      "path": "evidence/components/html5ever/rcdom/wpt-tree-construction-tests/webkit02.dat",
+      "bytes": 14940,
+      "sha256": "195b2592b6b26e563115e6237883f54d5f8481bab8c4cb62ac973753d33ac3e6"
+    }
+  ]
+}

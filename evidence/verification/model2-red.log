@@ -1,0 +1,13 @@
+   Compiling windows-sys v0.61.2
+   Compiling opensequoia v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+error[E0583]: file not found for module `windows_process`
+ --> crates\app\src\main.rs:8:1
+  |
+8 | mod windows_process;
+  | ^^^^^^^^^^^^^^^^^^^^
+  |
+  = help: to create the module `windows_process`, create file "crates\app\src\windows_process.rs" or "crates\app\src\windows_process\mod.rs"
+  = note: if there is a `mod windows_process` elsewhere in the crate already, import it with `use crate::...` instead
+
+For more information about this error, try `rustc --explain E0583`.
+error: could not compile `opensequoia` (bin "opensequoia" test) due to 1 previous error

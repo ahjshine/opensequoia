@@ -1,0 +1,2 @@
+PROCESS_SMOKE_OK healthy=1 malformed_rejected=1 restarted=1 spawned=3 reaped=3
+Local lifecycle probe only; no sandbox, site isolation or authenticated peer claim.

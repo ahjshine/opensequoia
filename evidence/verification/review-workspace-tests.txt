@@ -1,0 +1,40 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.44s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-2beb1d63a8ff4f92.exe)
+
+running 6 tests
+test input::tests::modes_are_explicit_and_exclusive ... ok
+test input::tests::refuses_network_and_device_inputs ... ok
+test input::tests::defaults_to_bundled_local_document ... ok
+test windows::tests::dpi_conversion_checks_signed_coordinates ... ok
+test input::tests::loader_validates_real_utf8_and_file_limits ... ok
+test input::tests::loader_rejects_a_real_local_directory_junction ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.73s
+
+     Running unittests src\lib.rs (target\debug\deps\opensequoia_engine-7b885e5d65bc1fb5.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\static_document.rs (target\debug\deps\static_document-d4d515d2e7ad4c84.exe)
+
+running 9 tests
+test unsupported_css_and_active_elements_are_explicit ... ok
+test foster_parenting_and_misnested_formatting_terminate_with_text ... ok
+test html_tree_builder_repairs_paragraphs_and_preserves_entities_unicode ... ok
+test non_rendered_content_cannot_leak_into_display_list ... ok
+test unicode_chunk_boundaries_and_html_space_rules_are_preserved ... ok
+test viewport_rejection_and_wrapping_have_deterministic_bounds ... ok
+test generated_malformed_token_sequences_keep_display_bounds ... ok
+test input_and_node_limits_reject_instead_of_returning_truncated_documents ... ok
+test deep_tree_traversal_and_drop_do_not_recurse ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.17s
+
+   Doc-tests opensequoia_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

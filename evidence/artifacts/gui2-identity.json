@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-23",
+  "executable": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\gui\\release\\opensequoia.exe",
+  "bytes": 946176,
+  "sha256": "D80778D7DBAA7F3A520B33E88AB3CB8346CCE1C8C31749CBA19653EDE0511F3E",
+  "product_name": "OpenSequoia",
+  "file_description": "OpenSequoia local browsing development app",
+  "file_version": "0.2.0.0",
+  "product_version": "0.2.0",
+  "signature_status": "NotSigned",
+  "signature_message": "The file C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\gui\\release\\opensequoia.exe is not digitally signed. You cannot run this script on the current system. For more information about running scripts and setting execution policy, see about_Execution_Policies at https://go.microsoft.com/fwlink/?LinkID=135170",
+  "verification": "root2-gui-verification.json",
+  "input_hashes_match": true
+}

@@ -1,0 +1,14 @@
+{
+  "tool": "core_unknown_add",
+  "params": {
+    "question": "Is the release binary reproducible byte-for-byte from the recorded source and locked inputs?",
+    "severity": "medium",
+    "domain": "provenance",
+    "probes": [
+      "Repeat a clean build in a fresh target directory and compare SHA256"
+    ]
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"domain\":\"provenance\",\"evidence_against\":[],\"evidence_for\":[],\"id\":\"unk_8b59dc22585fa2aa\",\"probes\":[\"Repeat a clean build in a fresh target directory and compare SHA256\"],\"question\":\"Is the release binary reproducible byte-for-byte from the recorded source and locked inputs?\",\"revision\":1,\"severity\":\"medium\",\"status\":\"open\"}}\n"
+}

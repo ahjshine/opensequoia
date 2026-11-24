@@ -1,0 +1,1168 @@
+{
+  "authority": "original-files",
+  "carries_target_content": true,
+  "confidence": "observed",
+  "coverage": {
+    "examined": 146,
+    "status": "complete",
+    "total": 146
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_7bde15503add490eaab3b678e0ba974cb9c876725ef2b930f407dcf6733d9b5c",
+  "limitations": [],
+  "links": [],
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/craft-opensequoia-final.exe"
+    }
+  ],
+  "operation": "native_library_calls_list",
+  "params": {
+    "contains": null,
+    "kind": null,
+    "limit": 200,
+    "offset": 0,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/craft-opensequoia-final.exe"
+  },
+  "result": {
+    "bound_modules": [],
+    "format": "pe",
+    "imports": [
+      {
+        "hint": 20,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "AddVectoredExceptionHandler",
+        "slot": "0x1400680f8"
+      },
+      {
+        "hint": 178,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "CompareStringOrdinal",
+        "slot": "0x140068188"
+      },
+      {
+        "hint": 230,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "CreateFileW",
+        "slot": "0x140068138"
+      },
+      {
+        "hint": 243,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "CreateMutexA",
+        "slot": "0x1400680b0"
+      },
+      {
+        "hint": 258,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "CreateProcessW",
+        "slot": "0x140068110"
+      },
+      {
+        "hint": 271,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "CreateThread",
+        "slot": "0x140068160"
+      },
+      {
+        "hint": 285,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "CreateWaitableTimerExW",
+        "slot": "0x140068068"
+      },
+      {
+        "hint": 450,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "FlsAlloc",
+        "slot": "0x140068050"
+      },
+      {
+        "hint": 451,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "FlsFree",
+        "slot": "0x140068058"
+      },
+      {
+        "hint": 454,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "FlsSetValue",
+        "slot": "0x140068048"
+      },
+      {
+        "hint": 464,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "FormatMessageW",
+        "slot": "0x140068038"
+      },
+      {
+        "hint": 467,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "FreeEnvironmentStringsW",
+        "slot": "0x140068128"
+      },
+      {
+        "hint": 512,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetCommandLineW",
+        "slot": "0x1400680d8"
+      },
+      {
+        "hint": 549,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetConsoleMode",
+        "slot": "0x140068078"
+      },
+      {
+        "hint": 553,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetConsoleOutputCP",
+        "slot": "0x140068070"
+      },
+      {
+        "hint": 570,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentDirectoryW",
+        "slot": "0x1400680e0"
+      },
+      {
+        "hint": 577,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentProcess",
+        "slot": "0x140068170"
+      },
+      {
+        "hint": 578,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentProcessId",
+        "slot": "0x1400680b8"
+      },
+      {
+        "hint": 581,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentThread",
+        "slot": "0x1400680e8"
+      },
+      {
+        "hint": 582,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentThreadId",
+        "slot": "0x140068180"
+      },
+      {
+        "hint": 610,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetEnvironmentStringsW",
+        "slot": "0x140068130"
+      },
+      {
+        "hint": 612,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetEnvironmentVariableW",
+        "slot": "0x1400680a0"
+      },
+      {
+        "hint": 615,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetExitCodeProcess",
+        "slot": "0x140068100"
+      },
+      {
+        "hint": 740,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetProcessHeap",
+        "slot": "0x1400681a8"
+      },
+      {
+        "hint": 771,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetStdHandle",
+        "slot": "0x140068178"
+      },
+      {
+        "hint": 785,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetSystemDirectoryW",
+        "slot": "0x140068120"
+      },
+      {
+        "hint": 794,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetSystemTimeAsFileTime",
+        "slot": "0x140068008"
+      },
+      {
+        "hint": 861,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "GetWindowsDirectoryW",
+        "slot": "0x140068118"
+      },
+      {
+        "hint": 892,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "HeapAlloc",
+        "slot": "0x140068098"
+      },
+      {
+        "hint": 896,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "HeapFree",
+        "slot": "0x1400681a0"
+      },
+      {
+        "hint": 899,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "HeapReAlloc",
+        "slot": "0x140068198"
+      },
+      {
+        "hint": 922,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "InitializeSListHead",
+        "slot": "0x140068108"
+      },
+      {
+        "hint": 954,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "IsThreadAFiber",
+        "slot": "0x140068040"
+      },
+      {
+        "hint": 1059,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "MultiByteToWideChar",
+        "slot": "0x140068088"
+      },
+      {
+        "hint": 1153,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "QueryPerformanceCounter",
+        "slot": "0x140068168"
+      },
+      {
+        "hint": 1154,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "QueryPerformanceFrequency",
+        "slot": "0x140068030"
+      },
+      {
+        "hint": 1190,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "ReadConsoleW",
+        "slot": "0x140068090"
+      },
+      {
+        "hint": 1194,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "ReadFileEx",
+        "slot": "0x140068150"
+      },
+      {
+        "hint": 1254,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "ReleaseMutex",
+        "slot": "0x1400680a8"
+      },
+      {
+        "hint": 1289,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "RtlCaptureContext",
+        "slot": "0x140068028"
+      },
+      {
+        "hint": 1297,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "RtlLookupFunctionEntry",
+        "slot": "0x140068020"
+      },
+      {
+        "hint": 1304,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "RtlVirtualUnwind",
+        "slot": "0x140068018"
+      },
+      {
+        "hint": 1451,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "SetThreadStackGuarantee",
+        "slot": "0x1400680f0"
+      },
+      {
+        "hint": 1464,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "SetUnhandledExceptionFilter",
+        "slot": "0x140068010"
+      },
+      {
+        "hint": 1473,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "SetWaitableTimer",
+        "slot": "0x140068060"
+      },
+      {
+        "hint": 1483,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "SleepEx",
+        "slot": "0x140068148"
+      },
+      {
+        "hint": 1491,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "SwitchToThread",
+        "slot": "0x140068190"
+      },
+      {
+        "hint": 1496,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "TerminateProcess",
+        "slot": "0x140068000"
+      },
+      {
+        "hint": 1573,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "WaitForSingleObject",
+        "slot": "0x140068158"
+      },
+      {
+        "hint": 1574,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "WaitForSingleObjectEx",
+        "slot": "0x1400680c0"
+      },
+      {
+        "hint": 1612,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "WideCharToMultiByte",
+        "slot": "0x1400680c8"
+      },
+      {
+        "hint": 1631,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "WriteConsoleW",
+        "slot": "0x140068080"
+      },
+      {
+        "hint": 1633,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "WriteFileEx",
+        "slot": "0x140068140"
+      },
+      {
+        "hint": 1678,
+        "kind": "normal",
+        "library": "KERNEL32.dll",
+        "name": "lstrlenW",
+        "slot": "0x1400680d0"
+      },
+      {
+        "hint": 8,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "__C_specific_handler",
+        "slot": "0x1400681c0"
+      },
+      {
+        "hint": 14,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "__CxxFrameHandler3",
+        "slot": "0x1400681e8"
+      },
+      {
+        "hint": 27,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "__current_exception",
+        "slot": "0x1400681b8"
+      },
+      {
+        "hint": 28,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "__current_exception_context",
+        "slot": "0x1400681d8"
+      },
+      {
+        "hint": 59,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "memcmp",
+        "slot": "0x1400681e0"
+      },
+      {
+        "hint": 60,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "memcpy",
+        "slot": "0x1400681f0"
+      },
+      {
+        "hint": 61,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "memmove",
+        "slot": "0x1400681c8"
+      },
+      {
+        "hint": 62,
+        "kind": "normal",
+        "library": "VCRUNTIME140.dll",
+        "name": "memset",
+        "slot": "0x1400681d0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "api-ms-win-core-synch-l1-2-0.dll",
+        "name": "WaitOnAddress",
+        "slot": "0x140068200"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "api-ms-win-core-synch-l1-2-0.dll",
+        "name": "WakeByAddressAll",
+        "slot": "0x140068210"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "api-ms-win-core-synch-l1-2-0.dll",
+        "name": "WakeByAddressSingle",
+        "slot": "0x140068208"
+      },
+      {
+        "hint": 22,
+        "kind": "normal",
+        "library": "api-ms-win-crt-heap-l1-1-0.dll",
+        "name": "_set_new_mode",
+        "slot": "0x140068228"
+      },
+      {
+        "hint": 24,
+        "kind": "normal",
+        "library": "api-ms-win-crt-heap-l1-1-0.dll",
+        "name": "free",
+        "slot": "0x140068220"
+      },
+      {
+        "hint": 8,
+        "kind": "normal",
+        "library": "api-ms-win-crt-locale-l1-1-0.dll",
+        "name": "_configthreadlocale",
+        "slot": "0x140068238"
+      },
+      {
+        "hint": 9,
+        "kind": "normal",
+        "library": "api-ms-win-crt-math-l1-1-0.dll",
+        "name": "__setusermatherr",
+        "slot": "0x140068248"
+      },
+      {
+        "hint": 4,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "__p___argc",
+        "slot": "0x1400682a8"
+      },
+      {
+        "hint": 5,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "__p___argv",
+        "slot": "0x1400682b8"
+      },
+      {
+        "hint": 21,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_c_exit",
+        "slot": "0x1400682c0"
+      },
+      {
+        "hint": 22,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_cexit",
+        "slot": "0x140068260"
+      },
+      {
+        "hint": 24,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_configure_narrow_argv",
+        "slot": "0x1400682a0"
+      },
+      {
+        "hint": 30,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_crt_atexit",
+        "slot": "0x140068258"
+      },
+      {
+        "hint": 35,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_exit",
+        "slot": "0x140068290"
+      },
+      {
+        "hint": 40,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_get_initial_narrow_environment",
+        "slot": "0x140068270"
+      },
+      {
+        "hint": 51,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_initialize_narrow_environment",
+        "slot": "0x140068298"
+      },
+      {
+        "hint": 52,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_initialize_onexit_table",
+        "slot": "0x140068268"
+      },
+      {
+        "hint": 54,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_initterm",
+        "slot": "0x140068278"
+      },
+      {
+        "hint": 55,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_initterm_e",
+        "slot": "0x140068280"
+      },
+      {
+        "hint": 60,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_register_onexit_function",
+        "slot": "0x1400682b0"
+      },
+      {
+        "hint": 61,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_register_thread_local_exe_atexit_callback",
+        "slot": "0x1400682d8"
+      },
+      {
+        "hint": 64,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_seh_filter_exe",
+        "slot": "0x1400682c8"
+      },
+      {
+        "hint": 66,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "_set_app_type",
+        "slot": "0x1400682e0"
+      },
+      {
+        "hint": 85,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "exit",
+        "slot": "0x140068288"
+      },
+      {
+        "hint": 103,
+        "kind": "normal",
+        "library": "api-ms-win-crt-runtime-l1-1-0.dll",
+        "name": "terminate",
+        "slot": "0x1400682d0"
+      },
+      {
+        "hint": 1,
+        "kind": "normal",
+        "library": "api-ms-win-crt-stdio-l1-1-0.dll",
+        "name": "__p__commode",
+        "slot": "0x1400682f8"
+      },
+      {
+        "hint": 84,
+        "kind": "normal",
+        "library": "api-ms-win-crt-stdio-l1-1-0.dll",
+        "name": "_set_fmode",
+        "slot": "0x1400682f0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "CreateFontW",
+        "slot": "0x140068330"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "DeleteObject",
+        "slot": "0x140068328"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "GetStockObject",
+        "slot": "0x140068310"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "GetTextExtentPoint32W",
+        "slot": "0x140068340"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "SelectObject",
+        "slot": "0x140068338"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "SetBkMode",
+        "slot": "0x140068320"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "SetTextColor",
+        "slot": "0x140068318"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "gdi32.dll",
+        "name": "TextOutW",
+        "slot": "0x140068308"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "CloseHandle",
+        "slot": "0x140068350"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "DuplicateHandle",
+        "slot": "0x1400683a0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "FindClose",
+        "slot": "0x1400683e0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "FindFirstFileExW",
+        "slot": "0x1400683d8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetDriveTypeW",
+        "slot": "0x140068388"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetFileAttributesW",
+        "slot": "0x1400683a8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetFileInformationByHandle",
+        "slot": "0x1400683c0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetFileInformationByHandleEx",
+        "slot": "0x1400683c8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetFullPathNameW",
+        "slot": "0x140068398"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetLastError",
+        "slot": "0x140068360"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetModuleFileNameW",
+        "slot": "0x1400683e8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetModuleHandleA",
+        "slot": "0x140068380"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetModuleHandleExW",
+        "slot": "0x140068378"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetModuleHandleW",
+        "slot": "0x140068368"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "GetProcAddress",
+        "slot": "0x1400683b8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "LoadLibraryA",
+        "slot": "0x1400683d0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "SetFileInformationByHandle",
+        "slot": "0x140068370"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "SetFileTime",
+        "slot": "0x1400683b0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "SetLastError",
+        "slot": "0x140068390"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "kernel32.dll",
+        "name": "Sleep",
+        "slot": "0x140068358"
+      },
+      {
+        "hint": 300,
+        "kind": "normal",
+        "library": "ntdll.dll",
+        "name": "NtCreateNamedPipeFile",
+        "slot": "0x1400683f8"
+      },
+      {
+        "hint": 430,
+        "kind": "normal",
+        "library": "ntdll.dll",
+        "name": "NtOpenFile",
+        "slot": "0x140068400"
+      },
+      {
+        "hint": 536,
+        "kind": "normal",
+        "library": "ntdll.dll",
+        "name": "NtReadFile",
+        "slot": "0x140068410"
+      },
+      {
+        "hint": 679,
+        "kind": "normal",
+        "library": "ntdll.dll",
+        "name": "NtWriteFile",
+        "slot": "0x140068408"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "ntdll.dll",
+        "name": "RtlNtStatusToDosError",
+        "slot": "0x140068418"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "AreDpiAwarenessContextsEqual",
+        "slot": "0x140068438"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "BeginPaint",
+        "slot": "0x1400684c8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "CreateWindowExW",
+        "slot": "0x140068450"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "DefWindowProcW",
+        "slot": "0x1400684c0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "DestroyWindow",
+        "slot": "0x140068498"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "DispatchMessageW",
+        "slot": "0x140068480"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "EndPaint",
+        "slot": "0x1400684d8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "FillRect",
+        "slot": "0x1400684d0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "GetClientRect",
+        "slot": "0x1400684b0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "GetDpiForWindow",
+        "slot": "0x1400684b8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "GetMessageW",
+        "slot": "0x140068470"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "GetThreadDpiAwarenessContext",
+        "slot": "0x140068430"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "InvalidateRect",
+        "slot": "0x140068428"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "IsWindow",
+        "slot": "0x140068490"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "LoadCursorW",
+        "slot": "0x140068440"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "PostMessageW",
+        "slot": "0x1400684a0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "PostQuitMessage",
+        "slot": "0x1400684a8"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "RegisterClassW",
+        "slot": "0x140068448"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "SetProcessDpiAwarenessContext",
+        "slot": "0x1400684e0"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "SetTimer",
+        "slot": "0x140068458"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "ShowWindow",
+        "slot": "0x140068460"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "TranslateMessage",
+        "slot": "0x140068478"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "UnregisterClassW",
+        "slot": "0x140068488"
+      },
+      {
+        "hint": 0,
+        "kind": "normal",
+        "library": "user32.dll",
+        "name": "UpdateWindow",
+        "slot": "0x140068468"
+      }
+    ],
+    "libraries": [
+      {
+        "by_ordinal_only": 0,
+        "imports": 54,
+        "kinds": [
+          "normal"
+        ],
+        "name": "KERNEL32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 8,
+        "kinds": [
+          "normal"
+        ],
+        "name": "VCRUNTIME140.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 3,
+        "kinds": [
+          "normal"
+        ],
+        "name": "api-ms-win-core-synch-l1-2-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 2,
+        "kinds": [
+          "normal"
+        ],
+        "name": "api-ms-win-crt-heap-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 1,
+        "kinds": [
+          "normal"
+        ],
+        "name": "api-ms-win-crt-locale-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 1,
+        "kinds": [
+          "normal"
+        ],
+        "name": "api-ms-win-crt-math-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 18,
+        "kinds": [
+          "normal"
+        ],
+        "name": "api-ms-win-crt-runtime-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 2,
+        "kinds": [
+          "normal"
+        ],
+        "name": "api-ms-win-crt-stdio-l1-1-0.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 8,
+        "kinds": [
+          "normal"
+        ],
+        "name": "gdi32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 20,
+        "kinds": [
+          "normal"
+        ],
+        "name": "kernel32.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 5,
+        "kinds": [
+          "normal"
+        ],
+        "name": "ntdll.dll"
+      },
+      {
+        "by_ordinal_only": 0,
+        "imports": 24,
+        "kinds": [
+          "normal"
+        ],
+        "name": "user32.dll"
+      }
+    ],
+    "matching": 146,
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/craft-opensequoia-final.exe",
+    "total": 146
+  },
+  "subject": {
+    "kind": "pe",
+    "name": "craft-opensequoia-final.exe",
+    "sha256": "930a4415a37137ad33ce77e4c82c134aa1ae0be5dcae14bc8449104ffb7042b8"
+  },
+  "summary": "146 imported function(s) from 12 libraries."
+}

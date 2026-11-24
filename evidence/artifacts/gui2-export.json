@@ -1,0 +1,10 @@
+{
+  "tool": "core-evidence-export",
+  "params": {
+    "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\gui2-craft-evidence.json",
+    "overwrite": false
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":535898,\"not_loaded\":0,\"path\":\"C:\\\\Users\\\\deepa\\\\OneDrive\\\\Dokumen\\\\ChatGPT\\\\opensequoia\\\\evidence\\\\artifacts\\\\gui2-craft-evidence.json\",\"records\":26,\"unknowns\":5}}\n"
+}

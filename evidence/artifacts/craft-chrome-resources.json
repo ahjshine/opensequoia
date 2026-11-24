@@ -1,0 +1,1646 @@
+{
+  "authority": "original-files",
+  "confidence": "observed",
+  "coverage": {
+    "examined": 117,
+    "status": "complete",
+    "total": 117
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_488a8d5a415a322876dfc2123522d34c5d3643eedd324d99db8c7a0e6645e887",
+  "limitations": [],
+  "links": [],
+  "locations": [],
+  "operation": "native_pe_resources_list",
+  "params": {
+    "max_entries": 128,
+    "path": "C:/Program Files/BraveSoftware/Brave-Browser/Application/158.1.100.58/chrome.dll"
+  },
+  "result": {
+    "entries": [
+      {
+        "codepage": 0,
+        "file_offset": 336080200,
+        "language": 1033,
+        "name": "101",
+        "rva": "0x14331b48",
+        "sha256": "d96c8ef7ced2cc56ac5039a24eb001f69da45a89e275349f17dc4363bf0d1b95",
+        "size": 712,
+        "type": "RT_ACCELERATOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336284152,
+        "language": 0,
+        "name": "1",
+        "rva": "0x143637f8",
+        "sha256": "8c5a126b0e59e2927158fe5008c375aeef5396adb797c682e07578d13c283a3f",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336296992,
+        "language": 0,
+        "name": "10",
+        "rva": "0x14366a20",
+        "sha256": "d87015c12fb89d2c54c2b1ea0b5f0feaf50bba50cddcf546668c62316597bf2f",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336301288,
+        "language": 0,
+        "name": "11",
+        "rva": "0x14367ae8",
+        "sha256": "c7988ba08e9df9a1eee74d2ed9ecda968a384dd1ac105125b95dee98cc663c19",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336305584,
+        "language": 0,
+        "name": "12",
+        "rva": "0x14368bb0",
+        "sha256": "744c1f78a1a9d3ec04ad6358c2bdbd89b8a1cfa9d850c1ee4ecfa4b3f256ff26",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336309880,
+        "language": 0,
+        "name": "13",
+        "rva": "0x14369c78",
+        "sha256": "cbb310244272c36ea589f9257476e6c19b1eb6be0cd5193cd5901efd4d184c35",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336314176,
+        "language": 0,
+        "name": "14",
+        "rva": "0x1436ad40",
+        "sha256": "302d274cf49db7ebc8f97dd4320489781da8a44447cbb2a7346ccff84b1b944b",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336318472,
+        "language": 0,
+        "name": "15",
+        "rva": "0x1436be08",
+        "sha256": "bc19a3937fe7fb79cf877d2bea8d1ab4ea30d1a05f4c60d42cf57142c81290e9",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336322768,
+        "language": 0,
+        "name": "16",
+        "rva": "0x1436ced0",
+        "sha256": "9534fac9229e10c53a85e5a6deb4224d12a7a3024b7ff9ccc1cb8717ffd7acaa",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336327064,
+        "language": 0,
+        "name": "17",
+        "rva": "0x1436df98",
+        "sha256": "faf155f58e17b8e1a98cc26aaa92597c62dc87ff98555cd708f6684eb8243d4c",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336331360,
+        "language": 0,
+        "name": "18",
+        "rva": "0x1436f060",
+        "sha256": "f4bcc6750981e15e3fc8c751997156f4df9055cece8d16944e4dea2ce4bc911b",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336335656,
+        "language": 0,
+        "name": "19",
+        "rva": "0x14370128",
+        "sha256": "787dc2d9d3f4034a91bd222034d01eafb01e1053ac3579a0fd033f141dcccb69",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336284488,
+        "language": 0,
+        "name": "2",
+        "rva": "0x14363948",
+        "sha256": "06db3222f267c74b72573a349de6a24bcfbb4bba9656d3dd6b50f4f64326e156",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336339952,
+        "language": 0,
+        "name": "20",
+        "rva": "0x143711f0",
+        "sha256": "236462dd2d629d67ff18c41f41cfa739549aff2933f7df2bd51630790b4d424e",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336340288,
+        "language": 0,
+        "name": "21",
+        "rva": "0x14371340",
+        "sha256": "3eba69eaec7cef56d2c964dee1f9c0226a365b3ae869a402690d548c82c16ba3",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336340624,
+        "language": 0,
+        "name": "22",
+        "rva": "0x14371490",
+        "sha256": "2a53b434f3ab8d37381a5461163027d2a256f0bda3ea8f65795ed6d2c66b4e30",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336340960,
+        "language": 0,
+        "name": "23",
+        "rva": "0x143715e0",
+        "sha256": "5b4c85e7d881d8c74760c07f9e4fe3d7427a72bed0e379aed6a78f7cbeca3199",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336284824,
+        "language": 0,
+        "name": "3",
+        "rva": "0x14363a98",
+        "sha256": "91baaad720c63aaff01b902deda14e2c8b355c31159b71c481dc6fb67bcbb4cf",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336285160,
+        "language": 0,
+        "name": "4",
+        "rva": "0x14363be8",
+        "sha256": "2d2aea139c8f41675322a459ce75295ac168eb0e925ed5a75c0981b3693069aa",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336285496,
+        "language": 0,
+        "name": "5",
+        "rva": "0x14363d38",
+        "sha256": "a4319fd1d9a81d7a6dc9ef1818d85dc68ded85342754d2f5768e01d0edf46780",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336285808,
+        "language": 0,
+        "name": "6",
+        "rva": "0x14363e70",
+        "sha256": "ff8ccb25e747ead631922be99ebc2004a97295b0b606f40e83f15c2dc2bbbc81",
+        "size": 3244,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336289096,
+        "language": 0,
+        "name": "7",
+        "rva": "0x14364b48",
+        "sha256": "860a680c92db087b12dd6bf2ef581979c08ac13ed9657403dab974f387420555",
+        "size": 308,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336289408,
+        "language": 0,
+        "name": "8",
+        "rva": "0x14364c80",
+        "sha256": "5edad8d3d744070cb51e4dfdb02053a15101c8c954f952e4dfe57a4d7659e5b2",
+        "size": 3244,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336292696,
+        "language": 0,
+        "name": "9",
+        "rva": "0x14365958",
+        "sha256": "3bd84b82f6e6a2cb156d881bdc1f29567d5712ad81d2da33b0ff9cd8a5a9981f",
+        "size": 4268,
+        "type": "RT_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336284464,
+        "language": 0,
+        "name": "34980",
+        "rva": "0x14363930",
+        "sha256": "c53efa8085835ba129c1909beaff8a67b45f50837707f22dfff0f24d8cd26710",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336284800,
+        "language": 0,
+        "name": "34981",
+        "rva": "0x14363a80",
+        "sha256": "b07e022f8ef0a8e5fd3f56986b2e5bf06df07054e9ea9177996b0a6c27d74d7c",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336285136,
+        "language": 0,
+        "name": "34982",
+        "rva": "0x14363bd0",
+        "sha256": "43f40dd5140804309a4c901ec3c85b54481316e67a6fe18beb9d5c0ce3a42c3a",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336285472,
+        "language": 0,
+        "name": "34983",
+        "rva": "0x14363d20",
+        "sha256": "ff47a48c11c234903a7d625cb8b62101909f735ad84266c98dd4834549452c39",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336289056,
+        "language": 0,
+        "name": "34984",
+        "rva": "0x14364b20",
+        "sha256": "f75e551324504a3c9caa453a4b0fd424884291acdb82f0549e7bb0b48ce01647",
+        "size": 34,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336292656,
+        "language": 0,
+        "name": "34985",
+        "rva": "0x14365930",
+        "sha256": "770a19a2be0c18daf7fb714c6f78e5fecde900b9fda29a6c4691c369253f6f0f",
+        "size": 34,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336296968,
+        "language": 0,
+        "name": "34986",
+        "rva": "0x14366a08",
+        "sha256": "7662c77c89bc776c64acfbc6ac7f22f56a631304205ac1a00d1d6c876ff1574d",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336301264,
+        "language": 0,
+        "name": "34987",
+        "rva": "0x14367ad0",
+        "sha256": "c7f15e3e69f8bad21f5f9c9546b129828d66e90b38a8fe9cf33cf23846e62700",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336305560,
+        "language": 0,
+        "name": "34988",
+        "rva": "0x14368b98",
+        "sha256": "fd27224dee56e50f926e0c003d1bdb8c31db4d1f0a089280d0f55b79ff45c1e7",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336309856,
+        "language": 0,
+        "name": "34989",
+        "rva": "0x14369c60",
+        "sha256": "2c57fbd554735f2b8ff46f26b3d2d58a5a5e4152a02043e7fd6c552a43a3ceee",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336314152,
+        "language": 0,
+        "name": "34990",
+        "rva": "0x1436ad28",
+        "sha256": "1133ff27d25ac052e4a0570865c18ce0e07a3afbb89577bc52af61435a91b8cc",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336318448,
+        "language": 0,
+        "name": "34991",
+        "rva": "0x1436bdf0",
+        "sha256": "5907a1ab79be2dae328a84248db9750607aeb7b802af582f974a5ae59fb3c37c",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336322744,
+        "language": 0,
+        "name": "34992",
+        "rva": "0x1436ceb8",
+        "sha256": "d19508d8742527d523aa3ef78e1091ce417bec079e9632181cdc8ff245c53ce9",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336327040,
+        "language": 0,
+        "name": "34993",
+        "rva": "0x1436df80",
+        "sha256": "1dac0833fe30898ce2c1df2c70b09d62d51f8f765ae0ffd90b811067e875ae98",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336331336,
+        "language": 0,
+        "name": "34994",
+        "rva": "0x1436f048",
+        "sha256": "5fa51d73b8ea1316fb0c8f11c3740c6f755a8499a135e4e18ef6b823aad3ad70",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336335632,
+        "language": 0,
+        "name": "34995",
+        "rva": "0x14370110",
+        "sha256": "7794cf070f4c99cd9ec27a43faa84daab8d19e765f0489c981a9ef28468a3899",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336339928,
+        "language": 0,
+        "name": "34996",
+        "rva": "0x143711d8",
+        "sha256": "4c9fe467bd0250366713a2a43f5162e5ec2e7cd566ea218f7a6545e0ad878184",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336340264,
+        "language": 0,
+        "name": "34997",
+        "rva": "0x14371328",
+        "sha256": "b328fe22a904a2e7e1341a95dbf00e2fdffc9ab350bc64c5ee348d3007c2b479",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336340600,
+        "language": 0,
+        "name": "34998",
+        "rva": "0x14371478",
+        "sha256": "8f51832638675f16ec5f251ab59251b3f85d84e5129025d44c45b3191b331c58",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336340936,
+        "language": 0,
+        "name": "34999",
+        "rva": "0x143715c8",
+        "sha256": "6c2ef97bca5cdc6aa6de65b1f1ae8328bcb3494a16025eee870231d991e2cd56",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336341272,
+        "language": 0,
+        "name": "35000",
+        "rva": "0x14371718",
+        "sha256": "1085b7390dbd2b2006f85619521047c6ca58a8b274196eeed48e74ad8a1b746a",
+        "size": 20,
+        "type": "RT_GROUP_CURSOR"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336113520,
+        "language": 1033,
+        "name": "101",
+        "rva": "0x14339d70",
+        "sha256": "7ff29d28f0f6fb41ba8c7a7bf58b9eb37f2ee61ea5cc313296d852e71d3f5ca8",
+        "size": 62,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336256040,
+        "language": 1033,
+        "name": "102",
+        "rva": "0x1435ca28",
+        "sha256": "e83c200cca916bf43a7d469bcb0e13a2f1aaeee59e81180ae95979ff7bc1d390",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336257192,
+        "language": 1033,
+        "name": "103",
+        "rva": "0x1435cea8",
+        "sha256": "3fd8b8783489facc6a97e0d66e9078d15b07d77691e7e067c6caca492d11ba8f",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336258344,
+        "language": 1033,
+        "name": "104",
+        "rva": "0x1435d328",
+        "sha256": "9313ac83158214e14cd830c097ad3e61f8a7c4a7011ae3ccf66f109a89c75e4f",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336259496,
+        "language": 1033,
+        "name": "105",
+        "rva": "0x1435d7a8",
+        "sha256": "fb5abac7fcd36c2344392dea11882ae9f1795345a83e57d97feb00f69d534792",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336260648,
+        "language": 1033,
+        "name": "106",
+        "rva": "0x1435dc28",
+        "sha256": "ca90fe29a3c63460b06341240c071103630db100e514f36420303ffcf0b09bd4",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336261800,
+        "language": 1033,
+        "name": "107",
+        "rva": "0x1435e0a8",
+        "sha256": "e9c073b915212c166c682cd568b29520413733c2e162fd6351f6a47b4acc5f14",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336262952,
+        "language": 1033,
+        "name": "108",
+        "rva": "0x1435e528",
+        "sha256": "ee15d2a71f17f53507ca018d355a5348c207298bc9c748955e38e140a05f0273",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336264104,
+        "language": 1033,
+        "name": "109",
+        "rva": "0x1435e9a8",
+        "sha256": "d1286bc5b3b8a21b3a03e2da41f9deb984def39be5e067ceb90a9faecf3538a5",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336265256,
+        "language": 1033,
+        "name": "110",
+        "rva": "0x1435ee28",
+        "sha256": "79291072a43baa1202c2845fb53138c64b2d50af587ed39bb1e99711e5f2ce08",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336266408,
+        "language": 1033,
+        "name": "111",
+        "rva": "0x1435f2a8",
+        "sha256": "02592075840c1e2b15eb87d359dca66f576fc169a22a9c404f7b9251ef9468d3",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336267560,
+        "language": 1033,
+        "name": "112",
+        "rva": "0x1435f728",
+        "sha256": "fa141684a01eff320dbc1be1a564c208a4a1383fe9aa8095a2db4fd6e58c6e88",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336268712,
+        "language": 1033,
+        "name": "113",
+        "rva": "0x1435fba8",
+        "sha256": "15ce7b5058688b6b78c18d884d94fef96d59bdc349f0ce7a09d533f35abb2e87",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336269864,
+        "language": 1033,
+        "name": "114",
+        "rva": "0x14360028",
+        "sha256": "f352941ca54c0f968e5980ee53ce8d7b2d2ba9bbea61131ce46ddd7c2245325d",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336271016,
+        "language": 1033,
+        "name": "115",
+        "rva": "0x143604a8",
+        "sha256": "cfab016ce8ab28bee4ef05f69047c61f0da4bc34d38959de4728b83e2b22e7b7",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336272168,
+        "language": 1033,
+        "name": "116",
+        "rva": "0x14360928",
+        "sha256": "702d76379db6bc364370f2d10404565ee4f3ee2c87568e4c8531462fb1b65bd3",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336273320,
+        "language": 1033,
+        "name": "117",
+        "rva": "0x14360da8",
+        "sha256": "06b6f068a8a1de185f68c0ffae95fb38deff797c9f09708bb1bcec1b80f4072f",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336274472,
+        "language": 1033,
+        "name": "118",
+        "rva": "0x14361228",
+        "sha256": "630437cab2f485241ea1e23561cc2032fbe824b8786865823d7798935c574e9c",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336275624,
+        "language": 1033,
+        "name": "119",
+        "rva": "0x143616a8",
+        "sha256": "7dfa17ed85759a2d7c7a8f1ed7aaf48bcdc4428494597827986722150733795a",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336276776,
+        "language": 1033,
+        "name": "120",
+        "rva": "0x14361b28",
+        "sha256": "e0f1810d921af4833fe8d551e4776227c3c5025dd5e5fed94136f0896055c92d",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336277928,
+        "language": 1033,
+        "name": "121",
+        "rva": "0x14361fa8",
+        "sha256": "cbc34942250e1a8377654217a8af0c34bf5e9718035920cca12f18fc0fe4880a",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336279080,
+        "language": 1033,
+        "name": "122",
+        "rva": "0x14362428",
+        "sha256": "75bfdbb16fab2c73d46baa81b1a5628bde9fce1e051835391019fac6a715dd16",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336280232,
+        "language": 1033,
+        "name": "123",
+        "rva": "0x143628a8",
+        "sha256": "f4828446fc17626ca393bbbbe7ee6a5de60232de836684aa5df22d9072f0c62a",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336281384,
+        "language": 1033,
+        "name": "124",
+        "rva": "0x14362d28",
+        "sha256": "456e86d1ea781e6e1c0939453b2e39c09ec2bd5b6413ab9e68fd49739c6b5e2a",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336282536,
+        "language": 1033,
+        "name": "125",
+        "rva": "0x143631a8",
+        "sha256": "9b52887be534ad80fb30c45b0e63de7f9e38776e231b0fc7e2adddba68297783",
+        "size": 20,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336159360,
+        "language": 1033,
+        "name": "126",
+        "rva": "0x14345080",
+        "sha256": "2be7230c1827350c285b225245f0dca522e610e259aa66bcb523f13af9cf8e70",
+        "size": 62,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336203688,
+        "language": 1033,
+        "name": "127",
+        "rva": "0x1434fda8",
+        "sha256": "49add76e2967262d87ae459aefadb315cf7da3788b43a64ad47aba10cfd08e4c",
+        "size": 62,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336254848,
+        "language": 1033,
+        "name": "128",
+        "rva": "0x1435c580",
+        "sha256": "570c9d84b03f1716ffde6886a0e070b7e5f97190ade1c0b3669f0957fd0476ad",
+        "size": 62,
+        "type": "RT_GROUP_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336080912,
+        "language": 1033,
+        "name": "1",
+        "rva": "0x14331e10",
+        "sha256": "f6df16d916496763eb5ec772e6787397dfa165634fd7f8dcb591618c09f74af2",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336160552,
+        "language": 1033,
+        "name": "10",
+        "rva": "0x14345528",
+        "sha256": "a57e6e1b5bcdda04aef7ba31f1c070415c5ab38fe9d14e711e2dce9d91cf9b0a",
+        "size": 29232,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336189784,
+        "language": 1033,
+        "name": "11",
+        "rva": "0x1434c758",
+        "sha256": "8a9cb817c2d730b0e81fbca2f7398c28e50ec6557182d35590aedbc17a421dce",
+        "size": 4264,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336194048,
+        "language": 1033,
+        "name": "12",
+        "rva": "0x1434d800",
+        "sha256": "276b1b076e3a43585f0709977a3803f2254089ef55cc6f01caf584c29c210957",
+        "size": 9640,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336203752,
+        "language": 1033,
+        "name": "13",
+        "rva": "0x1434fde8",
+        "sha256": "79b81b458f2fe8b7b5bb9f1c7949cb943907261fb3df1fb4188ccb109e5a3050",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336204880,
+        "language": 1033,
+        "name": "14",
+        "rva": "0x14350250",
+        "sha256": "dc0e80bbd140659ebf1901f38e7e8b69b378522c0432a4a514872cbdaece3579",
+        "size": 4264,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336209144,
+        "language": 1033,
+        "name": "15",
+        "rva": "0x143512f8",
+        "sha256": "e688d7d663c8a8639d8cb7ba44797e5915a05c4651b6333afe94126990ea87fc",
+        "size": 9640,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336218784,
+        "language": 1033,
+        "name": "16",
+        "rva": "0x143538a0",
+        "sha256": "0cfbdaec16c54d84108e1ba9ce7513e6cf8c8c87c35be086c88c3cf671775263",
+        "size": 36064,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336254912,
+        "language": 1033,
+        "name": "17",
+        "rva": "0x1435c5c0",
+        "sha256": "fe7f2a8a40484abba508c1a704c265040891a33852cd9bcfed6595c4c225f589",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336256064,
+        "language": 1033,
+        "name": "18",
+        "rva": "0x1435ca40",
+        "sha256": "4e9954537cddb457d9da8e8c679cd3fbdf883248ee25e0e40b905be7cc7ba237",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336257216,
+        "language": 1033,
+        "name": "19",
+        "rva": "0x1435cec0",
+        "sha256": "02bfc382724178ae8e5a80307c344968d7aab4bd07200b41bc557a704022e058",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336082040,
+        "language": 1033,
+        "name": "2",
+        "rva": "0x14332278",
+        "sha256": "cb59a5d07c338d95520668fa53e4ad0c11cbb23de1a331454fb96e9b1654b3df",
+        "size": 17571,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336258368,
+        "language": 1033,
+        "name": "20",
+        "rva": "0x1435d340",
+        "sha256": "9abc6499eacf19d54e9cf5372d77ab530dbe16287b070a7d976e0908e82b3083",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336259520,
+        "language": 1033,
+        "name": "21",
+        "rva": "0x1435d7c0",
+        "sha256": "33a9489c1aeb5fca86ecf10566e36b59d78715923c878f5f8feed2dbe06db76f",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336260672,
+        "language": 1033,
+        "name": "22",
+        "rva": "0x1435dc40",
+        "sha256": "a8ef564171fa20d61afeb8f0f40830da8f6279e836571e4a496448c708b96361",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336261824,
+        "language": 1033,
+        "name": "23",
+        "rva": "0x1435e0c0",
+        "sha256": "7c71e20ceaa2d210521018f84ffc6d2daaf1a912361362bb19d1ebdf75a361cf",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336262976,
+        "language": 1033,
+        "name": "24",
+        "rva": "0x1435e540",
+        "sha256": "c85319234e6cbd1ca07bcd984d2513bdf550f11c1a309029dbe36a8f38fae033",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336264128,
+        "language": 1033,
+        "name": "25",
+        "rva": "0x1435e9c0",
+        "sha256": "54274badd4e08ed10341dfcf97d5708e44834a3a82fd645c3edac7867d502ca9",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336265280,
+        "language": 1033,
+        "name": "26",
+        "rva": "0x1435ee40",
+        "sha256": "8e1e84ab6ea178d196499e9858255faa3e62375a37743de82d99e1f2514d52b1",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336266432,
+        "language": 1033,
+        "name": "27",
+        "rva": "0x1435f2c0",
+        "sha256": "5076bea5c063c1c2de09a1d80ce444271f0b3f5cf6ef2a1c3ac5ff6bb93effab",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336267584,
+        "language": 1033,
+        "name": "28",
+        "rva": "0x1435f740",
+        "sha256": "92c9515ba526efec403af2d277ef1357ace502f851d5fa4ece977be69490ba7b",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336268736,
+        "language": 1033,
+        "name": "29",
+        "rva": "0x1435fbc0",
+        "sha256": "000403da2955b9a363530857f1f7a73f2dede94271fe4cb1977449728d80d77c",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336099616,
+        "language": 1033,
+        "name": "3",
+        "rva": "0x14336720",
+        "sha256": "322fe689909f7fae52881307190e9f5bc53d57a5c298f7b9998cab48dfdeb797",
+        "size": 4264,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336269888,
+        "language": 1033,
+        "name": "30",
+        "rva": "0x14360040",
+        "sha256": "16fb1d9aa395279a5f1748685f19bdf7f9015bf378785de324607afbd3a31342",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336271040,
+        "language": 1033,
+        "name": "31",
+        "rva": "0x143604c0",
+        "sha256": "a97a679bcb91f6a015af34e8064def2d2f86256c2e506e3af4b2858a25a0e2e5",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336272192,
+        "language": 1033,
+        "name": "32",
+        "rva": "0x14360940",
+        "sha256": "f139b6ba66c2335805a752e96786367a8cd749a05a297ab88287c61ef3c2cfae",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336273344,
+        "language": 1033,
+        "name": "33",
+        "rva": "0x14360dc0",
+        "sha256": "3784055e8b0628d2b1b6688048fff87afb2227e1dfb8db1282f53437ff9e36b1",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336274496,
+        "language": 1033,
+        "name": "34",
+        "rva": "0x14361240",
+        "sha256": "98819fcd3bb7b9052f0d504f0104ba3bd68ec5f51054e6e6b5724393ce846a02",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336275648,
+        "language": 1033,
+        "name": "35",
+        "rva": "0x143616c0",
+        "sha256": "1ac1e2f1010406c5c0e18e8065d69b767913e88ac7b45f06d55c4dd953782ddf",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336276800,
+        "language": 1033,
+        "name": "36",
+        "rva": "0x14361b40",
+        "sha256": "da794feff6a6fa3759327fbb85899999ff57803580afe0c7a8ffc043ca74b8b2",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336277952,
+        "language": 1033,
+        "name": "37",
+        "rva": "0x14361fc0",
+        "sha256": "665e0c14096ecd22242d8fde452ef94901c922f64b0f0908647dcb4178463078",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336279104,
+        "language": 1033,
+        "name": "38",
+        "rva": "0x14362440",
+        "sha256": "344dc4f84f45abb896891d52e69001bc1f0ae4526127a472c8522498b5326a0e",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336280256,
+        "language": 1033,
+        "name": "39",
+        "rva": "0x143628c0",
+        "sha256": "b61868425a5f4ce6f56a35fb02012128ea1bb33d592bd4c3deba3466ffd05b9f",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336103880,
+        "language": 1033,
+        "name": "4",
+        "rva": "0x143377c8",
+        "sha256": "e815f0f7a5e005efc9c47bc1c0062348382520858128baf596544a32425b5676",
+        "size": 9640,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336281408,
+        "language": 1033,
+        "name": "40",
+        "rva": "0x14362d40",
+        "sha256": "a6016c681ec6c116edd4fa37c91a52e493d09a502b23b64636938a09f56b7ca8",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336113584,
+        "language": 1033,
+        "name": "5",
+        "rva": "0x14339db0",
+        "sha256": "bc6e364907baadfb82ad37332ad9557aa96676640b9f538cb6fbad7465c7ffe5",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336114712,
+        "language": 1033,
+        "name": "6",
+        "rva": "0x1433a218",
+        "sha256": "856eecc4e826cd5cbb1de6a516cfc6245b267815856c75438170d81fbdc9d825",
+        "size": 30741,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336145456,
+        "language": 1033,
+        "name": "7",
+        "rva": "0x14341a30",
+        "sha256": "ad5f2647d944bbf1c699fa581e403f4f1af987cbba730b6090b593f44bb2d7b1",
+        "size": 4264,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336149720,
+        "language": 1033,
+        "name": "8",
+        "rva": "0x14342ad8",
+        "sha256": "151f39469800ade0bc2ced0943c5cb5ba07b38bc2908fc7bbfb1132dc295bf1e",
+        "size": 9640,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336159424,
+        "language": 1033,
+        "name": "9",
+        "rva": "0x143450c0",
+        "sha256": "3e21864b5af76992fdf60d41e4910ebe7cb49fa1633680eda1858d5b1f3cc3e6",
+        "size": 1128,
+        "type": "RT_ICON"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336341296,
+        "language": 1033,
+        "name": "2",
+        "rva": "0x14371730",
+        "sha256": "f807b29bf9e24c6d1d9c27eca497fcfc3ff7cc185b4eb22f6a6d999997e97482",
+        "size": 542,
+        "type": "RT_MANIFEST"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336282560,
+        "language": 1033,
+        "name": "1",
+        "rva": "0x143631c0",
+        "sha256": "51b3d8c734d307af13984bb2c2abde79c859a5acb6386fd233f3e9338f2a7dc5",
+        "size": 180,
+        "type": "RT_MESSAGETABLE"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336079104,
+        "language": 1033,
+        "name": "1",
+        "rva": "0x14331700",
+        "sha256": "57ab3def8a47c738cce78869b9ec9b7ec5126196a3945e3bb89e2f3da5c5977f",
+        "size": 1092,
+        "type": "RT_VERSION"
+      },
+      {
+        "codepage": 0,
+        "file_offset": 336282744,
+        "language": 1033,
+        "name": "1",
+        "rva": "0x14363278",
+        "sha256": "1de7329c900e3e367a04ea99c1169cde528754c408de077628f5be856cfe0926",
+        "size": 1402,
+        "type": "WEVT_TEMPLATE"
+      }
+    ],
+    "icon_groups": [
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 1,
+            "width": 16
+          },
+          {
+            "bit_count": 32,
+            "bytes": 17571,
+            "height": 256,
+            "icon_id": 2,
+            "width": 256
+          },
+          {
+            "bit_count": 32,
+            "bytes": 4264,
+            "height": 32,
+            "icon_id": 3,
+            "width": 32
+          },
+          {
+            "bit_count": 32,
+            "bytes": 9640,
+            "height": 48,
+            "icon_id": 4,
+            "width": 48
+          }
+        ],
+        "name": "101"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 17,
+            "width": 16
+          }
+        ],
+        "name": "102"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 18,
+            "width": 16
+          }
+        ],
+        "name": "103"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 19,
+            "width": 16
+          }
+        ],
+        "name": "104"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 20,
+            "width": 16
+          }
+        ],
+        "name": "105"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 21,
+            "width": 16
+          }
+        ],
+        "name": "106"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 22,
+            "width": 16
+          }
+        ],
+        "name": "107"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 23,
+            "width": 16
+          }
+        ],
+        "name": "108"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 24,
+            "width": 16
+          }
+        ],
+        "name": "109"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 25,
+            "width": 16
+          }
+        ],
+        "name": "110"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 26,
+            "width": 16
+          }
+        ],
+        "name": "111"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 27,
+            "width": 16
+          }
+        ],
+        "name": "112"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 28,
+            "width": 16
+          }
+        ],
+        "name": "113"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 29,
+            "width": 16
+          }
+        ],
+        "name": "114"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 30,
+            "width": 16
+          }
+        ],
+        "name": "115"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 31,
+            "width": 16
+          }
+        ],
+        "name": "116"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 32,
+            "width": 16
+          }
+        ],
+        "name": "117"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 33,
+            "width": 16
+          }
+        ],
+        "name": "118"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 34,
+            "width": 16
+          }
+        ],
+        "name": "119"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 35,
+            "width": 16
+          }
+        ],
+        "name": "120"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 36,
+            "width": 16
+          }
+        ],
+        "name": "121"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 37,
+            "width": 16
+          }
+        ],
+        "name": "122"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 38,
+            "width": 16
+          }
+        ],
+        "name": "123"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 39,
+            "width": 16
+          }
+        ],
+        "name": "124"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 40,
+            "width": 16
+          }
+        ],
+        "name": "125"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 5,
+            "width": 16
+          },
+          {
+            "bit_count": 32,
+            "bytes": 30741,
+            "height": 256,
+            "icon_id": 6,
+            "width": 256
+          },
+          {
+            "bit_count": 32,
+            "bytes": 4264,
+            "height": 32,
+            "icon_id": 7,
+            "width": 32
+          },
+          {
+            "bit_count": 32,
+            "bytes": 9640,
+            "height": 48,
+            "icon_id": 8,
+            "width": 48
+          }
+        ],
+        "name": "126"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 9,
+            "width": 16
+          },
+          {
+            "bit_count": 32,
+            "bytes": 29232,
+            "height": 256,
+            "icon_id": 10,
+            "width": 256
+          },
+          {
+            "bit_count": 32,
+            "bytes": 4264,
+            "height": 32,
+            "icon_id": 11,
+            "width": 32
+          },
+          {
+            "bit_count": 32,
+            "bytes": 9640,
+            "height": 48,
+            "icon_id": 12,
+            "width": 48
+          }
+        ],
+        "name": "127"
+      },
+      {
+        "icons": [
+          {
+            "bit_count": 32,
+            "bytes": 1128,
+            "height": 16,
+            "icon_id": 13,
+            "width": 16
+          },
+          {
+            "bit_count": 32,
+            "bytes": 4264,
+            "height": 32,
+            "icon_id": 14,
+            "width": 32
+          },
+          {
+            "bit_count": 32,
+            "bytes": 9640,
+            "height": 48,
+            "icon_id": 15,
+            "width": 48
+          },
+          {
+            "bit_count": 32,
+            "bytes": 36064,
+            "height": 256,
+            "icon_id": 16,
+            "width": 256
+          }
+        ],
+        "name": "128"
+      }
+    ],
+    "manifest": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n<trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\"><security><requestedPrivileges><requestedExecutionLevel level=\"asInvoker\" uiAccess=\"false\"/></requestedPrivileges></security></trustInfo><dependency><dependentAssembly><assemblyIdentity type=\"win32\" name=\"Microsoft.Windows.Common-Controls\" version=\"6.0.0.0\" processorArchitecture=\"*\" publicKeyToken=\"6595b64144ccf1df\" language=\"*\"/></dependentAssembly></dependency></assembly>\n",
+    "truncated": false,
+    "version": {
+      "file_version": "158.1.100.58",
+      "product_version": "158.1.100.58",
+      "strings": {
+        "CompanyName": "Brave Software, Inc.",
+        "CompanyShortName": "Brave Software",
+        "FileDescription": "Brave Browser",
+        "FileVersion": "158.1.100.58",
+        "InternalName": "chrome_dll",
+        "LastChange": "bd6d26d1bced03c17a98baa86d2cd3425d543d1b",
+        "LegalCopyright": "Copyright 2016 The Brave Authors. All rights reserved.",
+        "Official Build": "1",
+        "OriginalFilename": "chrome.dll",
+        "ProductName": "Brave Browser",
+        "ProductShortName": "Brave",
+        "ProductVersion": "158.1.100.58"
+      }
+    }
+  },
+  "subject": {
+    "kind": "pe",
+    "name": "chrome.dll",
+    "sha256": "be842bf3a479d88dfc1fdc4ef4cbb52589ff1de0b34259c5921cbd6489ddcf1f"
+  },
+  "summary": "117 resources, 28 icon groups, product \"Brave Browser\"."
+}

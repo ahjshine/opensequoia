@@ -1,0 +1,9 @@
+{
+  "tool": "core_handoff_write",
+  "params": {
+    "text": "I03a static EXE investigation is settled for the current bytes. Target: controller/target/i03a/release/opensequoia.exe, 1,043,456 bytes, SHA256 b8ae67c3b6839c1be1751bb3eb49088bf9999491b38284b58eb309e74cbc7499, built from source commit 54289fd with rustc 1.98.1. Findings cover PE identity, x86_64 GUI layout/hardening, 199 imports from 16 libraries (WS2_32/advapi32/bcryptprimitives/userenv are new versus the prior d807 snapshot) and OpenSequoia 0.2.0.0 resources/manifest. Next: preserve docs/evidence, update TASKS, and keep runtime/signing/reproducibility as open gates. Traps: CLI target state is ephemeral, so pass the absolute path or _target on every call; code_signature null is not an unsigned verdict; imports do not prove runtime use or absence of statically linked code; the S03c network=10013 gate is a separate runtime acceptance criterion and must not be weakened or claimed from static evidence."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"revision\":14}}\n"
+}

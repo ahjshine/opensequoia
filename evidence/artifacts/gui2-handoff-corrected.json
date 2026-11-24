@@ -1,0 +1,9 @@
+{
+  "tool": "core-handoff-write",
+  "params": {
+    "text": "I02a resumed 2026-11-23 existing durable investigation. Current final GUI0.2 EXE target/gui/release/opensequoia.exe SHA d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e,946176bytes. root2-gui-verification inputs matched at analysis start; Windows Authenticode NotSigned. Two identical-input packaging runs produced ZIP743c6594a6e72f0dffdcfbf07537b4900659da35d018933eef39df21d871ff05,379375bytes, four members total1289128bytes. Findings18-21 cite intact current header/resource/import/archive records. GUI subsystem2 replaces prior console draft subsystem3; AMD64/CFG/NX/ASLR flags retained. Import row slots differ, so literal row-equivalence hyp14 was refuted; semantic imports are unchanged. No target code ran through Craft. Preserve prior0.1/app2 reports and anomalies; do not cite earlier un-loadable native-layout/overview IDs. Current objdump header result is only first250/22890lines, sufficient for header claims; two resources/162imports/four ZIP entries fully enumerated. Next root maps source commit to existing verification/artifact hashes and reconciles docs. Production AppContainer/site/origin/TLS/standards/accessibility/browser parity, static native completeness, clean-machine VC runtime, signing/update/install/recovery and comparative runtime performance remain unknown/unmet; existing Brave-wrapper unknown also remains. Future artifact batches begin with investigation/session show and new brief/plan/hypotheses; never bypass consent or reconfigure working MCP. Exports/report saved as gui2-*."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"revision\":71}}\n"
+}

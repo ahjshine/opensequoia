@@ -1,0 +1,8 @@
+{
+  "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\release\\opensequoia.exe",
+  "sha256": "930A4415A37137AD33CE77E4C82C134AA1AE0BE5DCAE14BC8449104FFB7042B8",
+  "status": "NotSigned",
+  "signer": null,
+  "procedure": "Windows Get-AuthenticodeSignature, not Craft code_signature:null",
+  "limitation": "Signature status is not runtime security or update implementation"
+}

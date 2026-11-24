@@ -1,0 +1,71 @@
+{
+  "selection_date": "2026-11-22",
+  "toolchain": "rustc 1.98.1 (48a229cea 2026-09-01)\r\nbinary: rustc\r\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\r\ncommit-date: 2026-09-01\r\nhost: x86_64-pc-windows-msvc\r\nrelease: 1.98.1\r\nLLVM version: 22.1.8",
+  "windows": {
+    "Caption": "Microsoft Windows 11 Home Single Language",
+    "Version": "10.0.26200",
+    "BuildNumber": "26200",
+    "OSArchitecture": "64-bit"
+  },
+  "sdk_versions": [
+    "10.0.19041.0",
+    "10.0.26100.0"
+  ],
+  "artifacts": [
+    {
+      "name": "accesskit_windows-0.35.1.crate",
+      "sha256": "ce63f35d6bdcf59f26b76b3379063f738e6412cef46999cc772d46aa3de35adb"
+    },
+    {
+      "name": "windows-link-0.2.1.crate",
+      "sha256": "f0805222e57f7521d6a62e36fa9163bc891acd422f971defe97d64e70d0a4fe5"
+    },
+    {
+      "name": "windows-sys-0.61.2.crate",
+      "sha256": "ae137229bcbd6cdf0f7b80a31df61766145077ddf49416a728b02cb3921ff3fc"
+    }
+  ],
+  "source_commits": {
+    "windows_sys": "32c3144490c016fe496a0aed769bce60987a2e9d",
+    "accesskit_windows": "ce8164ba92995cfa86005b6259115e08c8244253",
+    "windows_link": "d468916ac27a36fb8a12bafc1bf5c0ec2fe92238"
+  },
+  "docs": [
+    {
+      "name": "appcontainer.html",
+      "sha256": "1fdcc4d004f0223a28a9f865b999dc04ef3b99ccf17b738437e84698fd45aad6"
+    },
+    {
+      "name": "attributes.html",
+      "sha256": "1d449eb75a870371c1edcb610d09e706649a6d4b2b70738a3afadea92c050042"
+    },
+    {
+      "name": "directwrite.html",
+      "sha256": "6b957661b4f33441a15d03671aec5f6dc36c73d970bc196bcfd65b953d7ad887"
+    },
+    {
+      "name": "ime.html",
+      "sha256": "522814240c8caf27e82261fb587b6c768a1f2959e8ab812fa39fd4a57de8c5aa"
+    },
+    {
+      "name": "paint.html",
+      "sha256": "9d8fe9b0bf0a4a7be15c1e833d6d8e95e7ccf18b132722253faa6731bb8e3432"
+    },
+    {
+      "name": "rust-platform-support.html",
+      "sha256": "c5c8b84cfcf0c1925fd3c1c4f6f5b3c78ddaab2406f92115d3f74c88f3b8735f"
+    },
+    {
+      "name": "rust-windows-msvc.html",
+      "sha256": "dcbc3831a5791f99d1f277583307de3d74af5f4da6f090430f90dd880a44ee36"
+    },
+    {
+      "name": "uia.html",
+      "sha256": "8e1167751251bd5eaa70521dbef95061fce5f937554e405b58bad1c2d0da9c36"
+    },
+    {
+      "name": "wintrust.html",
+      "sha256": "8cfaffe636c3093ba8f70fe6790debfe25fa0b56847cad5ae39d7e6450fad4e0"
+    }
+  ]
+}

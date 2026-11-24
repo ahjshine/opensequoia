@@ -1,0 +1,31 @@
+# S02c navigation model handoff
+
+Owner: `/root/navigation_model`. Date: 2026-11-22. Ownership: `crates/app/src/browser.rs` and `model2-*` evidence only. No manifests, root records, other module implementations, commits, artifact analysis or personal files changed.
+
+## Delivered behavior and contract
+
+Safe Rust (`forbid(unsafe_code)`), standard library only. `PageSource::{Welcome, Guide, Local(PathBuf)}` provides `from_address`, `address` and `title`. Raw addresses are bounded at 4096 UTF-8 bytes and reject controls/bidi control characters, unknown schemes, share/device spellings via the existing real `input::check_local_path`. Local path spelling is preserved exactly; only built-in addresses tolerate surrounding ordinary spaces. Model validation is spelling/representation validation, not filesystem or network isolation. `input::load`/controller retain actual file checks and their existing limitations.
+
+`Browser::new(PageSource) -> Result<(Browser, LoadRequest), NavigationError>`; `active`, `tabs`, `new_tab`, `select`, `select_relative`, `close`, `navigate`, `back`, `forward`, `reload`, `rerender`, `complete`, `is_current`. `Tab` exposes identity/source/status/key/history-direction getters. History length/index introspection is `cfg(test)` because no actual UI consumer needs those getters; no fake UI counts or lint suppression was added to silence dead code. IDs are monotonic `TabId(u64)` and `RequestKey { tab, generation }`; counters fail atomically rather than wrap.
+
+`LoadRequest { key, source, reason }` uses `LoadReason::{Navigation, Reload, Reflow}`. `LoadStatus::{Loading, Ready, Failed(String)}` tracks the current navigation. Navigating the same source reloads without duplicate history; ordinary navigation truncates the forward branch only after all failure preconditions pass. Reflow advances the generation without mutating history. `complete` accepts only the current pending generation, including inactive tabs, and rejects stale/closed/duplicate completion. Failed messages are bounded to 1024 UTF-8 bytes without breaking a character boundary.
+
+Closing a nonfinal tab selects the adjacent right tab (or left at the end) and preserves its state. Closing the final development tab resets to Welcome under a **new** ID, rejecting old completions. This explicit development behavior is not a claim of final Brave last-window parity. Limits of 32 tabs and 128 history entries per tab are current development resource bounds; full retained scope is not narrowed by this leaf.
+
+The model holds no HTML, DOM, displays, OS handles, file reads or persistence. Caller must clear previous-source content for Navigation/Reload, bind displayed results to an accepted token, cancel closed controller jobs, and may retain same-source display while Reflow loads. Generation checks are internal state correctness, not authentication/origin/capability IPC.
+
+## Actual verification
+
+Environment: Windows x64, Rust 1.98.1 / LLVM 22.1.8, shared dirty application integration tree. Final model GREEN ran with the root's 0.2.0 workspace. Model source has no version-dependent behavior. Source fingerprint in `model2-source-hashes.json` binds this exact leaf.
+
+1. Initial `cargo test -p opensequoia --locked browser::tests -- --nocapture`: compile failure E0583 because root activated the not-yet-created `windows_process` module. `model2-red.log`; **not semantic RED**.
+2. After root deferred that declaration, same test command: actual semantic RED **9 failing / 0 passing / 0 ignored**, temporary constructor stub returned CounterExhausted. `model2-semantic-red.log`. All temporary stubs were replaced before delivery.
+3. Meaningful local-filename regression failed before fix: ` leading.html` reparsed as `leading.html`, potentially selecting a different file. Focused command `cargo test -p opensequoia --locked browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization`; `model2-filename-red.log`. Fixed by preserving local path spelling and validating raw address bounds before builtin normalization; the same expectation now passes.
+4. Final `cargo test -p opensequoia --locked browser::tests`: **12 passed / 0 failed / 0 ignored**, 21 unrelated tests filtered at that moment, 0.02 seconds test execution. `model2-green.log`. Includes history transition/forward truncation, reload/reflow, capacity/counter atomicity, last/nonfinal close, selection wrap, stale/duplicate/closed and inactive completion behavior, control/device/source validation, bounded non-ASCII failure messages, filename roundtrip, and 1024 deterministic generated transition operations/invariants. Finite generated sampling is not a conformance suite or exhaustive fuzzing.
+5. `rustfmt --edition 2024 crates/app/src/browser.rs` and `rustfmt --edition 2024 --check crates/app/src/browser.rs` ran successfully. Scoped app Clippy first returned E0432 (`crate::chrome` not activated while the native agent's module moved in): `model2-integration-clippy.log`. A later integrated attempt found only a collapsible-if in the other agent's `windows.rs:222`: `model2-clippy.log`. Native author was notified. No model lint defect or allow/dead-code suppression was introduced; full application warning-free lint gate remains parent verification.
+
+## Review and remaining work
+
+Self-review checked constructor/source validation, nonempty tab/history invariants, counter preflight order, close/select indexing and transaction boundaries, inactive and duplicate results, string UTF-8 bounds and address roundtrips. Found/fixed the actual address-space defect with a failing regression. No remaining concrete model defect was found in this pass; this is not independent review or security proof.
+
+Parent must integrate consumers, rerun current quality gates and perform independent review plus actual native UI/controller/process tests. Ensure UI uses `Browser::complete` before applying/cache-publishing a display, exact local address spelling is retained, closed jobs are cancelled, and old-source frames are cleared for Navigation/Reload. No modern website, sandbox, profile, sync, extension or full-browser completion is claimed. Leaf source is frozen pending reviewer feedback; parent owns acceptance and record integration.

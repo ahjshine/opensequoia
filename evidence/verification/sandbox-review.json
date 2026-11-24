@@ -1,0 +1,407 @@
+{
+  "acceptance": {
+    "passed": false,
+    "passed_assertions": 24,
+    "unmet": [
+      "sandbox smoke exit",
+      "actual helper loopback WSAEACCES 10013",
+      "broker exact denial/token observation",
+      "complete sandbox smoke"
+    ]
+  },
+  "checks": [
+    {
+      "detail": "1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97",
+      "name": "source hash crates/app/src/windows_sandbox.rs",
+      "passed": true
+    },
+    {
+      "detail": "65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d",
+      "name": "source hash crates/app/src/windows_process.rs",
+      "passed": true
+    },
+    {
+      "detail": "802f6c5274cff59711da028d0e2ea4e38306638b6a823791fa1431d88fb09b1d",
+      "name": "source hash crates/app/src/worker.rs",
+      "passed": true
+    },
+    {
+      "detail": "2c06b3551678656d80e4fac74989cb003c33a73686c91babaf3569d2cf700d52",
+      "name": "source hash crates/app/src/main.rs",
+      "passed": true
+    },
+    {
+      "detail": "25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60",
+      "name": "source hash crates/app/src/input.rs",
+      "passed": true
+    },
+    {
+      "detail": "e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf",
+      "name": "source hash crates/app/Cargo.toml",
+      "passed": true
+    },
+    {
+      "detail": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd",
+      "name": "source hash Cargo.toml",
+      "passed": true
+    },
+    {
+      "detail": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707",
+      "name": "source hash Cargo.lock",
+      "passed": true
+    },
+    {
+      "detail": "f71a782718153f585aef611a3fb91fbf79bb7f32149537b9a112b40f9b1c82b3",
+      "name": "source hash evidence/verification/sandbox4-acceptance.py",
+      "passed": true
+    },
+    {
+      "detail": "6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72",
+      "name": "source hash evidence/verification/sandbox4-process-helper.rs",
+      "passed": true
+    },
+    {
+      "detail": "dd9ee9c9415ab8bd1bfc19369a12f9a85fdba6483279785209d24dcfdee9754c",
+      "name": "evidence hash evidence/verification/sandbox4-acceptance.json",
+      "passed": true
+    },
+    {
+      "detail": "15aa1b4ecf0d3233ae0f80ca731dfe369617c8cebe208601a8526b34c169be92",
+      "name": "evidence hash evidence/verification/sandbox4-acceptance.log",
+      "passed": true
+    },
+    {
+      "detail": "907e37a6b368c5b0350b45895b86bc6caefb11da70d849b6ae02cef785b84891",
+      "name": "evidence hash target/r04/direct-drop-probe.rs",
+      "passed": true
+    },
+    {
+      "detail": "2f2f4d71287fbaae4c69c54af80496ef66a981f26c992dff6031d4a62a12bf62",
+      "name": "evidence hash target/r04/direct-drop.log",
+      "passed": true
+    },
+    {
+      "detail": "3a51acec85a882d9431d6657822458442d55c5358275636c05cef0b9229be017",
+      "name": "evidence hash target/r04/scoped.diff",
+      "passed": true
+    },
+    {
+      "detail": "b3e3ccc0d3f413747ca7c3be76f34761895c8094",
+      "name": "snapshot HEAD",
+      "passed": true
+    },
+    {
+      "detail": "git diff --quiet returncode=0",
+      "name": "post-evidence production engine/IPC/fixture inputs unchanged",
+      "passed": true
+    },
+    {
+      "detail": "opensequoia-s03c-acceptance-v1",
+      "name": "acceptance schema",
+      "passed": true
+    },
+    {
+      "detail": "22abfd5604c13e97a89ea416efd2154e75c50257",
+      "name": "acceptance execution revision recorded",
+      "passed": true
+    },
+    {
+      "detail": "integrated_checkout",
+      "name": "integrated evidence kind",
+      "passed": true
+    },
+    {
+      "detail": "1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97",
+      "name": "acceptance lane hash crates/app/src/windows_sandbox.rs",
+      "passed": true
+    },
+    {
+      "detail": "65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d",
+      "name": "acceptance lane hash crates/app/src/windows_process.rs",
+      "passed": true
+    },
+    {
+      "detail": "802f6c5274cff59711da028d0e2ea4e38306638b6a823791fa1431d88fb09b1d",
+      "name": "acceptance lane hash crates/app/src/worker.rs",
+      "passed": true
+    },
+    {
+      "detail": "f71a782718153f585aef611a3fb91fbf79bb7f32149537b9a112b40f9b1c82b3",
+      "name": "acceptance lane hash evidence/verification/sandbox4-acceptance.py",
+      "passed": true
+    },
+    {
+      "detail": "6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72",
+      "name": "acceptance lane hash evidence/verification/sandbox4-process-helper.rs",
+      "passed": true
+    },
+    {
+      "detail": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd",
+      "name": "acceptance root hash Cargo.toml",
+      "passed": true
+    },
+    {
+      "detail": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707",
+      "name": "acceptance root hash Cargo.lock",
+      "passed": true
+    },
+    {
+      "detail": "e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf",
+      "name": "acceptance root hash crates/app/Cargo.toml",
+      "passed": true
+    },
+    {
+      "detail": "2c06b3551678656d80e4fac74989cb003c33a73686c91babaf3569d2cf700d52",
+      "name": "acceptance root hash crates/app/src/main.rs",
+      "passed": true
+    },
+    {
+      "detail": "25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60",
+      "name": "acceptance root hash crates/app/src/input.rs",
+      "passed": true
+    },
+    {
+      "detail": "count=28",
+      "name": "exact 28 assertion identities/states",
+      "passed": true
+    },
+    {
+      "detail": "passed=24 unmet=4",
+      "name": "24 passing and four unmet",
+      "passed": true
+    },
+    {
+      "detail": "False",
+      "name": "acceptance overall failed",
+      "passed": true
+    },
+    {
+      "detail": "[\"sandbox smoke exit\", \"actual helper loopback WSAEACCES 10013\", \"broker exact denial/token observation\", \"complete sandbox smoke\"]",
+      "name": "exact four unmet names",
+      "passed": true
+    },
+    {
+      "detail": "commands=6",
+      "name": "exact command results and stream hashes",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_RENDER app=1 sid_equal=1 integrity_rid=4096 capabilities=0 equal=1 spawned=2 reaped=2",
+      "name": "runtime marker SANDBOX_RENDER",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_DENIAL_CONTROL app=0 read=0 write=0 network=0 accepted=1 fixture_unchanged=1",
+      "name": "runtime marker SANDBOX_DENIAL_CONTROL",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_PROBE_FILES app=1 read=5 write=5",
+      "name": "runtime marker SANDBOX_PROBE_FILES",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_DENIAL_OBSERVATION accepted=0 fixture_unchanged=1",
+      "name": "runtime marker SANDBOX_DENIAL_OBSERVATION",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_PROBE_ERROR operation=Winsock WSAPoll loopback connect timed out with SO_ERROR=0",
+      "name": "runtime marker SANDBOX_PROBE_ERROR",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_LIFETIME_STAGE handle_include=true result=INHERITED",
+      "name": "runtime marker SANDBOX_LIFETIME_STAGE",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_LIFETIME_STAGE handle_include=false result=0xc0000008",
+      "name": "runtime marker SANDBOX_LIFETIME_STAGE",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_PARENT_DEATH killed=1 child_reaped=1 profile_deleted=1 staging_removed=1",
+      "name": "runtime marker SANDBOX_PARENT_DEATH",
+      "passed": true
+    },
+    {
+      "detail": "timeout retained",
+      "name": "no actual exact 10013 helper marker",
+      "passed": true
+    },
+    {
+      "detail": "SANDBOX_SMOKE_OK absent",
+      "name": "no actual sandbox smoke success",
+      "passed": true
+    },
+    {
+      "detail": "S03C_PROBE_OK absent",
+      "name": "no acceptance success token",
+      "passed": true
+    },
+    {
+      "detail": "direct drop cleaned; one host only",
+      "name": "focused final-owner probe result",
+      "passed": true
+    },
+    {
+      "detail": "crates/app/src/worker.rs:570:security",
+      "name": "finding 0 schema/fingerprint",
+      "passed": true
+    },
+    {
+      "detail": "crates/app/src/windows_sandbox.rs:3:security",
+      "name": "finding 1 schema/fingerprint",
+      "passed": true
+    },
+    {
+      "detail": "critical=1 informational=1",
+      "name": "finding inventory",
+      "passed": true
+    },
+    {
+      "detail": "BLOCKED",
+      "name": "main report R04_VERDICT",
+      "passed": true
+    },
+    {
+      "detail": "1",
+      "name": "main report R04_CRITICAL",
+      "passed": true
+    },
+    {
+      "detail": "1",
+      "name": "main report R04_INFORMATIONAL",
+      "passed": true
+    },
+    {
+      "detail": "4",
+      "name": "main report R04_REQUIRED_UNMET",
+      "passed": true
+    },
+    {
+      "detail": "24",
+      "name": "main report R04_ACCEPTANCE_PASSED",
+      "passed": true
+    },
+    {
+      "detail": "0",
+      "name": "main report R04_NEW_IMPLEMENTATION_DEFECTS",
+      "passed": true
+    },
+    {
+      "detail": "b3e3ccc0d3f413747ca7c3be76f34761895c8094",
+      "name": "main report R04_SNAPSHOT",
+      "passed": true
+    },
+    {
+      "detail": "BLOCKED",
+      "name": "summary agrees R04_VERDICT",
+      "passed": true
+    },
+    {
+      "detail": "1",
+      "name": "summary agrees R04_CRITICAL",
+      "passed": true
+    },
+    {
+      "detail": "1",
+      "name": "summary agrees R04_INFORMATIONAL",
+      "passed": true
+    },
+    {
+      "detail": "4",
+      "name": "summary agrees R04_REQUIRED_UNMET",
+      "passed": true
+    },
+    {
+      "detail": "b3e3ccc0d3f413747ca7c3be76f34761895c8094",
+      "name": "summary agrees R04_SNAPSHOT",
+      "passed": true
+    }
+  ],
+  "clean": false,
+  "evidence_consistent": true,
+  "evidence_execution_revision": "22abfd5604c13e97a89ea416efd2154e75c50257",
+  "evidence_hashes": {
+    "evidence/verification/sandbox4-acceptance.json": {
+      "actual": "dd9ee9c9415ab8bd1bfc19369a12f9a85fdba6483279785209d24dcfdee9754c",
+      "expected": "dd9ee9c9415ab8bd1bfc19369a12f9a85fdba6483279785209d24dcfdee9754c"
+    },
+    "evidence/verification/sandbox4-acceptance.log": {
+      "actual": "15aa1b4ecf0d3233ae0f80ca731dfe369617c8cebe208601a8526b34c169be92",
+      "expected": "15aa1b4ecf0d3233ae0f80ca731dfe369617c8cebe208601a8526b34c169be92"
+    },
+    "target/r04/direct-drop-probe.rs": {
+      "actual": "907e37a6b368c5b0350b45895b86bc6caefb11da70d849b6ae02cef785b84891",
+      "expected": "907e37a6b368c5b0350b45895b86bc6caefb11da70d849b6ae02cef785b84891"
+    },
+    "target/r04/direct-drop.log": {
+      "actual": "2f2f4d71287fbaae4c69c54af80496ef66a981f26c992dff6031d4a62a12bf62",
+      "expected": "2f2f4d71287fbaae4c69c54af80496ef66a981f26c992dff6031d4a62a12bf62"
+    },
+    "target/r04/scoped.diff": {
+      "actual": "3a51acec85a882d9431d6657822458442d55c5358275636c05cef0b9229be017",
+      "expected": "3a51acec85a882d9431d6657822458442d55c5358275636c05cef0b9229be017"
+    }
+  },
+  "findings": {
+    "critical": 1,
+    "informational": 1
+  },
+  "findings_sha256": "a8e55f077974522e13fabcccdda1b2228fd95f0ee9a7954db2272f4b9e9f08ee",
+  "limits": [
+    "No product probe or broad suite was rerun by this checker.",
+    "The known loopback 10013 gate remains unmet; timeout/SO_ERROR=0 is not denial.",
+    "No formal gstack receipt, READY, production sandbox, or remote enablement is established."
+  ],
+  "passed": false,
+  "report_sha256": "36d00c8dd99d033dec4d3b0b1c778e069b08da3e8ec72c31d0f3a1fccca2eec6",
+  "schema": "opensequoia-r04-sandbox-review-v1",
+  "snapshot": "b3e3ccc0d3f413747ca7c3be76f34761895c8094",
+  "source_hashes": {
+    "Cargo.lock": {
+      "actual": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707",
+      "expected": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707"
+    },
+    "Cargo.toml": {
+      "actual": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd",
+      "expected": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd"
+    },
+    "crates/app/Cargo.toml": {
+      "actual": "e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf",
+      "expected": "e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf"
+    },
+    "crates/app/src/input.rs": {
+      "actual": "25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60",
+      "expected": "25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60"
+    },
+    "crates/app/src/main.rs": {
+      "actual": "2c06b3551678656d80e4fac74989cb003c33a73686c91babaf3569d2cf700d52",
+      "expected": "2c06b3551678656d80e4fac74989cb003c33a73686c91babaf3569d2cf700d52"
+    },
+    "crates/app/src/windows_process.rs": {
+      "actual": "65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d",
+      "expected": "65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d"
+    },
+    "crates/app/src/windows_sandbox.rs": {
+      "actual": "1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97",
+      "expected": "1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97"
+    },
+    "crates/app/src/worker.rs": {
+      "actual": "802f6c5274cff59711da028d0e2ea4e38306638b6a823791fa1431d88fb09b1d",
+      "expected": "802f6c5274cff59711da028d0e2ea4e38306638b6a823791fa1431d88fb09b1d"
+    },
+    "evidence/verification/sandbox4-acceptance.py": {
+      "actual": "f71a782718153f585aef611a3fb91fbf79bb7f32149537b9a112b40f9b1c82b3",
+      "expected": "f71a782718153f585aef611a3fb91fbf79bb7f32149537b9a112b40f9b1c82b3"
+    },
+    "evidence/verification/sandbox4-process-helper.rs": {
+      "actual": "6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72",
+      "expected": "6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72"
+    }
+  },
+  "summary_sha256": "56b7a975beaf667aed0179785868f80a4ac6d5e7615e0f56ce0ee0641c0c3901",
+  "verdict": "BLOCKED"
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "core_hypothesis_record",
+  "params": {
+    "claim": "The new EXE is an x86_64 PE GUI-subsystem executable with NX, PIE and high-entropy VA enabled and control-flow guard enabled by the locked release build.",
+    "prediction": "PE layout reports machine x86_64, subsystem GUI, NX/PIE/high-entropy VA true and CFG true."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis_id\":\"hyp_1\",\"revision\":3}}\n"
+}

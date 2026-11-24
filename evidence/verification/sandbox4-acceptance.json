@@ -1,0 +1,278 @@
+{
+  "assertions": [
+    {
+      "evidence": "entries=0; oracle never deletes abandoned input",
+      "name": "no preexisting generated staging",
+      "passed": true
+    },
+    {
+      "evidence": "returncode=0",
+      "name": "application build",
+      "passed": true
+    },
+    {
+      "evidence": "count=1",
+      "name": "one compatible windows-sys rlib",
+      "passed": true
+    },
+    {
+      "evidence": "returncode=0",
+      "name": "process helper build",
+      "passed": true
+    },
+    {
+      "evidence": "returncode=0",
+      "name": "ordinary process smoke exit",
+      "passed": true
+    },
+    {
+      "evidence": "PROCESS_SMOKE_OK healthy=1 malformed_rejected=1 restarted=1 spawned=3 reaped=3",
+      "name": "ordinary healthy/malformed/restart/reap controls",
+      "passed": true
+    },
+    {
+      "evidence": "returncode=1",
+      "name": "sandbox smoke exit",
+      "passed": false
+    },
+    {
+      "evidence": "SANDBOX_RENDER app=1 sid_equal=1 integrity_rid=4096 capabilities=0 equal=1 spawned=2 reaped=2",
+      "name": "real renderer equality and suspended token policy",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_DENIAL_CONTROL app=0 read=0 write=0 network=0 accepted=1 fixture_unchanged=1",
+      "name": "ordinary file/network positive control",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_PROBE_VERIFIED_FILES app=1 read=5 write=5",
+      "name": "AppContainer exact file denials",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_DENIAL_OBSERVATION accepted=0 fixture_unchanged=1",
+      "name": "unchanged fixture and no accepted sandbox connection",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_PROBE_VERIFIED app=1 read=5 write=5 network=10013",
+      "name": "actual helper loopback WSAEACCES 10013",
+      "passed": false
+    },
+    {
+      "evidence": "SANDBOX_DENIAL ordinary_app=0 sandbox_app=1 sid_equal=1 integrity_rid=4096 capabilities=0 read=5 write=5 network=10013 ordinary_accepted=1 accepted=0 fixture_unchanged=1",
+      "name": "broker exact denial/token observation",
+      "passed": false
+    },
+    {
+      "evidence": "SANDBOX_CLEANUP profile_deleted=1 staging_removed=1",
+      "name": "observable sandbox profile/staging cleanup",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_SMOKE_OK token=verified render=equal denials=verified cleanup=ok",
+      "name": "complete sandbox smoke",
+      "passed": false
+    },
+    {
+      "evidence": "returncode=0",
+      "name": "lifetime exit",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE wrong_path=denied",
+      "name": "wrong-path fail closed",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE job_close=1",
+      "name": "Job close kills real sandbox child",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE quota=2 result=STARTED_AND_REAPED",
+      "name": "two-process descendant positive control",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE quota=1 result=DENIED:1816",
+      "name": "one-process quota 1816",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE handle_include=true result=INHERITED",
+      "name": "included handle marker positive control",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE handle_include=false result=0xc0000008",
+      "name": "excluded strict-handle observation",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_STAGE cancellation=995",
+      "name": "real pipe cancellation 995",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME job_close=1 quota_control=started quota_denied=1816 include_control=1 unrelated_handle=0xc0000008 cancellation=995 wrong_path=denied",
+      "name": "lifetime summary",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_LIFETIME_OK reaped=1 cleanup=1",
+      "name": "lifetime reaping and cleanup",
+      "passed": true
+    },
+    {
+      "evidence": "returncode=0",
+      "name": "parent-death exit",
+      "passed": true
+    },
+    {
+      "evidence": "SANDBOX_PARENT_DEATH killed=1 child_reaped=1 profile_deleted=1 staging_removed=1",
+      "name": "parent death kills child and recovers owned profile/staging",
+      "passed": true
+    },
+    {
+      "evidence": "remaining=0",
+      "name": "all generated staging removed",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "arguments": [
+        "cargo",
+        "build",
+        "--manifest-path",
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\Cargo.toml",
+        "--target-dir",
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build",
+        "-p",
+        "opensequoia",
+        "--locked",
+        "--offline"
+      ],
+      "cwd": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+      "duration_seconds": 28.197,
+      "label": "build application",
+      "returncode": 0,
+      "stderr_sha256": "f2250332be80707ac8db10707df80f6c6206ca50f63310d59066e82d51a15a8f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timed_out": false,
+      "timeout_seconds": 180
+    },
+    {
+      "arguments": [
+        "rustc",
+        "--edition=2024",
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\verification\\sandbox4-process-helper.rs",
+        "--extern",
+        "windows_sys=C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\deps\\libwindows_sys-e0551551b6ff6ca1.rlib",
+        "-L",
+        "dependency=C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\deps",
+        "-o",
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-process-helper.exe"
+      ],
+      "cwd": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+      "duration_seconds": 2.203,
+      "label": "build real process helper",
+      "returncode": 0,
+      "stderr_sha256": "ee657bcc67ee9aeffaa4eefeac9283750c0968388ac78b70b60ddd403c781640",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timed_out": false,
+      "timeout_seconds": 180
+    },
+    {
+      "arguments": [
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\opensequoia.exe",
+        "--process-smoke"
+      ],
+      "cwd": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+      "duration_seconds": 0.534,
+      "label": "ordinary process smoke",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "afd7aa97f57552b59f42b0ea2caaaa1eb3c16373a1f1f373c85c0fcd51d10b0f",
+      "timed_out": false,
+      "timeout_seconds": 60
+    },
+    {
+      "arguments": [
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-build\\debug\\opensequoia.exe",
+        "--sandbox-smoke"
+      ],
+      "cwd": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+      "duration_seconds": 3.006,
+      "label": "AppContainer renderer and denial smoke",
+      "returncode": 1,
+      "stderr_sha256": "336d603e72d580dcdbc80b5d2ec7f796eeb09abc4c3b41307f9c7ed6b052c314",
+      "stdout_sha256": "56ae5abd1a851596e98dfbc63ad2a767c2fc010490fc33df8da4385faba68cd9",
+      "timed_out": false,
+      "timeout_seconds": 90
+    },
+    {
+      "arguments": [
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-process-helper.exe",
+        "sandbox-lifetime"
+      ],
+      "cwd": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+      "duration_seconds": 0.75,
+      "label": "AppContainer Job/handle/cancellation lifetime",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "87f899b08328717b24c6d263a558279786f49176ece039c149e9bcf8fdbd0677",
+      "timed_out": false,
+      "timeout_seconds": 90
+    },
+    {
+      "arguments": [
+        "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\sandbox4\\oracle-process-helper.exe",
+        "sandbox-parent-death"
+      ],
+      "cwd": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+      "duration_seconds": 0.383,
+      "label": "AppContainer parent death and owned recovery",
+      "returncode": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4e5188fed36c54edddb1dee24131c0c054ea536b5ac29728185dbde1b25f268a",
+      "timed_out": false,
+      "timeout_seconds": 90
+    }
+  ],
+  "generated_utc": "2026-11-24T12:30:31.615943+00:00",
+  "integration": {
+    "kind": "integrated_checkout",
+    "lane_sources": {
+      "crates/app/src/windows_process.rs": "65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d",
+      "crates/app/src/windows_sandbox.rs": "1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97",
+      "crates/app/src/worker.rs": "3565782421db5b76408c98387e5e30e19864e6814548ec3693e542689034b5e0",
+      "evidence/verification/sandbox4-acceptance.py": "9d815a6f3d1f107df95b9a90f9e7fc55c0e291f8056c5529ebc796571e3acc58",
+      "evidence/verification/sandbox4-process-helper.rs": "6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72"
+    },
+    "root": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia",
+    "root_files": {
+      "Cargo.lock": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707",
+      "Cargo.toml": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd",
+      "crates/app/Cargo.toml": "e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf",
+      "crates/app/src/input.rs": "25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60",
+      "crates/app/src/main.rs": "ea9da7f770d81173495457ca2c9afb0364086020dc3f5dc0a8ec5c0f3ee94646"
+    }
+  },
+  "limits": [
+    "Development probe only; no production sandbox, site/origin isolation, authenticated IPC, TLS or remote-browsing claim.",
+    "Only the current Windows x64 host was exercised; no external network, personal profile, firewall change or loopback exemption was used.",
+    "A timeout or SO_ERROR=0 is not WSAEACCES 10013 and cannot satisfy the network gate."
+  ],
+  "passed": false,
+  "revision": "56d1adbbce0cfe468e56be2afaacb778ef102a2b",
+  "schema": "opensequoia-s03c-acceptance-v1",
+  "unmet": [
+    "sandbox smoke exit",
+    "actual helper loopback WSAEACCES 10013",
+    "broker exact denial/token observation",
+    "complete sandbox smoke"
+  ]
+}

@@ -1,0 +1,20 @@
+   Compiling opensequoia v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.53s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-db6b529dac40c3a8.exe)
+
+running 12 tests
+test browser::tests::closing_last_tab_creates_new_welcome_identity ... ok
+test browser::tests::request_and_tab_counter_exhaustion_are_atomic_failures ... ok
+test browser::tests::failure_messages_remain_bounded_utf8_and_do_not_revert_source ... ok
+test browser::tests::no_history_unknown_tab_and_invalid_initial_source_are_explicit_failures ... ok
+test browser::tests::reload_same_address_and_reflow_do_not_duplicate_history ... ok
+test browser::tests::stale_duplicate_and_closed_tab_completions_cannot_replace_current_state ... ok
+test browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization ... ok
+test browser::tests::source_validation_rejects_active_schemes_devices_controls_and_invalid_direct_sources ... ok
+test browser::tests::tab_selection_wraps_and_closure_preserves_neighbor_and_pending_results ... ok
+test browser::tests::navigation_and_history_keep_loading_identity_and_discard_forward_branch ... ok
+test browser::tests::tab_and_history_limits_fail_without_mutating_state ... ok
+test browser::tests::generated_transition_sequences_preserve_identity_history_and_completion_invariants ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 21 filtered out; finished in 0.02s
+

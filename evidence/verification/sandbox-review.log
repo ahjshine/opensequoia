@@ -1,0 +1,65 @@
+checker=python evidence/verification/sandbox-review-check.py
+PASS source hash crates/app/src/windows_sandbox.rs: 1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97
+PASS source hash crates/app/src/windows_process.rs: 65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d
+PASS source hash crates/app/src/worker.rs: 802f6c5274cff59711da028d0e2ea4e38306638b6a823791fa1431d88fb09b1d
+PASS source hash crates/app/src/main.rs: 2c06b3551678656d80e4fac74989cb003c33a73686c91babaf3569d2cf700d52
+PASS source hash crates/app/src/input.rs: 25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60
+PASS source hash crates/app/Cargo.toml: e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf
+PASS source hash Cargo.toml: 1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd
+PASS source hash Cargo.lock: e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707
+PASS source hash evidence/verification/sandbox4-acceptance.py: f71a782718153f585aef611a3fb91fbf79bb7f32149537b9a112b40f9b1c82b3
+PASS source hash evidence/verification/sandbox4-process-helper.rs: 6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72
+PASS evidence hash evidence/verification/sandbox4-acceptance.json: dd9ee9c9415ab8bd1bfc19369a12f9a85fdba6483279785209d24dcfdee9754c
+PASS evidence hash evidence/verification/sandbox4-acceptance.log: 15aa1b4ecf0d3233ae0f80ca731dfe369617c8cebe208601a8526b34c169be92
+PASS evidence hash target/r04/direct-drop-probe.rs: 907e37a6b368c5b0350b45895b86bc6caefb11da70d849b6ae02cef785b84891
+PASS evidence hash target/r04/direct-drop.log: 2f2f4d71287fbaae4c69c54af80496ef66a981f26c992dff6031d4a62a12bf62
+PASS evidence hash target/r04/scoped.diff: 3a51acec85a882d9431d6657822458442d55c5358275636c05cef0b9229be017
+PASS snapshot HEAD: b3e3ccc0d3f413747ca7c3be76f34761895c8094
+PASS post-evidence production engine/IPC/fixture inputs unchanged: git diff --quiet returncode=0
+PASS acceptance schema: opensequoia-s03c-acceptance-v1
+PASS acceptance execution revision recorded: 22abfd5604c13e97a89ea416efd2154e75c50257
+PASS integrated evidence kind: integrated_checkout
+PASS acceptance lane hash crates/app/src/windows_sandbox.rs: 1ae44f9d316e4796cd88faceba48b412fb86e9d45f86164c7b6955f0195efc97
+PASS acceptance lane hash crates/app/src/windows_process.rs: 65f42fea9b302858076d5046767df11b708b0a9c97e6689fd5ac05bac5cd246d
+PASS acceptance lane hash crates/app/src/worker.rs: 802f6c5274cff59711da028d0e2ea4e38306638b6a823791fa1431d88fb09b1d
+PASS acceptance lane hash evidence/verification/sandbox4-acceptance.py: f71a782718153f585aef611a3fb91fbf79bb7f32149537b9a112b40f9b1c82b3
+PASS acceptance lane hash evidence/verification/sandbox4-process-helper.rs: 6f972a377381fd158a2004dccd67f240bb425e61bf19fb32bb2e474690ea7c72
+PASS acceptance root hash Cargo.toml: 1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd
+PASS acceptance root hash Cargo.lock: e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707
+PASS acceptance root hash crates/app/Cargo.toml: e8d6ef76b14e277613b4acc1d02bd3437b7b1046da0f757b947b596c338c49cf
+PASS acceptance root hash crates/app/src/main.rs: 2c06b3551678656d80e4fac74989cb003c33a73686c91babaf3569d2cf700d52
+PASS acceptance root hash crates/app/src/input.rs: 25106af641986a62785d3b7f6bc2ce540e2031f6a921cf7dacadb3bb2be15a60
+PASS exact 28 assertion identities/states: count=28
+PASS 24 passing and four unmet: passed=24 unmet=4
+PASS acceptance overall failed: False
+PASS exact four unmet names: ["sandbox smoke exit", "actual helper loopback WSAEACCES 10013", "broker exact denial/token observation", "complete sandbox smoke"]
+PASS exact command results and stream hashes: commands=6
+PASS runtime marker SANDBOX_RENDER: SANDBOX_RENDER app=1 sid_equal=1 integrity_rid=4096 capabilities=0 equal=1 spawned=2 reaped=2
+PASS runtime marker SANDBOX_DENIAL_CONTROL: SANDBOX_DENIAL_CONTROL app=0 read=0 write=0 network=0 accepted=1 fixture_unchanged=1
+PASS runtime marker SANDBOX_PROBE_FILES: SANDBOX_PROBE_FILES app=1 read=5 write=5
+PASS runtime marker SANDBOX_DENIAL_OBSERVATION: SANDBOX_DENIAL_OBSERVATION accepted=0 fixture_unchanged=1
+PASS runtime marker SANDBOX_PROBE_ERROR: SANDBOX_PROBE_ERROR operation=Winsock WSAPoll loopback connect timed out with SO_ERROR=0
+PASS runtime marker SANDBOX_LIFETIME_STAGE: SANDBOX_LIFETIME_STAGE handle_include=true result=INHERITED
+PASS runtime marker SANDBOX_LIFETIME_STAGE: SANDBOX_LIFETIME_STAGE handle_include=false result=0xc0000008
+PASS runtime marker SANDBOX_PARENT_DEATH: SANDBOX_PARENT_DEATH killed=1 child_reaped=1 profile_deleted=1 staging_removed=1
+PASS no actual exact 10013 helper marker: timeout retained
+PASS no actual sandbox smoke success: SANDBOX_SMOKE_OK absent
+PASS no acceptance success token: S03C_PROBE_OK absent
+PASS focused final-owner probe result: direct drop cleaned; one host only
+PASS finding 0 schema/fingerprint: crates/app/src/worker.rs:570:security
+PASS finding 1 schema/fingerprint: crates/app/src/windows_sandbox.rs:3:security
+PASS finding inventory: critical=1 informational=1
+PASS main report R04_VERDICT: BLOCKED
+PASS main report R04_CRITICAL: 1
+PASS main report R04_INFORMATIONAL: 1
+PASS main report R04_REQUIRED_UNMET: 4
+PASS main report R04_ACCEPTANCE_PASSED: 24
+PASS main report R04_NEW_IMPLEMENTATION_DEFECTS: 0
+PASS main report R04_SNAPSHOT: b3e3ccc0d3f413747ca7c3be76f34761895c8094
+PASS summary agrees R04_VERDICT: BLOCKED
+PASS summary agrees R04_CRITICAL: 1
+PASS summary agrees R04_INFORMATIONAL: 1
+PASS summary agrees R04_REQUIRED_UNMET: 4
+PASS summary agrees R04_SNAPSHOT: b3e3ccc0d3f413747ca7c3be76f34761895c8094
+evidence_consistent=True critical=1 required_unmet=4
+SANDBOX_REVIEW_BLOCKED unresolved_critical=1 required_unmet=4

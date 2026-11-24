@@ -1,0 +1,7 @@
+{
+  "tool": "core_session_show",
+  "params": {},
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"active_target\":null,\"analysis_mode\":\"deep\",\"clean_room\":false,\"evidence_not_loaded\":0,\"evidence_records\":0,\"host\":\"windows-x86_64\",\"open\":false,\"project\":{\"name\":\"sandbox4-opensequoia\",\"path\":\"C:\\\\Users\\\\deepa\\\\OneDrive\\\\Dokumen\\\\ChatGPT\\\\opensequoia-crew\\\\controller\\\\evidence\\\\artifacts\\\\sandbox4-opensequoia.cany\",\"purpose\":\"own_or_authorized\"},\"server\":{\"name\":\"craft-anything\",\"version\":\"0.6.1\"},\"targets\":[],\"unknowns\":0}}\n"
+}

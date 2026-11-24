@@ -1,0 +1,10 @@
+{
+  "tool": "core-hypothesis-record",
+  "params": {
+    "claim": "The final GUI development ZIP contains the verified GUI executable bytes and exactly LICENSE, README.md and THIRD_PARTY_NOTICES.txt.",
+    "prediction": "Complete ZIP inventory contains four members with EXE SHA256 d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e and no contradictions."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis_id\":\"hyp_13\",\"revision\":58}}\n"
+}

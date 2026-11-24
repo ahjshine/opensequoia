@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "checked_at": "2026-11-22T20:01:24.4470960Z",
+  "scope": "Recorded GUI source-input fingerprints only, no binary parsing",
+  "input_count": 27,
+  "mismatches": [],
+  "scripts": [
+    {
+      "path": "crates/app/src/main.rs",
+      "sha256": "692B67E1E3DBDD0195BD04D3B5E70CE99CAECC7B9BDBA0285D0DB4F76602CBA5"
+    },
+    {
+      "path": "scripts/package_dev.py",
+      "sha256": "BA658ADE3BAFBC5955D4739D950C56E6F37E482FDA633E70C5C598EEB3923DD3"
+    },
+    {
+      "path": "scripts/verify.ps1",
+      "sha256": "0BD19C0A6014166FB17AE4E9332C1A24371E974D6548C3ECFA2CA3D8D37DE2CD"
+    },
+    {
+      "path": ".github/workflows/windows.yml",
+      "sha256": "9226EF96B86F4B94456B322D98F0790BB02852FB89155A373DF48B2E4D93C9FF"
+    },
+    {
+      "path": "README.md",
+      "sha256": "807109188029501AE799150F160C57D6CA57EE0094C5522EA0DD6A00FD445AA4"
+    }
+  ]
+}

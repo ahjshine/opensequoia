@@ -1,0 +1,276 @@
+{
+  "old_sha256": "930a4415a37137ad33ce77e4c82c134aa1ae0be5dcae14bc8449104ffb7042b8",
+  "new_sha256": "d50b7780c3dcfcce1906e946a103c2a0a765689805b2f15b6db4ad4208160e8f",
+  "old_rows": 146,
+  "new_rows": 162,
+  "normalization": "DLL names casefolded; symbol names/kinds exact; duplicate identical imports deduplicated for set delta",
+  "added": [
+    {
+      "key": "gdi32.dll|normal|CreateSolidBrush",
+      "name": "CreateSolidBrush",
+      "library": "gdi32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "gdi32.dll|normal|IntersectClipRect",
+      "name": "IntersectClipRect",
+      "library": "gdi32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "gdi32.dll|normal|RestoreDC",
+      "name": "RestoreDC",
+      "library": "gdi32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "gdi32.dll|normal|SaveDC",
+      "name": "SaveDC",
+      "library": "gdi32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|CancelSynchronousIo",
+      "name": "CancelSynchronousIo",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|CreateJobObjectW",
+      "name": "CreateJobObjectW",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|CreatePipe",
+      "name": "CreatePipe",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|DeleteProcThreadAttributeList",
+      "name": "DeleteProcThreadAttributeList",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|GetProcessId",
+      "name": "GetProcessId",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|InitializeProcThreadAttributeList",
+      "name": "InitializeProcThreadAttributeList",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|IsProcessInJob",
+      "name": "IsProcessInJob",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|SetHandleInformation",
+      "name": "SetHandleInformation",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|SetInformationJobObject",
+      "name": "SetInformationJobObject",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|TerminateJobObject",
+      "name": "TerminateJobObject",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "kernel32.dll|normal|UpdateProcThreadAttribute",
+      "name": "UpdateProcThreadAttribute",
+      "library": "kernel32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|CreateAcceleratorTableW",
+      "name": "CreateAcceleratorTableW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|DestroyAcceleratorTable",
+      "name": "DestroyAcceleratorTable",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|DrawTextW",
+      "name": "DrawTextW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|EnableWindow",
+      "name": "EnableWindow",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|GetFocus",
+      "name": "GetFocus",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|GetWindowTextLengthW",
+      "name": "GetWindowTextLengthW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|GetWindowTextW",
+      "name": "GetWindowTextW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|IsDialogMessageW",
+      "name": "IsDialogMessageW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|KillTimer",
+      "name": "KillTimer",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|MoveWindow",
+      "name": "MoveWindow",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|SendMessageW",
+      "name": "SendMessageW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|SetFocus",
+      "name": "SetFocus",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|SetWindowTextW",
+      "name": "SetWindowTextW",
+      "library": "user32.dll",
+      "kind": "normal"
+    },
+    {
+      "key": "user32.dll|normal|TranslateAcceleratorW",
+      "name": "TranslateAcceleratorW",
+      "library": "user32.dll",
+      "kind": "normal"
+    }
+  ],
+  "removed": [
+    {
+      "hint": 467,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "FreeEnvironmentStringsW",
+      "slot": "0x140068128"
+    },
+    {
+      "hint": 610,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "GetEnvironmentStringsW",
+      "slot": "0x140068130"
+    },
+    {
+      "hint": 785,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "GetSystemDirectoryW",
+      "slot": "0x140068120"
+    },
+    {
+      "hint": 861,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "GetWindowsDirectoryW",
+      "slot": "0x140068118"
+    },
+    {
+      "hint": 1194,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "ReadFileEx",
+      "slot": "0x140068150"
+    },
+    {
+      "hint": 1483,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "SleepEx",
+      "slot": "0x140068148"
+    },
+    {
+      "hint": 1496,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "TerminateProcess",
+      "slot": "0x140068000"
+    },
+    {
+      "hint": 1633,
+      "kind": "normal",
+      "library": "KERNEL32.dll",
+      "name": "WriteFileEx",
+      "slot": "0x140068140"
+    },
+    {
+      "hint": 0,
+      "kind": "normal",
+      "library": "gdi32.dll",
+      "name": "GetStockObject",
+      "slot": "0x140068310"
+    },
+    {
+      "hint": 0,
+      "kind": "normal",
+      "library": "kernel32.dll",
+      "name": "DuplicateHandle",
+      "slot": "0x1400683a0"
+    },
+    {
+      "hint": 0,
+      "kind": "normal",
+      "library": "kernel32.dll",
+      "name": "GetFileAttributesW",
+      "slot": "0x1400683a8"
+    },
+    {
+      "hint": 300,
+      "kind": "normal",
+      "library": "ntdll.dll",
+      "name": "NtCreateNamedPipeFile",
+      "slot": "0x1400683f8"
+    },
+    {
+      "hint": 430,
+      "kind": "normal",
+      "library": "ntdll.dll",
+      "name": "NtOpenFile",
+      "slot": "0x140068400"
+    }
+  ]
+}

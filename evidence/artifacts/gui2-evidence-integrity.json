@@ -1,0 +1,19 @@
+{
+  "task": "I02a",
+  "records": 26,
+  "findings": 21,
+  "cited_records": 20,
+  "missing_cited_ids": [],
+  "current_findings": [
+    "fnd_18",
+    "fnd_19",
+    "fnd_20",
+    "fnd_21"
+  ],
+  "analysis_records": {
+    "headers": "ev_a5ef3c46551c09321e8f1df477403bdfc68782d330ee8a107721730a8f3b1e3b",
+    "resources": "ev_7c864322896125c053adf7e03d6f2f6488bcb36bc41dc676c066a3e375509527",
+    "imports": "ev_f97f3c572503836ee601339717f5779c4f277218b6637baef179d3d4a441212b",
+    "archive": "ev_5da17a302b1ea9c68081ad590c783575f88bc1474663a074758898275d34f2bb"
+  }
+}

@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.json -text
+*.log -text
+*.png -text
+*.exe -text
+*.zip -text
+# Preserve raw evidence CRLF and final output blank lines; source rules stay strict.
+/evidence/** whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+# These are unmodified downloaded HTML documents; retain their original bytes.
+/evidence/verification/process2-doc-*.txt -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol

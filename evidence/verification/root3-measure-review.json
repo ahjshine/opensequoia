@@ -1,0 +1,15 @@
+{
+  "task": "M02",
+  "reviewer": "root (separate from sampler author)",
+  "checks": 32,
+  "all_pass": true,
+  "actual_measurement_rerun": false,
+  "sampled_process_counts": [
+    1
+  ],
+  "limits": [
+    "Only recorded observations/statistics reconciled",
+    "No sampled renderer child; true peak/paint-readiness unknown",
+    "No equivalent Brave gain or production budget accepted"
+  ]
+}

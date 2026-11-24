@@ -1,0 +1,5 @@
+   Compiling opensequoia v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 3.64s
+     Running `target\debug\opensequoia.exe --process-smoke`
+PROCESS_SMOKE_OK healthy=1 malformed_rejected=1 restarted=1 spawned=3 reaped=3
+Local lifecycle probe only; no sandbox, site isolation or authenticated peer claim.

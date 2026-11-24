@@ -1,0 +1,15 @@
+{
+  "tool": "core-hypothesis-update",
+  "params": {
+    "hypothesis_id": "hyp_12",
+    "status": "supported",
+    "add_supporting_evidence_ids": [
+      "ev_a5ef3c46551c09321e8f1df477403bdfc68782d330ee8a107721730a8f3b1e3b",
+      "ev_7c864322896125c053adf7e03d6f2f6488bcb36bc41dc676c066a3e375509527"
+    ],
+    "note": "Recorded objdump first250 lines confirm GUI subsystem2/AMD64/flags; complete resources confirm OpenSequoia0.2.0.0. Both ledger records load successfully."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis\":{\"claim\":\"The corrected release executable uses Windows GUI subsystem 2 while retaining AMD64, CFG/NX/PIE/high-entropy flags and OpenSequoia 0.2 branding.\",\"contradicting\":[],\"id\":\"hyp_12\",\"notes\":[\"Recorded objdump first250 lines confirm GUI subsystem2/AMD64/flags; complete resources confirm OpenSequoia0.2.0.0. Both ledger records load successfully.\"],\"prediction\":\"PE headers identify pei-x86-64 and subsystem 2; DLL characteristics retain high entropy VA, dynamic base, NX and guard CF; resource version is OpenSequoia 0.2.0.0.\",\"status\":\"supported\",\"supporting\":[\"ev_a5ef3c46551c09321e8f1df477403bdfc68782d330ee8a107721730a8f3b1e3b\",\"ev_7c864322896125c053adf7e03d6f2f6488bcb36bc41dc676c066a3e375509527\"]},\"revision\":61}}\n"
+}

@@ -1,0 +1,139 @@
+ Downloading crates ...
+  Downloaded cfg-if v1.0.5
+  Downloaded fastrand v2.5.0
+  Downloaded lock_api v0.4.14
+  Downloaded parking_lot_core v0.9.12
+  Downloaded precomputed-hash v0.1.1
+  Downloaded scopeguard v1.2.0
+  Downloaded windows-link v0.2.1
+  Downloaded siphasher v1.0.4
+  Downloaded new_debug_unreachable v1.0.6
+  Downloaded string_cache_codegen v0.11.2
+  Downloaded phf_codegen v0.14.0
+  Downloaded phf_generator v0.14.0
+  Downloaded string_cache v0.11.0
+  Downloaded markup5ever v0.40.0
+  Downloaded web_atoms v0.3.0
+  Downloaded phf_shared v0.14.0
+  Downloaded log v0.4.35
+  Downloaded quote v1.0.47
+  Downloaded tendril v0.5.1
+  Downloaded parking_lot v0.12.5
+  Downloaded smallvec v1.16.6
+  Downloaded phf v0.14.0
+  Downloaded proc-macro2 v1.0.107
+  Downloaded unicode-ident v1.0.27
+  Downloaded serde_core v1.0.229
+  Downloaded html5ever v0.40.1
+  Downloaded memchr v2.8.3
+  Downloaded serde v1.0.229
+   Compiling siphasher v1.0.4
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling fastrand v2.5.0
+   Compiling unicode-ident v1.0.27
+   Compiling parking_lot_core v0.9.12
+   Compiling scopeguard v1.2.0
+   Compiling windows-link v0.2.1
+   Compiling cfg-if v1.0.5
+   Compiling smallvec v1.16.6
+   Compiling new_debug_unreachable v1.0.6
+   Compiling precomputed-hash v0.1.1
+   Compiling lock_api v0.4.14
+   Compiling tendril v0.5.1
+   Compiling log v0.4.35
+   Compiling memchr v2.8.3
+   Compiling phf_shared v0.14.0
+   Compiling phf_generator v0.14.0
+   Compiling phf v0.14.0
+   Compiling phf_codegen v0.14.0
+   Compiling parking_lot v0.12.5
+   Compiling string_cache v0.11.0
+   Compiling string_cache_codegen v0.11.2
+   Compiling web_atoms v0.3.0
+   Compiling markup5ever v0.40.0
+   Compiling html5ever v0.40.1
+   Compiling opensequoia-engine v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\engine)
+error[E0283]: type annotations needed
+   --> crates\engine\src\dom.rs:247:70
+    |
+247 |         if tag == "style" || attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+    |                                                                      ^^^^^^
+    |
+    = note: multiple `impl`s satisfying `string_cache::atom::Atom<LocalNameStaticSet>: AsRef<_>` found in the `string_cache` crate:
+            - impl<Static> AsRef<[u8]> for string_cache::atom::Atom<Static>
+              where Static: string_cache::static_sets::StaticAtomSet;
+            - impl<Static> AsRef<str> for string_cache::atom::Atom<Static>
+              where Static: string_cache::static_sets::StaticAtomSet;
+help: try using a fully qualified path to specify the expected types
+    |
+247 -         if tag == "style" || attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+247 +         if tag == "style" || attrs.iter().any(|attr| <string_cache::atom::Atom<LocalNameStaticSet> as AsRef<T>>::as_ref(&attr.name.local) == "style") {
+    |
+
+error[E0283]: type annotations needed
+   --> crates\engine\src\dom.rs:247:70
+    |
+247 |         if tag == "style" || attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+    |                                                                      ^^^^^^   -- type must be known at this point
+    |
+    = note: multiple `impl`s satisfying `_: PartialEq<str>` found in the following crates: `alloc`, `core`, `std`:
+            - impl PartialEq for str;
+            - impl PartialEq<str> for ByteStr;
+            - impl PartialEq<str> for ByteString;
+            - impl PartialEq<str> for OsStr;
+            - impl PartialEq<str> for OsString;
+            - impl PartialEq<str> for Path;
+            - impl PartialEq<str> for PathBuf;
+            - impl PartialEq<str> for String;
+            - impl PartialEq<str> for std::sys::process::windows::EnvKey;
+    = note: required for `&_` to implement `PartialEq<&str>`
+help: try using a fully qualified path to specify the expected types
+    |
+247 -         if tag == "style" || attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+247 +         if tag == "style" || attrs.iter().any(|attr| <string_cache::atom::Atom<LocalNameStaticSet> as AsRef<T>>::as_ref(&attr.name.local) == "style") {
+    |
+
+error[E0283]: type annotations needed
+   --> crates\engine\src\dom.rs:297:52
+    |
+297 |         if attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+    |                                                    ^^^^^^
+    |
+    = note: multiple `impl`s satisfying `string_cache::atom::Atom<LocalNameStaticSet>: AsRef<_>` found in the `string_cache` crate:
+            - impl<Static> AsRef<[u8]> for string_cache::atom::Atom<Static>
+              where Static: string_cache::static_sets::StaticAtomSet;
+            - impl<Static> AsRef<str> for string_cache::atom::Atom<Static>
+              where Static: string_cache::static_sets::StaticAtomSet;
+help: try using a fully qualified path to specify the expected types
+    |
+297 -         if attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+297 +         if attrs.iter().any(|attr| <string_cache::atom::Atom<LocalNameStaticSet> as AsRef<T>>::as_ref(&attr.name.local) == "style") {
+    |
+
+error[E0283]: type annotations needed
+   --> crates\engine\src\dom.rs:297:52
+    |
+297 |         if attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+    |                                                    ^^^^^^   -- type must be known at this point
+    |
+    = note: multiple `impl`s satisfying `_: PartialEq<str>` found in the following crates: `alloc`, `core`, `std`:
+            - impl PartialEq for str;
+            - impl PartialEq<str> for ByteStr;
+            - impl PartialEq<str> for ByteString;
+            - impl PartialEq<str> for OsStr;
+            - impl PartialEq<str> for OsString;
+            - impl PartialEq<str> for Path;
+            - impl PartialEq<str> for PathBuf;
+            - impl PartialEq<str> for String;
+            - impl PartialEq<str> for std::sys::process::windows::EnvKey;
+    = note: required for `&_` to implement `PartialEq<&str>`
+help: try using a fully qualified path to specify the expected types
+    |
+297 -         if attrs.iter().any(|attr| attr.name.local.as_ref() == "style") {
+297 +         if attrs.iter().any(|attr| <string_cache::atom::Atom<LocalNameStaticSet> as AsRef<T>>::as_ref(&attr.name.local) == "style") {
+    |
+
+For more information about this error, try `rustc --explain E0283`.
+error: could not compile `opensequoia-engine` (lib) due to 4 previous errors
+warning: build failed, waiting for other jobs to finish...

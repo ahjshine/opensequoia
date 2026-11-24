@@ -1,0 +1,14 @@
+{
+  "tool": "core_finding_record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_9a529d3bb5ea667ee02508b0100d5011ec72493a960ac1bd33edad2480bfb32d",
+      "ev_d1415ce57072b4b4827b09c86e89b3015be36e6e802685febd7630c0bc468b49"
+    ],
+    "statement": "The EXE is an x86_64 PE32+ windows-gui executable with six sections and entry point 0x140080850; NX, PIE, high-entropy VA and control-flow guard are true, while code_signature is null and there are no exports or symbols. These are static file flags, not runtime security evidence."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_2\",\"revision\":11}}\n"
+}

@@ -1,0 +1,863 @@
+{
+  "authority": "original-files",
+  "confidence": "observed",
+  "coverage": {
+    "examined": 1,
+    "status": "complete",
+    "total": 1
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_095dbe5394718c9bd813035807a2f4d430457368887df7083dd481601b8ea7e0",
+  "limitations": [
+    {
+      "code": "pe_base_relocations",
+      "message": "PE base relocations are counted by the loader, not listed"
+    }
+  ],
+  "links": [],
+  "locations": [
+    {
+      "kind": "file_offset",
+      "value": "0x0"
+    }
+  ],
+  "operation": "native_layout_show",
+  "params": {
+    "detail": "complete",
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia/evidence/artifacts/raw/BraveBrowserStandaloneSetup-1.100.58.exe"
+  },
+  "result": {
+    "architecture": "x86",
+    "bits": 32,
+    "details": {
+      "characteristics": "0x122",
+      "data_directories": [
+        {
+          "name": "import",
+          "rva": "0x22bf0",
+          "size": 140
+        },
+        {
+          "name": "resource",
+          "rva": "0x26000",
+          "size": 172918000
+        },
+        {
+          "name": "security",
+          "rva": "0xa50d000",
+          "size": 19296
+        },
+        {
+          "name": "basereloc",
+          "rva": "0xa50f000",
+          "size": 5428
+        },
+        {
+          "name": "debug",
+          "rva": "0x21df0",
+          "size": 84
+        },
+        {
+          "name": "tls",
+          "rva": "0x21e80",
+          "size": 24
+        },
+        {
+          "name": "load_config",
+          "rva": "0x21d30",
+          "size": 64
+        },
+        {
+          "name": "iat",
+          "rva": "0x1b000",
+          "size": 480
+        }
+      ],
+      "dll_characteristics": "0x8140",
+      "machine": "0x14c",
+      "pe32_plus": false,
+      "rich_header": [
+        {
+          "build": 30795,
+          "count": 11,
+          "product": 259
+        },
+        {
+          "build": 30795,
+          "count": 145,
+          "product": 261
+        },
+        {
+          "build": 30795,
+          "count": 20,
+          "product": 260
+        },
+        {
+          "build": 33808,
+          "count": 21,
+          "product": 259
+        },
+        {
+          "build": 33808,
+          "count": 18,
+          "product": 260
+        },
+        {
+          "build": 33808,
+          "count": 49,
+          "product": 261
+        },
+        {
+          "build": 34123,
+          "count": 7,
+          "product": 265
+        },
+        {
+          "build": 30795,
+          "count": 15,
+          "product": 257
+        },
+        {
+          "build": 0,
+          "count": 130,
+          "product": 1
+        },
+        {
+          "build": 34123,
+          "count": 1,
+          "product": 255
+        },
+        {
+          "build": 0,
+          "count": 55,
+          "product": 151
+        },
+        {
+          "build": 34123,
+          "count": 1,
+          "product": 258
+        }
+      ],
+      "sections": [
+        {
+          "characteristics": "0x60000020",
+          "name": ".text"
+        },
+        {
+          "characteristics": "0x40000040",
+          "name": ".rdata"
+        },
+        {
+          "characteristics": "0xc0000040",
+          "name": ".data"
+        },
+        {
+          "characteristics": "0x40000040",
+          "name": ".rsrc"
+        },
+        {
+          "characteristics": "0x42000040",
+          "name": ".reloc"
+        }
+      ],
+      "subsystem": "windows-gui"
+    },
+    "entry_point": "0x406f24",
+    "exports": [],
+    "format": "pe",
+    "image_base": "0x400000",
+    "imports": [
+      {
+        "library": "KERNEL32.dll",
+        "name": "InitializeSListHead",
+        "slot": "0x41b010"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "IsDebuggerPresent",
+        "slot": "0x41b014"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "UnhandledExceptionFilter",
+        "slot": "0x41b018"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SetUnhandledExceptionFilter",
+        "slot": "0x41b01c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetStartupInfoW",
+        "slot": "0x41b020"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "IsProcessorFeaturePresent",
+        "slot": "0x41b024"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetModuleHandleW",
+        "slot": "0x41b028"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentProcess",
+        "slot": "0x41b02c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "TerminateProcess",
+        "slot": "0x41b030"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "RtlUnwind",
+        "slot": "0x41b034"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetLastError",
+        "slot": "0x41b038"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SetLastError",
+        "slot": "0x41b03c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "EnterCriticalSection",
+        "slot": "0x41b040"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "LeaveCriticalSection",
+        "slot": "0x41b044"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "DeleteCriticalSection",
+        "slot": "0x41b048"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "InitializeCriticalSectionAndSpinCount",
+        "slot": "0x41b04c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "TlsAlloc",
+        "slot": "0x41b050"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "TlsGetValue",
+        "slot": "0x41b054"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "TlsSetValue",
+        "slot": "0x41b058"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "TlsFree",
+        "slot": "0x41b05c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FreeLibrary",
+        "slot": "0x41b060"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetProcAddress",
+        "slot": "0x41b064"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "LoadLibraryExW",
+        "slot": "0x41b068"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "EncodePointer",
+        "slot": "0x41b06c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "RaiseException",
+        "slot": "0x41b070"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetStdHandle",
+        "slot": "0x41b074"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "WriteFile",
+        "slot": "0x41b078"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetModuleFileNameW",
+        "slot": "0x41b07c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "ExitProcess",
+        "slot": "0x41b080"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetModuleHandleExW",
+        "slot": "0x41b084"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "OutputDebugStringW",
+        "slot": "0x41b088"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "HeapAlloc",
+        "slot": "0x41b08c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "HeapFree",
+        "slot": "0x41b090"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FindClose",
+        "slot": "0x41b094"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FindFirstFileExW",
+        "slot": "0x41b098"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FindNextFileW",
+        "slot": "0x41b09c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "IsValidCodePage",
+        "slot": "0x41b0a0"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetSystemTimeAsFileTime",
+        "slot": "0x41b0a4"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetOEMCP",
+        "slot": "0x41b0a8"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetCPInfo",
+        "slot": "0x41b0ac"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetCommandLineA",
+        "slot": "0x41b0b0"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetCommandLineW",
+        "slot": "0x41b0b4"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "MultiByteToWideChar",
+        "slot": "0x41b0b8"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "WideCharToMultiByte",
+        "slot": "0x41b0bc"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetEnvironmentStringsW",
+        "slot": "0x41b0c0"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FreeEnvironmentStringsW",
+        "slot": "0x41b0c4"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SetStdHandle",
+        "slot": "0x41b0c8"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetFileType",
+        "slot": "0x41b0cc"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetStringTypeW",
+        "slot": "0x41b0d0"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetTempPathW",
+        "slot": "0x41b0d4"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "LCMapStringW",
+        "slot": "0x41b0d8"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetProcessHeap",
+        "slot": "0x41b0dc"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "HeapSize",
+        "slot": "0x41b0e0"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "HeapReAlloc",
+        "slot": "0x41b0e4"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FlushFileBuffers",
+        "slot": "0x41b0e8"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetConsoleOutputCP",
+        "slot": "0x41b0ec"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetConsoleMode",
+        "slot": "0x41b0f0"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SetFilePointerEx",
+        "slot": "0x41b0f4"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "ReadFile",
+        "slot": "0x41b0f8"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "CreateFileW",
+        "slot": "0x41b0fc"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "CloseHandle",
+        "slot": "0x41b100"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "WriteConsoleW",
+        "slot": "0x41b104"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "DecodePointer",
+        "slot": "0x41b108"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "lstrcpynW",
+        "slot": "0x41b10c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SleepConditionVariableSRW",
+        "slot": "0x41b110"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "WakeAllConditionVariable",
+        "slot": "0x41b114"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "AcquireSRWLockExclusive",
+        "slot": "0x41b118"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "ReleaseSRWLockExclusive",
+        "slot": "0x41b11c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentThreadId",
+        "slot": "0x41b120"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetCurrentProcessId",
+        "slot": "0x41b124"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetACP",
+        "slot": "0x41b128"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "QueryPerformanceCounter",
+        "slot": "0x41b12c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "CreateDirectoryW",
+        "slot": "0x41b130"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SizeofResource",
+        "slot": "0x41b134"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "lstrlenW",
+        "slot": "0x41b138"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "RemoveDirectoryW",
+        "slot": "0x41b13c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetEnvironmentVariableW",
+        "slot": "0x41b140"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FormatMessageW",
+        "slot": "0x41b144"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetFileAttributesExW",
+        "slot": "0x41b148"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "LockResource",
+        "slot": "0x41b14c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "DeleteFileW",
+        "slot": "0x41b150"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FindResourceExW",
+        "slot": "0x41b154"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "LoadResource",
+        "slot": "0x41b158"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "FindResourceW",
+        "slot": "0x41b15c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "HeapDestroy",
+        "slot": "0x41b160"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "LocalFree",
+        "slot": "0x41b164"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "VerSetConditionMask",
+        "slot": "0x41b168"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "CopyFileW",
+        "slot": "0x41b16c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "VerifyVersionInfoW",
+        "slot": "0x41b170"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetTempFileNameW",
+        "slot": "0x41b174"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "lstrcmpiW",
+        "slot": "0x41b178"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "UnmapViewOfFile",
+        "slot": "0x41b17c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "CreateFileMappingW",
+        "slot": "0x41b180"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "MapViewOfFile",
+        "slot": "0x41b184"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "VirtualQuery",
+        "slot": "0x41b188"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "SetFilePointer",
+        "slot": "0x41b18c"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "WaitForSingleObject",
+        "slot": "0x41b190"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "CreateProcessW",
+        "slot": "0x41b194"
+      },
+      {
+        "library": "KERNEL32.dll",
+        "name": "GetExitCodeProcess",
+        "slot": "0x41b198"
+      },
+      {
+        "library": "SHLWAPI.dll",
+        "name": "PathQuoteSpacesW",
+        "slot": "0x41b1ac"
+      },
+      {
+        "library": "SHLWAPI.dll",
+        "name": "PathCanonicalizeW",
+        "slot": "0x41b1b0"
+      },
+      {
+        "library": "SHLWAPI.dll",
+        "name": "PathAppendW",
+        "slot": "0x41b1b4"
+      },
+      {
+        "library": "SHLWAPI.dll",
+        "name": "PathRemoveExtensionW",
+        "slot": "0x41b1b8"
+      },
+      {
+        "library": "SHLWAPI.dll",
+        "name": "PathStripPathW",
+        "slot": "0x41b1bc"
+      },
+      {
+        "library": "ADVAPI32.dll",
+        "name": "RegCreateKeyExW",
+        "slot": "0x41b000"
+      },
+      {
+        "library": "ADVAPI32.dll",
+        "name": "RegSetValueExW",
+        "slot": "0x41b004"
+      },
+      {
+        "library": "ADVAPI32.dll",
+        "name": "RegCloseKey",
+        "slot": "0x41b008"
+      },
+      {
+        "library": "ole32.dll",
+        "name": "CoUninitialize",
+        "slot": "0x41b1d4"
+      },
+      {
+        "library": "ole32.dll",
+        "name": "CoInitializeEx",
+        "slot": "0x41b1d8"
+      },
+      {
+        "library": "SHELL32.dll",
+        "name": "SHELL32#680",
+        "ordinal": 680,
+        "slot": "0x41b1a0"
+      },
+      {
+        "library": "SHELL32.dll",
+        "name": "SHGetFolderPathW",
+        "slot": "0x41b1a4"
+      },
+      {
+        "library": "USER32.dll",
+        "name": "MessageBoxW",
+        "slot": "0x41b1c4"
+      },
+      {
+        "library": "USER32.dll",
+        "name": "CharUpperBuffW",
+        "slot": "0x41b1c8"
+      },
+      {
+        "library": "USER32.dll",
+        "name": "CharLowerBuffW",
+        "slot": "0x41b1cc"
+      }
+    ],
+    "info": {
+      "linker_version": "14.41",
+      "pdb_path": "mi_exe_stub.pdb",
+      "rich_header": "present (built with Microsoft tools)",
+      "subsystem": "windows-gui",
+      "timestamp": "1794984997"
+    },
+    "kind": "executable",
+    "linkage": {
+      "exports": 0,
+      "imports": 114,
+      "interpreter": null,
+      "libraries": [
+        "ADVAPI32.dll",
+        "KERNEL32.dll",
+        "SHELL32.dll",
+        "SHLWAPI.dll",
+        "USER32.dll",
+        "ole32.dll"
+      ],
+      "rpath": null,
+      "runpath": null,
+      "soname": null
+    },
+    "mitigations": {
+      "canary": false,
+      "code_signature": null,
+      "control_flow_guard": false,
+      "encrypted": null,
+      "fortify": null,
+      "high_entropy_va": false,
+      "no_seh": false,
+      "nx": true,
+      "pie": true,
+      "relro": null,
+      "stripped": true
+    },
+    "relocation_count": 0,
+    "relocations": [],
+    "sections": [
+      {
+        "addr": "0x401000",
+        "alloc": true,
+        "entropy": 6.643435478210449,
+        "exec": true,
+        "file_offset": 1024,
+        "file_size": 105840,
+        "kind": "code",
+        "name": ".text",
+        "read": true,
+        "size": 105840,
+        "write": false
+      },
+      {
+        "addr": "0x41b000",
+        "alloc": true,
+        "entropy": 5.059319496154785,
+        "exec": false,
+        "file_offset": 107008,
+        "file_size": 34510,
+        "kind": "rodata",
+        "name": ".rdata",
+        "read": true,
+        "size": 34510,
+        "write": false
+      },
+      {
+        "addr": "0x424000",
+        "alloc": true,
+        "entropy": 2.4033584594726562,
+        "exec": false,
+        "file_offset": 141824,
+        "file_size": 2560,
+        "kind": "data",
+        "name": ".data",
+        "read": true,
+        "size": 5292,
+        "write": true
+      },
+      {
+        "addr": "0x426000",
+        "alloc": true,
+        "entropy": 7.999988555908203,
+        "exec": false,
+        "file_offset": 144384,
+        "file_size": 172918000,
+        "kind": "rodata",
+        "name": ".rsrc",
+        "read": true,
+        "size": 172918000,
+        "write": false
+      },
+      {
+        "addr": "0xa90f000",
+        "alloc": true,
+        "entropy": 6.58317756652832,
+        "exec": false,
+        "file_offset": 173062656,
+        "file_size": 5428,
+        "kind": "other",
+        "name": ".reloc",
+        "read": true,
+        "size": 5428,
+        "write": false
+      }
+    ],
+    "segments": [],
+    "symbols": [],
+    "warnings": []
+  },
+  "subject": {
+    "kind": "pe",
+    "name": "BraveBrowserStandaloneSetup-1.100.58.exe",
+    "sha256": "2802553c89831effe624bd1b0dd8e39c463e03a1224d557441350a5586e559ce"
+  },
+  "summary": "PE (Windows) executable (x86): 5 sections, 0 symbols, 0 relocations; NX yes, PIE yes, RELRO n/a, canary no."
+}

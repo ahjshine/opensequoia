@@ -1,0 +1,10 @@
+{
+  "tool": "core_report_write",
+  "params": {
+    "format": "markdown",
+    "path": "C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/docs/investigations/sandbox4-craft-report.md"
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":7450,\"evidence_records\":7,\"findings\":4,\"format\":\"markdown\",\"open_questions\":4,\"path\":\"C:/Users/deepa/OneDrive/Dokumen/ChatGPT/opensequoia-crew/controller/docs/investigations/sandbox4-craft-report.md\"}}\n"
+}

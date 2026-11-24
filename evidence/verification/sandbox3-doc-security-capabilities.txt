@@ -1,0 +1,97 @@
+SECURITY_CAPABILITIES (winnt.h) - Win32 apps | Microsoft Learn
+Skip to main content
+Skip to Ask Learn chat experience
+This browser is no longer supported.
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+Download Microsoft Edge
+More info about Internet Explorer and Microsoft Edge
+Table of contents
+Exit editor mode
+Ask Learn
+Ask Learn
+Reading mode
+Table of contents
+Read in English
+Add
+Add to Plans
+Edit
+Copy Markdown
+Print
+Note
+Access to this page requires authorization. You can try signing in or changing directories.
+Access to this page requires authorization. You can try changing directories.
+SECURITY_CAPABILITIES structure (winnt.h)
+Feedback
+Summarize this article for me
+In this article
+The SECURITY_CAPABILITIES structure defines the security capabilities of the app container.
+Syntax
+typedef struct _SECURITY_CAPABILITIES {
+#if ...
+PISID AppContainerSid;
+#if ...
+PSID_AND_ATTRIBUTES Capabilities;
+#else
+PSID AppContainerSid;
+#endif
+#else
+PSID_AND_ATTRIBUTES Capabilities;
+#endif
+DWORD CapabilityCount;
+DWORD Reserved;
+} SECURITY_CAPABILITIES, *PSECURITY_CAPABILITIES, *LPSECURITY_CAPABILITIES;
+Members
+AppContainerSid
+The SID of the app container.
+Capabilities
+The specific capabilities.
+CapabilityCount
+The number of the capabilities.
+Reserved
+This member is reserved. Do not use it.
+Requirements
+Requirement
+Value
+Minimum supported client
+Windows 8 [desktop apps only]
+Minimum supported server
+Windows Server 2012 [desktop apps only]
+Header
+winnt.h
+See also
+Capability SID Constants
+Feedback
+Was this page helpful?
+Yes
+No
+No
+Need help with this topic?
+Want to try using Ask Learn to clarify or guide you through this topic?
+Ask Learn
+Ask Learn
+Suggest a fix?
+Additional resources
+Last updated on
+2024-02-22
+In this article
+Was this page helpful?
+Need help with this topic?
+Want to try using Ask Learn to clarify or guide you through this topic?
+Ask Learn
+Ask Learn
+Suggest a fix?
+en-us
+Your Privacy Choices
+Theme
+Light
+Dark
+High contrast
+AI Disclaimer
+Previous Versions
+Blog
+Contribute
+Privacy
+Consumer Health Privacy
+Terms of Use
+Trademarks
+© Microsoft 2026

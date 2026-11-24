@@ -1,0 +1,3185 @@
+{
+  "authority": "original-files",
+  "confidence": "observed",
+  "coverage": {
+    "examined": 455,
+    "status": "complete",
+    "total": 455
+  },
+  "environment": {
+    "clean_room": false,
+    "engine": "builtin",
+    "engine_version": "0.6.1",
+    "host": "windows-x86_64"
+  },
+  "id": "ev_99e11378acc62a330777ece005827fef264a7769cc3896b420f05870ceebc8f5",
+  "limitations": [
+    {
+      "code": "no_disk_images",
+      "message": "Disk images (DMG), installers (PKG/MSI) and compressed tarballs are listed as single files, not opened."
+    }
+  ],
+  "links": [],
+  "locations": [
+    {
+      "kind": "path",
+      "value": "C:/Program Files/BraveSoftware/Brave-Browser/Application/158.1.100.58"
+    }
+  ],
+  "operation": "core_archive_show",
+  "params": {
+    "if_tampered": true,
+    "limit": 500,
+    "max_depth": 0,
+    "max_entries": 2000,
+    "max_total_bytes": 2147483648,
+    "offset": 0,
+    "path": "C:/Program Files/BraveSoftware/Brave-Browser/Application/158.1.100.58"
+  },
+  "result": {
+    "by_kind": {
+      "binary": 81,
+      "directory": 78,
+      "json": 72,
+      "pe": 17,
+      "png": 2,
+      "text": 205
+    },
+    "containers": [],
+    "content_id": "inv_778dbe1074480bc32bf5986d636c9346ca30073866e0afe53d1797dac3692128",
+    "contradictions": [],
+    "entries": [
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "BraveVpnWireguardService",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "Extensions",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "Installer",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "IwaKeyDistribution",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "Locales",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "MEIPreload",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "VisualElements",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/af",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/am",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ar",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/az",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/bg",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/bn",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/bs",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ca",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/cs",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/da",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/de",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/el",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/en_GB",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/en_US",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/es",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/es_419",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/et",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/fa",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/fi",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/fil",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/fr",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/gu",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/he",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/hi",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/hr",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/hu",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/id",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/it",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ja",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ka",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/kk",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/km",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/kn",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ko",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/lo",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/lt",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/lv",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/mk",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ml",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/mn",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/mr",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ms",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/my",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/nb",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/nl",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/pl",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/pt_BR",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/pt_PT",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ro",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ru",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/si",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sk",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sl",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sq",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sr",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sr_Latn",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sv",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/sw",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ta",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/te",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/th",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/tr",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/uk",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/ur",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/uz",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/vi",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/zh_CN",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "directory",
+        "path": "resources/brave_extension/_locales/zh_TW",
+        "size": 0
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "158.1.100.58.manifest",
+        "sha256": "c2a8b22548fe95d9f0e560b641978bd6f97555d3f816c7edf105bf46ca476f04",
+        "size": 224
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "BraveVpnWireguardService/brave_vpn_wireguard_service.exe",
+        "sha256": "a342d59f7449c0b8b842b8b7986868d905b0b8a1b1f06295d4401afac4c83605",
+        "size": 16104528
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "BraveVpnWireguardService/tunnel.dll",
+        "role": "native-library",
+        "sha256": "61b0e3c47703f8cd7c261d8a957dc22b18210f82b8370cf795645466e99bd696",
+        "size": 2957904
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "BraveVpnWireguardService/wireguard.dll",
+        "role": "native-library",
+        "sha256": "bf722372c72566351671cdc5245be4bb019b063f3667a2466617aa72e853ef68",
+        "size": 1330768
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "Extensions/external_extensions.json",
+        "sha256": "a68cafd7d78d5c671c2560656653f2a4d83ab66d87a8728356a88fb1f477b3e6",
+        "size": 99
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "Installer/chrmstp.exe",
+        "sha256": "0beae431b1e25f610dc3c71ee5619dcad3781cd13dcb1a3cb61b3db69bb0c17f",
+        "size": 7547984
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Installer/chrome.7z",
+        "sha256": "597e48a45e192e63c31ee180116e270554f806a3aed0537272244d22bcc7825f",
+        "size": 569442764
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "Installer/setup.exe",
+        "sha256": "0beae431b1e25f610dc3c71ee5619dcad3781cd13dcb1a3cb61b3db69bb0c17f",
+        "size": 7547984
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "IwaKeyDistribution/iwa-key-distribution.pb",
+        "sha256": "274f2cc20e5627c35d54cef0b5798f0a43bbc560fd52aa61a044a518c881a7d6",
+        "size": 3917
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "IwaKeyDistribution/manifest.json",
+        "sha256": "313d7ea9fb517aea7819f0f70ad56a26a7410cae164433ce80f9e88c5be4379c",
+        "size": 115
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/af.pak",
+        "sha256": "44e599d43eaa1e9502b0bbd45771944de028754b753f96f834e30aad2b21418c",
+        "size": 747390
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/af_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/af_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/af_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/am.pak",
+        "sha256": "cc94dac5d353c8794002f73bd3d81925182bd78b6f8dce61e506696128f64089",
+        "size": 1196172
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/am_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/am_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/am_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ar.pak",
+        "sha256": "0f73e43cc88f987457b35dd99e9a01d9583d02b8898f62e275ec2a39446f140d",
+        "size": 1295542
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ar_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ar_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ar_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/az.pak",
+        "sha256": "701e704c6fdb1841128e4272495761c081d82deabc40dc85b5a86509091b94ca",
+        "size": 857691
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/az_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/az_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/az_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/bg.pak",
+        "sha256": "d61b1871acf9e27359e93db912a99ebbdba24c7626cb16c2a683d1e75c9143a1",
+        "size": 1386264
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bg_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bg_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bg_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/bn.pak",
+        "sha256": "f60a0a9989225fb2e6e358346f515fe7b7cc44f6995f41434fff9cc8123ce723",
+        "size": 1773340
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bn_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bn_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bn_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/bs.pak",
+        "sha256": "7fc4f439175062daae8000e2a7512b813ab1c80d6ea721a9201984099df03e64",
+        "size": 835580
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bs_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bs_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/bs_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ca.pak",
+        "sha256": "103ebdf34bbb7acf7c93817ad047fb0d3fc7220697d311d2c4c01af3dad2674f",
+        "size": 857695
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ca_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ca_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ca_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/cs.pak",
+        "sha256": "ae7d7d5dfbe6eff3d2defd1006334ce6a23e2f98623af04087a35d35e04f437b",
+        "size": 875664
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/cs_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/cs_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/cs_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/da.pak",
+        "sha256": "280c49eb1855b35f7e06e4520199dc052a915c3b5ef5b28596a807ce148190bf",
+        "size": 788728
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/da_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/da_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/da_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/de.pak",
+        "sha256": "3f685d4c1699a2a13bfc781a20ad68b64a43de841b0448d577fb1a155aa71c38",
+        "size": 864397
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/de_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/de_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/de_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/el.pak",
+        "sha256": "2b30cad19745028ac831ed69d582578eae991ed49768a62763e101d1a46de5dc",
+        "size": 1515169
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/el_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/el_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/el_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/en-GB.pak",
+        "sha256": "8a1f69fdd1f18b76e1dd7634faac91586a868796fc3c600e40203e9d8347e1c8",
+        "size": 692494
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/en-GB_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/en-GB_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/en-GB_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/en-US.pak",
+        "sha256": "ad4ac706fd496b88156518b392135214ad449bd72b843513d08efae7e1a89916",
+        "size": 698619
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/en-US_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/en-US_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/en-US_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/es-419.pak",
+        "sha256": "75c6d5aadf240f12ba76fec87e14f703017d51e58d3140ef7981edc13079c3a6",
+        "size": 845288
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/es-419_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/es-419_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/es-419_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/es.pak",
+        "sha256": "6c1c959bf1206a80eeaee81dd625f37e0ed403a809709a59e0c926d703d4fe23",
+        "size": 840953
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/es_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/es_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/es_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/et.pak",
+        "sha256": "a6163a0c7dfd314f1331e7f1b7ad140b55925f4859173a7f2f19a14f1f1e8f60",
+        "size": 767291
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/et_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/et_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/et_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/fa.pak",
+        "sha256": "69528e3c7f30e15fb2ac7ee45e423e6d6d86afe77a0a7acf81bd5dc94b7e0a71",
+        "size": 1248092
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fa_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fa_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fa_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/fi.pak",
+        "sha256": "d0c556585a400463f0136b03f9b2078009c5e464fb77c8cbe66eee4ee1003ac0",
+        "size": 784557
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fi_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fi_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fi_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/fil.pak",
+        "sha256": "f9f6df67e15cb0877cdb2e5a58f76f7888ad8515fb3578161f881e4b0fab3196",
+        "size": 874166
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fil_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fil_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fil_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/fr.pak",
+        "sha256": "1701af701987d66e375dd2ae80e097aae0e5402ced2b202f93cdc21fe7269483",
+        "size": 911335
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fr_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fr_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/fr_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/gu.pak",
+        "sha256": "bc109ad347876826c5594598339f4b9805811ca179eaa39259133fd724779710",
+        "size": 1723448
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/gu_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/gu_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/gu_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/he.pak",
+        "sha256": "8c2801fc7f2a466af178a0697bf0c4c5e2337b84ef269dcd25f8fbd9fefbd325",
+        "size": 1076542
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/he_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/he_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/he_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/hi.pak",
+        "sha256": "70c62c3f4a37a2d74ff33fdb2158c60b81bd0d0b0b3aa76d9d98fc2409ded10d",
+        "size": 1829575
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hi_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hi_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hi_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/hr.pak",
+        "sha256": "75bd7359b452472a998c5e9645721395161912561fea752be2b47803ee084a12",
+        "size": 847130
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hr_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hr_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hr_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/hu.pak",
+        "sha256": "8a43e28928aa8cb87bf1c86033bda09781e56510acf6e573031d60a8acd862d8",
+        "size": 904729
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hu_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hu_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/hu_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/id.pak",
+        "sha256": "250702917f59946dd3289bf4ebcf374d4b448575e1740b176a7041b1e75a7f66",
+        "size": 763238
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/id_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/id_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/id_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/it.pak",
+        "sha256": "47d3cdbd44ff65769ecf40e29ee229935fe4bf82ceccb83f61165bf1d6b38633",
+        "size": 833683
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/it_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/it_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/it_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ja.pak",
+        "sha256": "060af5029ba1b156134df8e98a61c9dd77d7c4929df89711e4261a67ba7899b2",
+        "size": 1007722
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ja_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ja_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ja_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ka.pak",
+        "sha256": "d0fd37dd6bc6cec98ec76743158d654ddcbac2ba2d3d631a0c75cb05e3ae1387",
+        "size": 1873875
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ka_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ka_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ka_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/kk.pak",
+        "sha256": "fa1e09277efb67629c17ae5b4d9efb77c96c797e449b76ac6a92b59523736f33",
+        "size": 1346965
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/kk_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/kk_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/kk_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/km.pak",
+        "sha256": "ca9e9b9862da8ed2f29a594987a037317a6722999bf46c7cce4b459a7db4624d",
+        "size": 1901960
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/km_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/km_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/km_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/kn.pak",
+        "sha256": "b1b0233ef0f0028497c91304121266a9009e37cb2f24e0e0b8548b7066d4f163",
+        "size": 1998761
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/kn_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/kn_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/kn_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ko.pak",
+        "sha256": "73e8292eef700e3bbf08e28abb46e4145f5f69d45e1008915fc3033ebb798994",
+        "size": 856839
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ko_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ko_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ko_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/lo.pak",
+        "sha256": "09c75222a48b3235c6959108b418fb30cbdd3dfa4c593cacb43bf480713e8080",
+        "size": 1638479
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lo_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lo_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lo_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/lt.pak",
+        "sha256": "e6d9180b52fa21873cc8324348392afd3b4bbabc12b29e374c99d8ddf0266de4",
+        "size": 908997
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lt_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lt_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lt_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/lv.pak",
+        "sha256": "0a8ea9f1f868963f492ce6a77cf8789a9fe16565f411394338adb48a0fd4f1a1",
+        "size": 895104
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lv_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lv_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/lv_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/mk.pak",
+        "sha256": "d7a9d0a8db7e882b438f0e9ffc181efb0ee127f71dbc3b92ee023c72ee683bd6",
+        "size": 1355425
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mk_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mk_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mk_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ml.pak",
+        "sha256": "81314e2a52adb1b27ace34ec00e2c9618836f3728098d5521046b6b6429e0448",
+        "size": 2048583
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ml_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ml_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ml_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/mn.pak",
+        "sha256": "4fa0bcbaffc70d951dc5fba49244de2827cea3681f81600a24260a269b71f8a4",
+        "size": 1285523
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mn_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mn_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mn_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/mr.pak",
+        "sha256": "d623bfbfe1d00213748d445c944ebb8ef6298618cf1eff0b52e9fc6f577948ef",
+        "size": 1705377
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mr_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mr_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/mr_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ms.pak",
+        "sha256": "6690f4b46525366be25c07a5d1d1d7985c4af66d355f4d682f5384757882a7ec",
+        "size": 795886
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ms_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ms_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ms_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/my.pak",
+        "sha256": "041590f5715a43d85d8f876f2f3ae7621bff0693b326104da5d8d4490116f173",
+        "size": 1973798
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/my_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/my_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/my_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/nb.pak",
+        "sha256": "96664186aad77b888112bccd8aefab1d671dfce5030cbf264b4a8c97be97b7c5",
+        "size": 757203
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/nb_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/nb_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/nb_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/nl.pak",
+        "sha256": "b3c5ad7a5e0d378ae8f6088134352b05776b245d3c1df90d8ce3992c0cd5913e",
+        "size": 794651
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/nl_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/nl_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/nl_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/pl.pak",
+        "sha256": "f29aab0710a866aa4db0f6cc237995ae91d822ee53ac2925ded8e075c94cc3f3",
+        "size": 876960
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pl_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pl_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pl_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/pt-BR.pak",
+        "sha256": "182d36d8b13312bfa16ecd77a993788bb9f51c773ae8c6571107c3180fc6e621",
+        "size": 827792
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pt-BR_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pt-BR_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pt-BR_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/pt-PT.pak",
+        "sha256": "94a2283e411883243974e1e03c5c4ed85c7d57501cc4fa5c565e596c2494bc30",
+        "size": 832157
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pt-PT_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pt-PT_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/pt-PT_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ro.pak",
+        "sha256": "fcba5caded1233321645cf93950596ab33ccf6f455cfe240d799a43625e2473f",
+        "size": 863547
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ro_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ro_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ro_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ru.pak",
+        "sha256": "4ee8d2365a85f51c060af933d6ccf9f50eec35e743adea0e831363a7790831e2",
+        "size": 1393770
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ru_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ru_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ru_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/si.pak",
+        "sha256": "33525b7d2495a1c363e2c16ab29b4d772e4a8cd09a8ca144437b14e02eed7ef6",
+        "size": 1656887
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/si_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/si_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/si_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sk.pak",
+        "sha256": "7bc63a01fe2c1db8f5062606d8181892a053e6dad3e5af25a2229bd728ed102c",
+        "size": 885534
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sk_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sk_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sk_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sl.pak",
+        "sha256": "64fdc9d823b09187f8ba626b989c2d4e09bbe5b48e96db7f1d4c294ed8384fbd",
+        "size": 842639
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sl_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sl_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sl_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sq.pak",
+        "sha256": "46a9db3b2ae673f9f04ddc76fe179d03fbd4ede0a8827815290da12f9e4f9741",
+        "size": 854296
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sq_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sq_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sq_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sr-Latn.pak",
+        "sha256": "06bd749f7281744c0fdbca33fe430128048e37ebc597f17bc1d9bb7199bc56ba",
+        "size": 823120
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sr-Latn_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sr-Latn_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sr-Latn_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sr.pak",
+        "sha256": "5b754c63ca90a1dd5d0c20c4d8d75fe1287d51f1ea76502c4011c812efd56929",
+        "size": 1181177
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sr_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sr_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sr_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sv.pak",
+        "sha256": "d849e61f73dec0dac5b409760123937df8e0af9c8ba21e5ca1bd10be098a8034",
+        "size": 770346
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sv_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sv_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sv_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/sw.pak",
+        "sha256": "a3348c99b004b848a67eba766ac34f2d807d0603a9eb1e3d0a8d9ddfcaae9a37",
+        "size": 809278
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sw_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sw_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/sw_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ta.pak",
+        "sha256": "45f2ee6ca76673b843b7e65c2145d51777fceab9354afc5a45ac5e309ddec942",
+        "size": 2057450
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ta_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ta_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ta_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/te.pak",
+        "sha256": "b2ff617c0cf7e2da3402233f7ad277a9a730e89c3f746809bdedb12ef5babf68",
+        "size": 1898770
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/te_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/te_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/te_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/th.pak",
+        "sha256": "299654b8e21da8953e7243b2f588ba210bd425edcfec019caabd8a40b26ae402",
+        "size": 1613336
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/th_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/th_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/th_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/tr.pak",
+        "sha256": "0ae20117a70cabbf56ac05061f7cde1098770bf50ed94c7f45681d34e7e1f682",
+        "size": 829647
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/tr_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/tr_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/tr_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/uk.pak",
+        "sha256": "377300524dceb999f7e4368dce56747d3818307a25be99410d8950374dc8fb0f",
+        "size": 1401014
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/uk_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/uk_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/uk_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/ur.pak",
+        "sha256": "3f6f9deac7e8f3114aabc9ee2eed1c862b9bcac25a4e00b588904d4a9032fb04",
+        "size": 1116851
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ur_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ur_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/ur_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/uz.pak",
+        "sha256": "0423dd5fdb2bf722b44e3b8fd841971e4a5740a892f320f4a5ec83b429fa373e",
+        "size": 805315
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/uz_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/uz_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/uz_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/vi.pak",
+        "sha256": "da39384019b600dff2b444e65adf32714419e3794609480d49155e4fffc78df2",
+        "size": 981969
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/vi_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/vi_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/vi_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/zh-CN.pak",
+        "sha256": "55a9aa70e44f78d472aaa4614283e7d7b2aaf57d96e77e9146bedc88e8bb931b",
+        "size": 700438
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/zh-CN_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/zh-CN_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/zh-CN_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "Locales/zh-TW.pak",
+        "sha256": "ce309d1e019d18f9152b712743558ff60811f59655a8dc0d8cf93e2a90a045b8",
+        "size": 694409
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/zh-TW_FEMININE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/zh-TW_MASCULINE.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "text",
+        "path": "Locales/zh-TW_NEUTER.pak",
+        "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+        "size": 18
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "MEIPreload/manifest.json",
+        "sha256": "44844cf3dde6e80087ae0e6bf0d9326d7ef7d23326d24ac83af0850be26923d2",
+        "size": 238
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "MEIPreload/preloaded_data.pb",
+        "sha256": "c6070a157b4e28d16fbccbd233e93846ddb070c85e1a1bc64469b7a5f1424fad",
+        "size": 8254
+      },
+      {
+        "depth": 0,
+        "kind": "png",
+        "path": "VisualElements/Logo.png",
+        "sha256": "9a26c3ff09d38af2bad493b3f5a2fe9ab6eec6380ef4719b38e4b915aefc67b0",
+        "size": 26623
+      },
+      {
+        "depth": 0,
+        "kind": "png",
+        "path": "VisualElements/SmallLogo.png",
+        "sha256": "ec2fd0f07d645910a2a5d5efd71f5e35d020fe69d080cbc68b8e5aad84d3b588",
+        "size": 9335
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "brave.exe.sig",
+        "sha256": "641cf49b8e58c495b1072588c719018ded02d904a85ca46a1ee4b8dfcde3b3a8",
+        "size": 1418
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "brave_100_percent.pak",
+        "sha256": "e539603ea36b5aa5b1df42abfcd7811df3025ae8146f986fcb91037458679a01",
+        "size": 706603
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "brave_200_percent.pak",
+        "sha256": "5d6e43b0b57be60598cfb07190e14421866db1a1c3cba5518008db2d12d18379",
+        "size": 1235709
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "brave_resources.pak",
+        "sha256": "2a9c5c0e8d04367baafe933f9eeac7640a21268658e58bf8cfef59099fb854f2",
+        "size": 27025163
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "brave_vpn_helper.exe",
+        "sha256": "caeb7df1fd99502e6533aec4189dc7e15fbb79ba75e65fd3b4a67a54a4a38018",
+        "size": 4074576
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "chrome.dll",
+        "role": "native-library",
+        "sha256": "be842bf3a479d88dfc1fdc4ef4cbb52589ff1de0b34259c5921cbd6489ddcf1f",
+        "size": 338606160
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "chrome.dll.sig",
+        "sha256": "2f31fd29cdead00c9a023bd8cd6f3b1f6d184110b721eafd97dba176b3ce01c1",
+        "size": 1418
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "chrome_100_percent.pak",
+        "sha256": "5cfc30086ff4641ab0a551d0858e3da8469b279adf4b39821fb0aba3e4bfa1a7",
+        "size": 592181
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "chrome_200_percent.pak",
+        "sha256": "4c76c593e00a2c5035481414dda60e2c4ae4da1c61f3e51a2b71e26791196f11",
+        "size": 964404
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "chrome_elf.dll",
+        "role": "native-library",
+        "sha256": "9d19759ad279910c6a1e242b2a4e36bea3f0baf2fba1e6bae908a5cc40a65260",
+        "size": 2900560
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "chrome_pwa_launcher.exe",
+        "sha256": "a391abe4811ec1a71f95839b1bd7bd01c3fce98562f1526400d8a8569b829421",
+        "size": 2944080
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "chrome_wer.dll",
+        "role": "native-library",
+        "sha256": "d6c4a29a3931d746be406660a4010763064d0763beb12c59dfcfed126cce692e",
+        "size": 125520
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "d3dcompiler_47.dll",
+        "role": "native-library",
+        "sha256": "287a985f0b206c395e9f276285795009aea557a86758ebf4a7225a5ee77c67c9",
+        "size": 4753488
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "dxcompiler.dll",
+        "role": "native-library",
+        "sha256": "6711d597c07d09e0d60487db1bd3e062491ea26ff1dd683e5f91f6bbe1361796",
+        "size": 26121808
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "elevation_service.exe",
+        "sha256": "fff81863775cb5415ad3b4f40171f6cdb3eca466ca9c3376d47f383539137f3e",
+        "size": 4978768
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "eventlog_provider.dll",
+        "role": "native-library",
+        "sha256": "d480b47129460d464d0f20728bb2d2dd28bb8eb01da911b1c48d6055a30e276d",
+        "size": 16464
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "icudtl.dat",
+        "sha256": "e1ed8f674bb8449731b79cae956042da59f9ecbd37c8d3f86586a22b4836e5b2",
+        "size": 10824576
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "notification_helper.exe",
+        "sha256": "02919535dfb329ac3318a197cf25cf8d96ae001ed8da7461dceb7aa4ca531972",
+        "size": 2904144
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "resources.pak",
+        "sha256": "83d0e5884e042e812e5f3bcbf183bb97ef42cf000016992ae95b2c275065e9fe",
+        "size": 28529660
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/af/messages.json",
+        "sha256": "0d3b28cf871345d0b0c9a8099905c71e15543dcf2d1bda90c2d5b1102d0f8234",
+        "size": 9586
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/am/messages.json",
+        "sha256": "67f4123638a662c64e797fdb16c89436cd89cc26bd46e721ecf154a9003c7e6c",
+        "size": 10831
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ar/messages.json",
+        "sha256": "c1bef97da6312a15cae06b711cf43e6383a5293905c5c515fc5d72b60b3e1e32",
+        "size": 10682
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/az/messages.json",
+        "sha256": "41afb651eaa25a082906a2e2fa1dd6ad0b55378899af48f56a39d41d609522ed",
+        "size": 10024
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/bg/messages.json",
+        "sha256": "225cc7bcf8e5358d441f8af1404096d9c9377e0928c7e0a4f7fcafb5e20a6c7f",
+        "size": 11379
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/bn/messages.json",
+        "sha256": "d64b21d556ccfa8d096dd68bd9eda9e7499ed607b5606aa40f61722fb9ce82a9",
+        "size": 12791
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/bs/messages.json",
+        "sha256": "e84057cad88631dea52a1907d8e669f3665abfe1e65b29f4e03cb481afffb23f",
+        "size": 9856
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ca/messages.json",
+        "sha256": "7fda428597e22dbd00cedd9f156eb93699c9fcec8a7b3442fe81c4aa057727e2",
+        "size": 9791
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/cs/messages.json",
+        "sha256": "51dceab78cd742f6d1719faeebcda4df70eebff67b9e1a218bf2e2d4ef714deb",
+        "size": 9817
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/da/messages.json",
+        "sha256": "efcea488365dcea80e73e6fb4b35a6417d538840b3e587bc03e224de97d27a8f",
+        "size": 9545
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/de/messages.json",
+        "sha256": "9c2326819566784ecd4606ebc854287c7e55853be9d907a2597a4a73afdf8e45",
+        "size": 9712
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/el/messages.json",
+        "sha256": "b414ff71df702b01439d56f95a9b92db670fb0abb9cf7380e2eb290a953c3378",
+        "size": 11850
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/en_GB/messages.json",
+        "sha256": "7402ef16200fdb2675708eb0088332c59b5b9723a5c65345403ba30f78402115",
+        "size": 9352
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/en_US/messages.json",
+        "sha256": "d1c6f805d1e5501e39e20bbb84fc5311cbf93279488fc9f3c490cbe4752c5733",
+        "size": 9347
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/es/messages.json",
+        "sha256": "426209329e39ff55fe9640a282352f47202f3e5d04459b6a9fb8d43dee5eaf50",
+        "size": 9665
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/es_419/messages.json",
+        "sha256": "840d3f52a4c30d8c3cbdf383f80f3b2572c9a39fbdc4376df58c20d672083a76",
+        "size": 9810
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/et/messages.json",
+        "sha256": "07bdb0027445dddd554866e86067d88d5c29522ab8173b2a2b6f0df39164dcc0",
+        "size": 9668
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/fa/messages.json",
+        "sha256": "162da0bce00e9f008bf2b2aabecee59616e1b040745dcca1744a091c4bb23ff6",
+        "size": 10875
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/fi/messages.json",
+        "sha256": "40485da16abf7ff00b58d65addaa24ddc369caf1e63fb5806b63227c0c2f4c9f",
+        "size": 9721
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/fil/messages.json",
+        "sha256": "01e6c3140bfc77016b6e211b0209faa5b9206b88d9f3b0cb934153f050fcbee8",
+        "size": 9886
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/fr/messages.json",
+        "sha256": "3f83b957e0a5ab347715ae49887e1f10698bc0f5269e150f02ad89297165e271",
+        "size": 9789
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/gu/messages.json",
+        "sha256": "36c93436a7ff3bc8e17e4f82faaeb3498a0cd0ba7c14c130e015606ec1632574",
+        "size": 12061
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/he/messages.json",
+        "sha256": "116af7306c2b62ada15cd47d9cfff4ade3272e56b029869cd87a7560b9b18816",
+        "size": 10326
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/hi/messages.json",
+        "sha256": "926b0ed18cfad05ac2cd5eb2a263942505c551515c5655d78f9829d2caedfefa",
+        "size": 12410
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/hr/messages.json",
+        "sha256": "bf4799a7899490a023cb617dba40e32f16748cb8c9dffc26e299e327a76375fb",
+        "size": 9864
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/hu/messages.json",
+        "sha256": "b3c3bc2a0297e97fd173cdbabc432a8f908fd0f67144c8c9d18721880cb38469",
+        "size": 9878
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/id/messages.json",
+        "sha256": "7111c354a02b86e13d8bbd1f49f12b63946221c236a30333cd363f7d471528d3",
+        "size": 9489
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/it/messages.json",
+        "sha256": "ec4b966c64861a137a330aac2c3006219033f3779fb507a1121f1c647a8b5cf3",
+        "size": 9630
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ja/messages.json",
+        "sha256": "0678ab8b4884e141f333a91915039450db29b83b78c35ce0d14b3aef0bd67e0e",
+        "size": 10676
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ka/messages.json",
+        "sha256": "a95e2fd6d7fa4f385b005b4151373b0d7f3b1e187b640f184a37e155574aecc5",
+        "size": 12631
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/kk/messages.json",
+        "sha256": "d5ccc4b36f20c15a5b1e09d2fd3338fe0589c8cd53e29c9abc895e109ebac65f",
+        "size": 11237
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/km/messages.json",
+        "sha256": "84a5ef93445ae84fa52a35091378df2a6e1bfd93dfe9ea73cd1d24d8ce091139",
+        "size": 12884
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/kn/messages.json",
+        "sha256": "c3e2c0ce8bb48ff29abd0455bea0e6764cd7eaa6cbc05663cfcbcfdf43a85703",
+        "size": 13645
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ko/messages.json",
+        "sha256": "2a8017a49050479ad0d9139870fddb1b4c0b2fa57959e67c07f7987c3efc5093",
+        "size": 9922
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/lo/messages.json",
+        "sha256": "6617aac50d932032878e61e5263e0623ee95440dd5edd50f9ab108efe83a635e",
+        "size": 11141
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/lt/messages.json",
+        "sha256": "229174411add47118b70a9a37505cc894d75d3bfb1c9adcefaa8ebafe7989792",
+        "size": 9827
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/lv/messages.json",
+        "sha256": "3b798a3b5fdbb995935e744230376451be204021a38e12c5038cf364979cdb2b",
+        "size": 9893
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/mk/messages.json",
+        "sha256": "8153891e81d496524a5aaabb140ad8184d21110f298d0d205f44b900854de352",
+        "size": 11007
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ml/messages.json",
+        "sha256": "e785ab5d7341d7c0e31ad447ba591d8fc45e45851cf39daff949d985285cb5f2",
+        "size": 12286
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/mn/messages.json",
+        "sha256": "38eb7094240fd1bd672463bc7b92c6fc5063fc1793e2770a7713de7b733c678d",
+        "size": 11187
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/mr/messages.json",
+        "sha256": "5986f98e417c407494dfd49a929b85309a504df98e0cd5db1941625eff4b32c3",
+        "size": 12333
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ms/messages.json",
+        "sha256": "5985fd6dec2c239d1ed1d8c1be9dda17727685b36476d436c2be155fc96d81dd",
+        "size": 9605
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/my/messages.json",
+        "sha256": "f8847fff0c73ef9b07fe5907fd99ee10ec9ec9191ed32a2e08e48f1a32119826",
+        "size": 12607
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/nb/messages.json",
+        "sha256": "5b24429b9b7d9c3da37284ba6258b216f1cad71137e67301a90a5996f8e28698",
+        "size": 9650
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/nl/messages.json",
+        "sha256": "55871f560e20dd24147195cf40a36a8deecb794f3f062d8136469ce00bffc4ff",
+        "size": 9688
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/pl/messages.json",
+        "sha256": "2f1dff7c9f7f8e0323eba1cbca4508063447a354c6e8f22b6abad529f760f1e6",
+        "size": 9774
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/pt_BR/messages.json",
+        "sha256": "d22e6118a9649d1adb42123af28dd976686c16ebd4612225c8746f8f9438e120",
+        "size": 9721
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/pt_PT/messages.json",
+        "sha256": "32ac0c44ef4796518e7897bfaaec966386737368a5cb52bcbfd6eaad3115f1dd",
+        "size": 9728
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ro/messages.json",
+        "sha256": "16396a718071dd8b8b5b464d962d51c1d109419601b405cdfa02d9bada0a056d",
+        "size": 9853
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ru/messages.json",
+        "sha256": "c2ea152f8bfaf31e81ac7634eedea2ae65b54a910985648b4b86ac469e342921",
+        "size": 11185
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/si/messages.json",
+        "sha256": "448bbb4aa4d0e3ed3f31820f5ee9a5bc5cbd32b9d7f987145f38cc17c52cef53",
+        "size": 11986
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sk/messages.json",
+        "sha256": "9598d37f6028942751b14de75570efb7b27ec8fb393d753d0da8a2ca9ea9cceb",
+        "size": 9847
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sl/messages.json",
+        "sha256": "ddc231b74dd5187b63ff1b6572cd41fe50970f6ad94f92d664271c7e86beae12",
+        "size": 9645
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sq/messages.json",
+        "sha256": "8379a3eb0cdff8b96b61ce7dc8cfb03bd67758553d24aa7bae76a8459da38864",
+        "size": 9989
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sr/messages.json",
+        "sha256": "d1c6f805d1e5501e39e20bbb84fc5311cbf93279488fc9f3c490cbe4752c5733",
+        "size": 9347
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sr_Latn/messages.json",
+        "sha256": "25ad9975e6fd779b286febfd66cf8f2856446ec513c9c203e44cbf9402b0ac57",
+        "size": 9680
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sv/messages.json",
+        "sha256": "6287ab36f419f3193cfd877e9791a43c966cddeb5951876ad6d823a9b7c19ae1",
+        "size": 9631
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/sw/messages.json",
+        "sha256": "921bbf71fc316927c1b0a1fa0124b8a4ba37defe627cffffee9c1a0f14229bdf",
+        "size": 9689
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ta/messages.json",
+        "sha256": "4b892ad352eaeb87c355199688e81efeaf1fd47910a115b94d5ad65b7978c307",
+        "size": 12983
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/te/messages.json",
+        "sha256": "3f18669df2a5988922eb7ec65a75b86e868b91d5936d7f93d44ab6cfeefc84da",
+        "size": 13055
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/th/messages.json",
+        "sha256": "4bfe615ff0586b28928539c58d2c54f7a34b380f43fff78ca2a886f169ecebcf",
+        "size": 12186
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/tr/messages.json",
+        "sha256": "67e7f9232c4fd9ffc4727f29f9188d0f6a5f76b3b1d91af0e29436ebd4423a14",
+        "size": 9679
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/uk/messages.json",
+        "sha256": "b9e02a6fa0c1097a1d9276e8ec4a9f4422830751739343d1094a0df743977104",
+        "size": 11143
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/ur/messages.json",
+        "sha256": "d1c6f805d1e5501e39e20bbb84fc5311cbf93279488fc9f3c490cbe4752c5733",
+        "size": 9347
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/uz/messages.json",
+        "sha256": "cf635fab1e6b16ea6d8b3b8b5695ab878cef6c84d2eb0a4ccb16b6242d5f0380",
+        "size": 9760
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/vi/messages.json",
+        "sha256": "13ec0450176d49e3653b0037e8b19b4a321427344dcac2060e63670651e1490c",
+        "size": 10234
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/zh_CN/messages.json",
+        "sha256": "5fd16b698d0328f9ac5c8290c283f7745154a234ba717dab470fd07e37095956",
+        "size": 9359
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "resources/brave_extension/_locales/zh_TW/messages.json",
+        "sha256": "ba51230e79d71767a3aee4257771175749cb21176a87d97319f47076c07ef189",
+        "size": 9361
+      },
+      {
+        "depth": 0,
+        "kind": "binary",
+        "path": "v8_context_snapshot.bin",
+        "sha256": "e9880677788a3fb44d58a320c6be5a32b228eab8448cfdcef13f450820768add",
+        "size": 709560
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "vk_swiftshader.dll",
+        "role": "native-library",
+        "sha256": "7a1c226e6184223687b53e7d7b075eeeed835e369c9841f1b53edf15159d6f90",
+        "size": 5483088
+      },
+      {
+        "depth": 0,
+        "kind": "json",
+        "path": "vk_swiftshader_icd.json",
+        "sha256": "32d83ff113fef532a9f97e0d2831f8656628ab1c99e9060f0332b1532839afd9",
+        "size": 106
+      },
+      {
+        "depth": 0,
+        "kind": "pe",
+        "path": "vulkan-1.dll",
+        "role": "native-library",
+        "sha256": "58ee8b25712419d0c61ce385d1a0bc6493b2248da361648e0d56776abc87b7b0",
+        "size": 999504
+      }
+    ],
+    "entries_total": 455,
+    "files": 377,
+    "hashed_bytes": 1146695025,
+    "path": "C:/Program Files/BraveSoftware/Brave-Browser/Application/158.1.100.58",
+    "root": "158.1.100.58",
+    "root_kind": "directory",
+    "truncated": false,
+    "unopened_nested": 0
+  },
+  "subject": {
+    "kind": "directory",
+    "name": "158.1.100.58",
+    "sha256": "778dbe1074480bc32bf5986d636c9346ca30073866e0afe53d1797dac3692128"
+  },
+  "summary": "158.1.100.58 (directory) holds 377 files in 455 entries; 0 nested container(s)."
+}

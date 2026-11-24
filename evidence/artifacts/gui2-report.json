@@ -1,0 +1,11 @@
+{
+  "tool": "core-report-write",
+  "params": {
+    "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\docs\\investigations\\gui2-craft-report.md",
+    "format": "markdown",
+    "include_evidence": false
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":20417,\"evidence_records\":26,\"findings\":21,\"format\":\"markdown\",\"open_questions\":5,\"path\":\"C:\\\\Users\\\\deepa\\\\OneDrive\\\\Dokumen\\\\ChatGPT\\\\opensequoia\\\\docs\\\\investigations\\\\gui2-craft-report.md\"}}\n"
+}

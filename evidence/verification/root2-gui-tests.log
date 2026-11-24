@@ -1,0 +1,98 @@
+   Compiling opensequoia v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.44s
+     Running unittests src\main.rs (target\debug\deps\opensequoia-db6b529dac40c3a8.exe)
+
+running 35 tests
+test browser::tests::failure_messages_remain_bounded_utf8_and_do_not_revert_source ... ok
+test browser::tests::closing_last_tab_creates_new_welcome_identity ... ok
+test browser::tests::navigation_and_history_keep_loading_identity_and_discard_forward_branch ... ok
+test browser::tests::local_filename_spelling_round_trips_without_silent_space_normalization ... ok
+test browser::tests::no_history_unknown_tab_and_invalid_initial_source_are_explicit_failures ... ok
+test browser::tests::reload_same_address_and_reflow_do_not_duplicate_history ... ok
+test browser::tests::stale_duplicate_and_closed_tab_completions_cannot_replace_current_state ... ok
+test browser::tests::tab_selection_wraps_and_closure_preserves_neighbor_and_pending_results ... ok
+test browser::tests::request_and_tab_counter_exhaustion_are_atomic_failures ... ok
+test browser::tests::tab_and_history_limits_fail_without_mutating_state ... ok
+test browser::tests::source_validation_rejects_active_schemes_devices_controls_and_invalid_direct_sources ... ok
+test chrome::tests::dpi_conversion_checks_signed_coordinates ... ok
+test input::tests::modes_are_explicit_and_exclusive ... ok
+test controller::tests::closing_a_tab_discards_its_late_reply_and_frees_capacity ... ok
+test input::tests::refuses_network_and_device_inputs ... ok
+test chrome::tests::actual_ascii_font_metrics_fit_static_engine_advances ... ok
+test input::tests::defaults_to_bundled_local_document ... ok
+test controller::tests::scheduler_capacity_and_viewport_checks_do_not_mutate_state ... ok
+test windows::tests::delayed_foreground_reply_after_other_tab_resize_emits_current_width_reflow ... ok
+test controller::tests::pending_reflows_coalesce_and_running_stale_reply_is_not_published ... ok
+test controller::tests::renderer_failure_is_reported_for_the_current_request ... ok
+test worker::tests::valid_wire_display_for_another_viewport_is_rejected_at_request_boundary ... ok
+test windows_process::tests::real_synchronous_pipe_read_can_be_cancelled ... ok
+test worker::tests::worker_rejects_malformed_and_wrong_direction_frames ... ok
+test windows_process::tests::native_argument_quoting_preserves_quotes_and_trailing_slashes ... ok
+test worker::tests::worker_uses_real_parse_and_layout ... ok
+test browser::tests::generated_transition_sequences_preserve_identity_history_and_completion_invariants ... ok
+test windows_process::tests::job_membership_is_established_at_spawn_and_job_close_kills_child ... ok
+test input::tests::loader_validates_real_utf8_and_file_limits ... ok
+test worker::tests::supervisor_timeout_kills_and_reaps_actual_child ... ok
+test input::tests::loader_rejects_a_real_local_directory_junction ... ok
+test worker::tests::unfinished_io_thread_returns_bounded_error_and_fixture_is_released ... ok
+test windows_process::tests::parent_death_closes_noninherited_job_and_kills_actual_worker ... ok
+test windows_process::tests::unrelated_inheritable_handle_is_excluded_with_positive_control ... ok
+test windows_process::tests::job_active_process_limit_rejects_descendant_creation ... ok
+
+test result: ok. 35 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.11s
+
+     Running unittests src\lib.rs (target\debug\deps\opensequoia_engine-10f83aaa8605e5fc.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\static_document.rs (target\debug\deps\static_document-7eac270473b33d25.exe)
+
+running 9 tests
+test foster_parenting_and_misnested_formatting_terminate_with_text ... ok
+test non_rendered_content_cannot_leak_into_display_list ... ok
+test unsupported_css_and_active_elements_are_explicit ... ok
+test unicode_chunk_boundaries_and_html_space_rules_are_preserved ... ok
+test viewport_rejection_and_wrapping_have_deterministic_bounds ... ok
+test html_tree_builder_repairs_paragraphs_and_preserves_entities_unicode ... ok
+test generated_malformed_token_sequences_keep_display_bounds ... ok
+test input_and_node_limits_reject_instead_of_returning_truncated_documents ... ok
+test deep_tree_traversal_and_drop_do_not_recurse ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.83s
+
+     Running unittests src\lib.rs (target\debug\deps\opensequoia_ipc-cb8ea0cacd2721a7.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\framing.rs (target\debug\deps\framing-0c6a570743a68819.exe)
+
+running 10 tests
+test every_truncated_prefix_non_utf8_and_trailing_data_is_rejected ... ok
+test display_bounds_and_boolean_wire_field_are_validated ... ok
+test error_codes_reserved_payload_and_invalid_display_count_are_rejected ... ok
+test fragmented_streams_and_multiple_frames_preserve_boundaries ... ok
+test magic_version_tags_and_reserved_fields_fail_closed ... ok
+test round_trip_all_message_types_and_streamed_frames ... ok
+test mutated_frames_either_reject_or_reencode_canonically ... ok
+test request_and_error_encode_bounds_do_not_truncate ... ok
+test oversized_or_type_invalid_header_is_rejected_before_payload_read ... ok
+test maximum_run_count_and_text_totals_round_trip_without_weakening_bounds ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+   Doc-tests opensequoia_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests opensequoia_ipc
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

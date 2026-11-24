@@ -1,0 +1,9 @@
+{
+  "release": "v1.100.58",
+  "url": "https://github.com/brave/brave-browser/releases/download/v1.100.58/BraveBrowserStandaloneSetup.exe",
+  "absolute_path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\raw\\BraveBrowserStandaloneSetup-1.100.58.exe",
+  "bytes": 173087584,
+  "sha256": "2802553c89831effe624bd1b0dd8e39c463e03a1224d557441350a5586e559ce",
+  "publisher_digest_matched": true,
+  "limitation": "Digest verifies correspondence to release metadata; does not establish runtime behavior, PE architecture or security."
+}

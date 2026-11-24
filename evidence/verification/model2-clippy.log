@@ -1,0 +1,28 @@
+    Checking opensequoia v0.2.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+error: this `if` statement can be collapsed
+   --> crates\app\src\windows.rs:222:21
+    |
+222 | /                     if message.wParam == usize::from(VK_RETURN) {
+223 | |                         if let Some(controls) = state(|s| s.chrome.clone()).flatten() {
+224 | |                             if controls.editor_focused() {
+225 | |                                 act(hwnd, Action::Go)?;
+...   |
+232 | |                     }
+    | |_____________________^
+    |
+    = help: for further information visit https://rust-lang.github.io/rust-clippy/rust-1.98.0/index.html#collapsible_if
+    = note: `-D clippy::collapsible-if` implied by `-D warnings`
+    = help: to override `-D warnings` add `#[allow(clippy::collapsible_if)]`
+help: collapse nested if block
+    |
+222 ~                     if message.wParam == usize::from(VK_RETURN)
+223 ~                         && let Some(controls) = state(|s| s.chrome.clone()).flatten() {
+224 |                             if controls.editor_focused() {
+...
+230 |                             }
+231 ~                         }
+    |
+
+error: could not compile `opensequoia` (bin "opensequoia" test) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `opensequoia` (bin "opensequoia") due to 1 previous error

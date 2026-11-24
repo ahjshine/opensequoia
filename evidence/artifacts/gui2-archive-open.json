@@ -1,0 +1,9 @@
+{
+  "tool": "core-target-open",
+  "params": {
+    "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\evidence\\artifacts\\raw\\opensequoia-0.2.0-win-x64.zip"
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":379375,\"description\":\"A ZIP archive\",\"kind\":\"zip\",\"name\":\"opensequoia-0.2.0-win-x64.zip\",\"path\":\"C:\\\\Users\\\\deepa\\\\OneDrive\\\\Dokumen\\\\ChatGPT\\\\opensequoia\\\\evidence\\\\artifacts\\\\raw\\\\opensequoia-0.2.0-win-x64.zip\",\"raw\":null,\"sha256\":\"743c6594a6e72f0dffdcfbf07537b4900659da35d018933eef39df21d871ff05\",\"target_id\":\"t_743c6594a6e7\"}}\n"
+}

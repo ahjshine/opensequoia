@@ -1,0 +1,14 @@
+{
+  "tool": "core_finding_record",
+  "params": {
+    "confidence": "observed",
+    "evidence_ids": [
+      "ev_5e4aee0fe23a252922a7a0b06a1be7b3f07573ce857812280968cdc459b22c60",
+      "ev_2e484e3ca3417b503945f2b7b5bbe3b34e8b6551372345d8280b7c7f2cedfa26"
+    ],
+    "statement": "The new EXE imports 199 functions from 16 libraries, versus 162 functions from 12 libraries in the prior d80778d7 snapshot. It adds WS2_32.dll, advapi32.dll, bcryptprimitives.dll and userenv.dll and contains no script-engine or browser-engine library; static imports do not establish runtime network use or remote-browsing capability."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"finding_id\":\"fnd_3\",\"revision\":12}}\n"
+}

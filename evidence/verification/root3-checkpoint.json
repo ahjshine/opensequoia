@@ -1,0 +1,151 @@
+{
+  "task": "I02",
+  "source_commit": "83451aa1a93f7c85b730dd30940975bd7abf6aaa",
+  "verification": "evidence/verification/root2-gui-verification.json",
+  "checked": 27,
+  "mismatches": [],
+  "inputs": [
+    {
+      "path": "crates/app/build.rs",
+      "sha256": "c87dd0ef13d531b68158e53a6faefcbdc2ee8d6117d3eef4fa7760334e93ec96",
+      "matches": true
+    },
+    {
+      "path": "crates/app/Cargo.toml",
+      "sha256": "bfc3183980e72576fde595dfe4dd1e5f5077a2d306f842b121ab03c91203f219",
+      "matches": true
+    },
+    {
+      "path": "crates/app/resources/opensequoia.manifest",
+      "sha256": "4a8cef18596856f2a1b16fbb36a58a4a288105b4d4ff058d077f9c35c3446853",
+      "matches": true
+    },
+    {
+      "path": "crates/app/resources/opensequoia.rc",
+      "sha256": "91a71353f77979131459ad8ca68bb163dfb1e46381a0e287164437537fee682a",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/browser.rs",
+      "sha256": "28bb64613f96ce2b6a5e48c0f14e3df60d1c53c0d2286e1a1c5afb23d8605c8b",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/chrome.rs",
+      "sha256": "58599071a1612a48cb30ade5f42dae05e3887446d3868597fe669a3aefbce224",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/controller.rs",
+      "sha256": "1d36384067fbdfadaeef880cd22e56b91af77a80a2d4bd0071ebae2dd51eb52f",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/input.rs",
+      "sha256": "2afa17414fbe421e15a9d271a9ffa7857e23aa6241ca2d62d7638e04e7b8ae5d",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/main.rs",
+      "sha256": "692b67e1e3dbdd0195bd04d3b5e70ce99caecc7b9bdba0285d0db4f76602cba5",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/windows_process.rs",
+      "sha256": "6b2cc3b80bf3121c649c75ff8163bd11e0f99e6c672340bdb8e019d369bbe9af",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/windows.rs",
+      "sha256": "dcd3f3cd83727525668083138f0ca386b643eef71048123d3e2a2e4ec2247996",
+      "matches": true
+    },
+    {
+      "path": "crates/app/src/worker.rs",
+      "sha256": "1a67f290ad4818935a1b9b3c3bd381e23b756ba73894bab7784c84f5871ae01d",
+      "matches": true
+    },
+    {
+      "path": "crates/engine/Cargo.toml",
+      "sha256": "a50e98201067c464496bcaa4643a55ee081ab1e2e2433410fe5ddd4f040b8173",
+      "matches": true
+    },
+    {
+      "path": "crates/engine/src/dom.rs",
+      "sha256": "73ac088ae5a13342df9c11ea530ee61e564819b72b0a8709cbebff91ef5e7ee1",
+      "matches": true
+    },
+    {
+      "path": "crates/engine/src/layout.rs",
+      "sha256": "5cb3f1b05cb832c92142f252d9945a71b6fc84d9c22f1a8250a4f1c093a2e73e",
+      "matches": true
+    },
+    {
+      "path": "crates/engine/src/lib.rs",
+      "sha256": "eb9126b628407652edc3d75d6f8077ca93b54bdd2ba32058ce1f0dc11d29c371",
+      "matches": true
+    },
+    {
+      "path": "crates/engine/tests/static_document.rs",
+      "sha256": "735dacc2752f5246c6ed01682eebec88475522322eb671460852d01546e64a7e",
+      "matches": true
+    },
+    {
+      "path": "crates/ipc/Cargo.toml",
+      "sha256": "618c76524216ea5dea746360676ea0231f06be487faee6eeac2388e4a51f70d9",
+      "matches": true
+    },
+    {
+      "path": "crates/ipc/src/codec.rs",
+      "sha256": "cf199aee483460b9f32d162076dae0759ac71e81cf33944b043d07eac1b7c1de",
+      "matches": true
+    },
+    {
+      "path": "crates/ipc/src/lib.rs",
+      "sha256": "00c45c2ede1564be0577cf6b992f7d78792d2495af1248938575d9a40ec84cdb",
+      "matches": true
+    },
+    {
+      "path": "crates/ipc/tests/framing.rs",
+      "sha256": "65f97d98efe90b4e4808362bf49b125a09f24bc737d5eeed200c8536084db4a1",
+      "matches": true
+    },
+    {
+      "path": "Cargo.toml",
+      "sha256": "1caebaa3f3b1ce49737f390baad18c1daa33a2716cbdf1c0963d357ad12548dd",
+      "matches": true
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "e801e3ec0b12e1d134834a119102c4ac270d328818683c5c7cdb4d11b5852707",
+      "matches": true
+    },
+    {
+      "path": "rust-toolchain.toml",
+      "sha256": "b30392501151e20a7d00b4b580c614f49c402580ab876e3a4a694e58d09d595c",
+      "matches": true
+    },
+    {
+      "path": ".cargo/config.toml",
+      "sha256": "8a110099b9690912bd2f841794af36ef6c2096d1d14b7135439fee31ad08a3bc",
+      "matches": true
+    },
+    {
+      "path": "fixtures/welcome.html",
+      "sha256": "68cedd95f6f8125e334f748f1090cfb29f27fa7affd37e86214a90469c2294ea",
+      "matches": true
+    },
+    {
+      "path": "fixtures/guide.html",
+      "sha256": "6ded2e2a409116977d252431924614b988a94d0bb6749b4976f16b95f382607f",
+      "matches": true
+    }
+  ],
+  "executable_sha256": "d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e",
+  "zip_sha256": "743c6594a6e72f0dffdcfbf07537b4900659da35d018933eef39df21d871ff05",
+  "artifact_evidence": "evidence/artifacts/gui2-acceptance.json",
+  "limitations": [
+    "Matches saved source inputs; not a reproducible compiler-build proof",
+    "Development source has since advanced beyond this immutable GUI package"
+  ]
+}

@@ -1,0 +1,101 @@
+DeleteAppContainerProfile function (userenv.h) - Win32 apps | Microsoft Learn
+Skip to main content
+Skip to Ask Learn chat experience
+This browser is no longer supported.
+Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.
+Download Microsoft Edge
+More info about Internet Explorer and Microsoft Edge
+Table of contents
+Exit editor mode
+Ask Learn
+Ask Learn
+Reading mode
+Table of contents
+Read in English
+Add
+Add to Plans
+Edit
+Copy Markdown
+Print
+Note
+Access to this page requires authorization. You can try signing in or changing directories.
+Access to this page requires authorization. You can try changing directories.
+DeleteAppContainerProfile function (userenv.h)
+Feedback
+Summarize this article for me
+In this article
+Deletes the specified per-user, per-app profile.
+Note Deleting a non-existent profile returns success.
+Syntax
+USERENVAPI HRESULT DeleteAppContainerProfile(
+[in] PCWSTR pszAppContainerName
+);
+Parameters
+[in] pszAppContainerName
+The name given to the profile in the call to the CreateAppContainerProfile function. This string is at most 64 characters in length, and fits into the pattern described by the regular expression "[-_. A-Za-z0-9]+".
+Return value
+If this function succeeds, it returns a standard HRESULT code, including the following:
+Return code
+Description
+HRESULT_FROM_WIN32(ERROR_NOT_SUPPORTED)
+If the method is called from within an app container.
+S_OK
+The profile was deleted successfully.
+E_INVALIDARG
+If the container name is NULL, or if it exceeds its specified limit for length.
+Remarks
+To ensure the best results, close all file handles in the profile storage locations before calling the DeleteAppContainerProfile function. Otherwise, this function may not be able to completely remove the storage locations for the profile.
+This function deletes the profile for the current user. To delete the profile for another user, you must impersonate that user.
+If the function fails, the status of the profile is undetermined, and you should call DeleteAppContainerProfile again to complete the operation.
+Requirements
+Requirement
+Value
+Minimum supported client
+Windows 8 [desktop apps only]
+Minimum supported server
+Windows Server 2012 [desktop apps only]
+Target Platform
+Windows
+Header
+userenv.h
+Library
+Userenv.lib
+DLL
+Userenv.dll
+See also
+CreateAppContainerProfile
+Feedback
+Was this page helpful?
+Yes
+No
+No
+Need help with this topic?
+Want to try using Ask Learn to clarify or guide you through this topic?
+Ask Learn
+Ask Learn
+Suggest a fix?
+Additional resources
+Last updated on
+2024-02-22
+In this article
+Was this page helpful?
+Need help with this topic?
+Want to try using Ask Learn to clarify or guide you through this topic?
+Ask Learn
+Ask Learn
+Suggest a fix?
+en-us
+Your Privacy Choices
+Theme
+Light
+Dark
+High contrast
+AI Disclaimer
+Previous Versions
+Blog
+Contribute
+Privacy
+Consumer Health Privacy
+Terms of Use
+Trademarks
+© Microsoft 2026

@@ -1,0 +1,960 @@
+{
+  "schema": 1,
+  "selection_date": "2026-11-22",
+  "kind": "warm clean-profile idle snapshot",
+  "executable": "C:\\Program Files\\BraveSoftware\\Brave-Browser\\Application\\brave.exe",
+  "executable_sha256": "eb7bdd6794feef543c70ed73db5a408636b9f0b86f6977609e8034b1f6da932f",
+  "fixture_sha256": "3b98c0afca68e30dbdecd99066a6b0961067d4dbf5dbcc146f24e77486df3847",
+  "psutil_version": "7.1.2",
+  "flags": [
+    "--user-data-dir=<new temporary profile>",
+    "--no-first-run",
+    "--no-default-browser-check",
+    "<fixture file URI>"
+  ],
+  "limitations": [
+    "Hidden window; not an interaction/frame or first-paint measure",
+    "No controlled cold-cache run",
+    "New profiles each run; no personal data",
+    "Sampling may miss transient processes/peaks",
+    "No equivalent OpenSequoia comparison at text-only milestone",
+    "Background startup network traffic not disabled",
+    "Uncontrolled host background workload/power plan; exploratory measurements only"
+  ],
+  "runs": [
+    {
+      "process_spawn_ms": 21.456299999954354,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 7,
+        "working_set_bytes": 439836672,
+        "private_commit_bytes": 226795520,
+        "cpu_seconds": 4.578125
+      },
+      "sampled_peak_private_bytes": 227012608,
+      "sampled_peak_working_set_bytes": 439836672,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 6352896,
+          "private_commit_bytes": 1593344,
+          "cpu_seconds": 0.0
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 25661440,
+          "private_commit_bytes": 10440704,
+          "cpu_seconds": 0.25
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 146305024,
+          "private_commit_bytes": 51429376,
+          "cpu_seconds": 1.125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 290033664,
+          "private_commit_bytes": 135602176,
+          "cpu_seconds": 2.25
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 356593664,
+          "private_commit_bytes": 167014400,
+          "cpu_seconds": 3.0
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 370774016,
+          "private_commit_bytes": 173027328,
+          "cpu_seconds": 3.359375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 414015488,
+          "private_commit_bytes": 208896000,
+          "cpu_seconds": 3.75
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 422887424,
+          "private_commit_bytes": 215769088,
+          "cpu_seconds": 3.96875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 423784448,
+          "private_commit_bytes": 215920640,
+          "cpu_seconds": 4.0
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 423944192,
+          "private_commit_bytes": 215965696,
+          "cpu_seconds": 4.09375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 424325120,
+          "private_commit_bytes": 215990272,
+          "cpu_seconds": 4.125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 425435136,
+          "private_commit_bytes": 216064000,
+          "cpu_seconds": 4.21875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 429023232,
+          "private_commit_bytes": 218886144,
+          "cpu_seconds": 4.34375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 432168960,
+          "private_commit_bytes": 221818880,
+          "cpu_seconds": 4.390625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 432386048,
+          "private_commit_bytes": 221585408,
+          "cpu_seconds": 4.4375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 433123328,
+          "private_commit_bytes": 221921280,
+          "cpu_seconds": 4.484375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 434311168,
+          "private_commit_bytes": 221958144,
+          "cpu_seconds": 4.53125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437403648,
+          "private_commit_bytes": 224743424,
+          "cpu_seconds": 4.53125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 439635968,
+          "private_commit_bytes": 227012608,
+          "cpu_seconds": 4.5625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 439836672,
+          "private_commit_bytes": 226795520,
+          "cpu_seconds": 4.578125
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 12.182999999822641,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 8,
+        "working_set_bytes": 478375936,
+        "private_commit_bytes": 246816768,
+        "cpu_seconds": 8.65625
+      },
+      "sampled_peak_private_bytes": 253841408,
+      "sampled_peak_working_set_bytes": 490020864,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 5701632,
+          "private_commit_bytes": 1466368,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 39526400,
+          "private_commit_bytes": 13295616,
+          "cpu_seconds": 0.234375
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 189214720,
+          "private_commit_bytes": 75292672,
+          "cpu_seconds": 1.546875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 330072064,
+          "private_commit_bytes": 154927104,
+          "cpu_seconds": 2.515625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 360878080,
+          "private_commit_bytes": 172646400,
+          "cpu_seconds": 2.984375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 409522176,
+          "private_commit_bytes": 203399168,
+          "cpu_seconds": 3.359375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 434380800,
+          "private_commit_bytes": 225292288,
+          "cpu_seconds": 3.703125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 435576832,
+          "private_commit_bytes": 225419264,
+          "cpu_seconds": 3.734375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 436543488,
+          "private_commit_bytes": 225636352,
+          "cpu_seconds": 3.765625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437534720,
+          "private_commit_bytes": 225845248,
+          "cpu_seconds": 3.8125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437878784,
+          "private_commit_bytes": 225984512,
+          "cpu_seconds": 3.9375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 438620160,
+          "private_commit_bytes": 226041856,
+          "cpu_seconds": 4.09375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 443523072,
+          "private_commit_bytes": 228044800,
+          "cpu_seconds": 4.453125
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 468504576,
+          "private_commit_bytes": 234770432,
+          "cpu_seconds": 5.640625
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 482988032,
+          "private_commit_bytes": 243699712,
+          "cpu_seconds": 6.171875
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 489730048,
+          "private_commit_bytes": 248119296,
+          "cpu_seconds": 6.671875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 469331968,
+          "private_commit_bytes": 236908544,
+          "cpu_seconds": 7.203125
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 471019520,
+          "private_commit_bytes": 237469696,
+          "cpu_seconds": 7.578125
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 490020864,
+          "private_commit_bytes": 253841408,
+          "cpu_seconds": 8.25
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 478375936,
+          "private_commit_bytes": 246816768,
+          "cpu_seconds": 8.65625
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 10.139299999991636,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 9,
+        "working_set_bytes": 500641792,
+        "private_commit_bytes": 268390400,
+        "cpu_seconds": 8.640625
+      },
+      "sampled_peak_private_bytes": 282177536,
+      "sampled_peak_working_set_bytes": 565927936,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 6475776,
+          "private_commit_bytes": 1609728,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 46059520,
+          "private_commit_bytes": 14114816,
+          "cpu_seconds": 0.3125
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 207351808,
+          "private_commit_bytes": 95313920,
+          "cpu_seconds": 1.5625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 328372224,
+          "private_commit_bytes": 157798400,
+          "cpu_seconds": 2.375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 365019136,
+          "private_commit_bytes": 175308800,
+          "cpu_seconds": 3.03125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 408797184,
+          "private_commit_bytes": 200790016,
+          "cpu_seconds": 3.40625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 439525376,
+          "private_commit_bytes": 228704256,
+          "cpu_seconds": 3.75
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 440438784,
+          "private_commit_bytes": 228872192,
+          "cpu_seconds": 3.8125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 441368576,
+          "private_commit_bytes": 229351424,
+          "cpu_seconds": 3.859375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 441421824,
+          "private_commit_bytes": 229376000,
+          "cpu_seconds": 3.90625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 442281984,
+          "private_commit_bytes": 229441536,
+          "cpu_seconds": 3.984375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 443387904,
+          "private_commit_bytes": 229490688,
+          "cpu_seconds": 4.0
+        },
+        {
+          "processes": 14,
+          "working_set_bytes": 565927936,
+          "private_commit_bytes": 282177536,
+          "cpu_seconds": 5.46875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 469446656,
+          "private_commit_bytes": 237424640,
+          "cpu_seconds": 5.578125
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 471613440,
+          "private_commit_bytes": 240541696,
+          "cpu_seconds": 6.171875
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 492122112,
+          "private_commit_bytes": 249630720,
+          "cpu_seconds": 6.46875
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 496480256,
+          "private_commit_bytes": 249217024,
+          "cpu_seconds": 6.875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 481202176,
+          "private_commit_bytes": 243884032,
+          "cpu_seconds": 7.421875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 474644480,
+          "private_commit_bytes": 241238016,
+          "cpu_seconds": 7.84375
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 500641792,
+          "private_commit_bytes": 268390400,
+          "cpu_seconds": 8.640625
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 10.022799999660492,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 9,
+        "working_set_bytes": 488783872,
+        "private_commit_bytes": 252715008,
+        "cpu_seconds": 8.171875
+      },
+      "sampled_peak_private_bytes": 252715008,
+      "sampled_peak_working_set_bytes": 488783872,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 7544832,
+          "private_commit_bytes": 1871872,
+          "cpu_seconds": 0.0
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 45043712,
+          "private_commit_bytes": 14049280,
+          "cpu_seconds": 0.296875
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 187228160,
+          "private_commit_bytes": 75796480,
+          "cpu_seconds": 1.5
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 302350336,
+          "private_commit_bytes": 145477632,
+          "cpu_seconds": 2.28125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 358039552,
+          "private_commit_bytes": 169369600,
+          "cpu_seconds": 2.90625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 414695424,
+          "private_commit_bytes": 207175680,
+          "cpu_seconds": 3.234375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 433201152,
+          "private_commit_bytes": 224038912,
+          "cpu_seconds": 3.40625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 434339840,
+          "private_commit_bytes": 224141312,
+          "cpu_seconds": 3.421875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 435437568,
+          "private_commit_bytes": 224346112,
+          "cpu_seconds": 3.46875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 435548160,
+          "private_commit_bytes": 224362496,
+          "cpu_seconds": 3.484375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 435953664,
+          "private_commit_bytes": 224407552,
+          "cpu_seconds": 3.5
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437256192,
+          "private_commit_bytes": 224468992,
+          "cpu_seconds": 3.625
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 456523776,
+          "private_commit_bytes": 230563840,
+          "cpu_seconds": 4.078125
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 468684800,
+          "private_commit_bytes": 238276608,
+          "cpu_seconds": 4.90625
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 476516352,
+          "private_commit_bytes": 239005696,
+          "cpu_seconds": 5.671875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 469753856,
+          "private_commit_bytes": 238067712,
+          "cpu_seconds": 6.171875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 461787136,
+          "private_commit_bytes": 233857024,
+          "cpu_seconds": 6.59375
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 474087424,
+          "private_commit_bytes": 245252096,
+          "cpu_seconds": 7.296875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 475193344,
+          "private_commit_bytes": 245407744,
+          "cpu_seconds": 7.765625
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 488783872,
+          "private_commit_bytes": 252715008,
+          "cpu_seconds": 8.171875
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 6.673800000044139,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 7,
+        "working_set_bytes": 462405632,
+        "private_commit_bytes": 244801536,
+        "cpu_seconds": 4.09375
+      },
+      "sampled_peak_private_bytes": 244801536,
+      "sampled_peak_working_set_bytes": 462405632,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 6397952,
+          "private_commit_bytes": 1613824,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 42356736,
+          "private_commit_bytes": 14020608,
+          "cpu_seconds": 0.3125
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 200253440,
+          "private_commit_bytes": 80076800,
+          "cpu_seconds": 1.625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 326807552,
+          "private_commit_bytes": 155660288,
+          "cpu_seconds": 2.34375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 352481280,
+          "private_commit_bytes": 167436288,
+          "cpu_seconds": 2.890625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 415875072,
+          "private_commit_bytes": 207527936,
+          "cpu_seconds": 3.234375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 436162560,
+          "private_commit_bytes": 225746944,
+          "cpu_seconds": 3.53125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437383168,
+          "private_commit_bytes": 225861632,
+          "cpu_seconds": 3.625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437583872,
+          "private_commit_bytes": 226095104,
+          "cpu_seconds": 3.671875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 445927424,
+          "private_commit_bytes": 234393600,
+          "cpu_seconds": 3.6875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 446099456,
+          "private_commit_bytes": 234401792,
+          "cpu_seconds": 3.71875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 447520768,
+          "private_commit_bytes": 234450944,
+          "cpu_seconds": 3.75
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 449507328,
+          "private_commit_bytes": 234602496,
+          "cpu_seconds": 3.8125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 454234112,
+          "private_commit_bytes": 238886912,
+          "cpu_seconds": 3.859375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 454889472,
+          "private_commit_bytes": 239353856,
+          "cpu_seconds": 3.9375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 455352320,
+          "private_commit_bytes": 239382528,
+          "cpu_seconds": 3.96875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 456470528,
+          "private_commit_bytes": 239439872,
+          "cpu_seconds": 4.015625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 459886592,
+          "private_commit_bytes": 242249728,
+          "cpu_seconds": 4.0625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 462311424,
+          "private_commit_bytes": 244715520,
+          "cpu_seconds": 4.09375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 462405632,
+          "private_commit_bytes": 244801536,
+          "cpu_seconds": 4.09375
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 10.331399999813584,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 7,
+        "working_set_bytes": 463900672,
+        "private_commit_bytes": 247898112,
+        "cpu_seconds": 4.765625
+      },
+      "sampled_peak_private_bytes": 247898112,
+      "sampled_peak_working_set_bytes": 463900672,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 6377472,
+          "private_commit_bytes": 1617920,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 38567936,
+          "private_commit_bytes": 13078528,
+          "cpu_seconds": 0.34375
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 182173696,
+          "private_commit_bytes": 73940992,
+          "cpu_seconds": 1.5625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 320049152,
+          "private_commit_bytes": 155508736,
+          "cpu_seconds": 2.453125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 346443776,
+          "private_commit_bytes": 157421568,
+          "cpu_seconds": 3.140625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 406491136,
+          "private_commit_bytes": 200359936,
+          "cpu_seconds": 3.546875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437153792,
+          "private_commit_bytes": 228384768,
+          "cpu_seconds": 3.859375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 446828544,
+          "private_commit_bytes": 236847104,
+          "cpu_seconds": 3.921875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 447750144,
+          "private_commit_bytes": 237043712,
+          "cpu_seconds": 4.015625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 447942656,
+          "private_commit_bytes": 237072384,
+          "cpu_seconds": 4.046875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 448303104,
+          "private_commit_bytes": 237092864,
+          "cpu_seconds": 4.140625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 449630208,
+          "private_commit_bytes": 237199360,
+          "cpu_seconds": 4.234375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 453902336,
+          "private_commit_bytes": 240926720,
+          "cpu_seconds": 4.421875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 456052736,
+          "private_commit_bytes": 242229248,
+          "cpu_seconds": 4.5
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 456421376,
+          "private_commit_bytes": 242364416,
+          "cpu_seconds": 4.5
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 456957952,
+          "private_commit_bytes": 242438144,
+          "cpu_seconds": 4.53125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 458215424,
+          "private_commit_bytes": 242495488,
+          "cpu_seconds": 4.59375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 461910016,
+          "private_commit_bytes": 245977088,
+          "cpu_seconds": 4.671875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 463708160,
+          "private_commit_bytes": 247808000,
+          "cpu_seconds": 4.703125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 463900672,
+          "private_commit_bytes": 247898112,
+          "cpu_seconds": 4.765625
+        }
+      ]
+    },
+    {
+      "process_spawn_ms": 10.258000000249012,
+      "idle_after_seconds": 5.0,
+      "final": {
+        "processes": 8,
+        "working_set_bytes": 480514048,
+        "private_commit_bytes": 245989376,
+        "cpu_seconds": 8.265625
+      },
+      "sampled_peak_private_bytes": 268283904,
+      "sampled_peak_working_set_bytes": 546594816,
+      "samples": [
+        {
+          "processes": 1,
+          "working_set_bytes": 6545408,
+          "private_commit_bytes": 1687552,
+          "cpu_seconds": 0.015625
+        },
+        {
+          "processes": 2,
+          "working_set_bytes": 39837696,
+          "private_commit_bytes": 13557760,
+          "cpu_seconds": 0.34375
+        },
+        {
+          "processes": 5,
+          "working_set_bytes": 188358656,
+          "private_commit_bytes": 76128256,
+          "cpu_seconds": 1.390625
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 325865472,
+          "private_commit_bytes": 155734016,
+          "cpu_seconds": 2.234375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 351522816,
+          "private_commit_bytes": 166305792,
+          "cpu_seconds": 2.828125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 412291072,
+          "private_commit_bytes": 205287424,
+          "cpu_seconds": 3.203125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 429686784,
+          "private_commit_bytes": 219668480,
+          "cpu_seconds": 3.453125
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 436211712,
+          "private_commit_bytes": 224735232,
+          "cpu_seconds": 3.5
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437096448,
+          "private_commit_bytes": 224894976,
+          "cpu_seconds": 3.5
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437284864,
+          "private_commit_bytes": 224948224,
+          "cpu_seconds": 3.59375
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 437764096,
+          "private_commit_bytes": 225046528,
+          "cpu_seconds": 3.671875
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 438984704,
+          "private_commit_bytes": 225103872,
+          "cpu_seconds": 3.75
+        },
+        {
+          "processes": 7,
+          "working_set_bytes": 443445248,
+          "private_commit_bytes": 228900864,
+          "cpu_seconds": 3.875
+        },
+        {
+          "processes": 12,
+          "working_set_bytes": 546594816,
+          "private_commit_bytes": 268283904,
+          "cpu_seconds": 5.265625
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 488615936,
+          "private_commit_bytes": 247144448,
+          "cpu_seconds": 5.8125
+        },
+        {
+          "processes": 9,
+          "working_set_bytes": 478633984,
+          "private_commit_bytes": 242487296,
+          "cpu_seconds": 6.546875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 474185728,
+          "private_commit_bytes": 236285952,
+          "cpu_seconds": 7.09375
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 479830016,
+          "private_commit_bytes": 241762304,
+          "cpu_seconds": 7.6875
+        },
+        {
+          "processes": 8,
+          "working_set_bytes": 480514048,
+          "private_commit_bytes": 245989376,
+          "cpu_seconds": 8.265625
+        }
+      ]
+    }
+  ],
+  "median_final_private_bytes": 246816768,
+  "median_final_working_set_bytes": 478375936
+}

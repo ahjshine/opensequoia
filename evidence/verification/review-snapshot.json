@@ -1,0 +1,94 @@
+[
+  {
+    "path": "SPEC.md",
+    "sha256": "9a3b4075d2be831a81de9c18fdb223b9ba9c29b2b8bd90f7926520c5816f9406"
+  },
+  {
+    "path": "CONSTRAINTS.md",
+    "sha256": "62d5c16ed942b5dc99ec913277717dc8cb036e348abb82fd36861910b96a0673"
+  },
+  {
+    "path": "ARCHITECTURE.md",
+    "sha256": "d78ec5907a64ce6453ad380ad35d8dc6f6922a01d9ece7037eee72719d0ce177"
+  },
+  {
+    "path": "TASKS.md",
+    "sha256": "d200a793cc9ea6332fa26394e749d3083ae1fc1f10d35581ce4ce2da1bb91016"
+  },
+  {
+    "path": "FEATURE_PARITY.md",
+    "sha256": "0af52def28903910d24bb18ee2a51eb108bdcb70bd16bc4355c45270240af998"
+  },
+  {
+    "path": "BLOAT_DECISIONS.md",
+    "sha256": "9d4ba273fc462a5f1a4041585cb7ba526d51685ac5747eb2e065ce17bc25e566"
+  },
+  {
+    "path": "BASELINE.md",
+    "sha256": "d39722ad64458613b4987ba5d1583d0cae152870d408c7836f834aa25c5d5832"
+  },
+  {
+    "path": "SECURITY.md",
+    "sha256": "5e189c0686e5bf1ba56794809322362f22c5de0b987b4abe99348b842c6a571b"
+  },
+  {
+    "path": "BENCHMARKS.md",
+    "sha256": "7b55b99b2003b94260b11704e1e209e31ad665bb0383aecdf865629c76725517"
+  },
+  {
+    "path": "Cargo.toml",
+    "sha256": "3936ac3b85cf37e019cfe36ac4a040bff857a17979797df66a679ca6c3d66299"
+  },
+  {
+    "path": "Cargo.lock",
+    "sha256": "2dfe9e01aea779b9d4fb886b9b24050487518902a72fb1d234e50c8d49a2b96b"
+  },
+  {
+    "path": "crates/engine/Cargo.toml",
+    "sha256": "a50e98201067c464496bcaa4643a55ee081ab1e2e2433410fe5ddd4f040b8173"
+  },
+  {
+    "path": "crates/engine/src/lib.rs",
+    "sha256": "eb9126b628407652edc3d75d6f8077ca93b54bdd2ba32058ce1f0dc11d29c371"
+  },
+  {
+    "path": "crates/engine/src/dom.rs",
+    "sha256": "73ac088ae5a13342df9c11ea530ee61e564819b72b0a8709cbebff91ef5e7ee1"
+  },
+  {
+    "path": "crates/engine/src/layout.rs",
+    "sha256": "5cb3f1b05cb832c92142f252d9945a71b6fc84d9c22f1a8250a4f1c093a2e73e"
+  },
+  {
+    "path": "crates/engine/tests/static_document.rs",
+    "sha256": "735dacc2752f5246c6ed01682eebec88475522322eb671460852d01546e64a7e"
+  },
+  {
+    "path": "crates/app/Cargo.toml",
+    "sha256": "3b76e42744a2112f40f9eaf4ca96f1d4e0619e1c6c58ac8fada6abf218ad2a48"
+  },
+  {
+    "path": "crates/app/src/main.rs",
+    "sha256": "5c01ec77e80820d4b74dfd87059b4a98f17a9439c37f3eaeaa87958d7b4cd2e6"
+  },
+  {
+    "path": "crates/app/src/input.rs",
+    "sha256": "3d616bde35fc9e1cd1640499259c53c05e6c8fbdccb3f354a41f851567bfc95b"
+  },
+  {
+    "path": "crates/app/src/windows.rs",
+    "sha256": "545738ef233bc7f609f27e5e896bc2a27d5671bff06855d3a98e5f0b95cb9f83"
+  },
+  {
+    "path": "crates/app/build.rs",
+    "sha256": "c87dd0ef13d531b68158e53a6faefcbdc2ee8d6117d3eef4fa7760334e93ec96"
+  },
+  {
+    "path": "crates/app/resources/opensequoia.rc",
+    "sha256": "d06039d3384296fe6f813014b1f990a07851b829df9aec39eea6f182864700b5"
+  },
+  {
+    "path": "crates/app/resources/opensequoia.manifest",
+    "sha256": "f1a83999267cfae7ec75375eecda34e2e9f2969d0d041643d39cb0ee7d448b84"
+  }
+]

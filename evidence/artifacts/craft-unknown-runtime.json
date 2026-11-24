@@ -1,0 +1,1 @@
+{"error":{"category":"input","code":"bad_input","details":{"parameter_path":"/severity"},"message":"invalid params at \"/severity\": unknown variant `important`, expected one of `low`, `medium`, `high`, `critical`","remediation":"Correct the parameter to match the tool's input schema, then call the tool again.","retryable":false}}

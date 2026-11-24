@@ -1,0 +1,18 @@
+{
+  "tool": "core-unknown-add",
+  "params": {
+    "domain": "packaging",
+    "severity": "high",
+    "question": "Does the unsigned0.2GUI development payload start correctly on a supported clean Windows machine without an existing VC runtime, and can it meet signed installer/update/recovery requirements?",
+    "evidence_for": [
+      "ev_f97f3c572503836ee601339717f5779c4f277218b6637baef179d3d4a441212b"
+    ],
+    "probes": [
+      "Run installation/startup on a disposable supported Windows10/11 x64 machine with pristine runtime prerequisites",
+      "Verify signing/trusted update/recovery/install/uninstall behavior when production packaging is implemented"
+    ]
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"domain\":\"packaging\",\"evidence_against\":[],\"evidence_for\":[\"ev_f97f3c572503836ee601339717f5779c4f277218b6637baef179d3d4a441212b\"],\"id\":\"unk_7368c30312b582f5\",\"probes\":[\"Run installation/startup on a disposable supported Windows10/11 x64 machine with pristine runtime prerequisites\",\"Verify signing/trusted update/recovery/install/uninstall behavior when production packaging is implemented\"],\"question\":\"Does the unsigned0.2GUI development payload start correctly on a supported clean Windows machine without an existing VC runtime, and can it meet signed installer/update/recovery requirements?\",\"revision\":1,\"severity\":\"high\",\"status\":\"open\"}}\n"
+}

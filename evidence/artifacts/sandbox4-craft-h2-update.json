@@ -1,0 +1,15 @@
+{
+  "tool": "core_hypothesis_update",
+  "params": {
+    "hypothesis_id": "hyp_2",
+    "status": "refuted",
+    "add_contradicting_evidence_ids": [
+      "ev_5e4aee0fe23a252922a7a0b06a1be7b3f07573ce857812280968cdc459b22c60",
+      "ev_2e484e3ca3417b503945f2b7b5bbe3b34e8b6551372345d8280b7c7f2cedfa26"
+    ],
+    "note": "The new EXE imports 199 functions from 16 libraries versus 162 from 12. It adds WS2_32.dll, advapi32.dll, bcryptprimitives.dll and userenv.dll; no script engine or browser engine library appears. Static imports do not establish runtime network use or remote-browsing capability."
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"hypothesis\":{\"claim\":\"The new EXE imports only Windows platform/CRT libraries used by the local renderer and has no new networking, scripting or browser-engine dependency compared with the prior snapshot.\",\"contradicting\":[\"ev_5e4aee0fe23a252922a7a0b06a1be7b3f07573ce857812280968cdc459b22c60\",\"ev_2e484e3ca3417b503945f2b7b5bbe3b34e8b6551372345d8280b7c7f2cedfa26\"],\"id\":\"hyp_2\",\"notes\":[\"The new EXE imports 199 functions from 16 libraries versus 162 from 12. It adds WS2_32.dll, advapi32.dll, bcryptprimitives.dll and userenv.dll; no script engine or browser engine library appears. Static imports do not establish runtime network use or remote-browsing capability.\"],\"prediction\":\"Library summary contains KERNEL32/USER32/GDI32/ntdll and CRT runtime names, with no new network or script engine DLLs.\",\"status\":\"refuted\",\"supporting\":[]},\"revision\":7}}\n"
+}

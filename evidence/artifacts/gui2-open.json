@@ -1,0 +1,9 @@
+{
+  "tool": "core-target-open",
+  "params": {
+    "path": "C:\\Users\\deepa\\OneDrive\\Dokumen\\ChatGPT\\opensequoia\\target\\gui\\release\\opensequoia.exe"
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"bytes\":946176,\"description\":\"A Windows program\",\"kind\":\"pe\",\"name\":\"opensequoia.exe\",\"path\":\"C:\\\\Users\\\\deepa\\\\OneDrive\\\\Dokumen\\\\ChatGPT\\\\opensequoia\\\\target\\\\gui\\\\release\\\\opensequoia.exe\",\"raw\":null,\"sha256\":\"d80778d7dbaa7f3a520b33e88ab3cb8346cce1c8c31749cba19653ede0511f3e\",\"target_id\":\"t_d80778d7dbaa\"}}\n"
+}

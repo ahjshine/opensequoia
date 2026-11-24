@@ -1,0 +1,69 @@
+[
+  {
+    "name": "attributes",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-updateprocthreadattribute",
+    "retrieved": "2026-11-22T14:01:43.450460+00:00",
+    "html_sha256": "1d449eb75a870371c1edcb610d09e706649a6d4b2b70738a3afadea92c050042",
+    "snippets": [
+      {
+        "term": "PROC_THREAD_ATTRIBUTE_JOB_LIST",
+        "excerpt": " Windows Server\u00a0Version 1709 and newer. \n \n \n \n \n PROC_THREAD_ATTRIBUTE_JOB_LIST \n \n \n \nThe  lpValue  parameter is a pointer to a list of job handles to be assigned to the child process, in the order specified.\n Supported in Windows 10 and newer and Windows Server\u00a02016 and newer. \n \n \n \n \n PROC_THREAD_ATTRIBUTE_ENABLE_OPTIONAL_XSTATE_FEATURES \n \n \n \nThe  lpValue  parameter is a pointer to a  DWORD64  value that specifies the set of optional XState features to enable for the new thread.\n Supported in Windows 11 and newer and Windows Server\u00a02022 and newer. \n \n \n \n [in] lpValue \n A pointer to the attribute value.  This value must persist until the attribute list is destroyed using the  DeleteProcThreadAttributeList  function . \n [in] cbSize \n The size of the attribute value specified by the  lpValue  parameter. \n [out, optional] lpPreviousValue \n This parameter is reserved and must be NULL. \n [in, optional] lpReturnSize \n This parameter is reserved and must be NULL. \n Return value \n If the function succeeds, the return value is nonzero. \n If the function fails, the return value is zero. To get extended error information, call\n GetLastError . \n Remarks \n An attribute list is an opaque structure that consists of a series of key/value pairs, one for each attribute. A process can update only the attribute keys described in this topic. \n The   DWORD  or  DWORD64  pointed to by  lpValue  can be one or more of the following values when "
+      },
+      {
+        "term": "PROC_THREAD_ATTRIBUTE_HANDLE_LIST",
+        "excerpt": "r and Windows Server\u00a02008\u00a0R2 and newer. \n \n \n \n \n PROC_THREAD_ATTRIBUTE_HANDLE_LIST \n \n \n \nThe  lpValue  parameter is a pointer to a list of handles to be inherited by the child process.\n These handles must be created as inheritable handles and must not include pseudo handles such as those returned by the  GetCurrentProcess  or  GetCurrentThread  function. \n Note \u00a0\u00a0if you use this attribute, pass in a value of TRUE for the  bInheritHandles  parameter of the  CreateProcess  function. \n \u00a0 \n \n \n \n \n PROC_THREAD_ATTRIBUTE_IDEAL_PROCESSOR \n \n \n \nThe  lpValue  parameter is a pointer to a   PROCESSOR_NUMBER  structure that specifies the ideal processor for the new thread.\n Supported in Windows\u00a07 and newer and Windows Server\u00a02008\u00a0R2 and newer. \n \n \n \n \n \n PROC_THREAD_ATTRIBUTE_MACHINE_TYPE \n \n \n \nThe  lpValue  parameter is a pointer to a  WORD  that specifies the machine architecture of the child process.\n Supported in Windows\u00a011 and newer. \n The   WORD  pointed to by  lpValue  can be a value listed on  IMAGE FILE MACHINE CONSTANTS . \n \n \n \n \n PROC_THREAD_ATTRIBUTE_MITIGATION_POLICY \n \n \n \nThe  lpValue  parameter is a pointer to a  DWORD  or  DWORD64  that specifies the exploit mitigation policy for the child process. Starting in Windows\u00a010, version 1703, this parameter can also be a pointer to a two-element  DWORD64  array.\n The specified policy overrides the policies set for the application and the system and cannot be changed after"
+      },
+      {
+        "term": "Windows 10",
+        "excerpt": "ich  lpValue  points, see Remarks. \n Supported in Windows 10 Version 1703 and newer and Windows Server\u00a0Version 1709 and newer. \n \n \n \n \n PROC_THREAD_ATTRIBUTE_JOB_LIST \n \n \n \nThe  lpValue  parameter is a pointer to a list of job handles to be assigned to the child process, in the order specified.\n Supported in Windows 10 and newer and Windows Server\u00a02016 and newer. \n \n \n \n \n PROC_THREAD_ATTRIBUTE_ENABLE_OPTIONAL_XSTATE_FEATURES \n \n \n \nThe  lpValue  parameter is a pointer to a  DWORD64  value that specifies the set of optional XState features to enable for the new thread.\n Supported in Windows 11 and newer and Windows Server\u00a02022 and newer. \n \n \n \n [in] lpValue \n A pointer to the attribute value.  This value must persist until the attribute list is destroyed using the  DeleteProcThreadAttributeList  function . \n [in] cbSize \n The size of the attribute value specified by the  lpValue  parameter. \n [out, optional] lpPreviousValue \n This parameter is reserved and must be NULL. \n [in, optional] lpReturnSize \n This parameter is reserved and must be NULL. \n Return value \n If the function succeeds, the return value is nonzero. \n If the function fails, the return value is zero. To get extended error information, call\n GetLastError . \n Remarks \n An attribute list is an opaque structure that consists of a series of key/value pairs, one for each attribute. A process can update only the attribute keys described in this topic. \n The   DWORD"
+      }
+    ]
+  },
+  {
+    "name": "job-limits",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/jobapi2/nf-jobapi2-setinformationjobobject",
+    "retrieved": "2026-11-22T14:01:43.499288+00:00",
+    "html_sha256": "986a1f19951938d0cbf8f22f4b7f8109914766b259c3694822b3e853442bb343",
+    "snippets": []
+  },
+  {
+    "name": "creation",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw",
+    "retrieved": "2026-11-22T14:01:43.452150+00:00",
+    "html_sha256": "d4f2ba8f5b4542f7feb6b75d2d3d54942f20ff04c9d3a8c73098a2098f31b152",
+    "snippets": [
+      {
+        "term": "PROC_THREAD_ATTRIBUTE_HANDLE_LIST",
+        "excerpt": "UpdateProcThreadAttributeList  function\nwith the  PROC_THREAD_ATTRIBUTE_HANDLE_LIST  parameter\nto provide a list of handles to be inherited by a particular process. \n Security Remarks \nThe first parameter,  lpApplicationName , can be  NULL , in which case the executable name must be in the  white space\u2013delimited string pointed to by  lpCommandLine . If the executable or path name has a space in it, there is a risk that a different executable could be run because of the way the function parses spaces. The following example is dangerous because the function will attempt to run \"Program.exe\", if it exists, instead of \"MyApp.exe\".\n     LPTSTR szCmdline = _tcsdup(TEXT(\"C:\\\\Program Files\\\\MyApp -L -S\"));\n    CreateProcess(NULL, szCmdline, /* ... */);\n \n If a malicious user were to create an application called \"Program.exe\" on a system, any program that incorrectly calls\n CreateProcess  using the Program Files directory will run this application instead of the intended application. \n To avoid this problem, do not pass  NULL  for  lpApplicationName . If you do pass  NULL  for  lpApplicationName , use quotation marks around the executable path in  lpCommandLine , as shown in the example below. \n     LPTSTR szCmdline[] = _tcsdup(TEXT(\"\\\"C:\\\\Program Files\\\\MyApp\\\" -L -S\"));\n    CreateProcess(NULL, szCmdline, /*...*/);\n \n Examples \n For an example, see\n Creating Processes . \n \n \n Note \n The processthreadsapi.h header defines CreateProcess"
+      }
+    ]
+  },
+  {
+    "name": "cancel",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/api/ioapiset/nf-ioapiset-cancelsynchronousio",
+    "retrieved": "2026-11-22T14:01:43.910283+00:00",
+    "html_sha256": "cb98b52ec36265643d8b63c6500ba179796c21402365c0b97fb83f3aea297f12",
+    "snippets": [
+      {
+        "term": "ERROR_NOT_FOUND",
+        "excerpt": "rn value is 0 (zero), and\n GetLastError  returns\n ERROR_NOT_FOUND . \n Remarks \n The caller must have the\n THREAD_TERMINATE  access right. \n If there are any pending I/O operations in progress for the specified thread, the\n CancelSynchronousIo  function marks them for\ncancellation. Most types of operations can be canceled immediately; other operations can continue toward\ncompletion before they are actually canceled and the caller is notified. The\n CancelSynchronousIo  function does not wait for\nall canceled operations to complete. For more information, see\n Canceling Pending I/O Operations . \n The operation being canceled is completed with one of three statuses; you must check the completion status to\ndetermine the completion state. The three statuses are: \n \n The operation completed normally.  This can occur even if the operation was \n      canceled, because the cancel request might not have been submitted in time to cancel the operation. \n The operation was canceled.  The \n       GetLastError  function returns \n       ERROR_OPERATION_ABORTED . \n The operation failed with another error.  The \n       GetLastError  function returns the relevant error \n      code. \n \nIn Windows\u00a08 and Windows Server\u00a02012, this function is supported by the following technologies.\n \n \n Technology \n Supported \n \n \n \nServer Message Block (SMB) 3.0 protocol\n \n \nYes\n \n \n \n \nSMB 3.0 Transparent Failover (TFO)\n \n \nYes\n \n \n \n \nSMB 3.0 with Scale-out File S"
+      },
+      {
+        "term": "does not wait",
+        "excerpt": "r is notified. The\n CancelSynchronousIo  function does not wait for\nall canceled operations to complete. For more information, see\n Canceling Pending I/O Operations . \n The operation being canceled is completed with one of three statuses; you must check the completion status to\ndetermine the completion state. The three statuses are: \n \n The operation completed normally.  This can occur even if the operation was \n      canceled, because the cancel request might not have been submitted in time to cancel the operation. \n The operation was canceled.  The \n       GetLastError  function returns \n       ERROR_OPERATION_ABORTED . \n The operation failed with another error.  The \n       GetLastError  function returns the relevant error \n      code. \n \nIn Windows\u00a08 and Windows Server\u00a02012, this function is supported by the following technologies.\n \n \n Technology \n Supported \n \n \n \nServer Message Block (SMB) 3.0 protocol\n \n \nYes\n \n \n \n \nSMB 3.0 Transparent Failover (TFO)\n \n \nYes\n \n \n \n \nSMB 3.0 with Scale-out File Shares (SO)\n \n \nYes\n \n \n \n \nCluster Shared Volume File System (CsvFS)\n \n \nYes\n \n \n \n \nResilient File System (ReFS)\n \n \nYes\n \n \n \n Requirements \n \n \n \n Requirement \n Value \n \n \n \n \n Minimum supported client \n Windows\u00a0Vista [desktop apps only] \n \n \n Minimum supported server \n Windows Server\u00a02008 [desktop apps only] \n \n \n Target Platform \n Windows \n \n \n Header \n ioapiset.h (include Windows.h) \n \n \n Library \n Kernel32.lib \n \n \n DLL "
+      }
+    ]
+  },
+  {
+    "name": "jobs",
+    "url": "https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects",
+    "retrieved": "2026-11-22T14:01:43.813318+00:00",
+    "html_sha256": "9f92cab56d9f9bcb05644200305e5beef5ec3461eaf07f59e9c309dffc0094aa",
+    "snippets": [
+      {
+        "term": "JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE",
+        "excerpt": "have been terminated. However, if the job has the JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE flag specified, closing the last job object handle terminates all associated processes and then destroys the job object itself. If a nested job has the JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE flag specified, closing the last job object handle terminates all processes associated with the job and its child jobs in the hierarchy. \n Managing a Process Tree that Uses Job Objects \n Starting with Windows\u00a08 and Windows Server\u00a02012, an application can use  nested jobs  to manage a process tree that uses more than one job object. However, an application that must run on Windows\u00a07, Windows Server\u00a02008\u00a0R2, or earlier versions of Windows that do not support nested jobs must manage the process tree in other ways. \n If a tool must manage a process tree that uses job objects and it is not possible to use nested jobs, both the tool and the members of the process tree must cooperate. Use one of the following options: \n \n Use the JOB_OBJECT_LIMIT_SILENT_BREAKAWAY_OK limit. If the tool uses this limit, it cannot monitor an entire process tree. The tool can monitor only the processes it adds to the job. If these processes create child processes, they are not associated with the job. In this option, child processes can be associated with other job objects. \n \n Use the JOB_OBJECT_LIMIT_BREAKAWAY_OK limit. If the tool uses this limit, it can monitor the entire process tre"
+      }
+    ]
+  }
+]

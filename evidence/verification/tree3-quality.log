@@ -1,0 +1,56 @@
+COMMAND: cargo fmt -p opensequoia-engine -- --check
+COMMAND: cargo clippy --target-dir target/tree3 -p opensequoia-engine --all-targets --locked -- -D warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.52s
+COMMAND: cargo test --target-dir target/tree3 -p opensequoia-engine --locked
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.47s
+     Running unittests src\lib.rs (target/tree3\debug\deps\opensequoia_engine-10f83aaa8605e5fc.exe)
+
+running 1 test
+test dom::tests::parser_preserves_non_rendered_nodes_and_template_identity ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\dat_format.rs (target/tree3\debug\deps\dat_format-0847cb7a8003de08.exe)
+
+running 4 tests
+test dat_empty_data_fragment_flags_and_error_sections_are_kept ... ok
+test dat_final_isolated_carriage_return_is_not_a_line_ending ... ok
+test dat_sections_normalize_crlf_but_preserve_other_data_whitespace ... ok
+test malformed_dat_files_fail_instead_of_losing_cases_or_sections ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\static_document.rs (target/tree3\debug\deps\static_document-7eac270473b33d25.exe)
+
+running 9 tests
+test unsupported_css_and_active_elements_are_explicit ... ok
+test viewport_rejection_and_wrapping_have_deterministic_bounds ... ok
+test foster_parenting_and_misnested_formatting_terminate_with_text ... ok
+test non_rendered_content_cannot_leak_into_display_list ... ok
+test html_tree_builder_repairs_paragraphs_and_preserves_entities_unicode ... ok
+test unicode_chunk_boundaries_and_html_space_rules_are_preserved ... ok
+test generated_malformed_token_sequences_keep_display_bounds ... ok
+test input_and_node_limits_reject_instead_of_returning_truncated_documents ... ok
+test deep_tree_traversal_and_drop_do_not_recurse ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.92s
+
+     Running tests\tree_inspection.rs (target/tree3\debug\deps\tree_inspection-e8cf78b248730e02.exe)
+
+running 6 tests
+test fragment_context_controls_html_and_foreign_tree_construction ... ok
+test canonical_tree_preserves_doctype_comments_entities_and_attribute_order ... ok
+test foreign_namespace_names_and_attributes_are_preserved ... ok
+test template_contents_are_inspected_but_are_not_rendered ... ok
+test parser_scripting_flag_changes_noscript_tokens_without_executing_scripts ... ok
+test deeply_indented_inspection_rejects_before_unbounded_output_growth ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.11s
+
+   Doc-tests opensequoia_engine
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+TREE3_QUALITY_OK tests=20 ignored=0

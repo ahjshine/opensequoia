@@ -1,0 +1,14 @@
+{
+  "tool": "core_unknown_add",
+  "params": {
+    "question": "What does the EXE do at runtime, including whether the AppContainer denial path and local rendering actually behave as source suggests?",
+    "severity": "high",
+    "domain": "runtime",
+    "probes": [
+      "Authorized clean-host runtime smoke and sandbox acceptance on supported Windows builds"
+    ]
+  },
+  "exit_code": 0,
+  "stderr": "",
+  "stdout": "{\"result\":{\"domain\":\"runtime\",\"evidence_against\":[],\"evidence_for\":[],\"id\":\"unk_748eca35306b893a\",\"probes\":[\"Authorized clean-host runtime smoke and sandbox acceptance on supported Windows builds\"],\"question\":\"What does the EXE do at runtime, including whether the AppContainer denial path and local rendering actually behave as source suggests?\",\"revision\":1,\"severity\":\"high\",\"status\":\"open\"}}\n"
+}

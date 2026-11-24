@@ -1,0 +1,12 @@
+/target/
+/evidence/upstream/
+/evidence/components/
+/evidence/artifacts/raw/
+/evidence/artifacts/*.cany/
+/evidence/artifacts/craft-*.exe
+/evidence/artifacts/app2-*.exe
+/evidence/artifacts/gui2-*.exe
+/evidence/windows/
+/.unlazy/
+/.claude/settings.local.json
+*.dmp

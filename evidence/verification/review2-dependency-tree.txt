@@ -1,0 +1,46 @@
+opensequoia v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\app)
+├── opensequoia-engine v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\engine)
+│   └── html5ever v0.40.1
+│       ├── log v0.4.35
+│       ├── markup5ever v0.40.0
+│       │   ├── log v0.4.35
+│       │   ├── tendril v0.5.1
+│       │   │   └── new_debug_unreachable v1.0.6
+│       │   └── web_atoms v0.3.0
+│       │       ├── phf v0.14.0
+│       │       │   └── phf_shared v0.14.0
+│       │       │       └── siphasher v1.0.4
+│       │       └── string_cache v0.11.0
+│       │           ├── new_debug_unreachable v1.0.6
+│       │           ├── parking_lot v0.12.5
+│       │           │   ├── lock_api v0.4.14
+│       │           │   │   └── scopeguard v1.2.0
+│       │           │   └── parking_lot_core v0.9.12
+│       │           │       ├── cfg-if v1.0.5
+│       │           │       ├── smallvec v1.16.6
+│       │           │       └── windows-link v0.2.1
+│       │           ├── phf_shared v0.14.0 (*)
+│       │           └── precomputed-hash v0.1.1
+│       │       [build-dependencies]
+│       │       ├── phf_codegen v0.14.0
+│       │       │   ├── phf_generator v0.14.0
+│       │       │   │   ├── fastrand v2.5.0
+│       │       │   │   └── phf_shared v0.14.0
+│       │       │   │       └── siphasher v1.0.4
+│       │       │   └── phf_shared v0.14.0 (*)
+│       │       └── string_cache_codegen v0.11.2
+│       │           ├── phf_generator v0.14.0 (*)
+│       │           ├── phf_shared v0.14.0 (*)
+│       │           ├── proc-macro2 v1.0.107
+│       │           │   └── unicode-ident v1.0.27
+│       │           └── quote v1.0.47
+│       │               └── proc-macro2 v1.0.107 (*)
+│       └── memchr v2.8.3
+├── opensequoia-ipc v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\ipc)
+│   └── opensequoia-engine v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\engine) (*)
+└── windows-sys v0.61.2
+    └── windows-link v0.2.1
+
+opensequoia-engine v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\engine) (*)
+
+opensequoia-ipc v0.1.0 (C:\Users\deepa\OneDrive\Dokumen\ChatGPT\opensequoia\crates\ipc) (*)
