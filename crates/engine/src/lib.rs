@@ -84,7 +84,18 @@ pub struct TextRun {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
+pub struct FillRect {
+    pub x: i32,
+    pub y: i32,
+    pub width: u32,
+    pub height: u32,
+    pub color: Color,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub enum DisplayItem {
+    /// Painted before later items; block backgrounds use this variant.
+    Fill(FillRect),
     Text(TextRun),
 }
 

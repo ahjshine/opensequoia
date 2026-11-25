@@ -1,0 +1,11 @@
+Command: python evidence/verification/tree3-acceptance.py
+Run at final fill source, 2026-11-24.
+
+TREE3_SOURCE_INVENTORY_OK files=68 dat_files=59 source_cases=1779 outcomes=3519
+TREE3_ADAPTER_BUILD_OK
+TREE3_ADAPTER_EXIT=1 (genuine fail/unsupported outcomes remain nonzero)
+TREE3_OUTCOMES pass=3515 fail=0 unsupported=4 skip=0 timeout=0 crash=0 harness_error=0
+TREE3_NEGATIVE_CONTROLS_OK count=8
+S04A_ACCEPTANCE_OK
+
+Scope: pinned html5ever tree-construction assertions only; no JS, network, CSS conformance or browser parity claim.

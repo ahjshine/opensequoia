@@ -1,6 +1,6 @@
 use std::io::{self, Cursor, Read, Write};
 
-use opensequoia_engine::{Color, DisplayItem, DisplayList, MAX_INPUT_BYTES, TextRun};
+use opensequoia_engine::{Color, DisplayItem, DisplayList, FillRect, MAX_INPUT_BYTES, TextRun};
 use opensequoia_ipc::{
     ErrorCode, HEADER_BYTES, IpcError, MAX_ERROR_BYTES, MAX_FRAME_BYTES, MAX_RUNS,
     MAX_TOTAL_TEXT_BYTES, Message, decode, encode, read_message, write_message,
@@ -16,25 +16,55 @@ fn display() -> Message {
     Message::Display(DisplayList {
         width: 800,
         height: 80,
-        items: vec![DisplayItem::Text(TextRun {
-            text: "Hello 世界".into(),
+        items: vec![
+            DisplayItem::Text(TextRun {
+                text: "Hello 世界".into(),
+                x: 16,
+                y: 16,
+                width: 80,
+                height: 24,
+                font_size: 16,
+                bold: false,
+                color: Color {
+                    r: 28,
+                    g: 41,
+                    b: 35,
+                },
+            }),
+            DisplayItem::Fill(FillRect {
+                x: 16,
+                y: 16,
+                width: 100,
+                height: 20,
+                color: Color {
+                    r: 240,
+                    g: 240,
+                    b: 240,
+                },
+            }),
+        ],
+    })
+}
+fn fill_display() -> Message {
+    Message::Display(DisplayList {
+        width: 800,
+        height: 80,
+        items: vec![DisplayItem::Fill(FillRect {
             x: 16,
             y: 16,
-            width: 80,
-            height: 24,
-            font_size: 16,
-            bold: false,
+            width: 100,
+            height: 20,
             color: Color {
-                r: 28,
-                g: 41,
-                b: 35,
+                r: 240,
+                g: 240,
+                b: 240,
             },
         })],
     })
 }
 fn header(tag: u8, payload: u32) -> Vec<u8> {
     let mut bytes = b"SQIP".to_vec();
-    bytes.extend_from_slice(&1_u16.to_le_bytes());
+    bytes.extend_from_slice(&2_u16.to_le_bytes());
     bytes.push(tag);
     bytes.push(0);
     bytes.extend_from_slice(&payload.to_le_bytes());
@@ -47,6 +77,7 @@ fn round_trip_all_message_types_and_streamed_frames() {
     for message in [
         request(),
         display(),
+        fill_display(),
         Message::Error {
             code: ErrorCode::Layout,
             message: "layout सीमा".into(),
@@ -63,7 +94,7 @@ fn round_trip_all_message_types_and_streamed_frames() {
 #[test]
 fn magic_version_tags_and_reserved_fields_fail_closed() {
     let bytes = encode(&request()).unwrap();
-    for (offset, value) in [(0, b'X'), (4, 2), (6, 99), (7, 1), (12, 1)] {
+    for (offset, value) in [(0, b'X'), (4, 3), (6, 99), (7, 1), (12, 1)] {
         let mut malformed = bytes.clone();
         malformed[offset] = value;
         assert!(decode(&malformed).is_err(), "offset {offset} accepted");
@@ -169,7 +200,9 @@ fn display_bounds_and_boolean_wire_field_are_validated() {
         let Message::Display(mut list) = display() else {
             unreachable!()
         };
-        let DisplayItem::Text(run) = &mut list.items[0];
+        let DisplayItem::Text(run) = &mut list.items[0] else {
+            unreachable!()
+        };
         match mutate {
             0 => run.x = -1,
             1 => run.y = -1,
@@ -186,12 +219,52 @@ fn display_bounds_and_boolean_wire_field_are_validated() {
         ));
     }
     let mut bytes = encode(&display()).unwrap();
-    bytes[HEADER_BYTES + 12 + 20] = 2;
+    bytes[HEADER_BYTES + 12 + 1 + 20] = 2;
     assert!(matches!(decode(&bytes), Err(IpcError::InvalidDisplay)));
     let mut bytes = encode(&display()).unwrap();
     bytes[HEADER_BYTES + 8..HEADER_BYTES + 12]
         .copy_from_slice(&((MAX_RUNS + 1) as u32).to_le_bytes());
     assert!(decode(&bytes).is_err());
+}
+
+#[test]
+fn fill_geometry_is_validated_on_encode_and_decode() {
+    for mutate in 0..5 {
+        let Message::Display(mut list) = fill_display() else {
+            unreachable!()
+        };
+        let DisplayItem::Fill(rect) = &mut list.items[0] else {
+            unreachable!()
+        };
+        match mutate {
+            0 => rect.x = -1,
+            1 => rect.y = -1,
+            2 => rect.width = 0,
+            3 => rect.height = 0,
+            4 => rect.width = u32::MAX,
+            _ => unreachable!(),
+        }
+        assert!(matches!(
+            encode(&Message::Display(list)),
+            Err(IpcError::InvalidDisplay)
+        ));
+    }
+    let mut bytes = encode(&fill_display()).unwrap();
+    // Display header is 12 bytes; the fill width follows its tag, x and y.
+    bytes[HEADER_BYTES + 12 + 1 + 8] = 0;
+    assert!(matches!(decode(&bytes), Err(IpcError::InvalidDisplay)));
+    let Message::Display(mut list) = fill_display() else {
+        unreachable!()
+    };
+    let DisplayItem::Fill(rect) = &mut list.items[0] else {
+        unreachable!()
+    };
+    rect.width = 800;
+    rect.x = 1;
+    assert!(matches!(
+        encode(&Message::Display(list)),
+        Err(IpcError::InvalidDisplay)
+    ));
 }
 
 #[test]
@@ -216,7 +289,9 @@ fn maximum_run_count_and_text_totals_round_trip_without_weakening_bounds() {
     let Message::Display(mut list) = display() else {
         unreachable!()
     };
-    let DisplayItem::Text(run) = &mut list.items[0];
+    let DisplayItem::Text(run) = &mut list.items[0] else {
+        unreachable!()
+    };
     run.text = "x".into();
     list.items = vec![list.items[0].clone(); MAX_RUNS];
     let maximum = Message::Display(list.clone());
@@ -232,13 +307,17 @@ fn maximum_run_count_and_text_totals_round_trip_without_weakening_bounds() {
     let Message::Display(mut list) = display() else {
         unreachable!()
     };
-    let DisplayItem::Text(run) = &mut list.items[0];
+    let DisplayItem::Text(run) = &mut list.items[0] else {
+        unreachable!()
+    };
     run.text = "x".repeat(MAX_INPUT_BYTES);
     list.items = vec![list.items[0].clone(); MAX_TOTAL_TEXT_BYTES / MAX_INPUT_BYTES];
     let maximum = Message::Display(list.clone());
     assert_eq!(decode(&encode(&maximum).unwrap()).unwrap(), maximum);
     let mut extra = list.items[0].clone();
-    let DisplayItem::Text(run) = &mut extra;
+    let DisplayItem::Text(run) = &mut extra else {
+        unreachable!()
+    };
     run.text = "x".into();
     list.items.push(extra);
     assert!(matches!(

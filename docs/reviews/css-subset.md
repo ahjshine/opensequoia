@@ -22,7 +22,7 @@ Verdict: **changes required**; the P1 and actionable P2/P3 findings below were f
 
 ## Verification after fixes
 
-- `cargo test --workspace --locked`: 90 tests, zero failed/ignored.
+- `cargo test --workspace --locked`: 90 tests at this review, zero failed/ignored. Current count is 94 after block background fills (`docs/reviews/background-fill.md`).
 - `cargo clippy --workspace --all-targets --locked -- -D warnings`: clean.
 - `cargo fmt --all -- --check`: clean.
 - `python evidence/verification/tree3-acceptance.py`: 3515 pass, 0 fail, 4 scripted unsupported.

@@ -6,8 +6,9 @@ fn text(document: &Document, width: u32) -> String {
         .unwrap()
         .items
         .into_iter()
-        .map(|item| match item {
-            DisplayItem::Text(run) => run.text,
+        .filter_map(|item| match item {
+            DisplayItem::Text(run) => Some(run.text),
+            DisplayItem::Fill(_) => None,
         })
         .collect::<Vec<_>>()
         .join(" ")
@@ -25,6 +26,11 @@ fn non_rendered_content_cannot_leak_into_display_list() {
     let document = Document::parse("<head><title>hidden</title><style>style hidden</style></head><body><script>script hidden</script><template>template hidden</template><p>visible</p>").unwrap();
     assert_eq!(text(&document, 800), "visible");
     assert!(document.diagnostics().contains(&Diagnostic::UnsupportedCss));
+    assert!(
+        !document
+            .diagnostics()
+            .contains(&Diagnostic::UnsupportedElement("style".into()))
+    );
 }
 
 #[test]
@@ -61,7 +67,9 @@ fn viewport_rejection_and_wrapping_have_deterministic_bounds() {
     assert_eq!(list, document.layout(96).unwrap());
     assert!(list.items.len() > 2);
     for item in list.items {
-        let DisplayItem::Text(run) = item;
+        let DisplayItem::Text(run) = item else {
+            continue;
+        };
         assert!(run.x >= 0 && run.y >= 0);
         assert!(run.x as u32 + run.width <= list.width);
         assert!(run.y as u32 + run.height <= list.height);
@@ -112,8 +120,9 @@ fn unicode_chunk_boundaries_and_html_space_rules_are_preserved() {
     let runs: Vec<_> = list
         .items
         .iter()
-        .map(|item| match item {
-            DisplayItem::Text(run) => run,
+        .filter_map(|item| match item {
+            DisplayItem::Text(run) => Some(run),
+            DisplayItem::Fill(_) => None,
         })
         .collect();
     assert_eq!(runs[0].x + runs[0].width as i32, runs[1].x);
@@ -149,7 +158,9 @@ fn generated_malformed_token_sequences_keep_display_bounds() {
         let document = Document::parse(&input).unwrap();
         let list = document.layout(64 + seed % 320).unwrap();
         for item in list.items {
-            let DisplayItem::Text(run) = item;
+            let DisplayItem::Text(run) = item else {
+                continue;
+            };
             assert!(run.x >= 0 && run.y >= 0);
             assert!(run.x as u32 + run.width <= list.width);
             assert!(run.y as u32 + run.height <= list.height);

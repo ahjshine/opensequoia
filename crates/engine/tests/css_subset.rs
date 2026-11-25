@@ -9,8 +9,9 @@ fn text_runs(document: &Document, width: u32) -> Vec<TextRun> {
         .unwrap()
         .items
         .into_iter()
-        .map(|item| match item {
-            DisplayItem::Text(run) => run,
+        .filter_map(|item| match item {
+            DisplayItem::Text(run) => Some(run),
+            DisplayItem::Fill(_) => None,
         })
         .collect()
 }
@@ -279,4 +280,67 @@ fn border_none_resets_width_without_becoming_unsupported() {
 fn html_and_body_are_block_boxes() {
     let document = Document::parse("<body style=\"margin:20px\"><p>x</p></body>").unwrap();
     assert_eq!(text_runs(&document, 800)[0].x, 36);
+}
+
+// Value: protects=block background geometry and paint order behind child text;
+// fails_when=background is absent, covers only the content box, or paints over text;
+// why_new=background-color is parsed but needs an actual display primitive;
+// seam=block boxes only, no inline/background propagation or borders; no_claim=CSS painting.
+#[test]
+fn block_background_emits_a_fill_behind_its_content() {
+    let document = Document::parse(
+        "<body style=\"background-color:#102030\"><p style=\"margin:10px\">x</p></body>",
+    )
+    .unwrap();
+    let list = document.layout(400).unwrap();
+    let DisplayItem::Fill(ref fill) = list.items[0] else {
+        panic!("background fill must be the first item");
+    };
+    assert_eq!(
+        (fill.x, fill.y, fill.width, fill.color),
+        (
+            16,
+            16,
+            368,
+            Color {
+                r: 0x10,
+                g: 0x20,
+                b: 0x30
+            }
+        )
+    );
+    assert!(fill.height > 0);
+    assert!(fill.height as i32 + fill.y <= list.height as i32);
+    assert!(
+        list.items
+            .iter()
+            .skip(1)
+            .any(|item| matches!(item, DisplayItem::Text(run) if run.text == "x"))
+    );
+}
+
+// Value: protects=empty blocks do not emit zero-height wire records;
+// fails_when=a zero-height fill survives into the display list; why_new=the fill
+// height is only known at exit; seam=zero-size boxes; no_claim=full CSS layout.
+#[test]
+fn empty_background_blocks_emit_no_fill() {
+    let document = Document::parse("<body style=\"background-color:#fff\"></body>").unwrap();
+    assert!(
+        document
+            .layout(400)
+            .unwrap()
+            .items
+            .iter()
+            .all(|item| matches!(item, DisplayItem::Text(_)))
+    );
+    // An empty fill after text and before another block must not corrupt the
+    // current line boundary when it is removed.
+    let document =
+        Document::parse("<body><p>a</p><div style=\"background-color:#fff\"></div><p>b</p></body>")
+            .unwrap();
+    let runs = text_runs(&document, 400);
+    assert_eq!(
+        runs.iter().map(|run| run.text.as_str()).collect::<Vec<_>>(),
+        ["a", "b"]
+    );
 }

@@ -1,6 +1,6 @@
 #![forbid(unsafe_code)]
 
-//! Version 1 bounded local renderer frames. This transport provides no peer authentication,
+//! Version 2 bounded local renderer frames. This transport provides no peer authentication,
 //! sandbox, origin identity or capability checks. Those remain broker/security work.
 
 use std::fmt;
@@ -15,7 +15,7 @@ pub const MAX_FRAME_BYTES: usize = 4 * 1024 * 1024;
 pub const MAX_RUNS: usize = 65_536;
 pub const MAX_TOTAL_TEXT_BYTES: usize = 1024 * 1024;
 pub const MAX_ERROR_BYTES: usize = 1024;
-pub const VERSION: u16 = 1;
+pub const VERSION: u16 = 2;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ErrorCode {

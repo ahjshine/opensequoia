@@ -536,8 +536,17 @@ impl Drop for Paint {
 }
 
 pub fn scaled(value: i32, dpi: u32) -> Result<i32, String> {
-    i32::try_from(i64::from(value) * i64::from(dpi) / i64::from(CSS_DPI))
-        .map_err(|_| "drawing coordinate overflow".to_owned())
+    scaled_offset(i64::from(value), dpi)
+}
+
+/// Scale a signed CSS offset without clamping it at zero, so content scrolled
+/// above the viewport keeps its true overhang and is clipped by GDI.
+fn scaled_offset(value: i64, dpi: u32) -> Result<i32, String> {
+    let scaled = value
+        .checked_mul(i64::from(dpi))
+        .ok_or_else(|| "drawing coordinate overflow".to_owned())?
+        / i64::from(CSS_DPI);
+    i32::try_from(scaled).map_err(|_| "drawing coordinate overflow".to_owned())
 }
 
 pub fn paint(
@@ -676,17 +685,48 @@ fn draw(
             return Err(os_error("content clipping failed"));
         }
         let mut count = 0u32;
-        for DisplayItem::Text(run) in &display.items {
-            let y = scaled(run.y.saturating_sub(scroll), dpi)?.saturating_add(top);
-            let height = scaled(
-                i32::try_from(run.height).map_err(|_| "text height overflow")?,
-                dpi,
-            )?;
-            if y >= bottom || y.saturating_add(height) <= top {
-                continue;
+        for item in &display.items {
+            match item {
+                DisplayItem::Fill(rect) => {
+                    let x = scaled(rect.x, dpi)?;
+                    let y = scaled_offset(i64::from(rect.y) - i64::from(scroll), dpi)?
+                        .saturating_add(top);
+                    let width = scaled(
+                        i32::try_from(rect.width).map_err(|_| "fill width overflow")?,
+                        dpi,
+                    )?;
+                    let height = scaled(
+                        i32::try_from(rect.height).map_err(|_| "fill height overflow")?,
+                        dpi,
+                    )?;
+                    if y >= bottom || y.saturating_add(height) <= top {
+                        continue;
+                    }
+                    let color = u32::from(rect.color.r)
+                        | (u32::from(rect.color.g) << 8)
+                        | (u32::from(rect.color.b) << 16);
+                    let rect = RECT {
+                        left: x,
+                        top: y,
+                        right: x.saturating_add(width),
+                        bottom: y.saturating_add(height),
+                    };
+                    fill(dc, &rect, color)?;
+                }
+                DisplayItem::Text(run) => {
+                    let y = scaled_offset(i64::from(run.y) - i64::from(scroll), dpi)?
+                        .saturating_add(top);
+                    let height = scaled(
+                        i32::try_from(run.height).map_err(|_| "text height overflow")?,
+                        dpi,
+                    )?;
+                    if y >= bottom || y.saturating_add(height) <= top {
+                        continue;
+                    }
+                    draw_text(dc, run, y, dpi)?;
+                    count = count.saturating_add(1);
+                }
             }
-            draw_text(dc, run, y, dpi)?;
-            count = count.saturating_add(1);
         }
         Ok(count)
     })();
@@ -818,7 +858,10 @@ mod tests {
     fn dpi_conversion_checks_signed_coordinates() {
         assert_eq!(scaled(24, 144).unwrap(), 36);
         assert_eq!(scaled(-24, 192).unwrap(), -48);
+        assert_eq!(scaled_offset(-24, 192).unwrap(), -48);
+        assert_eq!(scaled_offset(-24 - 120, 192).unwrap(), -288);
         assert!(scaled(i32::MAX, 192).is_err());
+        assert!(scaled_offset(i64::MAX, 192).is_err());
     }
 
     #[test]

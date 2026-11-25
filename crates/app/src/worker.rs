@@ -640,6 +640,7 @@ mod tests {
         assert_eq!(display.width, 640);
         assert!(display.items.iter().any(|item| match item {
             opensequoia_engine::DisplayItem::Text(run) => run.text.contains("🌲"),
+            opensequoia_engine::DisplayItem::Fill(_) => false,
         }));
     }
 
@@ -659,6 +660,9 @@ mod tests {
         };
         let run = match display.items.first() {
             Some(opensequoia_engine::DisplayItem::Text(run)) => run,
+            Some(opensequoia_engine::DisplayItem::Fill(_)) => {
+                panic!("styled text run was replaced by a fill")
+            }
             None => panic!("styled text run missing"),
         };
         assert_eq!(run.font_size, 256);
@@ -739,5 +743,27 @@ mod tests {
         // 150ms exchange timeout plus at most one-second reap and one-second I/O
         // completion allowance; 3s catches waiting for the helper's full30s sleep.
         assert!(started.elapsed() < Duration::from_secs(3));
+    }
+    #[test]
+    fn block_background_fill_round_trips_through_worker() {
+        let mut input = Cursor::new(
+            encode(&Message::Render {
+                html: "<body style=\"background-color:#102030\"><p>x</p></body>".to_owned(),
+                width: 800,
+            })
+            .unwrap(),
+        );
+        let mut output = Vec::new();
+        serve(&mut input, &mut output).unwrap();
+        let Message::Display(display) = read_message(&mut Cursor::new(output)).unwrap() else {
+            panic!("worker did not return a display list");
+        };
+        let Some(opensequoia_engine::DisplayItem::Fill(fill)) = display.items.first() else {
+            panic!("background fill missing from worker output");
+        };
+        assert_eq!(fill.width, 768);
+        assert!(display.items.iter().any(
+            |item| matches!(item, opensequoia_engine::DisplayItem::Text(run) if run.text == "x")
+        ));
     }
 }

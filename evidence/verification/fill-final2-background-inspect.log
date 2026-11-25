@@ -1,0 +1,3 @@
+OpenSequoia local HTML inspection
+nodes=25 viewport_width=960 content_height=244 text_runs=35
+diagnostics=1 html_recovery=0 unsupported_elements=0 unsupported_css=0 unsupported_features=1

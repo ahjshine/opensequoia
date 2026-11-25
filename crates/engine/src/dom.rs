@@ -127,7 +127,7 @@ impl Document {
     }
 
     /// Limited block/text layout: estimated glyph advances plus the documented CSS subset.
-    /// Background and border declarations are resolved but not painted by this display list.
+    /// Block background colours become fill records; border colours are resolved but not painted.
     pub fn layout(&self, width: u32) -> Result<DisplayList, Error> {
         crate::layout::layout(self, width)
     }
@@ -664,6 +664,7 @@ impl TreeSink for Sink {
                     | "head"
                     | "body"
                     | "title"
+                    | "style"
                     | "meta"
                     | "p"
                     | "div"

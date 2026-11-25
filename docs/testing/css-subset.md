@@ -11,7 +11,7 @@ Owner: root integration. Source: `crates/engine/src/css.rs` + styled flow in `cr
 - Cascade: inline style specificity 1000; otherwise `#id` 100, `.class` 10, type 1; ties use later source order.
 - Declarations:
   - `color`, `background-color`: `#rgb`, `#rrggbb`, or a 16-name subset (aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow). No `rgb()` yet.
-  - `font-size`: integer px, 1-256 (the IPC v1 display bound; larger values are unsupported).
+  - `font-size`: integer px, 1-256 (the IPC v2 display bound; larger values are unsupported).
   - `font-weight`: `normal` or `bold`; `text-align`: `left`, `center`, `right`.
   - `margin`/`padding` (+ `-top/right/bottom/left`): 1-4 integer px values, shorthand expansion.
   - `border`, `border-width`, `border-style` (`solid`/`none`), `border-color`: width-only layout effect. A one-value `border: Npx` means a solid width of N (a documented subset deviation from CSS, where the style would default to `none`); `border:none` resets both width and style.
@@ -22,8 +22,10 @@ Owner: root integration. Source: `crates/engine/src/css.rs` + styled flow in `cr
 ## Layout behaviour
 
 Normal flow only: block/inline boxes, word wrap, text alignment within the content box, and
-margin/padding/border insets. Borders are not painted: IPC v1 has no decoration record. There is no
-float, flex, grid, positioning, collapsing margins, or bidirectional/complex shaping.
+margin/padding/border insets. An explicit `background-color` on a block box becomes an IPC v2 fill
+record covering its content, padding and border box, painted before its descendants; it does not
+propagate from `body` to the canvas, and inline backgrounds are not painted. Borders are not painted.
+There is no float, flex, grid, positioning, collapsing margins, or bidirectional/complex shaping.
 
 ## Bounds and failure policy
 
@@ -36,16 +38,22 @@ float, flex, grid, positioning, collapsing margins, or bidirectional/complex sha
 
 ## Verification
 
-- `crates/engine/tests/css_subset.rs`: 16 tests covering specificity, source order, lists, unsupported
+- `crates/engine/tests/css_subset.rs`: 18 tests covering specificity, source order, lists, unsupported
   accounting, supported-set accounting, font/size/weight/colour/alignment, spacing, borders, display,
   inheritance, unstyled default drift, the 1-256 IPC font bound, the shared rule budget, value case/comments,
-  and `border:none`; a unit test covers border colour defaulting to the element's own colour.
-- `crates/app/src/worker.rs` test: a 256px styled document survives `Document::parse` -> layout ->
-  IPC encode/decode through the real worker boundary.
-- `cargo test --workspace --locked`; the tree-construction acceptance harness remains green.
+  `border:none`, block fill geometry, and empty-block fill suppression; a unit test covers border colour
+  defaulting to the element's own colour.
+- `crates/app/src/worker.rs` tests: a 256px styled document and a block background survive
+  `Document::parse` -> layout -> IPC encode/decode through the real worker boundary.
+- `fixtures/background.html` is a native-paint fixture: current-build `--inspect` reports no
+  unsupported CSS and `--smoke-test fixtures/background.html` exercises the GDI fill path before
+  automatic close. This proves the fill call succeeds, not pixel equality or full CSS rendering.
+- `cargo test --workspace --locked`; the pinned tree-construction acceptance harness passes
+  (3515 pass / 4 unsupported, no harness errors) and is unaffected by display-list decoration.
 
 ## Non-claims
 
 No CSS conformance, browser compatibility, external CSS, custom properties, `calc`, `em`/`rem`/`%`,
-selector combinators, pseudo-classes, media queries, animations/transitions, border painting, or
-fonts/Shaping. Values outside the subset are visible as counted unsupported declarations.
+selector combinators, pseudo-classes, media queries, animations/transitions, border painting, inline
+backgrounds, canvas background propagation, or fonts/shaping. Values outside the subset are visible as
+counted unsupported declarations.

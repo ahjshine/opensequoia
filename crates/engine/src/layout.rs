@@ -1,12 +1,12 @@
 //! Deliberately limited static block/text flow. Glyph advances are estimates, not shaping.
 //! Block boxes honour the documented CSS subset (margins, padding, border width, alignment);
-//! background-color and border colours are resolved but not painted by this display list.
+//! explicit block background colours become fill records. Borders are laid out but not painted.
 
 use html5ever::ns;
 
 use crate::css::{ComputedStyle, DEFAULT_TEXT_COLOR, DisplayValue, TextAlign};
 use crate::dom::{Document, NodeKind};
-use crate::{Color, DisplayItem, DisplayList, Error, MAX_NODES, TextRun};
+use crate::{Color, DisplayItem, DisplayList, Error, FillRect, MAX_NODES, TextRun};
 
 const MARGIN: u32 = 16;
 const MAX_HEIGHT: u32 = 1_000_000;
@@ -38,12 +38,20 @@ impl Style {
 }
 
 #[derive(Clone, Copy)]
+struct FillSpan {
+    index: usize,
+    top: u32,
+    bottom_extra: u32,
+}
+
+#[derive(Clone, Copy)]
 struct Exit {
     block: bool,
     left: u32,
     right: u32,
     align: TextAlign,
     bottom: u32,
+    fill: Option<FillSpan>,
 }
 
 enum Event {
@@ -71,9 +79,11 @@ impl Flow {
         }
         let available = self.right.saturating_sub(self.left);
         let mut used = 0;
-        for DisplayItem::Text(run) in &self.items[self.line_start..] {
-            let end = u32::try_from(run.x).unwrap_or(0).saturating_add(run.width);
-            used = used.max(end.saturating_sub(self.left));
+        for item in &self.items[self.line_start..] {
+            if let DisplayItem::Text(run) = item {
+                let end = u32::try_from(run.x).unwrap_or(0).saturating_add(run.width);
+                used = used.max(end.saturating_sub(self.left));
+            }
         }
         let shift = match self.align {
             TextAlign::Left => 0,
@@ -86,8 +96,10 @@ impl Flow {
         if shift == 0 {
             return;
         }
-        for DisplayItem::Text(run) in &mut self.items[self.line_start..] {
-            run.x = run.x.saturating_add(shift);
+        for item in &mut self.items[self.line_start..] {
+            if let DisplayItem::Text(run) = item {
+                run.x = run.x.saturating_add(shift);
+            }
         }
     }
 
@@ -196,6 +208,25 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
             Event::Exit(exit) => {
                 if exit.block {
                     flow.newline(false)?;
+                    if let Some(span) = exit.fill {
+                        let bottom = flow
+                            .y
+                            .checked_add(span.bottom_extra)
+                            .ok_or(Error::LayoutLimit)?;
+                        let height = bottom.saturating_sub(span.top);
+                        match flow.items.get_mut(span.index) {
+                            Some(DisplayItem::Fill(rect)) if rect.width > 0 && height > 0 => {
+                                rect.height = height;
+                            }
+                            Some(DisplayItem::Fill(_)) => {
+                                flow.items.remove(span.index);
+                                if flow.line_start > span.index {
+                                    flow.line_start -= 1;
+                                }
+                            }
+                            _ => return Err(Error::InvalidTree),
+                        }
+                    }
                     flow.y = flow.y.checked_add(exit.bottom).ok_or(Error::LayoutLimit)?;
                     if flow.y > MAX_HEIGHT {
                         return Err(Error::LayoutLimit);
@@ -221,6 +252,7 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
                     right: flow.right,
                     align: flow.align,
                     bottom: 0,
+                    fill: None,
                 };
                 match &node.kind {
                     NodeKind::Text(text) => {
@@ -254,6 +286,34 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
                             exit.right = flow.right;
                             exit.align = flow.align;
                             let border = computed.effective_border();
+                            if let Some(color) = computed.background {
+                                let top = flow.y.saturating_add(computed.margin.top);
+                                let left = flow.left.saturating_add(computed.margin.left);
+                                let width = flow
+                                    .right
+                                    .saturating_sub(flow.left)
+                                    .saturating_sub(computed.margin.left + computed.margin.right);
+                                if width > 0 && top < MAX_HEIGHT {
+                                    if flow.items.len() >= MAX_RUNS {
+                                        return Err(Error::LayoutLimit);
+                                    }
+                                    exit.fill = Some(FillSpan {
+                                        index: flow.items.len(),
+                                        top,
+                                        bottom_extra: computed
+                                            .padding
+                                            .bottom
+                                            .saturating_add(border),
+                                    });
+                                    flow.items.push(DisplayItem::Fill(FillRect {
+                                        x: left as i32,
+                                        y: top as i32,
+                                        width,
+                                        height: 0,
+                                        color,
+                                    }));
+                                }
+                            }
                             flow.left = flow.left.saturating_add(
                                 computed.margin.left + computed.padding.left + border,
                             );

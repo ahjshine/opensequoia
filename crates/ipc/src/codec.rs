@@ -1,17 +1,19 @@
-//! Wire format v1, all integers little endian and strings exact-length UTF-8.
+//! Wire format v2, all integers little endian and strings exact-length UTF-8.
 //!
-//! Header (16 bytes): `SQIP` magic[4], version:u16=1, tag:u8, reserved:u8=0,
+//! Header (16 bytes): `SQIP` magic[4], version:u16=2, tag:u8, reserved:u8=0,
 //! payload_bytes:u32, reserved:u32=0. Total frame <=4 MiB, including header.
 //! Tag 1 Render: viewport_width:u32, html_bytes:u32, html[html_bytes].
-//! Tag 2 Display: width:u32, height:u32, count:u32, then `count` text records:
-//! x:i32,y:i32,width:u32,height:u32,font_size:u32,bold:u8(0/1),r:u8,g:u8,b:u8,
-//! text_bytes:u32,text[text_bytes]. No implicit padding or native Rust layout.
+//! Tag 2 Display: width:u32, height:u32, count:u32, then `count` tagged items:
+//! tag=1 text: x:i32,y:i32,width:u32,height:u32,font_size:u32,bold:u8(0/1),
+//! r:u8,g:u8,b:u8,text_bytes:u32,text[text_bytes].
+//! tag=2 fill: x:i32,y:i32,width:u32,height:u32,r:u8,g:u8,b:u8.
+//! No implicit padding or native Rust layout.
 //! Tag 3 Error: code:u16(1 Parse/2 Layout/3 Protocol), reserved:u16=0,
 //! message_bytes:u32,message[message_bytes]. Every payload must end exactly.
 
 use std::io::{self, Read};
 
-use opensequoia_engine::{Color, DisplayItem, DisplayList, MAX_INPUT_BYTES, TextRun};
+use opensequoia_engine::{Color, DisplayItem, DisplayList, FillRect, MAX_INPUT_BYTES, TextRun};
 
 use crate::{
     ErrorCode, HEADER_BYTES, IpcError, MAX_ERROR_BYTES, MAX_FRAME_BYTES, MAX_RUNS,
@@ -20,7 +22,11 @@ use crate::{
 
 const MAGIC: &[u8; 4] = b"SQIP";
 const MAX_HEIGHT: u32 = 1_000_000;
-const RUN_HEADER_BYTES: usize = 28;
+const TEXT_TAG: u8 = 1;
+const FILL_TAG: u8 = 2;
+const TEXT_ITEM_BYTES: usize = 29;
+const FILL_ITEM_BYTES: usize = 20;
+const MIN_ITEM_BYTES: usize = 20;
 
 fn valid_viewport(width: u32) -> Result<(), IpcError> {
     if !(64..=8192).contains(&width) {
@@ -29,7 +35,20 @@ fn valid_viewport(width: u32) -> Result<(), IpcError> {
     Ok(())
 }
 
-fn valid_geometry(
+fn valid_box(list_width: u32, list_height: u32, x: i32, y: i32, width: u32, height: u32) -> bool {
+    x >= 0
+        && y >= 0
+        && width > 0
+        && height > 0
+        && (x as u32)
+            .checked_add(width)
+            .is_some_and(|end| end <= list_width)
+        && (y as u32)
+            .checked_add(height)
+            .is_some_and(|end| end <= list_height)
+}
+
+fn valid_text(
     list_width: u32,
     list_height: u32,
     x: i32,
@@ -38,17 +57,7 @@ fn valid_geometry(
     height: u32,
     font_size: u32,
 ) -> bool {
-    x >= 0
-        && y >= 0
-        && width > 0
-        && height > 0
-        && (1..=256).contains(&font_size)
-        && (x as u32)
-            .checked_add(width)
-            .is_some_and(|end| end <= list_width)
-        && (y as u32)
-            .checked_add(height)
-            .is_some_and(|end| end <= list_height)
+    (1..=256).contains(&font_size) && valid_box(list_width, list_height, x, y, width, height)
 }
 
 fn validate(message: &Message) -> Result<(u8, usize), IpcError> {
@@ -66,30 +75,52 @@ fn validate(message: &Message) -> Result<(u8, usize), IpcError> {
                 return Err(IpcError::InvalidDisplay);
             }
             let mut total_text = 0_usize;
+            let mut length = 12_usize;
             for item in &list.items {
-                let DisplayItem::Text(run) = item;
-                if run.text.is_empty()
-                    || run.text.len() > MAX_INPUT_BYTES
-                    || !valid_geometry(
-                        list.width,
-                        list.height,
-                        run.x,
-                        run.y,
-                        run.width,
-                        run.height,
-                        run.font_size,
-                    )
-                {
-                    return Err(IpcError::InvalidDisplay);
-                }
-                total_text = total_text
-                    .checked_add(run.text.len())
-                    .ok_or(IpcError::InvalidDisplay)?;
-                if total_text > MAX_TOTAL_TEXT_BYTES {
-                    return Err(IpcError::InvalidDisplay);
+                match item {
+                    DisplayItem::Text(run) => {
+                        if run.text.is_empty()
+                            || run.text.len() > MAX_INPUT_BYTES
+                            || !valid_text(
+                                list.width,
+                                list.height,
+                                run.x,
+                                run.y,
+                                run.width,
+                                run.height,
+                                run.font_size,
+                            )
+                        {
+                            return Err(IpcError::InvalidDisplay);
+                        }
+                        total_text = total_text
+                            .checked_add(run.text.len())
+                            .ok_or(IpcError::InvalidDisplay)?;
+                        if total_text > MAX_TOTAL_TEXT_BYTES {
+                            return Err(IpcError::InvalidDisplay);
+                        }
+                        length = length
+                            .checked_add(TEXT_ITEM_BYTES + run.text.len())
+                            .ok_or(IpcError::InvalidDisplay)?;
+                    }
+                    DisplayItem::Fill(rect) => {
+                        if !valid_box(
+                            list.width,
+                            list.height,
+                            rect.x,
+                            rect.y,
+                            rect.width,
+                            rect.height,
+                        ) {
+                            return Err(IpcError::InvalidDisplay);
+                        }
+                        length = length
+                            .checked_add(FILL_ITEM_BYTES)
+                            .ok_or(IpcError::InvalidDisplay)?;
+                    }
                 }
             }
-            (2, 12 + list.items.len() * RUN_HEADER_BYTES + total_text)
+            (2, length)
         }
         Message::Error { message, .. } => {
             if message.len() > MAX_ERROR_BYTES {
@@ -132,15 +163,27 @@ pub(crate) fn encode(message: &Message) -> Result<Vec<u8>, IpcError> {
             push_u32(&mut bytes, list.height);
             push_u32(&mut bytes, list.items.len() as u32);
             for item in &list.items {
-                let DisplayItem::Text(run) = item;
-                bytes.extend_from_slice(&run.x.to_le_bytes());
-                bytes.extend_from_slice(&run.y.to_le_bytes());
-                push_u32(&mut bytes, run.width);
-                push_u32(&mut bytes, run.height);
-                push_u32(&mut bytes, run.font_size);
-                bytes.push(u8::from(run.bold));
-                bytes.extend_from_slice(&[run.color.r, run.color.g, run.color.b]);
-                push_string(&mut bytes, &run.text);
+                match item {
+                    DisplayItem::Text(run) => {
+                        bytes.push(TEXT_TAG);
+                        bytes.extend_from_slice(&run.x.to_le_bytes());
+                        bytes.extend_from_slice(&run.y.to_le_bytes());
+                        push_u32(&mut bytes, run.width);
+                        push_u32(&mut bytes, run.height);
+                        push_u32(&mut bytes, run.font_size);
+                        bytes.push(u8::from(run.bold));
+                        bytes.extend_from_slice(&[run.color.r, run.color.g, run.color.b]);
+                        push_string(&mut bytes, &run.text);
+                    }
+                    DisplayItem::Fill(rect) => {
+                        bytes.push(FILL_TAG);
+                        bytes.extend_from_slice(&rect.x.to_le_bytes());
+                        bytes.extend_from_slice(&rect.y.to_le_bytes());
+                        push_u32(&mut bytes, rect.width);
+                        push_u32(&mut bytes, rect.height);
+                        bytes.extend_from_slice(&[rect.color.r, rect.color.g, rect.color.b]);
+                    }
+                }
             }
         }
         Message::Error { code, message } => {
@@ -175,7 +218,7 @@ fn header(bytes: &[u8]) -> Result<(u8, usize), IpcError> {
     let length = u32::from_le_bytes([bytes[8], bytes[9], bytes[10], bytes[11]]) as usize;
     let (minimum, maximum) = match tag {
         1 => (8, 8 + MAX_INPUT_BYTES),
-        2 => (12, 12 + MAX_RUNS * RUN_HEADER_BYTES + MAX_TOTAL_TEXT_BYTES),
+        2 => (12, 12 + MAX_RUNS * TEXT_ITEM_BYTES + MAX_TOTAL_TEXT_BYTES),
         3 => (8, 8 + MAX_ERROR_BYTES),
         _ => return Err(IpcError::UnknownTag(tag)),
     };
@@ -278,47 +321,79 @@ fn payload_message(tag: u8, bytes: &[u8]) -> Result<Message, IpcError> {
             if height == 0 || height > MAX_HEIGHT || count > MAX_RUNS {
                 return Err(IpcError::InvalidDisplay);
             }
-            if count * RUN_HEADER_BYTES > payload.remaining() {
+            if count
+                .checked_mul(MIN_ITEM_BYTES)
+                .is_none_or(|minimum| minimum > payload.remaining())
+            {
                 return Err(IpcError::Truncated);
             }
             let mut items = Vec::with_capacity(count);
             let mut total_text = 0_usize;
             for _ in 0..count {
-                let x = payload.u32()? as i32;
-                let y = payload.u32()? as i32;
-                let run_width = payload.u32()?;
-                let run_height = payload.u32()?;
-                let font_size = payload.u32()?;
-                let flags = payload.take(4)?;
-                if flags[0] > 1
-                    || !valid_geometry(width, height, x, y, run_width, run_height, font_size)
-                {
-                    return Err(IpcError::InvalidDisplay);
+                match payload.take(1)?[0] {
+                    TEXT_TAG => {
+                        let x = payload.u32()? as i32;
+                        let y = payload.u32()? as i32;
+                        let run_width = payload.u32()?;
+                        let run_height = payload.u32()?;
+                        let font_size = payload.u32()?;
+                        let flags = payload.take(4)?;
+                        if flags[0] > 1
+                            || !valid_text(width, height, x, y, run_width, run_height, font_size)
+                        {
+                            return Err(IpcError::InvalidDisplay);
+                        }
+                        let bold = flags[0] == 1;
+                        let color = Color {
+                            r: flags[1],
+                            g: flags[2],
+                            b: flags[3],
+                        };
+                        let length = payload.u32()? as usize;
+                        total_text = total_text
+                            .checked_add(length)
+                            .ok_or(IpcError::InvalidDisplay)?;
+                        if length == 0
+                            || length > MAX_INPUT_BYTES
+                            || total_text > MAX_TOTAL_TEXT_BYTES
+                        {
+                            return Err(IpcError::InvalidDisplay);
+                        }
+                        let text = payload.string(length)?;
+                        items.push(DisplayItem::Text(TextRun {
+                            text,
+                            x,
+                            y,
+                            width: run_width,
+                            height: run_height,
+                            font_size,
+                            bold,
+                            color,
+                        }));
+                    }
+                    FILL_TAG => {
+                        let x = payload.u32()? as i32;
+                        let y = payload.u32()? as i32;
+                        let fill_width = payload.u32()?;
+                        let fill_height = payload.u32()?;
+                        let rgb = payload.take(3)?;
+                        if !valid_box(width, height, x, y, fill_width, fill_height) {
+                            return Err(IpcError::InvalidDisplay);
+                        }
+                        items.push(DisplayItem::Fill(FillRect {
+                            x,
+                            y,
+                            width: fill_width,
+                            height: fill_height,
+                            color: Color {
+                                r: rgb[0],
+                                g: rgb[1],
+                                b: rgb[2],
+                            },
+                        }));
+                    }
+                    tag => return Err(IpcError::UnknownTag(tag)),
                 }
-                let bold = flags[0] == 1;
-                let color = Color {
-                    r: flags[1],
-                    g: flags[2],
-                    b: flags[3],
-                };
-                let length = payload.u32()? as usize;
-                total_text = total_text
-                    .checked_add(length)
-                    .ok_or(IpcError::InvalidDisplay)?;
-                if length == 0 || length > MAX_INPUT_BYTES || total_text > MAX_TOTAL_TEXT_BYTES {
-                    return Err(IpcError::InvalidDisplay);
-                }
-                let text = payload.string(length)?;
-                items.push(DisplayItem::Text(TextRun {
-                    text,
-                    x,
-                    y,
-                    width: run_width,
-                    height: run_height,
-                    font_size,
-                    bold,
-                    color,
-                }));
             }
             Message::Display(DisplayList {
                 width,

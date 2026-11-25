@@ -731,6 +731,7 @@ fn smoke_tick(hwnd: HWND) -> Result<(), String> {
         };
         if !frame.items.first().is_some_and(|item| match item {
             opensequoia_engine::DisplayItem::Text(run) => run.text == expected_word,
+            opensequoia_engine::DisplayItem::Fill(_) => false,
         }) {
             return Err(format!("native smoke content mismatch at stage {stage}"));
         }
