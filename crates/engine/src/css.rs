@@ -3,7 +3,8 @@
 //! Supported selectors: type, `.class`, `#id`, type.class/type#id and comma-separated lists.
 //! Supported declarations: color, background-color, font-size (1-256 px), font-weight
 //! (normal|bold), text-align (left|center|right), margin/margin-* and padding/padding-*
-//! (1-4 px values), border/border-width/border-style(solid|none)/border-color, display
+//! (1-4 px values), border (1-3 token width/style/colour shorthand)/border-width/
+//! border-style(solid|none)/border-color, display
 //! (block|inline|none). Everything else is skipped and counted, never fatal.
 //!
 //! This is explicitly not CSS conformance: no combinators, pseudo-classes, attribute or
@@ -415,6 +416,62 @@ fn shorthand_lengths(value: &str) -> Option<[u32; 4]> {
     }
 }
 
+/// 1-3 token width/style/colour shorthand. Width-only stays solid (a documented
+/// subset deviation); unknown tokens or duplicates reject the whole declaration.
+fn set_border(declared: &mut Declared, value: &str) -> bool {
+    if value == "none" {
+        declared.border_width = Some(0);
+        declared.border_style = Some(BorderStyle::None);
+        return true;
+    }
+    let mut width = None;
+    let mut style = None;
+    let mut color = None;
+    let mut count = 0usize;
+    for token in value.split_whitespace() {
+        count += 1;
+        if count > 3 {
+            return false;
+        }
+        if let Some(px) = parse_px(token) {
+            if width.replace(px).is_some() {
+                return false;
+            }
+        } else if token == "solid" || token == "none" {
+            let value = if token == "solid" {
+                BorderStyle::Solid
+            } else {
+                BorderStyle::None
+            };
+            if style.replace(value).is_some() {
+                return false;
+            }
+        } else if let Some(value) = parse_color(token) {
+            if color.replace(value).is_some() {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    if count == 0 {
+        return false;
+    }
+    if let Some(width) = width {
+        declared.border_width = Some(width);
+    }
+    if let Some(style) = style {
+        declared.border_style = Some(style);
+    } else if width.is_some() {
+        // A bare width in this subset is a solid border; keep that documented deviation.
+        declared.border_style = Some(BorderStyle::Solid);
+    }
+    if let Some(color) = color {
+        declared.border_color = Some(color);
+    }
+    true
+}
+
 fn apply_declaration(declared: &mut Declared, name: &str, value: &str) -> bool {
     // `!important`, CSS-wide keywords and functions are outside the subset.
     if value.contains('!') || value.contains('(') {
@@ -487,22 +544,7 @@ fn apply_declaration(declared: &mut Declared, name: &str, value: &str) -> bool {
         "padding-right" => set_length(&mut declared.padding[1], value),
         "padding-bottom" => set_length(&mut declared.padding[2], value),
         "padding-left" => set_length(&mut declared.padding[3], value),
-        "border" if value == "none" => {
-            declared.border_width = Some(0);
-            declared.border_style = Some(BorderStyle::None);
-            true
-        }
-        "border" => match value.split_whitespace().count() {
-            1 => match parse_px(value) {
-                Some(width) => {
-                    declared.border_width = Some(width);
-                    declared.border_style = Some(BorderStyle::Solid);
-                    true
-                }
-                None => false,
-            },
-            _ => false,
-        },
+        "border" => set_border(declared, value),
         "border-width" => set_length(&mut declared.border_width, value),
         "border-style" => match value {
             "solid" => {

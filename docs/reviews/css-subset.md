@@ -10,7 +10,7 @@ Verdict: **changes required**; the P1 and actionable P2/P3 findings below were f
 | Sev | Finding | Disposition |
 |---|---|---|
 | P1 | The 4096-rule cap was per `<style>` element; many sheets multiplied the rules scanned for every node. | **Fixed.** One shared budget across all sheets; later sheets counted unsupported. Regression test `stylesheet_rule_budget_is_shared_across_all_style_elements` (two 4096-rule sheets -> one unsupported, page still renders). |
-| P2 | `border:1px` implied solid, where CSS defaults the style to none. | **Documented subset deviation** (a one-value border is deliberately a solid width; existing layout test depends on it). `border:none` now resets width and style; test `border_none_resets_width_without_becoming_unsupported`. Multi-token shorthand remains unsupported and counted. |
+| P2 | `border:1px` implied solid, where CSS defaults the style to none. | **Documented subset deviation** (a one-value border is deliberately a solid width; existing layout test depends on it). `border:none` now resets width and style; test `border_none_resets_width_without_becoming_unsupported`. Multi-token shorthand was unsupported at this review; a later 1-3 token width/style/colour increment changes that. |
 | P2 | Border colour defaulted to the inherited colour rather than the element's own `color`. | **Fixed** in `Cascade::resolve`; unit test `border_color_defaults_to_the_elements_own_color`. Border painting was added later as four solid edge fills. |
 | P2 | Non-element nodes copied the parent's full style, leaking box properties. | **Fixed** to `ComputedStyle::inherited`, which keeps text properties and resets box values. |
 | P2 | `<style>` text might be laid out. | **Not a defect:** `layout.rs` skips `head`, `script`, `style` and `template` before style lookup; verified by inspection and existing tests. |
@@ -18,7 +18,7 @@ Verdict: **changes required**; the P1 and actionable P2/P3 findings below were f
 | P3 | Inline styles were not comment-stripped. | **Fixed** by stripping comments in `parse_declarations`; same test. |
 | P3 | `style_texts` can drop oversized text parts silently. | Not reachable under the 256 KiB document cap: the sum of style text is bounded by the input. Limit remains documented. |
 | P3 | Heading defaults are absolute (32/28/...) rather than em-relative. | Documented in `docs/testing/css-subset.md` as a subset deviation; `<div style="font-size:40px"><h1>` therefore yields 32px. |
-| P3 | Border shorthand does not reset all longhands. | Accepted for the width-only subset and documented; no colour painting exists. |
+| P3 | Border shorthand does not reset all longhands. | Accepted for the then width-only subset and documented. A later 1-3 token shorthand sets the declared tokens only, not every longhand; this remains a documented subset deviation. |
 
 ## Verification after fixes
 

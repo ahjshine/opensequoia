@@ -81,7 +81,7 @@ fn unsupported_css_is_skipped_without_failing_and_is_counted() {
     let document = Document::parse(
         "<style>p{color:#12}p{font-size:1.5em}div > p{color:red}a:hover{color:red}\\
          p{width:10px}p{margin:1px 2px 3px 4px 5px}</style>\
-         <p style=\"border:1px solid red;font-size:20px\">ok</p>",
+         <p style=\"border:1px dashed red;font-size:20px\">ok</p>",
     )
     .unwrap();
     assert!(document.diagnostics().contains(&Diagnostic::UnsupportedCss));
@@ -90,6 +90,12 @@ fn unsupported_css_is_skipped_without_failing_and_is_counted() {
     assert_eq!(runs.len(), 1);
     assert_eq!(runs[0].font_size, 20);
     assert_eq!(runs[0].text, "ok");
+    let list = document.layout(800).unwrap();
+    assert!(
+        list.items
+            .iter()
+            .all(|item| !matches!(item, DisplayItem::Fill(_)))
+    );
 }
 
 // Value: protects=the supported property set without false unsupported reports; fails_when=a
@@ -260,6 +266,34 @@ fn values_are_case_insensitive_and_inline_comments_are_ignored() {
     let runs = text_runs(&document, 800);
     assert_eq!(runs[0].color, RED);
     assert!(runs[0].bold);
+}
+
+// Value: protects=the 1-3 token border shorthand applying width, style and colour together;
+// fails_when=the shorthand still reports unsupported or only the width reaches layout;
+// why_new=the earlier parser accepted only a bare width; seam=solid/none styles only, no
+// radius or dashed/dotted/double; no_claim=full CSS border shorthand.
+#[test]
+fn border_shorthand_applies_width_style_and_color() {
+    let document =
+        Document::parse("<div style=\"border:3px solid #112233;padding:0\">x</div>").unwrap();
+    assert_eq!(document.unsupported_css_declarations(), 0);
+    let list = document.layout(400).unwrap();
+    let fills: Vec<_> = list
+        .items
+        .iter()
+        .filter_map(|item| match item {
+            DisplayItem::Fill(fill) => Some(fill),
+            DisplayItem::Text(_) => None,
+        })
+        .collect();
+    assert_eq!(fills.len(), 4);
+    let border = Color {
+        r: 17,
+        g: 34,
+        b: 51,
+    };
+    assert!(fills.iter().all(|fill| fill.color == border));
+    assert_eq!((fills[0].width, fills[0].height), (368, 3));
 }
 
 // Value: protects=border:none resetting a previously declared width; fails_when=the earlier
