@@ -36,7 +36,7 @@ Reviewer: app-owned subagent, provider `deepai`, model `deepai/claude-haiku-5-5`
 
 ## Limits and non-claims
 
-- Only explicit block background colours are painted. Inline backgrounds, border painting, canvas/root propagation, gradients, images, alpha, `rgb()` and the `background` shorthand remain unsupported.
+- At review time only explicit block background colours were painted. Inline backgrounds, canvas/root propagation, gradients, images, alpha, `rgb()` and the `background` shorthand remain unsupported. A later follow-up adds solid block border edges as four fill records; that increment is not covered by this review.
 - Fill geometry is an integer CSS-pixel box; text metrics remain estimates and there is no shaping, selection, CSS conformance, pixel or website compatibility claim.
 - Wire version 2 is incompatible with historical version 1 peers by design; the app and worker are built together. There is no authenticated peer, origin or capability check.
 - No new `unsafe` was introduced. GDI painting is existing documented Win32 usage; the review above does not replace the outstanding signing, sandbox and hostile-content work.

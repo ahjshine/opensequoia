@@ -127,7 +127,8 @@ impl Document {
     }
 
     /// Limited block/text layout: estimated glyph advances plus the documented CSS subset.
-    /// Block background colours become fill records; border colours are resolved but not painted.
+    /// Block background colours become fill records; solid border widths are painted as four
+    /// edge fills using the element's resolved border colour.
     pub fn layout(&self, width: u32) -> Result<DisplayList, Error> {
         crate::layout::layout(self, width)
     }

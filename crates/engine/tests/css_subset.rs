@@ -149,7 +149,7 @@ fn margin_and_padding_shorthands_offset_the_content_box() {
 
 // Value: protects=1-value border shorthand and four-value margin expansion feeding layout;
 // fails_when=border width is ignored in the content inset; why_new=only padding was covered;
-// seam=no painted border (v1 IPC has no decoration record); no_claim=border painting.
+// seam=border edges are separate fill records, not a border primitive; no_claim=border style fidelity.
 #[test]
 fn border_width_insets_content_inside_four_value_margins() {
     let document =
@@ -264,13 +264,20 @@ fn values_are_case_insensitive_and_inline_comments_are_ignored() {
 
 // Value: protects=border:none resetting a previously declared width; fails_when=the earlier
 // border width still insets content or the valid declaration is counted unsupported;
-// why_new=only solid borders and a bare width were handled; seam=no border painting;
-// no_claim=the full CSS border shorthand.
+// why_new=only solid borders and a bare width were handled; seam=no border-radius or
+// multi-token shorthand; no_claim=the full CSS border shorthand.
 #[test]
 fn border_none_resets_width_without_becoming_unsupported() {
     let document = Document::parse("<p style=\"border:9px;border:none\">x</p>").unwrap();
     assert_eq!(document.unsupported_css_declarations(), 0);
     assert_eq!(text_runs(&document, 800)[0].x, 16);
+    let list = document.layout(800).unwrap();
+    assert!(
+        !list
+            .items
+            .iter()
+            .any(|item| matches!(item, DisplayItem::Fill(_)))
+    );
 }
 
 // Value: protects=html/body block-box defaults so body margins reach descendants;
@@ -285,7 +292,7 @@ fn html_and_body_are_block_boxes() {
 // Value: protects=block background geometry and paint order behind child text;
 // fails_when=background is absent, covers only the content box, or paints over text;
 // why_new=background-color is parsed but needs an actual display primitive;
-// seam=block boxes only, no inline/background propagation or borders; no_claim=CSS painting.
+// seam=block boxes only, no inline/background propagation; no_claim=CSS painting.
 #[test]
 fn block_background_emits_a_fill_behind_its_content() {
     let document = Document::parse(
@@ -317,6 +324,109 @@ fn block_background_emits_a_fill_behind_its_content() {
             .skip(1)
             .any(|item| matches!(item, DisplayItem::Text(run) if run.text == "x"))
     );
+}
+
+// Value: protects=block border edges painted after text without changing content flow;
+// fails_when=the border is absent, painted under text, or uses the wrong box; why_new=the
+// subset parsed border width/colour but had no border display record; seam=block borders
+// only, four axis-aligned fills, no border-radius/style fidelity; no_claim=CSS border
+// conformance or exact pixel geometry.
+#[test]
+fn block_border_paints_edges_after_text() {
+    let document = Document::parse(
+        "<body style=\"background-color:#ffffff;border-width:4px;border-style:solid;border-color:#112233;padding:6px;margin:8px\"><p>x</p></body>",
+    )
+    .unwrap();
+    let list = document.layout(400).unwrap();
+    let fills: Vec<(usize, &opensequoia_engine::FillRect)> = list
+        .items
+        .iter()
+        .enumerate()
+        .filter_map(|(index, item)| match item {
+            DisplayItem::Fill(fill) => Some((index, fill)),
+            DisplayItem::Text(_) => None,
+        })
+        .collect();
+    let text_index = list
+        .items
+        .iter()
+        .position(|item| matches!(item, DisplayItem::Text(_)))
+        .expect("text missing");
+    assert_eq!(fills.len(), 5, "one background and four border edges");
+    let (background_index, background) = fills[0];
+    assert!(background_index < text_index);
+    assert_eq!(
+        background.color,
+        Color {
+            r: 255,
+            g: 255,
+            b: 255
+        }
+    );
+    assert_eq!(
+        (background.x, background.y, background.width),
+        (24, 24, 352)
+    );
+    let border = Color {
+        r: 17,
+        g: 34,
+        b: 51,
+    };
+    let edges = &fills[1..];
+    assert!(
+        edges
+            .iter()
+            .all(|(index, fill)| *index > text_index && fill.color == border)
+    );
+    let (_, top) = edges[0];
+    let (_, bottom) = edges[1];
+    let (_, left) = edges[2];
+    let (_, right) = edges[3];
+    assert_eq!((top.x, top.y, top.width, top.height), (24, 24, 352, 4));
+    assert_eq!(
+        (bottom.x, bottom.y, bottom.width, bottom.height),
+        (24, background.y + background.height as i32 - 4, 352, 4)
+    );
+    assert_eq!(
+        (left.x, left.y, left.width, left.height),
+        (24, 24, 4, background.height)
+    );
+    assert_eq!(
+        (right.x, right.y, right.width, right.height),
+        (372, 24, 4, background.height)
+    );
+}
+
+// Value: protects=an empty block still paints its solid border box; fails_when=the border
+// disappears with the empty background or uses zero height; why_new=border and background
+// share a box but only the background had an empty-block regression; seam=block borders
+// only, integer fills; no_claim=border style fidelity.
+#[test]
+fn empty_block_still_paints_its_border() {
+    let document = Document::parse(
+        "<div style=\"border-width:3px;border-style:solid;border-color:#112233;padding:2px\"></div>",
+    )
+    .unwrap();
+    let list = document.layout(400).unwrap();
+    let fills: Vec<_> = list
+        .items
+        .iter()
+        .filter_map(|item| match item {
+            DisplayItem::Fill(fill) => Some(fill),
+            DisplayItem::Text(_) => None,
+        })
+        .collect();
+    assert_eq!(fills.len(), 4);
+    let border = Color {
+        r: 17,
+        g: 34,
+        b: 51,
+    };
+    assert!(fills.iter().all(|fill| fill.color == border));
+    assert_eq!((fills[0].width, fills[0].height), (368, 3));
+    assert_eq!((fills[1].width, fills[1].height), (368, 3));
+    assert_eq!((fills[2].width, fills[2].height), (3, 10));
+    assert_eq!((fills[3].width, fills[3].height), (3, 10));
 }
 
 // Value: protects=empty blocks do not emit zero-height wire records;

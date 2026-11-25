@@ -11,7 +11,7 @@ Verdict: **changes required**; the P1 and actionable P2/P3 findings below were f
 |---|---|---|
 | P1 | The 4096-rule cap was per `<style>` element; many sheets multiplied the rules scanned for every node. | **Fixed.** One shared budget across all sheets; later sheets counted unsupported. Regression test `stylesheet_rule_budget_is_shared_across_all_style_elements` (two 4096-rule sheets -> one unsupported, page still renders). |
 | P2 | `border:1px` implied solid, where CSS defaults the style to none. | **Documented subset deviation** (a one-value border is deliberately a solid width; existing layout test depends on it). `border:none` now resets width and style; test `border_none_resets_width_without_becoming_unsupported`. Multi-token shorthand remains unsupported and counted. |
-| P2 | Border colour defaulted to the inherited colour rather than the element's own `color`. | **Fixed** in `Cascade::resolve`; unit test `border_color_defaults_to_the_elements_own_color`. No border painting exists yet. |
+| P2 | Border colour defaulted to the inherited colour rather than the element's own `color`. | **Fixed** in `Cascade::resolve`; unit test `border_color_defaults_to_the_elements_own_color`. Border painting was added later as four solid edge fills. |
 | P2 | Non-element nodes copied the parent's full style, leaking box properties. | **Fixed** to `ComputedStyle::inherited`, which keeps text properties and resets box values. |
 | P2 | `<style>` text might be laid out. | **Not a defect:** `layout.rs` skips `head`, `script`, `style` and `template` before style lookup; verified by inspection and existing tests. |
 | P3 | CSS keywords/colour names were matched case-sensitively. | **Fixed** by ASCII-lowercasing values; test `values_are_case_insensitive_and_inline_comments_are_ignored`. |
@@ -29,4 +29,4 @@ Verdict: **changes required**; the P1 and actionable P2/P3 findings below were f
 
 ## Residual risks
 
-Rule matching is still linear in the shared 4096 rules per element; a near-cap document can do bounded but noticeable work. There is no selector index, CSS conformance, external CSS, `!important`, combinators, or border painting. The review was static and single-model; it does not replace a security audit.
+Rule matching is still linear in the shared 4096 rules per element; a near-cap document can do bounded but noticeable work. There is no selector index, CSS conformance, external CSS, `!important`, combinators, border-style/radius fidelity, or border painting beyond four solid edge fills. The review was static and single-model; it does not replace a security audit.

@@ -820,7 +820,8 @@ mod tests {
     // Value: protects=currentColor defaults for borders; fails_when=border_color resolves
     // from the inherited parent colour instead of this element's declared colour;
     // why_new=resolve used base.color before the cascade colour was applied;
-    // seam=no border painting yet; no_claim=painted border fidelity.
+    // seam=border painting is four solid edge fills in layout, no radius/style fidelity;
+    // no_claim=painted border fidelity.
     #[test]
     fn border_color_defaults_to_the_elements_own_color() {
         let declared = Declared {

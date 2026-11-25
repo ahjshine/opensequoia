@@ -2,7 +2,7 @@
 
 Windows-first Rust browser project in active development. The application and engine are Rust; documented Windows APIs provide native window/text drawing. No Chromium, Blink, V8, Electron, CEF or WebView2 is embedded.
 
-Current app version: **0.2.0**. Native tabs, Address/Go, Back/Forward/Reload, per-tab history and asynchronous child rendering now work for built-in pages and trusted local HTML. Renderer children use Windows Jobs, a stdio handle allowlist and bounded cancellation/exit checks. **This is not a completed browser and is not ready for hostile remote content.** Remote networking, full CSS (only a bounded static CSS text/box subset with block background fills is present), JavaScript, WebAssembly, AppContainer/origin isolation, profiles, extensions, sync and most retained Brave parity are still missing.
+Current app version: **0.2.0**. Native tabs, Address/Go, Back/Forward/Reload, per-tab history and asynchronous child rendering now work for built-in pages and trusted local HTML. Renderer children use Windows Jobs, a stdio handle allowlist and bounded cancellation/exit checks. **This is not a completed browser and is not ready for hostile remote content.** Remote networking, full CSS (only a bounded static CSS text/box subset with block background fills and solid border edges is present), JavaScript, WebAssembly, AppContainer/origin isolation, profiles, extensions, sync and most retained Brave parity are still missing.
 
 Build with Rust 1.98.1, MSVC Build Tools and Windows SDK (set WindowsSdkDir if outside the standard SDK root):
 

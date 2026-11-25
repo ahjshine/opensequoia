@@ -1,6 +1,7 @@
 //! Deliberately limited static block/text flow. Glyph advances are estimates, not shaping.
 //! Block boxes honour the documented CSS subset (margins, padding, border width, alignment);
-//! explicit block background colours become fill records. Borders are laid out but not painted.
+//! explicit block background colours and solid borders become fill records; borders are
+//! four axis-aligned edges painted after content, without radius or non-solid styles.
 
 use html5ever::ns;
 
@@ -45,6 +46,16 @@ struct FillSpan {
 }
 
 #[derive(Clone, Copy)]
+struct BorderSpan {
+    left: u32,
+    top: u32,
+    width: u32,
+    thickness: u32,
+    bottom_extra: u32,
+    color: Color,
+}
+
+#[derive(Clone, Copy)]
 struct Exit {
     block: bool,
     left: u32,
@@ -52,6 +63,7 @@ struct Exit {
     align: TextAlign,
     bottom: u32,
     fill: Option<FillSpan>,
+    border: Option<BorderSpan>,
 }
 
 enum Event {
@@ -72,6 +84,30 @@ struct Flow {
 }
 
 impl Flow {
+    fn push_fill(
+        &mut self,
+        x: u32,
+        y: u32,
+        width: u32,
+        height: u32,
+        color: Color,
+    ) -> Result<(), Error> {
+        if width == 0 || height == 0 {
+            return Ok(());
+        }
+        if self.items.len() >= MAX_RUNS {
+            return Err(Error::LayoutLimit);
+        }
+        self.items.push(DisplayItem::Fill(FillRect {
+            x: i32::try_from(x).map_err(|_| Error::LayoutLimit)?,
+            y: i32::try_from(y).map_err(|_| Error::LayoutLimit)?,
+            width,
+            height,
+            color,
+        }));
+        Ok(())
+    }
+
     /// Shift the finished line for text-align. Lines hold only text runs in this increment.
     fn finish_line(&mut self) {
         if self.line_start >= self.items.len() {
@@ -227,6 +263,46 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
                             _ => return Err(Error::InvalidTree),
                         }
                     }
+                    if let Some(border) = exit.border {
+                        let bottom = flow
+                            .y
+                            .checked_add(border.bottom_extra)
+                            .ok_or(Error::LayoutLimit)?;
+                        let height = bottom.saturating_sub(border.top);
+                        let thickness = border.thickness.min(border.width).min(height);
+                        if thickness > 0 {
+                            flow.push_fill(
+                                border.left,
+                                border.top,
+                                border.width,
+                                thickness,
+                                border.color,
+                            )?;
+                            flow.push_fill(
+                                border.left,
+                                bottom.saturating_sub(thickness),
+                                border.width,
+                                thickness,
+                                border.color,
+                            )?;
+                            flow.push_fill(
+                                border.left,
+                                border.top,
+                                thickness,
+                                height,
+                                border.color,
+                            )?;
+                            flow.push_fill(
+                                border
+                                    .left
+                                    .saturating_add(border.width.saturating_sub(thickness)),
+                                border.top,
+                                thickness,
+                                height,
+                                border.color,
+                            )?;
+                        }
+                    }
                     flow.y = flow.y.checked_add(exit.bottom).ok_or(Error::LayoutLimit)?;
                     if flow.y > MAX_HEIGHT {
                         return Err(Error::LayoutLimit);
@@ -253,6 +329,7 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
                     align: flow.align,
                     bottom: 0,
                     fill: None,
+                    border: None,
                 };
                 match &node.kind {
                     NodeKind::Text(text) => {
@@ -286,24 +363,22 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
                             exit.right = flow.right;
                             exit.align = flow.align;
                             let border = computed.effective_border();
-                            if let Some(color) = computed.background {
-                                let top = flow.y.saturating_add(computed.margin.top);
-                                let left = flow.left.saturating_add(computed.margin.left);
-                                let width = flow
-                                    .right
-                                    .saturating_sub(flow.left)
-                                    .saturating_sub(computed.margin.left + computed.margin.right);
-                                if width > 0 && top < MAX_HEIGHT {
+                            let top = flow.y.saturating_add(computed.margin.top);
+                            let left = flow.left.saturating_add(computed.margin.left);
+                            let width = flow
+                                .right
+                                .saturating_sub(flow.left)
+                                .saturating_sub(computed.margin.left + computed.margin.right);
+                            if width > 0 && top < MAX_HEIGHT {
+                                let bottom_extra = computed.padding.bottom.saturating_add(border);
+                                if let Some(color) = computed.background {
                                     if flow.items.len() >= MAX_RUNS {
                                         return Err(Error::LayoutLimit);
                                     }
                                     exit.fill = Some(FillSpan {
                                         index: flow.items.len(),
                                         top,
-                                        bottom_extra: computed
-                                            .padding
-                                            .bottom
-                                            .saturating_add(border),
+                                        bottom_extra,
                                     });
                                     flow.items.push(DisplayItem::Fill(FillRect {
                                         x: left as i32,
@@ -312,6 +387,16 @@ pub(crate) fn layout(document: &Document, width: u32) -> Result<DisplayList, Err
                                         height: 0,
                                         color,
                                     }));
+                                }
+                                if border > 0 {
+                                    exit.border = Some(BorderSpan {
+                                        left,
+                                        top,
+                                        width,
+                                        thickness: border,
+                                        bottom_extra,
+                                        color: computed.border_color,
+                                    });
                                 }
                             }
                             flow.left = flow.left.saturating_add(

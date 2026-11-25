@@ -745,10 +745,10 @@ mod tests {
         assert!(started.elapsed() < Duration::from_secs(3));
     }
     #[test]
-    fn block_background_fill_round_trips_through_worker() {
+    fn block_background_and_border_fills_round_trip_through_worker() {
         let mut input = Cursor::new(
             encode(&Message::Render {
-                html: "<body style=\"background-color:#102030\"><p>x</p></body>".to_owned(),
+                html: "<body style=\"background-color:#102030;border-width:2px;border-style:solid;border-color:#ffffff\"><p>x</p></body>".to_owned(),
                 width: 800,
             })
             .unwrap(),
@@ -762,8 +762,32 @@ mod tests {
             panic!("background fill missing from worker output");
         };
         assert_eq!(fill.width, 768);
-        assert!(display.items.iter().any(
-            |item| matches!(item, opensequoia_engine::DisplayItem::Text(run) if run.text == "x")
-        ));
+        let text_index = display
+            .items
+            .iter()
+            .position(|item| matches!(item, opensequoia_engine::DisplayItem::Text(_)))
+            .expect("text missing from worker output");
+        let border = opensequoia_engine::Color {
+            r: 255,
+            g: 255,
+            b: 255,
+        };
+        let edges: Vec<_> = display
+            .items
+            .iter()
+            .enumerate()
+            .filter_map(|(index, item)| match item {
+                opensequoia_engine::DisplayItem::Fill(rect) if rect.color == border => {
+                    Some((index, rect))
+                }
+                _ => None,
+            })
+            .collect();
+        assert_eq!(edges.len(), 4, "four border edges expected");
+        assert!(
+            edges
+                .iter()
+                .all(|(index, rect)| *index > text_index && rect.height > 0)
+        );
     }
 }
