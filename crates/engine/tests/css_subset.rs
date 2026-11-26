@@ -105,7 +105,7 @@ fn unsupported_css_is_skipped_without_failing_and_is_counted() {
 #[test]
 fn supported_subset_reports_no_unsupported_css() {
     let document = Document::parse(
-        "<style>p.note{color:#336699;background-color:#ffffff;font-size:18px;\
+        "<style>p.note{color:#336699;background:#fefefe;background-color:#ffffff;font-size:18px;\
          font-weight:bold;text-align:right;margin:4px 8px;padding:2px 3px 4px 5px;\
          border:2px;border-style:solid;border-color:#000000;display:block}</style>\
          <p class=\"note\">x</p><p style=\"display:inline\">y</p>",
@@ -266,6 +266,65 @@ fn values_are_case_insensitive_and_inline_comments_are_ignored() {
     let runs = text_runs(&document, 800);
     assert_eq!(runs[0].color, RED);
     assert!(runs[0].bold);
+}
+
+// Value: protects=single-colour background shorthand reaching the fill list;
+// fails_when=the shorthand remains unsupported or parses without painting;
+// why_new=only background-color was accepted; seam=one colour token only, no images,
+// gradients, alpha or multi-layer values; no_claim=full CSS background shorthand.
+#[test]
+fn background_shorthand_applies_one_color() {
+    let document =
+        Document::parse("<div style=\"background:#102030;margin:0;padding:0\">x</div>").unwrap();
+    assert_eq!(document.unsupported_css_declarations(), 0);
+    let list = document.layout(400).unwrap();
+    let fills: Vec<_> = list
+        .items
+        .iter()
+        .filter_map(|item| match item {
+            DisplayItem::Fill(fill) => Some(fill),
+            DisplayItem::Text(_) => None,
+        })
+        .collect();
+    assert_eq!(fills.len(), 1);
+    assert_eq!(
+        fills[0].color,
+        Color {
+            r: 16,
+            g: 32,
+            b: 48,
+        }
+    );
+}
+
+// Value: protects=background:none clearing a prior colour and multi-token rejection;
+// fails_when=none still paints, or an image/multi-layer value is partially applied;
+// why_new=silent partial backgrounds are worse than an explicit unsupported count;
+// seam=no images, gradients, alpha or multiple layers; no_claim=full CSS background.
+#[test]
+fn background_shorthand_none_clears_and_multi_token_rejects() {
+    let cleared =
+        Document::parse("<p style=\"background-color:#112233;background:none\">x</p>").unwrap();
+    assert_eq!(cleared.unsupported_css_declarations(), 0);
+    assert!(
+        !cleared
+            .layout(400)
+            .unwrap()
+            .items
+            .iter()
+            .any(|item| matches!(item, DisplayItem::Fill(_)))
+    );
+
+    let rejected = Document::parse("<p style=\"background:#ffffff url(x)\">x</p>").unwrap();
+    assert_eq!(rejected.unsupported_css_declarations(), 1);
+    assert!(
+        !rejected
+            .layout(400)
+            .unwrap()
+            .items
+            .iter()
+            .any(|item| matches!(item, DisplayItem::Fill(_)))
+    );
 }
 
 // Value: protects=the 1-3 token border shorthand applying width, style and colour together;

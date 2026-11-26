@@ -35,7 +35,7 @@ The parser now accepts `border` with up to three width/style/colour tokens in an
 
 - A minimal snippet-only review of `set_border` returned **APPROVE**: rejection returns before mutation, and duplicate/unknown/fourth-token cases are rejected. The reviewer noted that omitted components are not reset (full CSS shorthand would reset them); this is now documented as a subset deviation, not hidden.
 - The reviewer also asked how one width/colour state becomes four fills; that is the existing `BorderSpan` layout fan-out, not additional parser state.
-- Final evidence: `evidence/verification/border-final3-tests.log` has 97 passed, 0 failed, 0 ignored (21 CSS-subset tests); `border-final3-*` carries the full gate and fixture inspect/smoke. These are the current counts; the earlier `border-final2-*` block above records the preceding edge-only commit.
+- Final evidence at this checkpoint: `evidence/verification/border-final3-tests.log` has 97 passed, 0 failed, 0 ignored (21 CSS-subset tests); `border-final3-*` carries the full gate and fixture inspect/smoke. A later background-shorthand follow-up raises the totals to 99/23; the earlier `border-final2-*` block records the preceding edge-only commit.
 
 ## Limits and non-claims
 

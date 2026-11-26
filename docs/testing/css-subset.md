@@ -10,7 +10,7 @@ Owner: root integration. Source: `crates/engine/src/css.rs` + styled flow in `cr
   No combinators, universal/attribute/pseudo selectors, or `!important`.
 - Cascade: inline style specificity 1000; otherwise `#id` 100, `.class` 10, type 1; ties use later source order.
 - Declarations:
-  - `color`, `background-color`: `#rgb`, `#rrggbb`, or a 16-name subset (aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow). No `rgb()` yet.
+  - `color`, `background-color`, `background`: `#rgb`, `#rrggbb`, or a 16-name subset (aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, purple, red, silver, teal, white, yellow). `background` accepts exactly one colour token or `none` (clears the colour); multi-layer, image, gradient and alpha values reject the whole declaration. No `rgb()` yet.
   - `font-size`: integer px, 1-256 (the IPC v2 display bound; larger values are unsupported).
   - `font-weight`: `normal` or `bold`; `text-align`: `left`, `center`, `right`.
   - `margin`/`padding` (+ `-top/right/bottom/left`): 1-4 integer px values, shorthand expansion.
@@ -40,10 +40,10 @@ grid, positioning, collapsing margins, or bidirectional/complex shaping.
 
 ## Verification
 
-- `crates/engine/tests/css_subset.rs`: 21 tests covering specificity, source order, lists, unsupported
+- `crates/engine/tests/css_subset.rs`: 23 tests covering specificity, source order, lists, unsupported
   accounting, supported-set accounting, font/size/weight/colour/alignment, spacing, borders, display,
   inheritance, unstyled default drift, the 1-256 IPC font bound, the shared rule budget, value case/comments,
-  `border:none`, block fill geometry, border edge order/geometry, the 1-3 token shorthand, and empty-block
+  `border:none`, block fill geometry, border edge order/geometry, the 1-3 token border shorthand, single-colour/`none` background shorthand, and empty-block
   fill suppression; a unit test covers border colour defaulting to the element's own colour.
 - `crates/app/src/worker.rs` tests: a 256px styled document and block background/border fills survive
   `Document::parse` -> layout -> IPC encode/decode through the real worker boundary.
@@ -51,7 +51,7 @@ grid, positioning, collapsing margins, or bidirectional/complex shaping.
   unsupported CSS and `--smoke-test fixtures/background.html` exercises the GDI background and block
   border fill paths before automatic close. This proves the fill calls succeed, not pixel equality or
   full CSS rendering.
-- `cargo test --workspace --locked`: 97 passed, zero failed/ignored (21 CSS-subset tests).
+- `cargo test --workspace --locked`: 99 passed, zero failed/ignored (23 CSS-subset tests).
 - The pinned tree-construction acceptance harness passes
   (3515 pass / 4 unsupported, no harness errors) and is unaffected by display-list decoration.
 

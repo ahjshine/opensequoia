@@ -3,8 +3,8 @@
 //! Supported selectors: type, `.class`, `#id`, type.class/type#id and comma-separated lists.
 //! Supported declarations: color, background-color, font-size (1-256 px), font-weight
 //! (normal|bold), text-align (left|center|right), margin/margin-* and padding/padding-*
-//! (1-4 px values), border (1-3 token width/style/colour shorthand)/border-width/
-//! border-style(solid|none)/border-color, display
+//! (1-4 px values), background (single colour or `none`), border (1-3 token
+//! width/style/colour shorthand)/border-width/border-style(solid|none)/border-color, display
 //! (block|inline|none). Everything else is skipped and counted, never fatal.
 //!
 //! This is explicitly not CSS conformance: no combinators, pseudo-classes, attribute or
@@ -472,6 +472,17 @@ fn set_border(declared: &mut Declared, value: &str) -> bool {
     true
 }
 
+fn set_background(declared: &mut Declared, value: &str) -> bool {
+    if value == "none" {
+        declared.background = None;
+        return true;
+    }
+    if value.split_whitespace().count() != 1 {
+        return false;
+    }
+    set_color(&mut declared.background, value)
+}
+
 fn apply_declaration(declared: &mut Declared, name: &str, value: &str) -> bool {
     // `!important`, CSS-wide keywords and functions are outside the subset.
     if value.contains('!') || value.contains('(') {
@@ -479,6 +490,7 @@ fn apply_declaration(declared: &mut Declared, name: &str, value: &str) -> bool {
     }
     match name {
         "color" => set_color(&mut declared.color, value),
+        "background" => set_background(declared, value),
         "background-color" => set_color(&mut declared.background, value),
         "font-size" => set_font_size(&mut declared.font_size, value),
         "font-weight" => match value {

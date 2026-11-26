@@ -34,9 +34,18 @@ Reviewer: app-owned subagent, provider `deepai`, model `deepai/claude-haiku-5-5`
 - `evidence/verification/fill-final2-background-smoke.log`: `WINDOW_SMOKE_OK paints=1 drawn_text_runs=34 child_rendered=1`. This executes the GDI fill path; it does not compare pixels.
 - Pinned tree acceptance (`evidence/verification/tree3-final.log`): `S04A_ACCEPTANCE_OK`, 3515 pass / 4 unsupported / 0 fail / 0 skip / 0 timeout / 0 harness error; display changes do not alter parsing.
 
+## Follow-up: single-colour background shorthand
+
+`background` now accepts exactly one colour token or `none`; `none` clears the block colour. Multi-token, image, gradient, alpha, function and multi-layer values reject the declaration and remain counted unsupported. No fill geometry or IPC change was needed because this feeds the existing block background path.
+
+- Minimal snippet-only Haiku review returned **APPROVE**: no panic path, multi-token rejection happens before mutation, and `none` clears only the background field. The reviewer explicitly did not see `set_color` or the caller; root inspection confirms `set_color` mutates only on success and `parse_declarations` increments unsupported on a false return.
+- Final evidence: `evidence/verification/background-final-tests.log` has 99 passed, 0 failed, 0 ignored (23 CSS-subset tests); `background-final-*` carries the full gate and fixture inspect/smoke. Native fixture output is 25 nodes / 39 text runs / 0 unsupported CSS, and `drawn_text_runs=34`.
+- Pinned tree acceptance (`evidence/verification/tree3-background-shorthand.log`): `S04A_ACCEPTANCE_OK`, 3515 pass / 4 unsupported / 0 fail / 0 skip / 0 timeout / 0 harness error; CSS shorthand does not alter the parser result.
+- Limits: no images, gradients, alpha, `rgb()` or multiple layers; no inline/canvas propagation; no pixel or CSS-conformance claim.
+
 ## Limits and non-claims
 
-- At review time only explicit block background colours were painted. Inline backgrounds, canvas/root propagation, gradients, images, alpha, `rgb()` and the `background` shorthand remain unsupported. A later follow-up adds solid block border edges as four fill records; that increment is not covered by this review.
+- At review time only explicit block background colours were painted. Inline backgrounds, canvas/root propagation, gradients, images, alpha, `rgb()` and the `background` shorthand remained unsupported. Later follow-ups add solid block border edges and a single-colour/`none` `background` shorthand; those increments are not covered by this historical review.
 - Fill geometry is an integer CSS-pixel box; text metrics remain estimates and there is no shaping, selection, CSS conformance, pixel or website compatibility claim.
 - Wire version 2 is incompatible with historical version 1 peers by design; the app and worker are built together. There is no authenticated peer, origin or capability check.
 - No new `unsafe` was introduced. GDI painting is existing documented Win32 usage; the review above does not replace the outstanding signing, sandbox and hostile-content work.
